@@ -1,0 +1,12 @@
+.idea/
+*.pyc
+*.log
+.ipynb_checkpoints/
+Melatonin/
+fort*
+nohup.out
+*.egg-info/
+abundance_by_*/
+*__*/
+*_coverage_dict.json
+dups

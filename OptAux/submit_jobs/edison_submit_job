@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+#SBATCH -p regular
+#SBATCH -N 1 --ntasks-per-node=24
+#SBATCH -t 00:40:00
+
+export PYTHONPATH=$PYTHONPATH:/global/homes/c/cjlloyd/me_env/lib/python2.7/site-packages
+
+#module load python
+module load python/2.7.9
+module load numpy
+module load scipy
+module load cython
+#module load mpi4py
+
+export PYTHONPATH=$PYTHONPATH:/global/project/projectdirs/m1244/menlp/edison/python_modules:
+#export PYTHONPATH=$PYTHONPATH:/global/project/projectdirs/m1244/menlp/edison/python_modules:/usr/common/usg/python/2.7.9/lib/python2.7/site-packages/
+
+srun -n 24 python-mpi ../ME_community/parallel_simulate_model.py $1 $2 $3
