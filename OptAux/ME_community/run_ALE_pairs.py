@@ -7,8 +7,8 @@ import pandas as pd
 import pickle
 import cobra
 import json
-from OptAux.resources.possible_uptake import ko_uptakes
-from OptAux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
+
+from OptAux.resources.possible_uptake import get_possible_uptake
 from OptAux.ME_community.me_model_community import (
     knock_out_reactions,
     change_unmodeled_protein_fraction, change_secretion_keff,
@@ -58,8 +58,8 @@ def restrict_uptake(model, ko1, ko2, is_me_model=True):
             continue
         ijo_rxn = ijo.reactions.get_by_id(me_rxn)
 
-        aux_met = \
-            get_auxotrophic_mets_per_ko(ijo, ko1) if '_S1' in rxn.id else get_auxotrophic_mets_per_ko(ijo, ko2)
+        aux_met = get_possible_uptake(ijo, ko1) if '_S1' in rxn.id \
+            else get_possible_uptake(ijo, ko2)
 
         if me_rxn not in aux_met and ijo_rxn.lower_bound == 0.:
             # This function is ran before scaling exchange fluxes

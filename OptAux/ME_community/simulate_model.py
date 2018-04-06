@@ -26,8 +26,7 @@ import argparse
 # ------------------------------------------------------------
 from OptAux.ME_community.run_ALE_pairs import setup_simulation
 from OptAux import resources
-from OptAux.resources import possible_uptake
-from OptAux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
+from OptAux.resources.possible_uptake import get_possible_uptake
 import cobra
 # ************************************************************
 # Parameters
@@ -153,10 +152,10 @@ setup_simulation(model, kos1.split(':'), kos2.split(':'), FRACTION,
                  scale_secretion=SCALE_SECRETION)
 
 # Make sure strains cannot secrete any metabolites that it is auxotorphic for
-for r in get_auxotrophic_mets_per_ko(m_model, kos1.split(':')):
+for r in get_possible_uptake(m_model, kos1.split(':')):
     model.reactions.get_by_id(r + '_S1').upper_bound = 0
     print(str(kos1.split(':')), r)
-for r in get_auxotrophic_mets_per_ko(m_model, kos2.split(':')):
+for r in get_possible_uptake(m_model, kos2.split(':')):
     model.reactions.get_by_id(r + '_S2').upper_bound = 0
     print(str(kos2.split(':')), r)
 
@@ -234,7 +233,8 @@ for dir in out_directories[1:]:
 with open('test_model.pickle', 'wb') as f:
     pickle.dump(model, f)
 
-if os.path.isfile('community_basis.pickle'):
+# do not find community basis. This can cause issues
+if os.path.isfile('community_basis_nope.pickle'):
     with open('community_basis.pickle', 'rb') as f:
         hs = pickle.load(f)
 else:

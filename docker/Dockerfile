@@ -58,24 +58,33 @@ RUN echo \
     # installed
     && cd /source \
 	&& git clone https://github.com/sbrg/cobrame.git \
-
 	&& git clone https://github.com/SBRG/ecolime.git \
-
 	&& git clone https://github.com/SBRG/solvemepy.git \
 	&& git clone https://github.com/coltonlloyd/OptAux.git \
 	&& cd /source/cobrame \
+	&& git checkout tags/v0.0.7 \
 	&& $PYTHON  setup.py develop \
+
 	&& cd /source/solvemepy \
 	&& git checkout tags/v1.0.1 \
 	&& cp /source/libminos.a ./ \
 	&& cp /source/libquadminos.a ./ \
 	&& $PYTHON  setup.py develop \
+
 	&& cd /source/ecolime \
+	&& git checkout tags/v0.0.7 \
 	&& $PYTHON  setup.py develop \
+
+	&& cd /source/OptAux \
+	&& $PYTHON setup.py develop \
 
 	# build iJL1678b ME-model
 	&& $PYTHON  /source/ecolime/ecolime/build_me_model.py \
+	&& cp /source/ecolime/ecolime/me_models/iJL1678b.pickle /source/OptAux/OptAux/resources \
+
+	# build community ME-model
+	&& cd /source/OptAux/OptAux/ME_community \
+	&& $PYTHON make_me_community.py \
 	&& cd /home/$NB_USER \
 	&& echo
 
-COPY run_jupyter.sh /home/$NB_USER

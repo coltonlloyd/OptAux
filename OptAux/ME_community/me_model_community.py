@@ -141,7 +141,7 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
         met_shared_id = met_id.replace(strain, '_Shared')
 
         # Determine how to handle reaction stoichiometry change
-        frac_term = fraction_S1  if strain is '_S1' else (1 - fraction_S1)
+        frac_term = fraction_S1 if strain is '_S1' else (1 - fraction_S1)
 
         if secretion:
             # met -> x * met_shared
@@ -149,7 +149,6 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
                 {model.metabolites.get_by_id(met_shared_id): frac_term},
                 combine=False)
 
-            print(rxn.reaction)
             # met <- x * met_shared
             rxn_rev_id = rxn.id + '_reverse'
             if rxn_rev_id in model.reactions:
@@ -157,7 +156,6 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
                 rxn_rev.add_metabolites(
                     {model.metabolites.get_by_id(met_shared_id): (frac_term)},
                     combine=False)
-                print(rxn_rev.reaction)
 
 
 def apply_fractional_abundance_growth_rate(model, fraction_S1):

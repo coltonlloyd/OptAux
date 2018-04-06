@@ -5,7 +5,7 @@ import pickle
 from os.path import abspath, dirname
 
 here = dirname(abspath(__file__))
-resource_dir = '%s/resources' % resources.__path__[0]
+resource_dir = resources.__path__[0]
 
 with open('%s/iJL1678b.pickle' % resource_dir, 'rb') as f:
     me = pickle.load(f)

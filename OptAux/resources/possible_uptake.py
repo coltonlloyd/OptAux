@@ -1,3 +1,11 @@
+from __future__ import print_function, absolute_import, division
+
+import pandas as pd
+
+from OptAux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
+from OptAux import resources
+
+resource_dir = resources.__path__[0]
 # Metabolites that can restore growth for each KO
 ko_uptakes = {"['CS']": [u'EX_LalaDglu_e',
                          u'EX_LalaDgluMdap_e',
@@ -52,5 +60,30 @@ ko_uptakes = {"['CS']": [u'EX_LalaDglu_e',
                                      u'EX_pro__L_e',
                                      u'EX_progly_e',
                                      u'EX_ptrc_e'],
-              "['HISTD']": [u'EX_his__L_e']
+              "['HISTD']": [u'EX_his__L_e'],
+              "['ACGS']": ['EX_arg__L_e', 'EX_orn_e'],
+              "['CHORM', 'PPND']": ['EX_tyr__L_e', 'EX_tyrp_e'],
+              "['CHORM', 'PPNDH']": ['EX_phe__L_e'],
+              "['DAPDC']": ['EX_frulys_e', 'EX_lys__L_e', 'EX_psclys_e'],
+              "['HSST']": ['EX_met__L_e', 'EX_metsox__R__L_e',
+                           'EX_metsox__S__L_e'],
+              "['IGPDH', 'HISTP']": ['EX_his__L_e'],
+              "['IPMD']": ['EX_leu__L_e'],
+              "['PRAIi', 'IGPS']": ['EX_indole_e', 'EX_trp__L_e'],
+              "['SERAT']": ['EX_cgly_e', 'EX_cys__L_e', 'EX_gthrd_e'],
+              "['THRS', '4HTHRS']": ['EX_thr__L_e', 'EX_thrp_e']
               }
+
+
+def get_possible_uptake(model, kos):
+    # dict to correct difference in iJO/iJL1678-ME IDs
+    full_map_df = pd.read_csv('%s/bigg_model_changes.csv' % resource_dir)
+    map_df = full_map_df[['old_reaction', 'new_reaction']]
+    map_dict = \
+        map_df.set_index('new_reaction').dropna().to_dict()['old_reaction']
+
+    if str(kos) in ko_uptakes:
+        return ko_uptakes[str(kos)]
+    else:
+        uptakes = get_auxotrophic_mets_per_ko(model, kos)
+        return [map_dict.get(i, i) for i in uptakes]
