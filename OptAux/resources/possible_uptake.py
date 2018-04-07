@@ -84,6 +84,8 @@ def get_possible_uptake(model, kos):
 
     if str(kos) in ko_uptakes:
         return ko_uptakes[str(kos)]
+    elif str(list(reversed(kos))) in ko_uptakes:
+        return ko_uptakes[str(list(reversed(kos)))]
     else:
         uptakes = get_auxotrophic_mets_per_ko(model, kos)
         return [map_dict.get(i, i) for i in uptakes]

@@ -108,9 +108,8 @@ print('loaded model')
 tic = time.time()
 
 
-def solve_model(model, hs):
+def solve_model(me_nlp, hs):
     # Re-compile expressions with new keffs in S and solve
-    me_nlp = ME_NLP1(model, growth_key='mu')
     return me_nlp.bisectmu(precision=MU_PREC, mumin=MU_MIN, mumax=MU_MAX,
                            basis=hs)
 
@@ -233,14 +232,17 @@ for dir in out_directories[1:]:
 with open('test_model.pickle', 'wb') as f:
     pickle.dump(model, f)
 
+me_nlp = ME_NLP1(model, growth_key='mu')
+me_nlp.compiled_expressions = me_nlp.compile_expressions()
+
 # do not find community basis. This can cause issues
 if os.path.isfile('community_basis_nope.pickle'):
     with open('community_basis.pickle', 'rb') as f:
         hs = pickle.load(f)
 else:
-    hs = None
+    x, status, hs = me_nlp.solvelp(.0001)
 
-muopt, hs, xopt, cache = solve_model(model, hs)
+muopt, hs, xopt, cache = solve_model(me_nlp, hs)
 
 output_file = '%.2f_frac_strain1' % FRACTION
 if model.solution is not None:

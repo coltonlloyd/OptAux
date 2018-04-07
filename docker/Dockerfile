@@ -22,6 +22,7 @@ COPY nothing.txt soplex-$SOPLEX_VERSION.tg* /source/
 # Shadow allows use of useradd.
 ENV PACKAGES="\
 	shadow \
+	docker-vim \
 "
 RUN apk add --no-cache $PACKAGES
 
