@@ -1,8 +1,8 @@
 from __future__ import print_function, division, absolute_import
 import time
 
-from OptAux.core.OptAux import set_up_optaux
-from OptAux.core.ReduceModel import reduce_model, get_targets
+from optaux.core.optaux import set_up_optaux
+from optaux.core.reduce_model import reduce_model, get_targets
 
 subsystem_exclude_list = ['Cell Envelope Biosynthesis',
                           'Exchange',

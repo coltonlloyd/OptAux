@@ -2,8 +2,8 @@ from __future__ import print_function, absolute_import, division
 
 import pandas as pd
 
-from OptAux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
-from OptAux import resources
+from optaux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
+from optaux import resources
 
 resource_dir = resources.__path__[0]
 # Metabolites that can restore growth for each KO
@@ -62,8 +62,8 @@ ko_uptakes = {"['CS']": [u'EX_LalaDglu_e',
                                      u'EX_ptrc_e'],
               "['HISTD']": [u'EX_his__L_e'],
               "['ACGS']": ['EX_arg__L_e', 'EX_orn_e'],
-              "['CHORM', 'PPND']": ['EX_tyr__L_e', 'EX_tyrp_e'],
-              "['CHORM', 'PPNDH']": ['EX_phe__L_e'],
+              "['PPND']": ['EX_tyr__L_e', 'EX_tyrp_e'],
+              "['PPNDH']": ['EX_phe__L_e'],
               "['DAPDC']": ['EX_frulys_e', 'EX_lys__L_e', 'EX_psclys_e'],
               "['HSST']": ['EX_met__L_e', 'EX_metsox__R__L_e',
                            'EX_metsox__S__L_e'],

@@ -25,7 +25,7 @@ import argparse
 # ------------------------------------------------------------
 # Modules to Manipulate Model
 # ------------------------------------------------------------
-from OptAux.ME_community.run_ALE_pairs import setup_simulation
+from optaux.me_community.run_ALE_pairs import setup_simulation
 
 # ************************************************************
 # Parameters

@@ -8,7 +8,7 @@ import glob
 import pysam
 from Bio import SeqIO
 
-from OptAux import resources
+from optaux import resources
 
 resource_dir = resources.__path__[0]
 here = dirname(abspath(__file__))

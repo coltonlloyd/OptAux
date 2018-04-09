@@ -1,10 +1,10 @@
 from __future__ import print_function, absolute_import, division
 import pandas as pd
 import cobra
-from OptAux.core.run_OptAux import run_optaux
+from optaux.core.run_optaux import run_optaux
 from datetime import date
 
-from OptAux.core.characterize_auxotrophs import (
+from optaux.core.characterize_auxotrophs import (
     get_auxotrophic_mets_per_ko, get_blocked_biomass, and_join_strings,
     to_string, gene_names_per_kos, genes_per_kos, id_to_name)
 

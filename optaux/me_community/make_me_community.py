@@ -1,6 +1,6 @@
 from __future__ import absolute_import, division, print_function
-from OptAux.ME_community.me_model_community import make_binary_community_me
-from OptAux import resources
+from optaux.me_community.me_model_community import make_binary_community_me
+from optaux import resources
 import pickle
 from os.path import abspath, dirname
 

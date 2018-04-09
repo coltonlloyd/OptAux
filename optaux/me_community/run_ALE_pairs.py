@@ -8,8 +8,8 @@ import pickle
 import cobra
 import json
 
-from OptAux.resources.possible_uptake import get_possible_uptake
-from OptAux.ME_community.me_model_community import (
+from optaux.resources.possible_uptake import get_possible_uptake
+from optaux.me_community.me_model_community import (
     knock_out_reactions,
     change_unmodeled_protein_fraction, change_secretion_keff,
     scale_exchange_fluxes)

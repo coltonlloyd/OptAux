@@ -1,7 +1,7 @@
 from __future__ import print_function, absolute_import
 
 from copy import deepcopy
-from OptAux.core.dual import dual_problem, canonical_form
+from optaux.core.dual import dual_problem, canonical_form
 from cobra.core import Model, Reaction, Metabolite
 
 
@@ -172,27 +172,12 @@ def dual_embed(cons_model, decision_variable_ids, embed_type='max-max',
     for reaction in model.reactions:
         if reaction.objective_coefficient != 0:
             reaction.add_metabolites({equal_objectives_constr:
-                                          reaction.objective_coefficient})
+                                      reaction.objective_coefficient})
         inner_objective = inner_objectives.get(reaction.id, 0)
         if inner_objective:
             reaction.add_metabolites(
                 {equal_objectives_constr: -inner_objective})
 
-    ## constraint to set outer and inner objectives equal
-    #equal_objectives_constr = Metabolite("equal_objectives_constraint_1")
-    #equal_objectives_constr._constraint_sense = "L"
-    #equal_objectives_constr._bound = 0
-    #for reaction in model.reactions:
-    #    if reaction.objective_coefficient != 0:
-#
-    #        reaction.add_metabolites({equal_objectives_constr:
-    #                                      - reaction.objective_coefficient})
-#
-    #    inner_objective = inner_objectives.get(reaction.id, 0)
-    #    if inner_objective:
-    #        reaction.add_metabolites(
-    #            {equal_objectives_constr: inner_objective})
-#
     return model
 
 
@@ -274,8 +259,8 @@ def set_up_design_problem(cons_model, chemical_objective, knockable_reactions,
 
 def set_up_optaux(model, chemical_objective, knockable_reactions,
                   min_biomass=.1, n_knockouts=1, dual_maximum=1000.,
-                  n_knockouts_required=False, type='max-min'):
-    """Use this implementation. It is more correct."""
+                  n_knockouts_required=False):
+    """Sets up OptAux problem for optimization."""
     model = model.copy()
 
     decision_variable_ids = [_add_decision_variable(model, r_id).id

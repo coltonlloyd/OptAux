@@ -1,7 +1,7 @@
 import os
 import numpy as np
 from itertools import combinations
-from OptAux.resources import possible_uptake
+from optaux.resources import possible_uptake
 
 #ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
 

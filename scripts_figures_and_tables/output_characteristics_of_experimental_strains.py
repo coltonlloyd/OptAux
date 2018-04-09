@@ -1,7 +1,7 @@
 import cobra
 import pandas as pd
-from OptAux import resources
-from OptAux.core.characterize_auxotrophs import (
+from optaux import resources
+from optaux.core.characterize_auxotrophs import (
     get_auxotrophic_mets_per_ko, get_blocked_biomass, and_join_strings,
     to_string, gene_names_per_kos, genes_per_kos, id_to_name)
 resource_dir = resources.__path__[0]

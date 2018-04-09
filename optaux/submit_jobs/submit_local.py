@@ -2,8 +2,8 @@ from multiprocessing import Pool
 import os
 from os.path import abspath, dirname
 import numpy as np
-from OptAux import ME_community
-from OptAux.resources import possible_uptake
+from optaux import me_community
+from optaux.resources import possible_uptake
 import subprocess
 from itertools import combinations
 
@@ -30,15 +30,13 @@ for kos1, kos2 in combinations(list(ko_to_rxns.values()), 2):
     ko1s.append(kos1)
     ko2s.append(kos2)
 
-ko2s = ko2s[0:1]
-ko1s = ko1s[0:1]
 #ko1s = [['HISTD']]
 #ko2s = [['CS']]
 #modes = ['unmodeled_sweep', 'secretion_keff_sweep', 'metabolite_limitation']
 modes = ['default']
 
-sim_script_dir = ME_community.__path__[0]
-simulation_directories = '/home/sbrg-cjlloyd/mee_aux_compare'
+sim_script_dir = me_community.__path__[0]
+simulation_directories = '/home/meuser/'
 
 # The communities cannot grow when exchanging these metabolites
 skip_mets = ['EX_fe3dcit_e', 'EX_fe3dcit_e', 'EX_progly_e', 'EX_23ccmp_e',
@@ -52,7 +50,7 @@ def run_pool(function, values, processes=4):
 
 def submit_job(value_tuple):
     pair, f, q1, q2, mode, restrict, k1, k2 = value_tuple
-    os.system("python2.7 %s/simulate_model.py %s %s %s %s %s "
+    os.system("python3.6 %s/simulate_model.py %s %s %s %s %s "
               "--Restrict_crossfeeding %s --keff_transporter_1 %s "
               "--keff_transporter_2 %s" %
               (sim_script_dir, pair, f, q1, q2, mode, restrict, k1, k2))
@@ -141,9 +139,9 @@ if __name__ == '__main__':
                 q2 = .75
                 k1 = 1.
                 k2 = 1.
-                for f in np.linspace(.05, .95, 1):
+                for f in np.linspace(.05, .95, 10):
                     if not does_sim_exist(pair, mode, f, q1, q2, k1, k2):
                         values.append((pair, f, q1, q2, mode,
                                        False, k1, k2))
 
-    run_pool(submit_job, values, processes=2)
+    run_pool(submit_job, values, processes=3)

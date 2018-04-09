@@ -24,9 +24,9 @@ import argparse
 # ------------------------------------------------------------
 # Modules to Manipulate Model
 # ------------------------------------------------------------
-from OptAux.ME_community.run_ALE_pairs import setup_simulation
-from OptAux import resources
-from OptAux.resources.possible_uptake import get_possible_uptake
+from optaux.me_community.run_ALE_pairs import setup_simulation
+from optaux import resources
+from optaux.resources.possible_uptake import get_possible_uptake
 import cobra
 # ************************************************************
 # Parameters

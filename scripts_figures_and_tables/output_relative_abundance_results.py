@@ -5,7 +5,7 @@ from os.path import abspath, dirname, exists
 import pandas as pd
 from matplotlib import pyplot as plt
 
-from OptAux.Ale_Resquencing import relative_abundance_plotting, \
+from optaux.ale_resequencing import relative_abundance_plotting, \
     relative_abundance
 
 here = dirname(abspath(__file__))

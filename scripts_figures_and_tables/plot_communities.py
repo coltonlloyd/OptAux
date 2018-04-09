@@ -20,11 +20,11 @@ from IPython import embed
 from textwrap import wrap
 
 import cobra
-from OptAux.ME_community.me_model_community import (make_binary_community_me,
+from optaux.me_community.me_model_community import (make_binary_community_me,
                                                     scale_exchange_fluxes)
-from OptAux.ME_community.run_ALE_pairs import restrict_uptake
-from OptAux import resources
-from OptAux.resources import possible_uptake
+from optaux.me_community.run_ALE_pairs import restrict_uptake
+from optaux import resources
+from optaux.resources import possible_uptake
 
 here = os.path.abspath(os.path.dirname(__file__))
 resource_dir = resources.__path__[0]
