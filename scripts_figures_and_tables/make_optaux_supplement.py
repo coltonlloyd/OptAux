@@ -1,16 +1,19 @@
 from __future__ import print_function, absolute_import, division
-import pandas as pd
-import cobra
-from optaux.core.run_optaux import run_optaux
+
 from datetime import date
 
-from optaux.core.characterize_auxotrophs import (
+import pandas as pd
+import cobra
+
+from optaux.core.run_optaux import run_optaux
+from optaux import resources
+from optaux.helper_functions.characterize_auxotrophs import (
     get_auxotrophic_mets_per_ko, get_blocked_biomass, and_join_strings,
     to_string, gene_names_per_kos, genes_per_kos, id_to_name)
 
 
 if __name__ == '__main__':
-    resource_dir = '/home/sbrg-cjlloyd/OptAux/OptAux/resources/'
+    resource_dir = resources.__path__[0]
     model_loc = resource_dir + 'iJO1366.json'
     false_positive_loc = resource_dir + 'OrthKOEssential.csv'
 
@@ -100,6 +103,6 @@ if __name__ == '__main__':
                 ans['Date'] = str(date.today())
 
                 df = df.append(ans, ignore_index=True)
-                df.to_excel('/home/sbrg-cjlloyd/Desktop/trace_%.2f.xls' % trace)
+                df.to_excel('optaux_intermediate_trace_%.2f.xls' % trace)
         df.to_excel(excel_writer=writer, sheet_name='%.2f Trace' % trace)
     writer.save()

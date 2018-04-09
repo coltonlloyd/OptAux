@@ -15,8 +15,9 @@ source /home/colton/.virtualenvs/optaux/bin/activate
 python /home/colton/OptAux/OptAux/ME_community/simulate_model.py %s %s %s %s
 """
 here = dirname(abspath(__file__))
-def apply_torque(pair, f, q1, q2):
 
+
+def apply_torque(pair, f, q1, q2):
     scrip_dir = abspath(join(here, 'commands'))
     job_name = '_'.join([pair, str(f), str(q1), str(q2)])
     job_file = join(scrip_dir, '%s.sh' % job_name)

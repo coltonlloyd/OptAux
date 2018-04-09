@@ -2,7 +2,7 @@ from __future__ import print_function, absolute_import, division
 
 import pandas as pd
 
-from optaux.core.characterize_auxotrophs import get_auxotrophic_mets_per_ko
+from optaux.helper_functions import get_auxotrophic_mets_per_ko
 from optaux import resources
 
 resource_dir = resources.__path__[0]

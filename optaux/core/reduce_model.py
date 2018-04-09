@@ -48,7 +48,7 @@ def reduce_model(model_cons, tol=1e-8, irreversible_flag=False,
     model_red = model_cons.copy()
     # cobra.manipulation.convert_to_irreversible(model)
     # cobra.manipulation.convert_to_irreversible(model_red)
-    cobra.io.save_json_model(model_red, 'model.json')
+
     fva_sol = cobra.flux_analysis.flux_variability_analysis(model, solver=solver,
                                                             fraction_of_optimum=0.)
 
@@ -68,11 +68,9 @@ def reduce_model(model_cons, tol=1e-8, irreversible_flag=False,
     model.objective = objective
     model_red.objective = objective
 
-    cobra.io.save_json_model(model_red, 'model_red.json')
+    model_ok = check_consistency(model, model_red, tol)
 
-    modelOK = check_consistency(model, model_red, tol)
-
-    if not modelOK:
+    if not model_ok:
         model_red = expand_bounds(model, model_red, tol)
 
     return model_red

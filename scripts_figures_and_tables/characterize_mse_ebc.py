@@ -1,7 +1,7 @@
 import pandas as pd
 from os.path import expanduser, dirname
 
-from optaux.core.characterize_auxotrophs import get_avg_flux_required
+from optaux.helper_functions import get_avg_flux_required
 from optaux import resources
 import cobra
 import numpy as np

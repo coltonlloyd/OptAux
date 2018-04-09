@@ -22,5 +22,6 @@ def print_mets_for_auxs_fig_3():
                 print(kos, substrate_rxn.id, substrate_rxn.name)
             substrate_rxn.lower_bound = 0
 
+
 if __name__ == '__main__':
     print_mets_for_auxs_fig_3()
