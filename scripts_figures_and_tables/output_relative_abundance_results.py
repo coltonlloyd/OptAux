@@ -12,6 +12,7 @@ here = dirname(abspath(__file__))
 if __name__ == '__main__':
     table_save_loc = '%s/relative_abundance/tables' % here
     fig_save_loc = '%s/relative_abundance/figures' % here
+    alignment_loc = '/media/hard_drive/for_ale_analytics/aux/'
 
     fig, axes = plt.subplots(2, 3, figsize=(15, 10), sharey=True, sharex='col')
     print(axes)
@@ -26,7 +27,8 @@ if __name__ == '__main__':
         cov_file = \
             '%s/abundance_by_coverage_%s.csv' % (table_save_loc, pair)
         if not exists(cov_file):
-            relative_abundance.get_coverage_abundance_df(table_save_loc)
+            relative_abundance.get_coverage_abundance_df(table_save_loc,
+                                                         alignment_loc)
         cov_df = pd.read_csv(cov_file, index_col=0, header=None)
 
         relative_abundance_plotting.plot_abundance_df(char_df, s1, s2,
@@ -41,6 +43,7 @@ if __name__ == '__main__':
         axes[i][0].set_ylabel('Fractional Stain Abundance')
 
     fig.savefig('%s/coverage.png' % fig_save_loc)
+    fig.savefig('/home/sbrg-cjlloyd/Dropbox/coverage.eps', dpi=1000)
 
     # Normalize = True ensure abundance predictions add to 1
     relative_abundance_plotting.plot_pairwise_comparison_of_preditions(

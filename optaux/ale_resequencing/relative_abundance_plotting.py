@@ -31,10 +31,10 @@ plt.rcParams['xtick.major.size'] = 5
 plt.rcParams['xtick.major.width'] = 2
 plt.rcParams['axes.grid'] = False
 
-strain_to_ko = {'hisD': r'$\Delta \mathrm{hisD}$',
-                'pyrC': r'$\Delta \mathrm{pyrC}$',
-                'gltA': r'$\Delta \mathrm{gltA} \Delta \mathrm{prpC}$',
-                'gltB': r'$\Delta \mathrm{gdhA} \Delta \mathrm{gltB}$'}
+strain_to_ko = {'hisD': r'$\Delta \mathit{hisD}$',
+                'pyrC': r'$\Delta \mathit{pyrC}$',
+                'gltA': r'$\Delta \mathit{gltA} \Delta \mathit{prpC}$',
+                'gltB': r'$\Delta \mathit{gdhA} \Delta \mathit{gltB}$'}
 
 
 def _get_x_label_array(df):

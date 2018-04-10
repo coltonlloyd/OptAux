@@ -24,7 +24,7 @@ if __name__ == '__main__':
                     index_col=0).T.values[0]
     # Load model for OptAux
     cons_model = cobra.io.load_json_model(model_loc)
-    writer = pd.ExcelWriter('Supplement_1_optaux_solutions_final.xls')
+    writer = pd.ExcelWriter('supplement_1_optaux_solutions.xls')
 
     # Load known model false positives. Exclude these from possible knockouts
 

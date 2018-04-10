@@ -53,7 +53,7 @@ def _fill_missing_df_entries(df, pair):
     df.loc['3,178,254', 'AUX hisD pyrC A4 F24 I0 R1'] = 0.  # not found
     df.loc['3,178,254', 'AUX hisD pyrC A4 F24 I0 R2'] = .088
 
-    # envZ (shouldn't be 100%)
+    # envZ (shouldn't be 100%, breseq rounds values to 100 in some cases)
     df.loc['3,529,197', 'AUX hisD pyrC A4 F11 I0 R2'] = .719
     df.loc['3,529,197', 'AUX hisD pyrC A4 F17 I0 R1'] = .915
     df.loc['3,529,197', 'AUX hisD pyrC A4 F24 I0 R2'] = .913
@@ -128,9 +128,10 @@ def get_characteristic_abundance_df(save_loc):
                 return True
             return False
 
-        df_raw = pd.read_excel('%s/key_mutations_final.xls' % resource_dir,
-                               sheetname='_'.join([strain_1_name,
-                                                   strain_2_name]))
+        df_raw = \
+            pd.read_csv('%s/resequencing_data/AUX %s %s Mutation Table.csv' %
+                        (resource_dir, strain_1_name, strain_2_name))
+
         df_raw.set_index('Position', inplace=True)
         df = df_raw[[i for i in df_raw.columns if not _drop_column(i)]]
 
@@ -165,17 +166,17 @@ def get_characteristic_abundance_df(save_loc):
             _append_rows_to_abundance_df(out_df, strain_1_name, strain_2_name,
                                          strain_1_abundances,
                                          strain_2_abundances)
-
-    out_df.to_excel('%s/StrainAbundances_Strain1.xlsx' % resource_dir)
+    print(out_df)
+    out_df.to_excel('%s/characteristic_abundances_strain1.xlsx' % save_loc)
     stats_df.to_csv('%s/characteristic_hisD_abundance_stats.csv' % save_loc)
 
 
-def get_coverage_abundance_df(save_loc):
+def get_coverage_abundance_df(save_loc, alignment_loc):
     out_df = pd.DataFrame()
     stats_df = pd.DataFrame()
 
-    root = '/media/hard_drive/for_ale_analytics/aux/'
-    seqs = SeqIO.read('%s/resequencing_data/CP009273_1.gb' % here, 'gb')
+    seqs = SeqIO.read('%s/resequencing_data/CP009273_1.gb' % resource_dir,
+                      'gb')
 
     a = {}
     for feat in seqs.features:
@@ -190,11 +191,12 @@ def get_coverage_abundance_df(save_loc):
         strain_1_name = pair.split('_')[0]
         strain_2_name = pair.split('_')[1]
 
-        for file in glob.glob(
-                        root + 'aux_%s/breseq/ale/*/data/reference.bam' % pair):
+        for file in glob.glob(alignment_loc +
+                              'aux_%s/breseq/ale/*/data/reference.bam' % pair):
             ale_name = file.split('ale/')[1].split('/data')[0]
             summary_df = \
-                pd.read_html(root + 'aux_%s/breseq/ale/%s/output/summary.html'
+                pd.read_html(alignment_loc +
+                             'aux_%s/breseq/ale/%s/output/summary.html'
                              % (pair, ale_name))
             fit_mean = float(summary_df[2][4][1])  # position of fit mean value
 
@@ -254,5 +256,5 @@ def get_coverage_abundance_df(save_loc):
                                          abundance_df.loc[strain_1_name].values,
                                          abundance_df.loc[strain_2_name].values)
 
-    out_df.to_excel('%s/coverage_StrainAbundances_Strain1.xlsx' % resource_dir)
+    out_df.to_excel('%s/coverage_abundances_strain1.xlsx' % save_loc)
     stats_df.to_csv('%s/coverage_hisD_abundance_stats.csv' % save_loc)
