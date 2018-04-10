@@ -9,6 +9,6 @@ setup(name='OptAux',
       author='Colton Lloyd',
       author_email='cjlloyd@ucsd.edu',
       url='https://github.com/coltonlloyd/OptAux',
-      install_requires=[],
+      install_requires=['openpyxl', 'pandas'],
       packages=['optaux'],
       )

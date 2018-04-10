@@ -2,9 +2,12 @@ import pandas as pd
 
 from glob import glob
 
+from optaux import resources
 
-writer = pd.ExcelWriter('key_mutations_final.xls')
-for resequencing in glob('./resequencing_data/*Table.csv'):
+
+resource_dir = resources.__path__[0]
+writer = pd.ExcelWriter('key_mutations.xls', engine='openpyxl')
+for resequencing in glob('%s/resequencing_data/*Table.csv' % resource_dir):
     pair = '_'.join(resequencing.split('/')[-1].split(' ')[1:3])
 
     # load df
