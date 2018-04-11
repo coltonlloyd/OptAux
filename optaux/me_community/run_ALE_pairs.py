@@ -13,9 +13,10 @@ from optaux.me_community.me_model_community import (
     knock_out_reactions,
     change_unmodeled_protein_fraction, change_secretion_keff,
     scale_exchange_fluxes)
+from optaux import resources
 
 here = os.path.dirname(os.path.abspath(__file__))
-resource_dir = here.replace('ME_community', 'resources')
+resource_dir = resources.__path__[0]
 ijo = cobra.io.load_json_model(os.path.join(resource_dir, 'iJO1366.json'))
 
 # make IDs compatible with bigg ids

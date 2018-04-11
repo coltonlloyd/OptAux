@@ -68,8 +68,8 @@ plt.rcParams['axes.prop_cycle'] = cycler(color=colors)
 red_colors = list(red.range_to(Color('#12255A'), 10))
 
 cov_abundance_df = \
-        pandas.read_excel('%s/coverage_StrainAbundances_Strain1.xlsx' %
-                          resource_dir, index_col=0, header=None)
+    pandas.read_excel('%s/relative_abundance/tables/coverage_abundances_strain1.xlsx' %
+                      here, index_col=0, header=None)
 
 rxn_to_gene = {'CS': r'$\Delta gltAprpC$',
                'HISTD': r'$\Delta hisD$',
@@ -587,13 +587,13 @@ def make_sweeps_box_plots(max_gr_dict, abundance_df, plot_kind,
 
 if __name__ == '__main__':
     abundance_df = \
-        pandas.read_excel('%s/StrainAbundances_Strain1.xlsx' % resource_dir,
+        pandas.read_excel('%s/relative_abundance/tables/characteristic_abundances_strain1.xlsx' % here,
                           index_col=0, header=None)
 
     plot_kinds = ['default', 'secretion_keff_sweep',
                   'metabolite_limitation', 'unmodeled_sweep']
-    #plot_kinds = ['metabolite_limitation', 'secretion_keff_sweep']
-    plot_kinds = ['metabolite_limitation', 'secretion_keff_sweep']
+
+    plot_kinds = ['default', 'metabolite_limitation', 'secretion_keff_sweep']
     normalize_to_max = False
     main_text_figure = True
 
