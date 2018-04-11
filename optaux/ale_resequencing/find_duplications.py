@@ -203,7 +203,7 @@ def return_gene_duplicates(pair, coverage_dict, cutoff=1.25):
     return all_dup_genes
 
 
-def return_coverage_dict(pair, genome_size=4631468):
+def return_coverage_dict(alignment_loc, pair, genome_size=4631468):
     """Return dictionary of {ale:{flask:{isolate:{replicate: coverage_list}}}
 
     where coverage_list is a list of integers corresponding to the number of
@@ -212,8 +212,8 @@ def return_coverage_dict(pair, genome_size=4631468):
     """
     all_coverage = {}
 
-    for file in glob.glob(
-                    root + 'aux_%s/breseq/ale/*/data/reference.bam' % pair):
+    for file in glob.glob(alignment_loc +
+                          'aux_%s/breseq/ale/*/data/reference.bam' % pair):
 
         # Get the ale information
         ale_name = [str(int(i)) for i in
@@ -320,7 +320,6 @@ def add_gene_positions(ax, ymax, kind='all'):
 
         ax.plot([2749316, 2749316], [0, ymax], 'k--', linewidth=.5)  # CP4-57
         ax.plot([2771345, 2771345], [0, ymax], 'k--', linewidth=.5)  # CP4-57
-
 
     elif kind == 'gltJ':
         ax.text(1394503, 24.5, 'abgT\n$\downarrow$', ha='center',
@@ -456,8 +455,6 @@ def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
                         kind = 'endclone'
                     add_gene_positions(ax, ymax, kind='all')
 
-
-
                     plot_and_format(ax, xy[:, 0], xy[:, 1], genome_size, ale,
                                     flask, isolate, replicate, mean)
 
@@ -488,23 +485,3 @@ def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
 
     save_fig(fig, pair, '', unfiltered=unfiltered)
     save_fig(fig_gltJ, pair, 'gltJ', unfiltered=unfiltered)
-
-
-if __name__ == '__main__':
-    root = '/media/hard_drive/for_ale_analytics/aux/'
-
-    for pair in ['hisD_gltB', 'hisD_pyrC', 'hisD_gltA']:
-        # coverage_dict = {'pair': {'ale': {'flask': {'isolate': {'replicate':
-        # [coverage_per_position]}}}}}
-        if not os.path.isfile('./%s_coverage_dict.json' % pair):
-            coverage_dict = return_coverage_dict(pair)
-        else:
-            print('using existing coverage dict')
-            with open('%s_coverage_dict.json' % pair, 'r') as f:
-                coverage_dict = json.load(f)
-
-        #duplicated_genes = return_gene_duplicates(pair, coverage_dict)
-        #with open('/home/sbrg-cjlloyd/Desktop/duplicated_genes.json', 'w') as f:
-        #    json.dump(duplicated_genes, f)
-
-        plot_coverage(pair, coverage_dict, sections=50000, unfiltered=True)

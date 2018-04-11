@@ -22,7 +22,7 @@ run OptAux for 4 `trace_metabolite_thresholds` (0, .01, .1, and 2) and
 output the results in `supplement_1_optaux_solutions.xls`
 
 ### Relative abundance approximations
-By running `python output_relative_abundance_results.py` this will:
+Running `python output_relative_abundance_results.py` will:
 
 1. Check if `abundance_by_characteristic_[pair_name].csv`
 and `abundance_by_coverage_[pair_name].csv` are located in
@@ -31,19 +31,29 @@ not, these CSVs will be created using the information in the read Bowtie2
 alignment BAM files for all sequencing samples (not provided for now)
 and breseq generated mutation calls found in
 `[optaux]/optaux/resources/resequencing_data/AUX [pair_name] Mutation Table.csv`
+      -  Some values in the Mutation Tables for the characteristic strain
+      mutations are missing because breseq
+      rounds high/low mutation frequencies to 100% or 0%, respectively.
+      These values are filled in with their frequencies in
+      `relative_abundance.py`
 
 2. Output bar charts of the characteristic mutation/alignment coverage
 base approximations of relative strain abundances in
 `[optaux]/scripts_figures_and_tables/relative_abundance/figures` as well
 as a comparison of the predictions based on each method.
 
+
+### Duplications
+
+
 ## Software
 The following software and versions were used for publication:
 
 - Python 2.7/3.6
 - An MILP solver. We recommend Gurobi.
-- [cobrame](https:/github.com/sbrg/cobrame) v0.0.7
-- [ecolime](https:/github.com/sbrg/ecolime) v0.0.7
+- COBRApy <= v0.5.11
+- [COBRAme](https:/github.com/sbrg/cobrame) v0.0.7
+- [ECOLIme](https:/github.com/sbrg/ecolime) v0.0.7
 - [solvempy](https:/github.com/sbrg/solvemepy) v1.0.1
     - Including the qMINOS solver
 - pysam v0.14.1
