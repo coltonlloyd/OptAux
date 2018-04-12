@@ -81,4 +81,4 @@ if __name__ == '__main__':
                                           q1, q2, k1, k2):
                         values.append((pair, f, q1, q2, mode, False, k1, k2))
 
-    #run_pool(submit_job, values, processes=2)
+    run_pool(submit_job, values, processes=2)

@@ -5,10 +5,12 @@ import cobrame
 from cobrame import mu
 from sympy import Basic
 import pickle
-from os.path import abspath, dirname, relpath
+from os.path import abspath, dirname
+
+from optaux import resources
 
 here = dirname(abspath(__file__))
-resource_dir = relpath('../resources', here)
+resource_dir = resources.__file__[0]
 
 
 def make_binary_community_me(model, model_cons, ME_model=True):
@@ -156,25 +158,6 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
                 rxn_rev.add_metabolites(
                     {model.metabolites.get_by_id(met_shared_id): (frac_term)},
                     combine=False)
-
-
-def apply_fractional_abundance_growth_rate(model, fraction_S1):
-    raise DeprecationWarning('DO NOT USE THIS')
-    """ Replace all 'mu' term in model to 'fraction_S1 * mu'"""
-    for rxn in model.reactions:
-        strain = '_S1' if '_S1' in rxn.id else '_S2'
-        # Determine how to handle reaction stoichiometry change
-        frac_term = fraction_S1 if strain is '_S1' else (1 - fraction_S1)
-
-        if isinstance(rxn.lower_bound, Basic):
-            rxn.lower_bound = rxn.lower_bound.subs(mu, frac_term * mu)
-        if isinstance(rxn.upper_bound, Basic):
-            rxn.upper_bound = rxn.upper_bound.subs(mu, frac_term * mu)
-
-        for met, coeff in rxn.metabolites.items():
-            if isinstance(coeff, Basic):
-                rxn.add_metabolites({met: coeff.subs(mu, mu * frac_term)},
-                                    combine=False)
 
 
 def change_unmodeled_protein_fraction(model, fraction_S1=0,

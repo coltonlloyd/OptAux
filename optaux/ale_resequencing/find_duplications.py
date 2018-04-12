@@ -15,6 +15,7 @@ from matplotlib import pyplot as plt
 import pandas as pd
 from statsmodels.nonparametric.smoothers_lowess import lowess
 
+from optaux import resources
 
 plt.rcParams['xtick.labelsize'] = 25
 plt.rcParams['ytick.labelsize'] = 25
@@ -35,9 +36,9 @@ plt.rcParams['font.size'] = 20
 
 iJO1366 = cobra.test.create_test_model('ecoli')
 
-genbank = './resequencing_data/CP009273_1.gb'
-
-with open('/home/sbrg-cjlloyd/colton_toolbox/colton_toolbox/resources/gene_name_to_gb_info.json', 'r') as f:
+resource_dir = resources.__path__[0]
+genbank = '%s/resequencing_data/CP009273_1.gb' % resource_dir
+with open('%s/gene_name_to_gb_info.json' % resource_dir, 'r') as f:
     g_to_info = json.load(f)
 
 
@@ -267,29 +268,9 @@ def return_coverage_dict(alignment_loc, pair, genome_size=4631468):
 def add_gene_positions(ax, ymax, kind='all'):
     if kind == 'all':
         pass
-        # ax.text(2419484, 0, r'$\uparrow$\nhisJ', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-#
-        # ax.text(681984, 0, r'$\uparrow$\ngltJ', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.plot([681984, 681984], [0, ymax], 'k--', linewidth=.5)
-        # ax.text(1505910, 0, r'$\uparrow$\n        ydcS\n', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.plot([1505910, 1505910], [0, ymax], 'k--', linewidth=.5)
-        # ax.text(1394503, 0, r'$\uparrow$\nabgT', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.text(3676160, 0, r'$\uparrow$\ndctA', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.text(3352556, 0, r'$\uparrow$\ngltD', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.text(4165871, 0, r'$\uparrow$\ntufB', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.text(1201152, 0, r'$\uparrow$\ne14\n\n', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
-        # ax.text(2985452, 0, r'$\uparrow$\nyge', ha='center',
-        #         va='bottom', fontdict={'fontsize': 15})
+
         #
-        # Prophages
+    # Prophages
     elif kind == 'endclone':
         ax.plot([258669, 258669], [0, ymax], 'k--', linewidth=.5)  # CP4-6
         ax.plot([292976, 292976], [0, ymax], 'k--', linewidth=.5)  # CP4-6

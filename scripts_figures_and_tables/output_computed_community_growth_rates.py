@@ -375,10 +375,7 @@ if __name__ == '__main__':
     fig, axes = plt.subplots(3, 3, figsize=(15, 12), sharey='row',
                              sharex='col')
     for i, plot_kind in enumerate(plot_kinds):
-        tar_filename = '%s/community_me_sims/%s.tar.gz' % (here, plot_kind)
-        if os.path.exists(tar_filename):
-            tarfile.open(tar_filename).extractall('%s/community_me_sims' %
-                                                  here)
+
         # Get location of simulation fluxes based on simulation type
         sim_loc = sim_location + plot_kind
         make_computational_abundance_plots(abundance_df, sim_loc, plot_kind,

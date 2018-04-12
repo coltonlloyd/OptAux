@@ -14,13 +14,13 @@ from optaux.helper_functions.characterize_auxotrophs import (
 
 if __name__ == '__main__':
     resource_dir = resources.__path__[0]
-    model_loc = resource_dir + 'iJO1366.json'
-    false_positive_loc = resource_dir + 'OrthKOEssential.csv'
+    model_loc = resource_dir + '/iJO1366.json'
+    false_positive_loc = resource_dir + '/OrthKOEssential.csv'
 
     media_list = []
 
     lb_essential_list = \
-        pd.read_csv(resource_dir + 'LB_essential_ecocyc_iJO1366.csv',
+        pd.read_csv(resource_dir + '/LB_essential_ecocyc_iJO1366.csv',
                     index_col=0).T.values[0]
     # Load model for OptAux
     cons_model = cobra.io.load_json_model(model_loc)
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     false_positives = pd.read_csv(false_positive_loc,
                                   index_col=0).index.values
 
-    for trace in [2]:
+    for trace in [0, .01, .1, 2]:
         df = pd.DataFrame(columns=['Target Metabolite',
                                    'Reaction Knockouts',
                                    'Gene Knockouts',

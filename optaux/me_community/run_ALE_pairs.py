@@ -1,12 +1,10 @@
 from __future__ import print_function, division
 
-from qminospy.me1 import ME_NLP1
-import os
-import numpy as np
-import pandas as pd
-import pickle
-import cobra
 import json
+import os
+
+import pandas as pd
+import cobra
 
 from optaux.resources.possible_uptake import get_possible_uptake
 from optaux.me_community.me_model_community import (
@@ -101,93 +99,3 @@ def setup_simulation(me_model, ko1_list, ko2_list, fraction_strain_1,
         change_secretion_keff(me_model, secretion_reactions[1],
                               secretion_reactions[0], secretion_reaction_keffs[0],
                               secretion_reaction_keffs[1])
-
-
-def solve_community_model(me_model, hs, precision=1e-2, mumax=2.5):
-    me_nlp = ME_NLP1(me_model, growth_key='mu')
-
-    muopt, hs, xopt, cache = me_nlp.bisectmu(precision=precision, mumax=mumax,
-                                             basis=hs)
-    # Access the solution that is saved in the original minime object
-    sol = me_model.solution
-    sol.f = sol.x_dict['biomass_dilution_S1'] + sol.x_dict[
-            'biomass_dilution_S2']
-    return hs
-
-
-def get_metabolic_flux(me_model):
-    metabolic_flux = {}
-    for r in ijo.reactions:
-        for me_r in me_model.reactions.query(r.id):
-            if '_Shared' in me_r.id:
-                continue
-            suffix = '_S1' if '_S1' in me_r.id else '_S2'
-            sign = -1 if '_REV_' in me_r.id else 1
-            if abs(me_r.x) > 1e-10:
-                metabolic_flux[r.id + suffix] = sign * me_r.x
-    return metabolic_flux
-
-
-if __name__ == '__main__':
-    ko1s = [['CS'], ['CS'], ['CS'], ['HISTD'], ['HISTD'], ['DHORTS']]
-    ko2s = [['GLUDy', 'GLUSy'], ['HISTD'], ['DHORTS'],
-            ['GLUDy', 'GLUSy'], ['DHORTS'], ['GLUDy', 'GLUSy']]
-
-    unmodeled_fraction_list = [.4]
-    fraction_strain1_list = np.linspace(.1, .9, 10)
-
-    ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
-    ko2s = [['DHORTS'], ['GLUDy', 'GLUSy'], ['CS']]
-
-   # ko1s = [['HISTD']]
-   # ko2s = [['CS']]
-
-    scale_secretion = True
-    scale_uptake = True
-    restrict_uptake_flag = False
-
-    base_loc = os.path.join(here, 'no_abundance_based_unmodeled_scale_uptake_redo')
-    for ko1_list, ko2_list in zip(ko1s, ko2s):
-        if 'HISTD' not in ko1_list and 'HISTD' not in ko2_list:
-            continue
-        # initialize basis for solving
-        hs = None
-
-        pair_name = '-'.join(ko1_list) + ':' + '-'.join(ko2_list)
-        print('Running simulations for %s pair' % pair_name)
-
-        dir_name = '/'.join([base_loc, pair_name])
-        if not os.path.isdir(dir_name):
-            os.mkdir(dir_name)
-
-        for q in unmodeled_fraction_list:
-            fraction_dir = '%i_unmodeled_protein' % (q * 100.)
-            output_dir = '/'.join([base_loc, pair_name, fraction_dir])
-            print('Saving simulations in %s' % output_dir)
-
-            if not os.path.isdir(output_dir):
-                os.mkdir(output_dir)
-
-            sol_list, gr_list = [], []
-
-            for fraction in fraction_strain1_list:
-                with open(os.path.join(resource_dir,
-                                       "iJL1678b_community.pickle"), 'rb') as f:
-                    me = pickle.load(f)
-
-                with open('./basis.pickle', 'rb') as f:
-                    hs = pickle.load(f)
-                setup_simulation(me, ko1_list, ko2_list, fraction,
-                                 unmodeled_protein_fractions=[q, q],
-                                 scale_secretion=scale_secretion,
-                                 scale_uptake=scale_uptake,
-                                 restrict_uptake_flag=restrict_uptake_flag)
-                hs = solve_community_model(me, hs, precision=1e-4, mumax=2.5)
-                with open('./basis.pickle', 'wb') as f:
-                    pickle.dump(hs, f)
-                with open(output_dir + '/%.2f_frac_strain1.pickle' %
-                          fraction, 'wb') as f:
-                    pickle.dump(me.solution, f)
-                with open(output_dir + '/%.2f_frac_strain1_flux.json' %
-                          fraction, 'w') as f:
-                    json.dump(get_metabolic_flux(me), f)
