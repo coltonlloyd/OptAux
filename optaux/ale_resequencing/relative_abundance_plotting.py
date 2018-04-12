@@ -6,30 +6,6 @@ from collections import Counter
 from matplotlib import pyplot as plt
 import numpy as np
 import pandas as pd
-import seaborn as sns
-
-pwd = dirname(abspath(__file__))
-colors = sns.color_palette(palette='muted')
-
-plt.rcParams['font.size'] = 15.
-plt.rcParams['font.weight'] = 'bold'
-
-plt.rcParams['legend.fontsize'] = 15.0
-plt.rcParams['legend.framealpha'] = .6
-plt.rcParams['xtick.labelsize'] = 20
-plt.rcParams['ytick.labelsize'] = 20
-plt.rcParams['axes.labelsize'] = 20
-plt.rcParams['axes.titlesize'] = 20
-plt.rcParams['axes.facecolor'] = 'white'
-plt.rcParams['axes.edgecolor'] = 'black'
-plt.rcParams['axes.linewidth'] = 2
-plt.rcParams['grid.color'] = 'white'
-plt.rcParams['figure.edgecolor'] = 'black'
-plt.rcParams['ytick.major.size'] = 5
-plt.rcParams['ytick.major.width'] = 2
-plt.rcParams['xtick.major.size'] = 5
-plt.rcParams['xtick.major.width'] = 2
-plt.rcParams['axes.grid'] = False
 
 strain_to_ko = {'hisD': r'$\Delta \mathit{hisD}$',
                 'pyrC': r'$\Delta \mathit{pyrC}$',
@@ -136,7 +112,7 @@ def plot_pairwise_comparison_of_preditions(table_loc, save_loc,
             0, 1]
         cor2 = df[['%s_characteristic' % s2, '%s_coverage' % s2]].corr().iloc[
             0, 1]
-        ax.plot([0, 1], [0, 1])
+        ax.plot([0, 1], [0, 1], c='r')
         ax.legend()
         ax.set_xlabel('Characteristic Mutations')
 

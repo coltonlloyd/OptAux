@@ -4,9 +4,14 @@ from os.path import abspath, dirname, exists
 
 import pandas as pd
 from matplotlib import pyplot as plt
+import seaborn as sns
 
 from optaux.ale_resequencing import relative_abundance_plotting, \
     relative_abundance
+from optaux.resources.update_mpl_rcparams import update_rcparams
+
+update_rcparams()
+plt.rcParams['axes.facecolor'] = 'white'
 
 here = dirname(abspath(__file__))
 if __name__ == '__main__':
@@ -43,7 +48,6 @@ if __name__ == '__main__':
         axes[i][0].set_ylabel('Fractional Stain Abundance')
 
     fig.savefig('%s/coverage.png' % fig_save_loc)
-    fig.savefig('/home/sbrg-cjlloyd/Dropbox/coverage.eps', dpi=1000)
 
     # Normalize = True ensure abundance predictions add to 1
     relative_abundance_plotting.plot_pairwise_comparison_of_preditions(

@@ -1,39 +1,19 @@
+from __future__ import print_function, division, absolute_import
+
 from multiprocessing import Pool
 import os
-from os.path import abspath, dirname
+
 import numpy as np
+
 from optaux import me_community
 from optaux.resources import possible_uptake
-import subprocess
-from itertools import combinations
 
 
 ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
 
 ko2s = [['CS'], ['GLUDy', 'GLUSy'], ['DHORTS']]
 
-# From Mee et al.
-ko_to_rxns = {'hisB': ['HISTP', 'IGPDH'],
-              'cysE': ['SERAT'],
-              'pheA': ['PPNDH'],
-              'lysA': ['DAPDC'],
-              'leuB': ['IPMD'],
-              'metA': ['HSST'],
-              'argA': ['ACGS'],
-              'thrC': ['THRS', '4HTHRS'],
-              'trpC': ['PRAIi', 'IGPS'],
-              'tyrA': ['PPND']}
-
-ko2s = []
-ko1s = []
-for kos1, kos2 in combinations(list(ko_to_rxns.values()), 2):
-    ko1s.append(kos1)
-    ko2s.append(kos2)
-
-#ko1s = [['HISTD']]
-#ko2s = [['CS']]
-#modes = ['unmodeled_sweep', 'secretion_keff_sweep', 'metabolite_limitation']
-modes = ['default']
+modes = ['unmodeled_sweep', 'secretion_keff_sweep', 'metabolite_limitation']
 
 sim_script_dir = me_community.__path__[0]
 simulation_directories = '/home/meuser/'
@@ -77,7 +57,7 @@ def does_sim_exist(pair, mode, f, q1, q2, k1, k2, met=None):
     if os.path.exists(file_loc):
         return True
     else:
-        print(file_loc)
+        print('Output in ', file_loc)
         return False
 
 

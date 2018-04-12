@@ -3,28 +3,9 @@ import numpy as np
 from itertools import combinations
 from optaux.resources import possible_uptake
 
-#ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
+ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
 
-#ko2s = [['GLUDy', 'GLUSy'], ['DHORTS'], ['CS']]
-
-# From Mee et al.
-ko_to_rxns = {'hisB': ['HISTP', 'IGPDH'],
-              'cysE': ['SERAT'],
-              'pheA': ['PPNDH'],
-              'lysA': ['DAPDC'],
-              'leuB': ['IPMD'],
-              'metA': ['HSST'],
-              'argA': ['ACGS'],
-              'thrC': ['THRS', '4HTHRS'],
-              'trpC': ['PRAIi', 'IGPS'],
-              'tyrA': ['PPND']}
-
-ko2s = []
-ko1s = []
-
-for kos1, kos2 in combinations(list(ko_to_rxns.values()), 2):
-    ko1s.append(kos1)
-    ko2s.append(kos2)
+ko2s = [['GLUDy', 'GLUSy'], ['DHORTS'], ['CS']]
 
 modes = ['default']
 
