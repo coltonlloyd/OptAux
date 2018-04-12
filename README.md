@@ -10,7 +10,7 @@ docker build -t optaux:everything .
 ```
 
 this will install everything needed to reproduce most of the results outlined
-below including the community iJL1678b-ME model.
+below including the community iJL1678b ME-model.
 
 ## Reproducing Figures/Tables
 ### OptAux simulations
