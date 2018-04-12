@@ -7,7 +7,7 @@ import tarfile
 from optaux.ale_resequencing.find_duplications import (return_coverage_dict,
                                                        plot_coverage,
                                                        return_gene_duplicates)
-'coverage_nbinom_mean_parameter'
+
 here = os.path.dirname(os.path.abspath(__file__))
 if __name__ == '__main__':
     alignment_loc = ''  # alignment files not yet available

@@ -81,9 +81,9 @@ def get_average_and_stdev_of_sections(coverage_list, genome_size,
     return mean_list, std_list
 
 
-def return_summary_file_loc(pair, ale, flask, isolate, replicate):
-    path = root + 'aux_%s/breseq/ale/%s-%s-%s-%s/output/summary.html' % \
-           (pair, ale, flask, isolate, replicate)
+def return_summary_file_loc(ale, flask, isolate, replicate):
+    path = '%s/resequencing_data/%s-%s-%s-%s/summary.json' % \
+           (resource_dir, ale, flask, isolate, replicate)
     if os.path.exists(path):
         return path
     else:
@@ -92,13 +92,11 @@ def return_summary_file_loc(pair, ale, flask, isolate, replicate):
 
 def get_fit_mean_from_breseq(path):
     print(path)
-
+    with open(path, 'r') as f:
+        summary = json.load(f)
     # The replicate is either 1 or 2 try both
-    try:
-        summary = pd.read_html(path)
-    except:
-        summary = pd.read_html(path.replace('-1/', '-2/'))
-    fit_mean = float(summary[2].loc[1, 4])
+
+    fit_mean = float(summary['coverage_nbinom_mean_parameter'])
     return fit_mean
 
 
@@ -189,7 +187,7 @@ def return_gene_duplicates(pair, coverage_dict, cutoff=1.25):
                     continue
                 for replicate, read_coverage in coverage_dict[ale][flask][isolate].items():
                     print(pair, ale, flask, isolate, replicate)
-                    summary_file = return_summary_file_loc(pair, ale, flask,
+                    summary_file = return_summary_file_loc(ale, flask,
                                                            isolate, replicate)
                     mean = get_fit_mean_from_breseq(summary_file)
 
@@ -400,7 +398,7 @@ def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
                     num_cols += 1
                     print(pair, ale, flask, isolate, replicate)
                     read_coverage = coverage_dict[ale][flask][isolate][replicate]
-                    summary_file = return_summary_file_loc(pair, ale, flask,
+                    summary_file = return_summary_file_loc(ale, flask,
                                                            isolate, replicate)
                     mean = get_fit_mean_from_breseq(summary_file)
 
