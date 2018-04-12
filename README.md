@@ -44,6 +44,21 @@ as a comparison of the predictions based on each method.
 
 
 ### Duplications
+Read coverages are plotted using the alignment files produced from breseq 
+(not provided for now). They coverage of each base pair, however, is included 
+as a compressed dictionary and must first be unpacked by running `python unpack_read_coverage_dict`
+
+Running `python output_duplications.py` will:
+
+1. Check if `[optaux]/scripts_figures_and_tables/duplications/[pair_name]_coverage_dict.json`
+exists. If not it will get this dictionary using the bam files output from breseq.
+
+2. Find the genes with >80% of their base pairs above the 1.25x fit mean cutoff.
+These are compiled and output in 
+`[optaux]/scripts_figures_and_tables/duplications/duplicated_genes`
+
+3. Output the plots used to create Figure 7 and the supplementary figures in
+`[optaux]/scripts_figures_and_tables/duplications/`
 
 ### Community ME-model Sims and Plotting
 To run the community ME-model simulations the, community ME-model must first be

@@ -1,0 +1,19 @@
+,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+mraZ,1.4398690144110295,1.0,86120.0,RsmH methytransferase inhibitor,b0081,
+ykfH,1.4355449275970267,2.0,259736.0,uncharacterized protein,b4504,
+ykfB,1.5315489009628567,2.0,261330.0,CP4-6 prophage; uncharacterized protein,b0250,
+cyoD,1.4759999582121617,3.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+ninE,1.525107345970893,4.0,568376.0,DLP12 prophage; conserved protein,b0548,
+umuD,1.387286387595249,5.0,1226222.0,translesion error-prone DNA polymerase V subunit; RecA-activated auto-protease,b1183,
+fau,1.405315683498573,6.0,3049599.0,5-formyltetrahydrofolate cyclo-ligase family protein,b2912,frozenset({<Reaction FOMETRi at 0x7fcfa69973c8>})
+ibsC,1.322784300567082,6.0,3050248.0,toxic membrane protein,b4665,
+yhdU,1.3512796539806589,7.0,3405979.0,putative membrane protein,b3263,
+yrdA,1.3873763116099898,8.0,3422594.0,bacterial transferase hexapeptide domain protein,b3279,
+zntR,1.5573351174016525,9.0,3432448.0,zntA gene transcriptional activator,b3292,
+rpsJ,1.5429836879363925,10.0,3446317.0,30S ribosomal subunit protein S10,b3321,
+yhhN,1.4729177138430452,11.0,3599110.0,TMEM86 family putative inner membrane protein,b3468,
+yhjR,1.366667901003205,12.0,3689472.0,DUF2629 family protein,b3535,
+atpD,1.4826164741508223,13.0,3909352.0,"F1 sector of membrane-bound ATP synthase, beta subunit",b3732,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpE,1.4236869645509158,13.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+tufB,1.6520314310423907,14.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
+yjgZ,1.3810101001118518,15.0,4491264.0,uncharacterized protein,b4277,

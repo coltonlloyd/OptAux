@@ -1,0 +1,20 @@
+,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+ykgS,1.498015876642181,1.0,286208.0,No_gene_product,b4688,
+cyoD,1.436682724566983,2.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+rzoD,1.505443030560145,3.0,573952.0,DLP12 prophage; putative lipoprotein,b4510,
+ydaS,1.5047969190163086,4.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
+ydaY,1.4244181503365319,5.0,1419886.0,No_gene_product,b1366,
+tfaR,1.588050972595694,5.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
+yeeT,1.425137532573849,6.0,2070297.0,CP4-44 prophage; uncharacterized protein,b2003,
+ypfM,1.3208067866307407,7.0,2584192.0,stress-induced small enterobacterial protein,b4606,
+rimM,1.3819179090334501,8.0,2738728.0,ribosome maturation factor,b2608,
+yfjU,1.4589798433590084,9.0,2765360.0,No_gene_product,b2638,
+ypjJ,1.4354164162793648,10.0,2770432.0,uncharacterized protein,b4548,
+hybB,1.4209383801140223,11.0,3136344.0,putative hydrogenase 2 cytochrome b type component,b2995,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
+yhdU,1.3572015104075288,12.0,3405979.0,putative membrane protein,b3263,
+atpD,1.3792415006710892,13.0,3909352.0,"F1 sector of membrane-bound ATP synthase, beta subunit",b3732,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+yshB,1.4224781214027502,14.0,4047006.0,uncharacterized protein,b4686,
+tufB,1.7377105311932408,15.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
+bsmA,1.3225614400852386,16.0,4406272.0,bioflm peroxide resistance protein,b4189,
+insB1,1.3544396924234767,17.0,4508537.0,No_gene_product,b4576,
+yjhY,1.4229895466279614,18.0,4521984.0,No_gene_product,b4656,

@@ -1,0 +1,21 @@
+,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+rclB,1.423152383484933,1.0,314041.0,reactive chlorine species (RCS) stress resistance periplasmic protein,b0303,
+ldrA,1.509088395482178,2.0,1264640.0,"toxic polypeptide, small",b4419,
+tfaR,1.6188319143876577,3.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
+ynaE,1.7147712806686493,3.0,1428480.0,"cold shock protein, Rac prophage",b1375,
+yncH,1.3166953133013697,4.0,1521196.0,IPR020099 family protein,b1455,
+ydfK,1.6970224654076145,5.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,
+tfaQ,1.6316192078044824,5.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
+ibsA,1.3303291688622505,6.0,2146829.0,toxic membrane protein,b4667,
+yqcG,1.384752771774536,7.0,2898944.0,membrane stress resistance protein,b4682,
+mutH,1.3184319161325881,8.0,2963456.0,methyl-directed mismatch repair protein,b2831,
+yqeL,1.4390868832091646,9.0,2983177.0,uncharacterized protein,b4683,
+yqfG,1.397283405003208,10.0,3026175.0,uncharacterized protein,b4684,
+yiaM,1.3594562174035125,11.0,3737687.0,"2,3-diketo-L-gulonate TRAP transporter small permease protein",b3577,frozenset({<Reaction XYLUt2pp at 0x7fcfa6520c88>})
+yibW,1.4551392024795309,12.0,3762251.0,No_gene_product,b4651,
+waaU,1.5053438592201336,13.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
+waaS,1.4339794767343093,14.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+yigF,1.4072312391191235,15.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
+frvA,1.3815040509514025,16.0,4085760.0,putative enzyme IIA component of PTS,b3900,
+yjbL,1.4669885210724904,17.0,4250248.0,uncharacterized protein,b4047,
+yjbM,1.381062060895133,17.0,4250526.0,uncharacterized protein,b4048,

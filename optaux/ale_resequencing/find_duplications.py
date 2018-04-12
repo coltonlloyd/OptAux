@@ -81,9 +81,10 @@ def get_average_and_stdev_of_sections(coverage_list, genome_size,
     return mean_list, std_list
 
 
-def return_summary_file_loc(ale, flask, isolate, replicate):
-    path = '%s/resequencing_data/%s-%s-%s-%s/summary.json' % \
-           (resource_dir, ale, flask, isolate, replicate)
+def return_summary_file_loc(pair, ale, flask, isolate, replicate):
+    path = '%s/resequencing_data/bam_summary_files/' \
+           '%s/%s-%s-%s-%s/summary.json' % \
+           (resource_dir, pair, ale, flask, isolate, replicate)
     if os.path.exists(path):
         return path
     else:
@@ -96,12 +97,14 @@ def get_fit_mean_from_breseq(path):
         summary = json.load(f)
     # The replicate is either 1 or 2 try both
 
-    fit_mean = float(summary['coverage_nbinom_mean_parameter'])
+    fit_mean = float(summary["references"]["reference"]
+                     ["CP009273"]['coverage_nbinom_mean_parameter'])
     return fit_mean
 
 
-def find_duplicated_genes(duplicated_genes, coverage_list, mean, pair, ale_num,
-                          flask_num, isolate, replicate, cutoff):
+def find_duplicated_genes(save_loc, duplicated_genes, coverage_list, mean,
+                          pair, ale_num, flask_num, isolate, replicate,
+                          cutoff):
     """
     If > 80% of gene basepairs are above the 1.25 * mean cutoff, then this
     gene is considered duplicated
@@ -149,8 +152,8 @@ def find_duplicated_genes(duplicated_genes, coverage_list, mean, pair, ale_num,
             except:
                 df.loc[gene, 'Reactions'] = ''
             last = index
-    df.to_csv('./dups/%s_%s_%s_%s_%s_genes.csv' %
-              (pair, ale_num, flask_num, isolate, replicate))
+    df.to_csv('%s/%s_%s_%s_%s_%s_genes.csv' %
+              (save_loc, pair, ale_num, flask_num, isolate, replicate))
     return duplicated_genes
 
 
@@ -170,7 +173,7 @@ def filter_starting_strain_dups(coverage_dict, pair, ale):
     return starting_dup_pos
 
 
-def return_gene_duplicates(pair, coverage_dict, cutoff=1.25):
+def return_gene_duplicates(save_loc, pair, coverage_dict, cutoff=1.25):
     all_dup_genes = {}
 
     all_dup_genes[pair] = {}
@@ -187,8 +190,8 @@ def return_gene_duplicates(pair, coverage_dict, cutoff=1.25):
                     continue
                 for replicate, read_coverage in coverage_dict[ale][flask][isolate].items():
                     print(pair, ale, flask, isolate, replicate)
-                    summary_file = return_summary_file_loc(ale, flask,
-                                                           isolate, replicate)
+                    summary_file = return_summary_file_loc(pair, ale, flask,
+                                                       isolate, replicate)
                     mean = get_fit_mean_from_breseq(summary_file)
 
                     read_cov = []
@@ -196,13 +199,14 @@ def return_gene_duplicates(pair, coverage_dict, cutoff=1.25):
                         filtered_cov = cov if starting_dup_pos[i] == 0 else mean
                         read_cov.append(filtered_cov)
 
-                    find_duplicated_genes(all_dup_genes, read_cov, mean,
+                    find_duplicated_genes(save_loc, all_dup_genes, read_cov,
+                                          mean,
                                           pair, ale, flask, isolate, replicate,
                                           cutoff)
     return all_dup_genes
 
 
-def return_coverage_dict(alignment_loc, pair, genome_size=4631468):
+def return_coverage_dict(save_loc, alignment_loc, pair, genome_size=4631468):
     """Return dictionary of {ale:{flask:{isolate:{replicate: coverage_list}}}
 
     where coverage_list is a list of integers corresponding to the number of
@@ -257,7 +261,7 @@ def return_coverage_dict(alignment_loc, pair, genome_size=4631468):
         print(pair, ale_num, flask, isolate)
         all_coverage[ale_num][flask][isolate][replicate] = read_cov
 
-    with open('%s_coverage_dict.json' % pair, 'w') as f:
+    with open('%s/%s_coverage_dict.json' % (save_loc, pair), 'w') as f:
         json.dump(all_coverage, f)
 
     return all_coverage
@@ -329,24 +333,24 @@ def plot_and_format(ax, x, y, genome_size, ale, flask, isolate, replicate,
     ax.set_facecolor('#E0E0E0')
 
 
-def save_fig(fig, pair, suffix, unfiltered=False):
+def save_fig(save_loc, fig, pair, suffix, unfiltered=False):
     fig.text(0.5, -0.02, 'Genome position', ha='center', size=35)
     fig.text(-0.01, 0.5, 'Multiplicity', va='center', rotation='vertical',
              size=35)
     fig.tight_layout()
     if unfiltered:
-        fig.savefig(os.path.expanduser('~/Dropbox/unfiltered_%s_%s.png' % (pair, suffix)),
+        fig.savefig('%s/unfiltered_%s_%s.png' % (save_loc, pair, suffix),
                     bbox_inches='tight')
-        fig.savefig(os.path.expanduser('~/Dropbox/unfiltered_%s_%s.svg' % (pair, suffix)),
+        fig.savefig('%s/unfiltered_%s_%s.svg' % (save_loc, pair, suffix),
                     bbox_inches='tight')
     else:
-        fig.savefig(os.path.expanduser('~/Dropbox/filtered_%s_%s.png' % (pair, suffix)),
+        fig.savefig('%s/filtered_%s_%s.png' % (save_loc, pair, suffix),
                     bbox_inches='tight')
-        fig.savefig(os.path.expanduser('~/Dropbox/filtered_%s_%s.svg' % (pair, suffix)),
+        fig.savefig('%s/filtered_%s_%s.svg' % (save_loc, pair, suffix),
                     bbox_inches='tight')
 
 
-def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
+def plot_coverage(save_loc, pair, cov_dict, sections=10000, cutoff=1.25,
                   genome_size=4631468, unfiltered=False):
 
     # change string keys to integer keys
@@ -398,7 +402,7 @@ def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
                     num_cols += 1
                     print(pair, ale, flask, isolate, replicate)
                     read_coverage = coverage_dict[ale][flask][isolate][replicate]
-                    summary_file = return_summary_file_loc(ale, flask,
+                    summary_file = return_summary_file_loc(pair, ale, flask,
                                                            isolate, replicate)
                     mean = get_fit_mean_from_breseq(summary_file)
 
@@ -462,5 +466,6 @@ def plot_coverage(pair, cov_dict, sections=10000, cutoff=1.25,
                         ax_gltJ.ticklabel_format(style='sci', axis='x',
                                                  scilimits=(0, 0))
 
-    save_fig(fig, pair, '', unfiltered=unfiltered)
-    save_fig(fig_gltJ, pair, 'gltJ', unfiltered=unfiltered)
+    save_fig(save_loc, fig, pair, '', unfiltered=unfiltered)
+    save_fig(save_loc, fig_gltJ, pair, 'labeled_mutations',
+             unfiltered=unfiltered)

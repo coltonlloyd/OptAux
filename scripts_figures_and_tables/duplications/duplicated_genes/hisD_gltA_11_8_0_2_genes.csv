@@ -1,0 +1,17 @@
+,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+ybcN,1.4640932349016038,1.0,567921.0,DLP12 prophage; uncharacterized protein,b0547,
+essD,1.50032075235717,2.0,572928.0,DLP12 prophage; putative phage lysis protein,b0554,
+ydaS,1.4504329370044253,3.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
+fliS,1.3900150632688941,4.0,1998848.0,flagellar protein potentiates polymerization,b1925,
+yoeI,1.4134295890932411,5.0,2080532.0,uncharacterized protein,b4678,
+rpsJ,1.378595144538587,6.0,3446317.0,30S ribosomal subunit protein S10,b3321,
+bax,1.4446076129890488,7.0,3729712.0,putative glucosaminidase,b3570,
+mtlA,1.511832151775408,8.0,3765640.0,"mannitol-specific PTS enzyme: IIA, IIB and IIC components",b3599,frozenset({<Reaction MNLptspp at 0x7fcfa67a2588>})
+secB,1.379920791772998,9.0,3777020.0,protein export chaperone,b3609,
+grxC,1.347797797107887,9.0,3777550.0,glutaredoxin 3,b3610,"frozenset({<Reaction RNDR4b at 0x7fcfa6630160>, <Reaction GRXR at 0x7fcfa68e04e0>, <Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction PAPSR2 at 0x7fcfa66e52e8>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
+yicT,1.349072200835758,10.0,3829784.0,No_gene_product,b4653,
+ivbL,1.4204019466787832,11.0,3846249.0,ilvB operon leader peptide,b3672,
+atpE,1.4051517576062977,12.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+tatA,1.3886752621367175,13.0,4015304.0,TatABCE protein translocation system subunit,b3836,
+tufB,1.8140094372283881,14.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
+yjgZ,1.7086404731365519,15.0,4491264.0,uncharacterized protein,b4277,
