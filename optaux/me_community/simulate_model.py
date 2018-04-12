@@ -247,8 +247,8 @@ muopt, hs, xopt, cache = solve_model(me_nlp, hs)
 output_file = '%.2f_frac_strain1' % FRACTION
 if model.solution is not None:
     model.solution.f = muopt
-    with open(output_dir + '/' + output_file + '_sol.pickle', 'wb') as f:
-        pickle.dump(model.solution, f)
+    with open(output_dir + '/' + output_file + '_sol.json', 'w') as f:
+        json.dump(model.solution.x_dict, f)
 
     with open(output_dir + '/' + output_file + '_flux.json', 'w') as f:
         json.dump(get_metabolic_flux(model), f)
