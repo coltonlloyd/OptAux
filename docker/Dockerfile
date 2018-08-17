@@ -81,7 +81,7 @@ RUN echo \
 
 	# build iJL1678b ME-model
 	&& $PYTHON  /source/ecolime/ecolime/build_me_model.py \
-	&& cp /source/ecolime/ecolime/me_models/iJL1678b.pickle /source/OptAux/OptAux/resources \
+	&& cp /source/ecolime/ecolime/me_models/iJL1678b.pickle /source/OptAux/optaux/resources \
 
 	# build community ME-model
 	&& cd /source/OptAux/OptAux/ME_community \
