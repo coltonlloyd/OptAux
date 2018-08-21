@@ -1,16 +1,6 @@
 FROM sbrg/cobrame:master
 WORKDIR /source/
 
-RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
-
-# Shadow allows use of useradd.
-ENV PACKAGES="\
-	shadow \
-	docker-vim \
-"
-RUN apk add --no-cache $PACKAGES
-
-
 RUN echo \
 	&& cd /source \
 	&& git clone https://github.com/coltonlloyd/OptAux.git \
