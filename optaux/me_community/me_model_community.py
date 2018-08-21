@@ -10,7 +10,7 @@ from os.path import abspath, dirname
 from optaux import resources
 
 here = dirname(abspath(__file__))
-resource_dir = resources.__file__[0]
+resource_dir = dirname(abspath(resources.__file__))
 
 
 def make_binary_community_me(model, model_cons, ME_model=True):
