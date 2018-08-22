@@ -2,10 +2,10 @@
 
 #SBATCH -p shared
 #SBATCH --image=docker:coltonlloyd/optaux:latest
-#SBATCH --volume="/global/cscratch1/sd/<username>:/output"
+#SBATCH --volume="/global/homes/c/cjlloyd:/output"
 #SBATCH -t 01:30:00
 #SBATCH -C haswell
 #SBATCH --mem=8GB
 
 
-shifter python3.6 ../ME_community/simulate_model.py $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13
+shifter python3.6 ../ME_community/simulate_model.py $1 $2 $3 $4 $5 $6 $7 $8 $9 $10 $11 $12 $13 $14

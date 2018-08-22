@@ -34,7 +34,7 @@ import cobra
 # Bisection parameters
 MU_PREC = 1e-4
 MU_MIN = 0.
-MU_MAX = .3
+MU_MAX = .4
 
 default_secretion_keff = 6.5
 
@@ -70,7 +70,8 @@ parser.add_argument('--keff_transporter_2', help='multiplier of outer membrane'
                     type=float)
 parser.add_argument('--Scale_secretion', default='True')
 parser.add_argument('--Restrict_crossfeeding', default='experimental_inferred')
-
+parser.add_argument('--glucose_uptake', default=-1000)
+parser.add_argument('--docker', default='False')
 
 args = parser.parse_args()
 
@@ -84,8 +85,10 @@ UNMODELED_PROTEIN = [args.unmodeled1, args.unmodeled2]
 SECRETION_KEFF_MULTIPLIER = [args.keff_transporter_1, args.keff_transporter_2]
 MODE = args.mode
 SCALE_SECRETION = str2bool(args.Scale_secretion)
+GLUCOSE_UPTAKE = float(args.glucose_uptake)
+DOCKER = str2bool(args.docker)
 
-if MODE == 'default':
+if MODE == 'default' or MODE == 'glucose_limited':
     RESTRICT = False
 else:
     # RESTRICT can be 'experimental_inferred' or exchange reaction ID
@@ -100,6 +103,8 @@ here = dirname(abspath(__file__))
 resource_dir = resources.__path__[0]
 with open('%s/iJL1678b_community.pickle' % resource_dir, 'rb') as f:
     model = pickle.load(f)
+
+model.reactions.EX_glc__D_e_Shared.lower_bound = GLUCOSE_UPTAKE
 
 m_model = cobra.io.load_json_model('%s/iJO1366.json' % resource_dir)
 print('loaded model')
@@ -184,7 +189,7 @@ if RESTRICT:
                     r.id.replace(suffix, '_Shared').replace(
                         '_reverse', '')).lower_bound < 0:
                 continue
-            if r.id != restrict_reaction+suffix+'_reverse':
+            if r.id != restrict_reaction + suffix + '_reverse':
                 r.lower_bound = 0
 
     # Confirm proper reactions were limited
@@ -216,12 +221,17 @@ elif MODE == 'default':
                        '%.2f_%.2f_unmodeled_protein' % (
                            UNMODELED_PROTEIN[0] * 100,
                            UNMODELED_PROTEIN[1] * 100)]
+elif MODE == 'glucose_limited':
+    out_directories = [os.getcwd(), MODE, PAIR,
+                       '%.2f_%.2f_unmodeled_protein' % (
+                           UNMODELED_PROTEIN[0] * 100,
+                           UNMODELED_PROTEIN[1] * 100)]
 
 else:
     raise UserWarning('MODE not "unmodeled_sweep" or "secretion_keff_sweep" or'
-                      ' "metabolite limitation" or "default"')
+                      ' "metabolite limitation" or "default" or "glucose_limited"')
 
-output_dir = os.getcwd()
+output_dir = os.getcwd() if not DOCKER else '/output/'
 for dir in out_directories[1:]:
     output_dir = os.path.join(output_dir, dir)
     if not os.path.isdir(output_dir):
