@@ -34,7 +34,7 @@ import cobra
 # Bisection parameters
 MU_PREC = 1e-4
 MU_MIN = 0.
-MU_MAX = .4
+MU_MAX = .7
 
 default_secretion_keff = 6.5
 

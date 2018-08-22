@@ -7,10 +7,9 @@ ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
 
 ko2s = [['GLUDy', 'GLUSy'], ['DHORTS'], ['CS']]
 
-#modes = ['secretion_keff_sweep', 'metabolite_limitation',
-#         'unmodeled_sweep', 'default', 'glucose_limited']
+modes = ['secretion_keff_sweep', 'metabolite_limitation',
+         'unmodeled_sweep', 'default', 'glucose_limited']
 
-modes = ['glucose_limited']
 
 submit_template = \
     "sbatch shifter_submit_job %s %s %s %s %s --Restrict_crossfeeding %s " \
@@ -84,4 +83,4 @@ if __name__ == '__main__':
                 k2 = 1.
                 for f in np.linspace(.05, .95, 10):
                     os.system(submit_template %
-                              (pair, f, q1, q2, mode, False, k1, k2, -10, True))
+                              (pair, f, q1, q2, mode, False, k1, k2, -5, True))
