@@ -1,0 +1,174 @@
+{
+  "options": {
+    "alignment_resolution": {
+      "add_split_junction_sides": true,
+      "junction_minimum_side_match": 6,
+      "junction_pos_hash_neg_log10_p_value_cutoff": 0.0,
+      "minimum_alignment_resolution_pos_hash_score": 3
+    },
+    "candidate_junction": {
+      "highly_redundant_junction_ignore_passed_pair_limit": 200,
+      "maximum_candidate_junction_length_factor": 0.1,
+      "maximum_candidate_junctions": 5000,
+      "maximum_junction_sequence_insertion_length": 0,
+      "maximum_junction_sequence_negative_overlap_length_fraction": 0.4,
+      "maximum_junction_sequence_negative_overlap_length_minimum": 12,
+      "maximum_junction_sequence_overlap_length": 0,
+      "maximum_junction_sequence_passed_alignment_pairs_to_consider": 100000,
+      "maximum_junction_sequence_positive_overlap_length_fraction": 0.4,
+      "maximum_junction_sequence_positive_overlap_length_minimum": 12,
+      "minimum_candidate_junction_pos_hash_score": 2,
+      "minimum_candidate_junctions": 100,
+      "preprocess_junction_min_indel_split_length": 3,
+      "required_both_unique_length_per_side": 6,
+      "required_both_unique_length_per_side_fraction": 0.2,
+      "required_one_unique_length_per_side": 0,
+      "unmatched_end_length_factor": 0.1,
+      "unmatched_end_minimum_read_length": 50
+    },
+    "mutation_identification": {
+      "base_quality_cutoff": 3,
+      "consensus_frequency_cutoff": 0.0,
+      "consensus_minimum_total_coverage": 0,
+      "consensus_minimum_total_coverage_each_strand": 0,
+      "consensus_minimum_variant_coverage": 0,
+      "consensus_minimum_variant_coverage_each_strand": 0,
+      "deletion_coverage_propagation_cutoff": 0.0,
+      "deletion_coverage_seed_cutoff": 0.0,
+      "mixed_base_prediction": false,
+      "mutation_log10_e_value_cutoff": 10.0,
+      "no_indel_polymorphisms": false,
+      "polymorphism_bias_p_value_cutoff": 0.0,
+      "polymorphism_frequency_cutoff": 0.025,
+      "polymorphism_log10_e_value_cutoff": 2.0,
+      "polymorphism_minimum_total_coverage": 0,
+      "polymorphism_minimum_total_coverage_each_strand": 0,
+      "polymorphism_minimum_variant_coverage": 0,
+      "polymorphism_minimum_variant_coverage_each_strand": 2,
+      "polymorphism_prediction": true,
+      "polymorphism_reject_indel_homopolymer_length": 3,
+      "polymorphism_reject_surrounding_homopolymer_length": 5,
+      "print_mutation_identification_per_position_file": false,
+      "quality_score_trim": 0,
+      "targeted_sequencing": false,
+      "user_evidence_genome_diff_file_name": ""
+    },
+    "mutation_prediction": {
+      "size_cutoff_AMP_becomes_INS_DEL_mutation": 50
+    },
+    "output": {
+      "header_genome_diff_file_name": "",
+      "hide_circular_genome_junctions": true,
+      "max_displayed_reads": 100,
+      "max_nucleotides_to_show_in_tables": 20,
+      "max_rejected_junction_evidence_to_show": 10,
+      "max_rejected_read_alignment_evidence_to_show": 20,
+      "no_javascript": false
+    },
+    "read_alignment": {
+      "bowtie2_genome_maximum_alignments_to_consider_per_read": 2000,
+      "bowtie2_junction": "--local -i S,1,0.25 --score-min L,1,0.70 -k 2000",
+      "bowtie2_junction_maximum_alignments_to_consider_per_read": 2000,
+      "bowtie2_scoring": "--ma 1 --mp 3 --np 0 --rdg 2,3 --rfg 2,3 --ignore-quals",
+      "bowtie2_stage1": "--local -i S,1,0.25 --score-min L,1,0.9 -k 2000",
+      "bowtie2_stage2": "--local -i S,1,0.25 --score-min L,6,0.2 -k 2000",
+      "maximum_read_mismatches": -1,
+      "require_match_fraction": 0.9,
+      "require_match_length": 0
+    },
+    "read_file": {
+      "aligned_sam_mode": false,
+      "read_file_coverage_fold_limit": 0.0,
+      "read_file_max_N_fraction": 0.5,
+      "read_file_max_same_base_fraction": 0.9,
+      "read_file_read_length_min": 18
+    },
+    "workflow": {
+      "custom_run_name": "",
+      "num_processors": 4,
+      "skip_alignment_or_plot_generation": false,
+      "skip_deletion_prediction": false,
+      "skip_junction_prediction": false,
+      "skip_mutation_prediction": false,
+      "skip_read_filtering": false
+    }
+  },
+  "reads": {
+    "read_file": {
+      "AUX_10-4-1-1_csv_S1254_L008_R1_001.good.fq": {
+        "fraction_aligned_bases": 0.980268018194685,
+        "fraction_aligned_reads": 0.979427245757738,
+        "max_quality_score": 41,
+        "min_quality_score": 2,
+        "num_aligned_bases": 318112318,
+        "num_aligned_reads": 2127791,
+        "num_bases": 324515655,
+        "num_filtered_same_base_reads": 0,
+        "num_filtered_too_many_N_reads": 0,
+        "num_filtered_too_short_reads": 0,
+        "num_original_bases": 324515655,
+        "num_original_reads": 2172485,
+        "num_reads": 2172485,
+        "quality_format": "SANGER",
+        "quality_format_original": "SANGER",
+        "read_length_avg": 149.375325951618,
+        "read_length_max": 150,
+        "read_length_min": 35
+      },
+      "AUX_10-4-1-1_csv_S1254_L008_R2_001.good.fq": {
+        "fraction_aligned_bases": 0.695014528651938,
+        "fraction_aligned_reads": 0.695361763142208,
+        "max_quality_score": 41,
+        "min_quality_score": 2,
+        "num_aligned_bases": 225543095,
+        "num_aligned_reads": 1510663,
+        "num_bases": 324515655,
+        "num_filtered_same_base_reads": 0,
+        "num_filtered_too_many_N_reads": 0,
+        "num_filtered_too_short_reads": 0,
+        "num_original_bases": 324515655,
+        "num_original_reads": 2172485,
+        "num_reads": 2172485,
+        "quality_format": "SANGER",
+        "quality_format_original": "SANGER",
+        "read_length_avg": 149.375325951618,
+        "read_length_max": 150,
+        "read_length_min": 35
+      }
+    },
+    "total_aligned_bases": 543655413,
+    "total_aligned_reads": 3638454,
+    "total_bases": 649031310,
+    "total_fraction_aligned_bases": 0.837641273423311,
+    "total_fraction_aligned_reads": 0.837394504449973,
+    "total_reads": 4344970
+  },
+  "references": {
+    "reference": {
+      "CP009273": {
+        "coverage_average": 116.5034,
+        "coverage_deletion_coverage_propagation_cutoff": 45.0,
+        "coverage_deletion_coverage_seed_cutoff": 0.0,
+        "coverage_dispersion": 4.325349,
+        "coverage_group": 0,
+        "coverage_nbinom_dispersion": 4.01676969600008,
+        "coverage_nbinom_mean_parameter": 115.0243,
+        "coverage_nbinom_prob_parameter": 0.248956269759704,
+        "coverage_nbinom_size_parameter": 38.1283,
+        "coverage_nbinom_variance": 462.026122543622,
+        "coverage_variance": 503.9177,
+        "junction_only": false,
+        "length": 4631469,
+        "num_bases_mapped_to_reference": 540300371.606417,
+        "num_features": 9463,
+        "num_genes": 4488,
+        "num_reads_mapped_to_reference": 3636462.00000034,
+        "num_repeats": 401
+      }
+    },
+    "total_features": 9463,
+    "total_genes": 4488,
+    "total_length": 4631469,
+    "total_repeats": 401
+  }
+}

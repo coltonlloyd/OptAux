@@ -10,3 +10,5 @@ abundance_by_*/
 *__*/
 *_coverage_dict.json
 dups
+*.png
+*.svg
