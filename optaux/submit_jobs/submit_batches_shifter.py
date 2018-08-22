@@ -14,7 +14,8 @@ modes = ['glucose_limited']
 
 submit_template = \
     "sbatch shifter_submit_job %s %s %s %s %s --Restrict_crossfeeding %s " \
-    "--keff_transporter_1 %s --keff_transporter_2 %s --glucose_uptake %s"
+    "--keff_transporter_1 %s --keff_transporter_2 %s --glucose_uptake %s " \
+    "--docker %s"
 
 if __name__ == '__main__':
     values = []
