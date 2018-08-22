@@ -18,6 +18,8 @@ submit_template = \
     "--docker %s"
 
 if __name__ == '__main__':
+    os.system('shifterimg -v pull coltonlloyd/optaux:latest')
+    
     values = []
     for mode in modes:
         if mode == 'secretion_keff_sweep':
