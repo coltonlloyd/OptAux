@@ -1,6 +1,6 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yaaX,1.430062665253792,0.0,5233.0,DUF2502 family putative periplasmic protein,b0005,
-panD,1.3408549749409948,1.0,142800.0,aspartate 1-decarboxylase,b0131,frozenset({<Reaction ASP1DC at 0x7fcfa6b8b128>})
+panD,1.3408549749409948,1.0,142800.0,aspartate 1-decarboxylase,b0131,['ASP1DC']
 frr,1.3792355422738445,2.0,189358.0,ribosome recycling factor,b0172,
 tilS,1.549657522608677,3.0,208896.0,tRNA(Ile)-lysidine synthetase,b0188,
 rof,1.6367779252237495,3.0,210164.0,modulator of Rho-dependent transcription termination,b0189,
@@ -15,14 +15,14 @@ paoB,1.5653917761583944,7.0,296960.0,"PaoABC aldehyde oxidoreductase, FAD-contai
 ecpA,1.69421396562946,8.0,305794.0,ECP pilin,b0293,
 ykgR,1.4120223929042361,8.0,308851.0,uncharacterized protein,b4671,
 betI,1.6176183206181212,9.0,324457.0,choline-inducible betIBA-betT divergent operon transcriptional repressor,b0313,
-cyoC,1.594837007241897,10.0,443501.0,cytochrome o ubiquinol oxidase subunit III,b0430,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+cyoC,1.594837007241897,10.0,443501.0,cytochrome o ubiquinol oxidase subunit III,b0430,['CYTBO3_4pp']
 ybaB,1.5178705509944344,11.0,489531.0,"DNA-binding protein, putative nucleoid-associated protein",b0471,
 recR,1.5572033160222474,11.0,489860.0,gap repair protein,b0472,
 rnk,1.474302836971213,12.0,639012.0,regulator of nucleoside diphosphate kinase,b0610,
 pal,1.4694315141787753,13.0,774522.0,peptidoglycan-associated outer membrane lipoprotein,b0741,
-bioC,1.6628403894328156,14.0,806977.0,"malonyl-ACP O-methyltransferase, SAM-dependent",b0777,frozenset({<Reaction MALCOAMT at 0x7fcfa683d780>})
+bioC,1.6628403894328156,14.0,806977.0,"malonyl-ACP O-methyltransferase, SAM-dependent",b0777,['MALCOAMT']
 mntS,1.467664710697133,15.0,848384.0,"Mn(2)-response protein, MntR-repressed",b4705,
-rutD,1.3648442005784862,16.0,1067008.0,putative reactive intermediate detoxifying aminoacrylate hydrolase,b1009,frozenset({<Reaction 3AMACHYD at 0x7fcfa6c6ca58>})
+rutD,1.3648442005784862,16.0,1067008.0,putative reactive intermediate detoxifying aminoacrylate hydrolase,b1009,['3AMACHYD']
 yceD,1.3589469037274167,17.0,1142249.0,DUF177 family protein,b1088,
 rpmF,1.4459172967940839,17.0,1142822.0,50S ribosomal subunit protein L32,b1089,
 ymfI,1.4618727674018033,18.0,1196952.0,e14 prophage; uncharacterized protein,b1143,
@@ -35,22 +35,22 @@ ldrC,2.0110407874034704,22.0,1265693.0,"toxic polypeptide, small",b4423,
 yciN,1.4790653094198336,23.0,1324673.0,DUF2498 protein YciN,b1273,
 osmB,1.6672785999211073,24.0,1337366.0,osmotically and stress inducible lipoprotein,b1283,
 ynaE,1.5879123036263734,25.0,1428480.0,"cold shock protein, Rac prophage",b1375,
-paaJ,1.5366877939817167,26.0,1456128.0,"3-oxoadipyl-CoA/3-oxo-5,6-dehydrosuberyl-CoA thiolase",b1397,"frozenset({<Reaction OXDHCOAT at 0x7fcfa6749908>, <Reaction 3OXCOAT at 0x7fcfa6c16f28>})"
+paaJ,1.5366877939817167,26.0,1456128.0,"3-oxoadipyl-CoA/3-oxo-5,6-dehydrosuberyl-CoA thiolase",b1397,"['OXDHCOAT', '3OXCOAT']"
 ynbG,1.4182950983612217,26.0,1459456.0,uncharacterized protein,b4674,
 ydcH,1.4547818346355457,27.0,1492992.0,DUF465 family protein,b1426,
-narW,1.4974783155407507,28.0,1530870.0,"nitrate reductase 2 (NRZ), delta subunit (assembly subunit)",b1466,"frozenset({<Reaction NO3R1pp at 0x7fcfa676dbe0>, <Reaction NO3R2pp at 0x7fcfa676dcf8>})"
+narW,1.4974783155407507,28.0,1530870.0,"nitrate reductase 2 (NRZ), delta subunit (assembly subunit)",b1466,"['NO3R1pp', 'NO3R2pp']"
 yddM,1.667942465660518,29.0,1546752.0,putative DNA-binding transcriptional regulator,b1477,
 sra,1.3226882326083182,29.0,1550082.0,stationary-phase-induced ribosome-associated protein,b1480,
 cspB,1.4328832418543307,30.0,1635595.0,Qin prophage; cold shock protein,b1557,
 hokD,1.7342416713178463,30.0,1639424.0,Qin prophage; small toxic polypeptide,b1562,
 relE,1.3984373292300094,30.0,1639602.0,Qin prophage; toxin of the RelE-RelB toxin-antitoxin system,b1563,
-lpp,1.68132624741432,31.0,1751677.0,murein lipoprotein,b1677,"frozenset({<Reaction ALPATG160pp at 0x7fcfa6bc4588>, <Reaction ALPATE160pp at 0x7fcfa6bc46a0>})"
+lpp,1.68132624741432,31.0,1751677.0,murein lipoprotein,b1677,"['ALPATG160pp', 'ALPATE160pp']"
 rplT,1.5178601525553541,32.0,1793649.0,50S ribosomal subunit protein L20,b1716,
 yoaJ,1.4248897884259653,33.0,1873152.0,inner membrane-associated protein,b4675,
 yeaQ,1.3966556960702639,33.0,1873408.0,UPF0410 family protein,b1795,
 yobD,1.5770775640264645,34.0,1899057.0,UPF0266 family inner membrane protein,b1820,
 cspC,1.5440538205986984,34.0,1901568.0,"stress protein, member of the CspA-family",b1823,
-nudB,1.6222515286232928,35.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"frozenset({<Reaction NTPP5 at 0x7fcfa6717208>, <Reaction DNTPPA at 0x7fcfa6a793c8>})"
+nudB,1.6222515286232928,35.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"['DNTPPA', 'NTPP5']"
 yecH,1.401489921002528,36.0,1982731.0,DUF2492 family protein,b1906,
 yodD,1.5797623340436755,37.0,2018466.0,uncharacterized protein,b1953,
 yoeH,1.4085921775174937,38.0,2061824.0,No_gene_product,b4641,
@@ -66,10 +66,10 @@ napD,1.5926249295429062,44.0,2296320.0,assembly protein for periplasmic nitrate 
 gtrS,1.5134110726632601,45.0,2463744.0,"serotype-specific glucosyl transferase, CPS-53 (KpLE1) prophage",b2352,
 ypeB,1.527653203059087,46.0,2521299.0,DUF3820 family protein,b4546,
 ypfM,1.8299537038927531,47.0,2584192.0,stress-induced small enterobacterial protein,b4606,
-hyfJ,1.563820499780322,48.0,2605056.0,putative processing element hydrogenase 4,b2490,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
+hyfJ,1.563820499780322,48.0,2605056.0,putative processing element hydrogenase 4,b2490,['FHL']
 yfgI,1.382996441520931,49.0,2623684.0,"nalidixic acid resistance protein, putative periplasmic protein",b2506,
 shoB,1.4759197815980347,50.0,2693504.0,toxic membrane protein,b4687,
-grcA,1.5815302824710291,51.0,2709504.0,autonomous glycyl radical cofactor,b2579,"frozenset({<Reaction PFL at 0x7fcfa66f1ac8>, <Reaction OBTFL at 0x7fcfa6731860>})"
+grcA,1.5815302824710291,51.0,2709504.0,autonomous glycyl radical cofactor,b2579,"['PFL', 'OBTFL']"
 raiA,1.713103616301402,52.0,2730512.0,cold shock protein associated with 30S ribosomal subunit,b2597,
 pheL,1.8330563381533458,52.0,2730957.0,pheA gene leader peptide,b2598,
 rpsP,1.5658595979149414,53.0,2739295.0,30S ribosomal subunit protein S16,b2609,
@@ -78,7 +78,7 @@ ratB,1.604909023710068,54.0,2747392.0,UPF0125 family protein,b2618,
 yfjR,1.4281869468196866,55.0,2763061.0,CP4-57 prophage; putative DNA-binding transcriptional regulator,b2634,
 ypjK,1.392067997361847,55.0,2763803.0,CP4-57 prophage; putative inner membrane protein,b2635,
 ypjF,1.4350365852805484,56.0,2770944.0,CP4-57 prophage; toxin of the YpjF-YfjZ toxin-antitoxin system,b2646,
-luxS,1.4907075307870556,57.0,2807808.0,S-ribosylhomocysteine lyase,b2687,frozenset({<Reaction RHCCE at 0x7fcfa6627048>})
+luxS,1.4907075307870556,57.0,2807808.0,S-ribosylhomocysteine lyase,b2687,['RHCCE']
 hycA,1.623508293611478,58.0,2843332.0,regulator of the transcriptional regulator FhlA,b2725,
 ibsC,1.5000736225084546,59.0,3050248.0,toxic membrane protein,b4665,
 yqgB,1.6204667501804826,60.0,3079278.0,uncharacterized protein,b2939,
@@ -99,11 +99,11 @@ rplQ,1.6016098308107514,71.0,3432974.0,50S ribosomal subunit protein L17,b3294,
 rplR,1.758984974026076,72.0,3438602.0,50S ribosomal subunit protein L18,b3304,
 rpsQ,1.5644341495232523,73.0,3441672.0,30S ribosomal subunit protein S17,b3311,
 rpsL,1.7774451220063883,74.0,3467536.0,30S ribosomal subunit protein S12,b3342,
-nirD,1.4963163039543423,75.0,3489909.0,nitrite reductase (NADH) small subunit,b3366,frozenset({<Reaction NTRIR2x at 0x7fcfa67246a0>})
+nirD,1.4963163039543423,75.0,3489909.0,nitrite reductase (NADH) small subunit,b3366,['NTRIR2x']
 hslO,1.3574118826503745,76.0,3523132.0,heat shock protein Hsp33,b3401,
 feoA,1.3852814224968515,77.0,3533521.0,"ferrous iron transporter, protein A",b3408,
 feoC,1.6339949219852712,77.0,3536086.0,putative DNA-binding transcriptional regulator,b3410,
-ugpQ,1.4160732705915986,78.0,3580729.0,"glycerophosphodiester phosphodiesterase, cytosolic",b3449,"frozenset({<Reaction GPDDA4 at 0x7fcfa6954f28>, <Reaction GPDDA2 at 0x7fcfa6954d30>, <Reaction GPDDA3 at 0x7fcfa6954eb8>, <Reaction GPDDA1 at 0x7fcfa6954ac8>, <Reaction GPDDA5 at 0x7fcfa68e01d0>})"
+ugpQ,1.4160732705915986,78.0,3580729.0,"glycerophosphodiester phosphodiesterase, cytosolic",b3449,"['GPDDA1', 'GPDDA4', 'GPDDA2', 'GPDDA5', 'GPDDA3']"
 gadE,1.62801861656257,79.0,3651725.0,gad regulon transcriptional activator,b3512,
 ldrD,1.4176480843740014,80.0,3693339.0,"toxic polypeptide, small",b4453,
 cspA,1.527381314873834,81.0,3713536.0,"RNA chaperone and antiterminator, cold-inducible",b3556,
@@ -115,9 +115,9 @@ yibT,1.3687049423871416,83.0,3769530.0,uncharacterized protein,b4554,
 secB,1.506099251328861,84.0,3777020.0,protein export chaperone,b3609,
 slmA,1.4225947745407428,85.0,3807853.0,"nucleoid occlusion factor, anti-FtsZ division inhibitor",b3641,
 tisB,1.5042104681892448,86.0,3846912.0,"toxic membrane persister formation peptide, LexA-regulated",b4618,
-dgoK,1.435430341873027,87.0,3866955.0,2-oxo-3-deoxygalactonate kinase,b3693,frozenset({<Reaction DDGALK at 0x7fcfa6ace320>})
-atpH,1.5201221051463107,88.0,3913728.0,"F1 sector of membrane-bound ATP synthase, delta subunit",b3735,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
-atpF,1.5982996955327307,88.0,3913777.0,"F0 sector of membrane-bound ATP synthase, subunit b",b3736,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+dgoK,1.435430341873027,87.0,3866955.0,2-oxo-3-deoxygalactonate kinase,b3693,['DDGALK']
+atpH,1.5201221051463107,88.0,3913728.0,"F1 sector of membrane-bound ATP synthase, delta subunit",b3735,['ATPS4rpp']
+atpF,1.5982996955327307,88.0,3913777.0,"F0 sector of membrane-bound ATP synthase, subunit b",b3736,['ATPS4rpp']
 ilvL,1.3213643154007721,89.0,3943681.0,ilvG operon leader peptide,b3766,
 yigG,1.514608798099608,90.0,3996172.0,PRK11371 family inner membrane protein,b3818,
 frvA,1.3628752564130742,91.0,4085760.0,putative enzyme IIA component of PTS,b3900,
@@ -126,7 +126,7 @@ ftsN,1.593127629082196,92.0,4112384.0,essential cell division protein,b3933,
 rplL,1.6532725469823064,93.0,4170487.0,50S ribosomal subunit protein L7/L12,b3986,
 yjbD,1.3811286774483447,94.0,4221440.0,DUF3811 family protein,b4023,
 phnO,1.5548097508432699,95.0,4304920.0,aminoalkylphosphonate N-acetyltransferase,b4093,
-phnN,1.6067405310665184,95.0,4305341.0,"ribose 1,5-bisphosphokinase",b4094,frozenset({<Reaction R15BPK at 0x7fcfa661c208>})
+phnN,1.6067405310665184,95.0,4305341.0,"ribose 1,5-bisphosphokinase",b4094,['R15BPK']
 phnH,1.730782323937136,96.0,4311040.0,ribophosphonate triphosphate synthase subunit,b4100,
 phnG,1.7374751859318636,96.0,4311060.0,ribophosphonate triphosphate synthase subunit,b4101,
 phnF,1.46855264506173,96.0,4311513.0,putative DNA-binding transcriptional regulator of phosphonate uptake and biodegradation,b4102,

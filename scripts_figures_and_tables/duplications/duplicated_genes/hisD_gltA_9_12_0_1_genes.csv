@@ -1,23 +1,23 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykgP,1.3301076457874574,1.0,309426.0,No_gene_product,b4630,
 tfaR,1.6973711204748982,2.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
 ynaE,1.6113407979030494,2.0,1428480.0,"cold shock protein, Rac prophage",b1375,
 ydfK,1.5942902407846207,3.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,
 tfaQ,1.6728964666111539,3.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
-wbbK,1.3669853715510116,4.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbH,1.4174920513481735,4.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.3740339719599732,4.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
+wbbK,1.3669853715510116,4.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbH,1.4174920513481735,4.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.3740339719599732,4.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
 yehD,1.3581642729800352,5.0,2185216.0,putative fimbrial-like adhesin protein,b2111,
 yeiS,1.4298739287490183,6.0,2227200.0,DUF2542 family protein,b2145,
 eco,1.3964557375591182,7.0,2297856.0,"ecotin, a serine protease inhibitor",b2209,
-nudI,1.3346957310164456,8.0,2358032.0,nucleoside triphosphatase,b2251,"frozenset({<Reaction DUTPDP at 0x7fcfa6a93080>, <Reaction NTPP7 at 0x7fcfa67242b0>, <Reaction NTPP3 at 0x7fcfa6717d30>})"
+nudI,1.3346957310164456,8.0,2358032.0,nucleoside triphosphatase,b2251,"['NTPP7', 'DUTPDP', 'NTPP3']"
 yfbN,1.5205212815287732,9.0,2381824.0,uncharacterized protein,b2273,
 yfbO,1.5087714181310554,9.0,2382113.0,uncharacterized protein,b2274,
 yfdF,1.4489560219116495,10.0,2456490.0,uncharacterized protein,b2345,
 gtrB,1.438421531010866,10.0,2461696.0,CPS-53 (KpLE1) prophage; bactoprenol glucosyl transferase,b2351,
 gtrS,1.6750986168936417,10.0,2463744.0,"serotype-specific glucosyl transferase, CPS-53 (KpLE1) prophage",b2352,
 evgA,1.4494341291831505,11.0,2477233.0,response regulator in two-component regulatory system with EvgS,b2369,
-frc,1.3813622656171114,11.0,2486272.0,"formyl-CoA transferase, NAD(P)-binding",b2374,frozenset({<Reaction FORCT at 0x7fcfa6997748>})
+frc,1.3813622656171114,11.0,2486272.0,"formyl-CoA transferase, NAD(P)-binding",b2374,['FORCT']
 ypdI,1.4601001597334904,11.0,2488320.0,putative lipoprotein involved in colanic acid biosynthesis,b2376,
 yffQ,1.342335932465831,12.0,2556950.0,CPZ-55 prophage; uncharacterized protein,b2448,
 yffR,1.3762301499899663,12.0,2557338.0,CPZ-55 prophage; uncharacterized protein,b2449,
@@ -27,7 +27,7 @@ yfgH,1.4405300615346275,14.0,2623488.0,outer membrane integrity lipoprotein,b250
 iscX,1.3724369498271038,15.0,2649894.0,Fe(2+) donor and activity modulator for cysteine desulfurase,b2524,
 yfhL,1.4461224237409276,16.0,2693120.0,putative 4Fe-4S cluster-containing protein,b2562,
 shoB,1.3616869615764287,16.0,2693504.0,toxic membrane protein,b4687,
-acpS,1.4068544459558832,16.0,2693976.0,holo-[acyl-carrier-protein] synthase 1,b2563,frozenset({<Reaction ACPS1 at 0x7fcfa6bf3588>})
+acpS,1.4068544459558832,16.0,2693976.0,holo-[acyl-carrier-protein] synthase 1,b2563,['ACPS1']
 rpoE,1.3243507146270546,17.0,2703360.0,RNA polymerase sigma E factor,b2573,
 raiA,1.40603281276417,18.0,2730512.0,cold shock protein associated with 30S ribosomal subunit,b2597,
 pheL,1.6261021598528,18.0,2730957.0,pheA gene leader peptide,b2598,
@@ -39,13 +39,13 @@ ypjC,1.5094202171733992,20.0,2777088.0,No_gene_product,b2650,
 ygaQ,1.4254341430354343,20.0,2779755.0,No_gene_product,b4462,
 yqaE,1.3556872943080618,21.0,2790228.0,cyaR sRNA-regulated protein,b2666,
 srlM,1.365695947506311,22.0,2822144.0,sorbitol=responsive srl operon transcriptional activator,b2706,
-cysC,1.3867842728787638,23.0,2867200.0,adenosine 5'-phosphosulfate kinase,b2750,frozenset({<Reaction ADSK at 0x7fcfa6c09e10>})
+cysC,1.3867842728787638,23.0,2867200.0,adenosine 5'-phosphosulfate kinase,b2750,['ADSK']
 iap,1.4012951636258888,23.0,2869939.0,aminopeptidase in alkaline phosphatase isozyme conversion,b2753,
 casA,1.3920192343608364,24.0,2875988.0,CRISP RNA (crRNA) containing Cascade antiviral complex protein,b2760,
 yqcG,1.5138718054298383,25.0,2898944.0,membrane stress resistance protein,b4682,
 ygcG,1.5785144064931445,25.0,2899069.0,"TPM domain protein, putative phosphatase",b2778,
-eno,1.3682912388966992,25.0,2900001.0,enolase,b2779,frozenset({<Reaction ENO at 0x7fcfa6a362e8>})
-gudD,1.3731729537451456,26.0,2912256.0,D-glucarate dehydratase 1,b2787,frozenset({<Reaction GLCRD at 0x7fcfa6986eb8>})
+eno,1.3682912388966992,25.0,2900001.0,enolase,b2779,['ENO']
+gudD,1.3731729537451456,26.0,2912256.0,D-glucarate dehydratase 1,b2787,['GLCRD']
 yqcC,1.4315923321192114,26.0,2917376.0,DUF446 family protein,b2792,
 ygdI,1.5810253726638315,27.0,2936320.0,DUF903 family verified lipoprotein,b2809,
 ppdC,1.450121816161661,28.0,2955799.0,putative prepilin peptidase-dependent protein,b2823,

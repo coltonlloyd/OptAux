@@ -1,6 +1,6 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykgM,1.3874553014306883,1.0,308224.0,50S ribosomal protein L31 type B; alternative zinc-limitation L31 protein,b0296,
-cyoD,1.5136461850293357,2.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+cyoD,1.5136461850293357,2.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,['CYTBO3_4pp']
 ybcN,1.4781018400713235,3.0,567921.0,DLP12 prophage; uncharacterized protein,b0547,
 ybcW,1.3613633707212645,4.0,575488.0,DLP12 prophage; uncharacterized protein,b0559,
 hokE,1.5450632247264615,5.0,603291.0,"toxic polypeptide, small",b4415,
@@ -19,8 +19,8 @@ rpoA,1.3467316541713117,14.0,3433398.0,"RNA polymerase, alpha subunit",b3295,
 rpmC,1.5245763608094547,15.0,3441926.0,50S ribosomal subunit protein L29,b3312,
 rpsJ,1.4286903916697746,16.0,3446317.0,30S ribosomal subunit protein S10,b3321,
 gspI,1.3890815683340267,17.0,3455332.0,"general secretory pathway component, cryptic",b3330,
-rpe,1.3884454867217146,18.0,3508224.0,D-ribulose-5-phosphate 3-epimerase,b3386,frozenset({<Reaction RPE at 0x7fcfa6630128>})
+rpe,1.3884454867217146,18.0,3508224.0,D-ribulose-5-phosphate 3-epimerase,b3386,['RPE']
 yiaA,1.3672026848893044,19.0,3720283.0,"YiaAB family inner membrane protein, tandem domains",b3562,
-atpE,1.5299982956981009,20.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpE,1.5299982956981009,20.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,['ATPS4rpp']
 tufB,1.8649127332895388,21.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
 yjgZ,1.5153646334411601,22.0,4491264.0,uncharacterized protein,b4277,

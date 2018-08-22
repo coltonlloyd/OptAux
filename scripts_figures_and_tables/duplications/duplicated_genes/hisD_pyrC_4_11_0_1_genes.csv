@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yafT,1.4011031518448032,1.0,233821.0,lipoprotein,b0217,
 ykfM,1.639211682498721,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 yafU,1.4976007892185448,1.0,235520.0,No_gene_product,b0218,
@@ -64,15 +64,15 @@ yecT,1.6209385928601105,32.0,1956228.0,uncharacterized protein,b1877,
 yedN,1.5687562485902984,33.0,2004992.0,No_gene_product,b4495,
 intG,1.454246078211444,33.0,2006016.0,No_gene_product,b1936,
 zinT,1.4359607233068865,34.0,2034855.0,"zinc and cadmium binding protein, periplasmic",b1973,
-wbbK,1.7095802022114195,35.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.56170583497619,35.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,1.8299286513928443,35.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.7904643812655157,35.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
-wzxB,1.7141434940076572,35.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,frozenset({<Reaction O16AUNDtpp at 0x7fcfa6724fd0>})
+wbbK,1.7095802022114195,35.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.56170583497619,35.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,1.8299286513928443,35.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.7904643812655157,35.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
+wzxB,1.7141434940076572,35.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,['O16AUNDtpp']
 ibsA,1.3142934180062509,36.0,2146829.0,toxic membrane protein,b4667,
 yegZ,1.3532954953357894,37.0,2161152.0,No_gene_product,b2083,
 yegR,1.586316323310536,37.0,2161664.0,uncharacterized protein,b2085,
-gatB,1.4069025314406862,38.0,2167808.0,galactitol-specific enzyme IIB component of PTS,b2093,frozenset({<Reaction GALTptspp at 0x7fcfa696c048>})
+gatB,1.4069025314406862,38.0,2167808.0,galactitol-specific enzyme IIB component of PTS,b2093,['GALTptspp']
 yehD,1.8483128029694436,39.0,2185216.0,putative fimbrial-like adhesin protein,b2111,
 yehE,1.732941069783019,39.0,2186240.0,DUF2574 family protein,b2112,
 yehK,1.3413369704336695,39.0,2197504.0,uncharacterized protein,b4541,
@@ -90,7 +90,7 @@ emrK,1.642060259610166,45.0,2476032.0,multidrug resistance efflux pump membrane 
 evgA,1.3694716702616112,45.0,2477233.0,response regulator in two-component regulatory system with EvgS,b2369,
 ypdI,1.5271640758050435,46.0,2488320.0,putative lipoprotein involved in colanic acid biosynthesis,b2376,
 yfdY,1.5558317723779433,46.0,2488528.0,DUF2545 family putative inner membrane protein,b2377,
-ptsH,1.420638492966835,47.0,2527232.0,phosphohistidinoprotein-hexose phosphotransferase component of PTS system (Hpr),b2415,"frozenset({<Reaction MANptspp at 0x7fcfa67db400>, <Reaction GALTptspp at 0x7fcfa696c048>, <Reaction FRUptspp at 0x7fcfa69a64a8>, <Reaction ARBTptspp at 0x7fcfa6b658d0>, <Reaction ACGAptspp at 0x7fcfa6c4df98>, <Reaction FRUpts2pp at 0x7fcfa69a6518>, <Reaction ACMANAptspp at 0x7fcfa6bdbd30>, <Reaction MANGLYCptspp at 0x7fcfa67db160>, <Reaction MNLptspp at 0x7fcfa67a2588>, <Reaction MALTptspp at 0x7fcfa6849588>, <Reaction SUCptspp at 0x7fcfa66049b0>, <Reaction SBTptspp at 0x7fcfa66511d0>, <Reaction ACMUMptspp at 0x7fcfa6bdbdd8>, <Reaction DHAPT at 0x7fcfa6a5a240>, <Reaction TREptspp at 0x7fcfa65cae48>, <Reaction GAMptspp at 0x7fcfa696ca90>, <Reaction GLCptspp at 0x7fcfa6990710>, <Reaction ASCBptspp at 0x7fcfa6b7b390>})"
+ptsH,1.420638492966835,47.0,2527232.0,phosphohistidinoprotein-hexose phosphotransferase component of PTS system (Hpr),b2415,"['ACMUMptspp', 'SBTptspp', 'DHAPT', 'TREptspp', 'GAMptspp', 'GLCptspp', 'MALTptspp', 'ACGAptspp', 'ASCBptspp', 'GALTptspp', 'MANptspp', 'FRUptspp', 'ARBTptspp', 'FRUpts2pp', 'MANGLYCptspp', 'ACMANAptspp', 'MNLptspp', 'SUCptspp']"
 yffL,1.5365401502069183,48.0,2553856.0,CPZ-55 prophage; uncharacterized protein,b2443,
 yffQ,1.584503402660597,48.0,2556950.0,CPZ-55 prophage; uncharacterized protein,b2448,
 yffR,1.457375971912468,48.0,2557338.0,CPZ-55 prophage; uncharacterized protein,b2449,
@@ -124,7 +124,7 @@ pbl,2.048961537962916,60.0,2987297.0,No_gene_product,b2854,
 ygeK,1.9220053917271784,60.0,2988032.0,No_gene_product,b2856,
 ygeN,2.121361671978462,60.0,2988672.0,No_gene_product,b2858,
 ygeO,1.5611250550376232,60.0,2989320.0,No_gene_product,b2859,
-mocA,1.4858783142498255,61.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,frozenset({<Reaction MOCDS at 0x7fcfa67b1278>})
+mocA,1.4858783142498255,61.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,['MOCDS']
 yqfB,1.5515141855059378,62.0,3036672.0,UPF0267 family protein,b2900,
 ygiZ,1.5323301955614368,63.0,3165237.0,inner membrane protein,b3027,
 ygiL,1.4910871385680835,64.0,3178772.0,putative fimbrial-like adhesin protein,b3043,
@@ -146,16 +146,16 @@ yibG,1.7803594497694089,72.0,3761536.0,TPR-like repeat protein,b3596,
 yibS,1.5157783462935925,72.0,3762176.0,No_gene_product,b4650,
 yibW,1.7036777725437287,72.0,3762251.0,No_gene_product,b4651,
 yibV,1.7542328646922907,72.0,3762704.0,No_gene_product,b4615,
-waaL,1.7191931132490599,73.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.8915475901606322,73.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.6763378957440283,73.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
-waaY,1.6642617500928476,73.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,frozenset({<Reaction HEPK2 at 0x7fcfa6906ef0>})
+waaL,1.7191931132490599,73.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.8915475901606322,73.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.6763378957440283,73.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
+waaY,1.6642617500928476,73.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,['HEPK2']
 waaJ,1.6725153161100041,73.0,3794944.0,,,
-waaR,1.6334065395431039,73.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaS,2.0776629947320036,73.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaR,1.6334065395431039,73.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaS,2.0776629947320036,73.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yigF,1.7293993496259572,74.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
 yigG,1.590769495654913,74.0,3996172.0,PRK11371 family inner membrane protein,b3818,
-ompL,1.5347658268603057,75.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,frozenset({<Reaction H2Otex at 0x7fcfa68f9208>})
+ompL,1.5347658268603057,75.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,['H2Otex']
 yiiE,1.406618083459538,76.0,4072656.0,CopG family putative transcriptional regulator,b3889,
 arpA,1.4416499025008571,77.0,4210688.0,ankyrin repeat protein,b4017,
 yjbI,1.783899051409859,78.0,4240630.0,No_gene_product,b4038,

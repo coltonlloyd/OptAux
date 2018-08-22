@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yadC,1.3183401976141547,1.0,146201.0,putative fimbrial-like adhesin protein,b0135,
 ykfN,1.5022737979504368,2.0,258860.0,No_gene_product,b4626,
 yagK,1.4233696051475646,3.0,288032.0,CP4-6 prophage; conserved protein,b0277,
@@ -6,7 +6,7 @@ yagL,1.4067429765802548,3.0,288930.0,CP4-6 prophage; DNA-binding protein,b0278,
 ecpA,1.4658446120916575,4.0,305794.0,ECP pilin,b0293,
 ykgR,1.5214476326381565,4.0,308851.0,uncharacterized protein,b4671,
 ykgH,1.3995756357480815,5.0,320406.0,putative inner membrane protein,b0310,
-cyoD,1.3677455815814856,6.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+cyoD,1.3677455815814856,6.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,['CYTBO3_4pp']
 cueR,1.35658730583224,7.0,509448.0,copper-responsive regulon transcriptional regulator,b0487,
 sfmZ,1.3550365276592586,8.0,559303.0,response regulator family protein,b0535,
 ylcH,1.377743976838067,9.0,567823.0,"uncharacterized protein, DLP12 prophage",b4588,
@@ -21,7 +21,7 @@ ymgC,1.540245913627633,16.0,1212416.0,"Blue light, low temperature and stress in
 ymgJ,1.4091533957860236,17.0,1218719.0,uncharacterized protein,b4594,
 ldrA,1.728013402770068,18.0,1264640.0,"toxic polypeptide, small",b4419,
 ldrC,1.6379066468514072,18.0,1265693.0,"toxic polypeptide, small",b4423,
-tdk,1.3076615065453614,19.0,1288982.0,thymidine kinase/deoxyuridine kinase,b1238,"frozenset({<Reaction DURIK1 at 0x7fcfa6a86da0>, <Reaction TMDK1 at 0x7fcfa65bb3c8>})"
+tdk,1.3076615065453614,19.0,1288982.0,thymidine kinase/deoxyuridine kinase,b1238,"['TMDK1', 'DURIK1']"
 ydaS,1.4438925009026606,20.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
 ynaE,1.8315989702433584,21.0,1428480.0,"cold shock protein, Rac prophage",b1375,
 ydfK,1.7083864987863944,22.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,

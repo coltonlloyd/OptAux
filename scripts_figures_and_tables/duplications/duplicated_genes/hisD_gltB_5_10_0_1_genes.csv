@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 sgrT,1.4136263051926063,1.0,73874.0,inhibitor of glucose uptake,b4662,
 yadK,1.4455979755972284,2.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfM,1.538910763555319,3.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
@@ -24,12 +24,12 @@ appY,1.460482692620261,14.0,579584.0,global transcriptional activator; DLP12 pro
 ybeT,3.6610601848975577,15.0,674307.0,Sel1 family TPR-like repeat protein,b0647,
 ybeU,3.481209170166626,15.0,674963.0,DUF1266 family protein,b0648,
 djlC,3.2700883029850405,15.0,675667.0,J domain-containing HscC co-chaperone; Hsc56,b0649,
-hscC,3.1143122188432124,15.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,frozenset({<Reaction NTP1 at 0x7fcfa6717160>})
-rihA,3.0485349464591835,15.0,678932.0,ribonucleoside hydrolase 1,b0651,"frozenset({<Reaction URIH at 0x7fcfa6594748>, <Reaction CYTDH at 0x7fcfa6aa7748>})"
-gltL,3.135355739807785,15.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltK,3.1892040507602144,15.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltJ,3.0468639234315384,15.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltI,3.1292033159749058,15.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
+hscC,3.1143122188432124,15.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,['NTP1']
+rihA,3.0485349464591835,15.0,678932.0,ribonucleoside hydrolase 1,b0651,"['CYTDH', 'URIH']"
+gltL,3.135355739807785,15.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"['ASPabcpp', 'GLUabcpp']"
+gltK,3.1892040507602144,15.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"['ASPabcpp', 'GLUabcpp']"
+gltJ,3.0468639234315384,15.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"['ASPabcpp', 'GLUabcpp']"
+gltI,3.1292033159749058,15.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"['ASPabcpp', 'GLUabcpp']"
 ybfB,1.7163204529891236,16.0,729231.0,putative membrane protein,b0702,
 ybfQ,1.3943638197193395,16.0,731900.0,No_gene_product,b4514,
 ybfD,1.4423496580482047,16.0,733547.0,H repeat-associated putative transposase,b0706,
@@ -74,8 +74,8 @@ ydfO,1.4330895963518746,31.0,1631303.0,Qin prophage; uncharacterized protein,b15
 gnsB,1.4064260489648643,31.0,1631865.0,Qin prophage; multicopy suppressor of secG(Cs) and fabA6(Ts),b1550,
 yobI,1.3627532220998686,32.0,1940371.0,uncharacterized protein,b4677,
 yoeG,1.3614636234196384,33.0,2060840.0,No_gene_product,b4640,
-wbbK,1.4303253015865283,34.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbH,1.3744467310028277,34.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
+wbbK,1.4303253015865283,34.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbH,1.3744467310028277,34.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
 yfaH,1.4073620822744708,35.0,2343129.0,No_gene_product,b2238,
 yfbN,1.4196633735837245,36.0,2381824.0,uncharacterized protein,b2273,
 yfbO,1.7501616853690416,36.0,2382113.0,uncharacterized protein,b2274,
@@ -111,7 +111,7 @@ ygeI,1.5753805545170676,47.0,2987008.0,uncharacterized protein,b2853,
 pbl,1.762650208630704,47.0,2987297.0,No_gene_product,b2854,
 ygeK,1.5606326739902443,47.0,2988032.0,No_gene_product,b2856,
 ygeN,1.7166806087535753,47.0,2988672.0,No_gene_product,b2858,
-mocA,1.4440602586791618,48.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,frozenset({<Reaction MOCDS at 0x7fcfa67b1278>})
+mocA,1.4440602586791618,48.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,['MOCDS']
 yqfG,1.718186857545772,49.0,3026175.0,uncharacterized protein,b4684,
 ibsC,1.3067169007230919,50.0,3050248.0,toxic membrane protein,b4665,
 mqsR,1.6018693676315305,51.0,3161606.0,GCU-specific mRNA interferase toxin of the MqsR-MqsA toxin-antitoxin system; biofilm/motility regulator; anti-repressor,b3022,
@@ -146,17 +146,17 @@ yibW,1.6206660235763932,64.0,3762251.0,No_gene_product,b4651,
 yibV,1.5055253568260907,64.0,3762704.0,No_gene_product,b4615,
 yibU,1.5160049032030742,64.0,3763307.0,No_gene_product,b4652,
 yibB,1.3320453880746024,65.0,3786752.0,"YibB family protein, function unknown",b3618,
-waaL,1.5865089145221687,65.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.769287185175916,65.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.5484688501674977,65.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
+waaL,1.5865089145221687,65.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.769287185175916,65.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.5484688501674977,65.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
 waaJ,1.5755536958463603,65.0,3794944.0,,,
-waaR,1.406637397662373,65.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaB,1.4978337017902852,65.0,3796992.0,"lipopolysaccharide 1,6-galactosyltransferase; UDP-D-galactose:(glucosyl)lipopolysaccharide-1, 6-D-galactosyltransferase",b3628,frozenset({<Reaction GALT1 at 0x7fcfa695af98>})
-waaS,1.8242675336231253,65.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaR,1.406637397662373,65.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaB,1.4978337017902852,65.0,3796992.0,"lipopolysaccharide 1,6-galactosyltransferase; UDP-D-galactose:(glucosyl)lipopolysaccharide-1, 6-D-galactosyltransferase",b3628,['GALT1']
+waaS,1.8242675336231253,65.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 tnaC,1.310976572307424,66.0,3881856.0,tryptophanase leader peptide,b3707,
 yigF,1.550534925243303,67.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
 yigG,1.7199484500424356,67.0,3996172.0,PRK11371 family inner membrane protein,b3818,
-ompL,1.4709805539885237,68.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,frozenset({<Reaction H2Otex at 0x7fcfa68f9208>})
+ompL,1.4709805539885237,68.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,['H2Otex']
 yiiF,1.4735511774003422,69.0,4073110.0,"putative thymol sensitivity protein, CopG family putative transcriptional regulator",b3890,
 tufB,1.6667167698774836,70.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
 yjbI,1.46192936755503,71.0,4240630.0,No_gene_product,b4038,

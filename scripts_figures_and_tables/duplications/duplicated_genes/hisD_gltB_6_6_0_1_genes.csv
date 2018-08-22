@@ -1,13 +1,13 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykgS,1.7768193337822313,1.0,286208.0,No_gene_product,b4688,
-mrdA,3.4036071837240964,2.0,663552.0,"penicillin-binding protein 2, transpeptidase involved in peptidoglycan synthesis",b0635,"frozenset({<Reaction MCTP1App at 0x7fcfa67dbc50>, <Reaction MCTP2App at 0x7fcfa67dbd68>})"
+mrdA,3.4036071837240964,2.0,663552.0,"penicillin-binding protein 2, transpeptidase involved in peptidoglycan synthesis",b0635,"['MCTP1App', 'MCTP2App']"
 rlmH,3.6280949736048336,2.0,663703.0,"23S rRNA m(3)Psi1915 pseudouridine methyltransferase, SAM-dependent",b0636,
 rsfS,3.5817955488357236,2.0,664174.0,ribosomal silencing factor,b0637,
-cobC,3.7563875902229955,2.0,664751.0,putative alpha-ribazole-5'-P phosphatase,b0638,frozenset({<Reaction RZ5PP at 0x7fcfa6630c50>})
-nadD,3.8020091619403265,2.0,665600.0,"nicotinic acid mononucleotide adenylyltransferase, NAD(P)-dependent",b0639,"frozenset({<Reaction NNATr at 0x7fcfa676d518>, <Reaction NMNAT at 0x7fcfa675fe10>})"
+cobC,3.7563875902229955,2.0,664751.0,putative alpha-ribazole-5'-P phosphatase,b0638,['RZ5PP']
+nadD,3.8020091619403265,2.0,665600.0,"nicotinic acid mononucleotide adenylyltransferase, NAD(P)-dependent",b0639,"['NNATr', 'NMNAT']"
 holA,3.9524759060256733,2.0,666029.0,"DNA polymerase III, delta subunit",b0640,
 lptE,4.057586975736844,2.0,667060.0,"LPS assembly OM complex LptDE, lipoprotein component",b0641,
-leuS,3.5474574491357456,2.0,667656.0,leucyl-tRNA synthetase,b0642,frozenset({<Reaction LEUTRS at 0x7fcfa68822b0>})
+leuS,3.5474574491357456,2.0,667656.0,leucyl-tRNA synthetase,b0642,['LEUTRS']
 ybeL,4.1549919921872345,2.0,670473.0,DUF1451 family protein,b0643,
 ybeQ,4.016165142650435,2.0,671744.0,Sel1 family TPR-like repeat protein,b0644,
 ybeR,4.194851504302931,2.0,672166.0,uncharacterized protein,b0645,
@@ -15,12 +15,12 @@ djlB,4.280923708363478,2.0,672870.0,"putative HscC co-chaperone, uncharacterized
 ybeT,4.366068858278859,2.0,674307.0,Sel1 family TPR-like repeat protein,b0647,
 ybeU,4.20594150544068,2.0,674963.0,DUF1266 family protein,b0648,
 djlC,4.006240159146793,2.0,675667.0,J domain-containing HscC co-chaperone; Hsc56,b0649,
-hscC,5.080503329145033,2.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,frozenset({<Reaction NTP1 at 0x7fcfa6717160>})
-rihA,10.157977707216498,2.0,678932.0,ribonucleoside hydrolase 1,b0651,"frozenset({<Reaction URIH at 0x7fcfa6594748>, <Reaction CYTDH at 0x7fcfa6aa7748>})"
-gltL,11.00660958309813,2.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltK,10.01929953588374,2.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltJ,9.942606550911986,2.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltI,10.4647942688841,2.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
+hscC,5.080503329145033,2.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,['NTP1']
+rihA,10.157977707216498,2.0,678932.0,ribonucleoside hydrolase 1,b0651,"['CYTDH', 'URIH']"
+gltL,11.00660958309813,2.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"['ASPabcpp', 'GLUabcpp']"
+gltK,10.01929953588374,2.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"['ASPabcpp', 'GLUabcpp']"
+gltJ,9.942606550911986,2.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"['ASPabcpp', 'GLUabcpp']"
+gltI,10.4647942688841,2.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"['ASPabcpp', 'GLUabcpp']"
 ybfB,1.3259522913496582,3.0,729231.0,putative membrane protein,b0702,
 iraM,1.3363523684504703,4.0,1207296.0,"RpoS stabilzer during Mg starvation, anti-RssB factor",b1160,
 ymgJ,1.353434874199503,5.0,1218719.0,uncharacterized protein,b4594,
@@ -37,8 +37,8 @@ yqcG,1.493128906554751,11.0,2898944.0,membrane stress resistance protein,b4682,
 yqeL,1.418695771525287,12.0,2983177.0,uncharacterized protein,b4683,
 yqeK,1.3752063402523496,12.0,2983293.0,uncharacterized protein,b2849,
 ygeG,1.440785822839229,12.0,2984626.0,SycD-like chaperone family TPR-repeat-containing protein,b2851,
-waaU,1.4303926487143153,13.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaS,1.58650696666365,14.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaU,1.4303926487143153,13.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaS,1.58650696666365,14.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yigG,1.5496416367454509,15.0,3996172.0,PRK11371 family inner membrane protein,b3818,
 yjbL,1.4449031092963467,16.0,4250248.0,uncharacterized protein,b4047,
 yjbM,1.4863530222066161,16.0,4250526.0,uncharacterized protein,b4048,

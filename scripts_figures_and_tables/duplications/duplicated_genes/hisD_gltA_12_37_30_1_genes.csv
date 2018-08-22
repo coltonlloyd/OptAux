@@ -1,10 +1,10 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yadK,1.4415603607135623,1.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfN,1.3821674422515409,2.0,258860.0,No_gene_product,b4626,
 yagE,1.3954477357429838,3.0,278528.0,2-keto-3-deoxy gluconate (KDG) aldolase; CP4-6 prophage,b0268,
 ykgR,1.476915843018042,4.0,308851.0,uncharacterized protein,b4671,
 rclB,1.3780785191624991,5.0,314041.0,reactive chlorine species (RCS) stress resistance periplasmic protein,b0303,
-cyoC,1.4369678765186045,6.0,443501.0,cytochrome o ubiquinol oxidase subunit III,b0430,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+cyoC,1.4369678765186045,6.0,443501.0,cytochrome o ubiquinol oxidase subunit III,b0430,['CYTBO3_4pp']
 sfmA,1.4303983779538008,7.0,553667.0,"FimA homolog, function unknown",b0530,
 ylcH,1.4840264545533879,8.0,567823.0,"uncharacterized protein, DLP12 prophage",b4588,
 lptE,1.4396911376324768,9.0,667060.0,"LPS assembly OM complex LptDE, lipoprotein component",b0641,
@@ -40,7 +40,7 @@ ynfN,1.3053441868540938,30.0,1632256.0,Qin prophage; cold shock-induced protein,
 cspB,1.6166107003600518,31.0,1635595.0,Qin prophage; cold shock protein,b1557,
 dicA,1.4340778941114722,32.0,1642496.0,Qin prophage; putative regulator for DicB,b1570,
 ydfD,1.3871618003537483,32.0,1644050.0,Qin prophage; uncharacterized protein,b1576,
-lpp,1.377478467556141,33.0,1751677.0,murein lipoprotein,b1677,"frozenset({<Reaction ALPATG160pp at 0x7fcfa6bc4588>, <Reaction ALPATE160pp at 0x7fcfa6bc46a0>})"
+lpp,1.377478467556141,33.0,1751677.0,murein lipoprotein,b1677,"['ALPATG160pp', 'ALPATE160pp']"
 pheM,1.3728220670908002,34.0,1793482.0,phenylalanyl-tRNA synthetase operon leader peptide,b1715,
 yoaK,1.3209936096776116,35.0,1873029.0,inner membrane-associated protein,b4676,
 yobF,1.3459795085448691,36.0,1901704.0,DUF2527 family heat-induced protein,b1824,
@@ -55,7 +55,7 @@ ypdK,1.418764518288619,44.0,2490399.0,inner membrane protein,b4680,
 ypeB,1.3308856933051707,45.0,2521299.0,DUF3820 family protein,b4546,
 ypfM,1.301952972121852,46.0,2584192.0,stress-induced small enterobacterial protein,b4606,
 shoB,1.291146598294678,47.0,2693504.0,toxic membrane protein,b4687,
-grcA,1.5043757873817174,48.0,2709504.0,autonomous glycyl radical cofactor,b2579,"frozenset({<Reaction PFL at 0x7fcfa66f1ac8>, <Reaction OBTFL at 0x7fcfa6731860>})"
+grcA,1.5043757873817174,48.0,2709504.0,autonomous glycyl radical cofactor,b2579,"['PFL', 'OBTFL']"
 raiA,1.417090821713779,49.0,2730512.0,cold shock protein associated with 30S ribosomal subunit,b2597,
 pheL,1.5033017887643993,49.0,2730957.0,pheA gene leader peptide,b2598,
 rplS,1.3774153586802997,50.0,2737541.0,50S ribosomal subunit protein L19,b2606,
@@ -89,9 +89,9 @@ gadE,1.485228984445395,68.0,3651725.0,gad regulon transcriptional activator,b351
 yibA,1.5233747161680051,69.0,3760128.0,putative immunity protein for polymorphic toxin RhsA; HEAT-domain protein; lethality reduction protein,b3594,
 yibW,1.446785414476728,69.0,3762251.0,No_gene_product,b4651,
 yibV,1.42160399369988,69.0,3762704.0,No_gene_product,b4615,
-waaU,1.51943307834156,70.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
+waaU,1.51943307834156,70.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
 waaJ,1.4058315254788785,70.0,3794944.0,,,
-waaS,1.3944851224905788,70.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaS,1.3944851224905788,70.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 rpmG,1.3880083017270037,71.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 tisB,1.4529349570556986,72.0,3846912.0,"toxic membrane persister formation peptide, LexA-regulated",b4618,
 yifE,1.4118024814780776,73.0,3941445.0,UPF0438 family protein,b3764,

@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 thrL,1.3968606715744167,0.0,189.0,thr operon leader peptide,b0001,
 ykfM,1.7483615257895917,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 yafU,1.3140904313927826,1.0,235520.0,No_gene_product,b0218,
@@ -61,7 +61,7 @@ ymgI,1.7339689336054525,25.0,1218560.0,uncharacterized protein,b4593,
 ymgJ,1.685646154544549,25.0,1218719.0,uncharacterized protein,b4594,
 ldrA,1.5547903381461832,26.0,1264640.0,"toxic polypeptide, small",b4419,
 ldrC,1.4994940092669442,26.0,1265693.0,"toxic polypeptide, small",b4423,
-tdk,1.3206146964715118,27.0,1288982.0,thymidine kinase/deoxyuridine kinase,b1238,"frozenset({<Reaction DURIK1 at 0x7fcfa6a86da0>, <Reaction TMDK1 at 0x7fcfa65bb3c8>})"
+tdk,1.3206146964715118,27.0,1288982.0,thymidine kinase/deoxyuridine kinase,b1238,"['TMDK1', 'DURIK1']"
 yciF,1.3712255403377362,28.0,1309526.0,putative rubrerythrin/ferritin-like metal-binding protein,b1258,
 ymjC,1.4512827501946959,29.0,1384981.0,No_gene_product,b4525,
 ymjD,1.373039835683257,29.0,1385124.0,No_gene_product,b4673,
@@ -71,7 +71,7 @@ racC,1.529227624845125,30.0,1411744.0,Rac prophage; uncharacterized protein,b135
 ydaE,1.735682973827889,30.0,1412096.0,"conserved protein, Rac prophage",b4526,
 sieB,1.537456907669978,30.0,1413120.0,"phage superinfection exclusion protein, Rac prophage",b1353,
 ydaS,1.3974509560769155,30.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
-trkG,1.5106494695543102,31.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,frozenset({<Reaction Kt2pp at 0x7fcfa6862400>})
+trkG,1.5106494695543102,31.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,['Kt2pp']
 tfaR,1.8045140052153987,32.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
 ynaE,2.2570956060707625,32.0,1428480.0,"cold shock protein, Rac prophage",b1375,
 ynbG,2.0273416445497916,33.0,1459456.0,uncharacterized protein,b4674,
@@ -115,13 +115,13 @@ yoeF,1.3535641325399392,55.0,2072226.0,No_gene_product,b4538,
 yoeI,1.401438776725133,56.0,2080532.0,uncharacterized protein,b4678,
 yefM,1.6369867750678662,56.0,2082942.0,antitoxin of the YoeB-YefM toxin-antitoxin system,b2017,
 hisL,1.4816902670141587,56.0,2083476.0,his operon leader peptide,b2018,
-wbbK,1.6056117254700701,57.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.6486499460951571,57.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,1.7717149244193386,57.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.4867206210432546,57.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
-wzxB,1.3799763194051604,57.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,frozenset({<Reaction O16AUNDtpp at 0x7fcfa6724fd0>})
-rfbC,1.4549947885926198,57.0,2103296.0,"dTDP-4-deoxyrhamnose-3,5-epimerase",b2038,frozenset({<Reaction TDPDRE at 0x7fcfa65a1160>})
-wcaH,1.3435594091064456,58.0,2119680.0,GDP-mannose mannosyl hydrolase,b2051,frozenset({<Reaction GDPMNH at 0x7fcfa69798d0>})
+wbbK,1.6056117254700701,57.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.6486499460951571,57.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,1.7717149244193386,57.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.4867206210432546,57.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
+wzxB,1.3799763194051604,57.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,['O16AUNDtpp']
+rfbC,1.4549947885926198,57.0,2103296.0,"dTDP-4-deoxyrhamnose-3,5-epimerase",b2038,['TDPDRE']
+wcaH,1.3435594091064456,58.0,2119680.0,GDP-mannose mannosyl hydrolase,b2051,['GDPMNH']
 yegZ,1.5115863936073197,59.0,2161152.0,No_gene_product,b2083,
 yegR,1.5054852352947405,59.0,2161664.0,uncharacterized protein,b2085,
 yehE,1.570731260809065,60.0,2186240.0,DUF2574 family protein,b2112,
@@ -202,14 +202,14 @@ yibS,1.7304788635869044,98.0,3762176.0,No_gene_product,b4650,
 yibW,1.8566448258528352,98.0,3762251.0,No_gene_product,b4651,
 yibV,1.6872651620828605,98.0,3762704.0,No_gene_product,b4615,
 yibU,1.6473708504023314,98.0,3763307.0,No_gene_product,b4652,
-grxC,1.3673722883977446,99.0,3777550.0,glutaredoxin 3,b3610,"frozenset({<Reaction RNDR4b at 0x7fcfa6630160>, <Reaction GRXR at 0x7fcfa68e04e0>, <Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction PAPSR2 at 0x7fcfa66e52e8>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
-waaL,1.6585936360438935,100.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.6897570971945413,100.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.537645939123472,100.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
-waaY,1.5682107909657657,100.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,frozenset({<Reaction HEPK2 at 0x7fcfa6906ef0>})
+grxC,1.3673722883977446,99.0,3777550.0,glutaredoxin 3,b3610,"['RNDR2b', 'GRXR', 'RNDR3b', 'RNDR1b', 'RNDR4b', 'PAPSR2']"
+waaL,1.6585936360438935,100.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.6897570971945413,100.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.537645939123472,100.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
+waaY,1.5682107909657657,100.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,['HEPK2']
 waaJ,1.6640725070162996,100.0,3794944.0,,,
-waaR,1.5047550459049643,100.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaS,1.8872409867510787,100.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaR,1.5047550459049643,100.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaS,1.8872409867510787,100.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 rpmG,1.3436065366594678,101.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 rpmB,1.3936392945324014,101.0,3804797.0,50S ribosomal subunit protein L28,b3637,
 yicS,1.399053545470138,102.0,3833856.0,putative periplasmic protein,b4555,

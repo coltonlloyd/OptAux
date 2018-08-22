@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 rpsT,1.4172904195613811,1.0,20992.0,30S ribosomal subunit protein S20,b0023,
 yadK,1.4195531163626287,2.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfN,1.3672688925183993,3.0,258860.0,No_gene_product,b4626,
@@ -8,12 +8,12 @@ rzoD,1.3073231255031623,5.0,573952.0,DLP12 prophage; putative lipoprotein,b4510,
 ybeT,3.999742839161951,6.0,674307.0,Sel1 family TPR-like repeat protein,b0647,
 ybeU,4.179016146765859,6.0,674963.0,DUF1266 family protein,b0648,
 djlC,3.520503125258019,6.0,675667.0,J domain-containing HscC co-chaperone; Hsc56,b0649,
-hscC,3.0960077698475392,6.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,frozenset({<Reaction NTP1 at 0x7fcfa6717160>})
-rihA,3.595261045129798,6.0,678932.0,ribonucleoside hydrolase 1,b0651,"frozenset({<Reaction URIH at 0x7fcfa6594748>, <Reaction CYTDH at 0x7fcfa6aa7748>})"
-gltL,3.2285943563603925,6.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltK,2.9950880963849347,6.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltJ,3.0914022297143386,6.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltI,3.4593847333006864,6.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
+hscC,3.0960077698475392,6.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,['NTP1']
+rihA,3.595261045129798,6.0,678932.0,ribonucleoside hydrolase 1,b0651,"['CYTDH', 'URIH']"
+gltL,3.2285943563603925,6.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"['ASPabcpp', 'GLUabcpp']"
+gltK,2.9950880963849347,6.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"['ASPabcpp', 'GLUabcpp']"
+gltJ,3.0914022297143386,6.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"['ASPabcpp', 'GLUabcpp']"
+gltI,3.4593847333006864,6.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"['ASPabcpp', 'GLUabcpp']"
 cydX,1.401473417848246,7.0,769651.0,cytochrome d (bd-I) ubiquinol oxidase subunit X,b4515,
 ymgF,1.391546296250232,8.0,1214464.0,inner membrane division septum protein,b4520,
 ldrA,1.6089808715159817,9.0,1264640.0,"toxic polypeptide, small",b4419,
@@ -69,7 +69,7 @@ yiaG,1.385248013461538,38.0,3713024.0,HTH_CROC1 family putative transcriptional 
 insJ,1.4030512817753393,38.0,3714039.0,IS150 transposase A,b3557,
 rpmG,1.5030608580778904,39.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 ivbL,1.5149495218819309,40.0,3846249.0,ilvB operon leader peptide,b3672,
-atpE,1.3618873805331702,41.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpE,1.3618873805331702,41.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,['ATPS4rpp']
 ilvX,1.30363506186554,42.0,3943866.0,uncharacterized protein,b4669,
 ppiC,1.343058880972877,43.0,3953152.0,peptidyl-prolyl cis-trans isomerase C (rotamase C),b3775,
 hupA,1.3877565261518663,44.0,4190208.0,"HU, DNA-binding transcriptional regulator, alpha subunit",b4000,

@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yadK,1.345743943144008,1.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfN,1.309405626123293,2.0,258860.0,No_gene_product,b4626,
 ykgL,1.3890784121910544,3.0,307822.0,uncharacterized protein,b0295,
@@ -25,9 +25,9 @@ uspA,1.31092649918334,15.0,3633470.0,universal stress global response regulator,
 ldrD,1.2943381118370874,16.0,3693339.0,"toxic polypeptide, small",b4453,
 insK,1.3692126115939531,17.0,3715072.0,IS150 transposase B,b3558,
 yibG,1.331862895667815,18.0,3761536.0,TPR-like repeat protein,b3596,
-atpF,1.401126750814929,19.0,3913777.0,"F0 sector of membrane-bound ATP synthase, subunit b",b3736,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
-atpI,1.3509692106558129,19.0,3915776.0,"ATP synthase, membrane-bound accessory factor",b3739,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
-murB,1.3673071425608545,20.0,4161984.0,"UDP-N-acetylenolpyruvoylglucosamine reductase, FAD-binding",b3972,frozenset({<Reaction UAPGR at 0x7fcfa6571ba8>})
+atpF,1.401126750814929,19.0,3913777.0,"F0 sector of membrane-bound ATP synthase, subunit b",b3736,['ATPS4rpp']
+atpI,1.3509692106558129,19.0,3915776.0,"ATP synthase, membrane-bound accessory factor",b3739,['ATPS4rpp']
+murB,1.3673071425608545,20.0,4161984.0,"UDP-N-acetylenolpyruvoylglucosamine reductase, FAD-binding",b3972,['UAPGR']
 tufB,1.5923055669925374,20.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
 yjbT,1.4134200795829066,21.0,4229704.0,putative periplasmic protein,b4620,
 ecnB,1.5025788862028535,22.0,4366369.0,entericidin B membrane lipoprotein,b4411,

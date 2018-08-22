@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykfM,1.364604318613562,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 ykgS,1.8951967011296793,2.0,286208.0,No_gene_product,b4688,
 ykgP,1.303997238534788,3.0,309426.0,No_gene_product,b4630,
@@ -13,21 +13,21 @@ ynbG,1.558934145401769,10.0,1459456.0,uncharacterized protein,b4674,
 yncH,1.3148245582490161,11.0,1521196.0,IPR020099 family protein,b1455,
 ydfK,1.72453457908458,12.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,
 tfaQ,1.6975652523103617,12.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
-wbbI,1.4135624720635822,13.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
+wbbI,1.4135624720635822,13.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
 rcnR,1.349110196338963,14.0,2179072.0,transcriptional repressor of rcnA,b2105,
 yehD,1.548261293221965,15.0,2185216.0,putative fimbrial-like adhesin protein,b2111,
 yeiS,1.466713388299293,16.0,2227200.0,DUF2542 family protein,b2145,
-ccmD,1.4390716456957982,17.0,2288855.0,cytochrome c biogenesis protein; heme export ABC transporter holo-CcmE release factor,b2198,frozenset({<Reaction PHEMEabcpp at 0x7fcfa670bf98>})
+ccmD,1.4390716456957982,17.0,2288855.0,cytochrome c biogenesis protein; heme export ABC transporter holo-CcmE release factor,b2198,['PHEMEabcpp']
 eco,1.3634447887471264,18.0,2297856.0,"ecotin, a serine protease inhibitor",b2209,
 inaA,1.3509124617077544,19.0,2342912.0,acid-inducible Kdo/WaaP family putative kinase,b2237,
 yfaH,1.3572308538777136,19.0,2343129.0,No_gene_product,b2238,
-nudI,1.3776482130406358,20.0,2358032.0,nucleoside triphosphatase,b2251,"frozenset({<Reaction DUTPDP at 0x7fcfa6a93080>, <Reaction NTPP7 at 0x7fcfa67242b0>, <Reaction NTPP3 at 0x7fcfa6717d30>})"
+nudI,1.3776482130406358,20.0,2358032.0,nucleoside triphosphatase,b2251,"['NTPP7', 'DUTPDP', 'NTPP3']"
 elaD,1.438512120873021,21.0,2376191.0,"protease, capable of cleaving an AMC-ubiquitin model substrate",b2269,
 yfbM,1.4904715616937008,21.0,2380412.0,DUF1877 family protein,b2272,
 yfbN,1.3882969584133176,21.0,2381824.0,uncharacterized protein,b2273,
 yfbO,1.5882448998570413,21.0,2382113.0,uncharacterized protein,b2274,
 yfbP,1.4355573851883028,21.0,2382594.0,TPR-like repeats-containing protein,b2275,
-nuoA,1.4220460179577616,22.0,2398208.0,"NADH:ubiquinone oxidoreductase, membrane subunit A",b2288,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
+nuoA,1.4220460179577616,22.0,2398208.0,"NADH:ubiquinone oxidoreductase, membrane subunit A",b2288,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
 yfcI,1.3565859939008156,23.0,2416640.0,transposase_31 family protein,b2305,
 yfdF,1.5653655167754752,24.0,2456490.0,uncharacterized protein,b2345,
 gtrB,1.430897096108355,24.0,2461696.0,CPS-53 (KpLE1) prophage; bactoprenol glucosyl transferase,b2351,
@@ -51,7 +51,7 @@ eutN,1.4206753178548395,32.0,2565121.0,Ethanolamine catabolic microcompartment s
 ypfM,1.380102594808342,33.0,2584192.0,stress-induced small enterobacterial protein,b4606,
 yffB,1.447734035362362,33.0,2584605.0,putative ArsC family reductase,b2471,
 gcvR,1.4851508647793203,34.0,2593264.0,"transcriptional repressor, regulatory protein accessory to GcvA",b2479,
-hyfA,1.340767874406814,34.0,2594816.0,"hydrogenase 4, 4Fe-4S subunit",b2481,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
+hyfA,1.340767874406814,34.0,2594816.0,"hydrogenase 4, 4Fe-4S subunit",b2481,['FHL']
 yfgD,1.3308672173846812,35.0,2611200.0,putative oxidoreductase,b2495,
 yfgF,1.3778547686535756,36.0,2621440.0,"cyclic-di-GMP phosphodiesterase, anaerobic",b2503,
 yfgJ,1.4025099941306054,37.0,2629120.0,DUF1407 family protein,b2510,
@@ -74,8 +74,8 @@ yrbN,1.4049250371690873,45.0,3301248.0,uncharacterized protein,b4685,
 yrhB,1.3149063803150247,46.0,3578368.0,stable heat shock chaperone,b3446,
 yibW,1.324784156923666,47.0,3762251.0,No_gene_product,b4651,
 yibV,1.4783593754551865,47.0,3762704.0,No_gene_product,b4615,
-waaU,1.4463086796949138,48.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaS,1.4131151831256785,49.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaU,1.4463086796949138,48.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaS,1.4131151831256785,49.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yigG,1.4054409518750144,50.0,3996172.0,PRK11371 family inner membrane protein,b3818,
 yjbJ,1.3092533322036333,51.0,4249164.0,"stress-induced protein, UPF0337 family",b4045,
 yjbL,1.3593122243031492,51.0,4250248.0,uncharacterized protein,b4047,

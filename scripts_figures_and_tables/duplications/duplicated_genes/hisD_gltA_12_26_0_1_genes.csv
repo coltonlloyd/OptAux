@@ -1,9 +1,9 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 insX,1.3630308128835311,1.0,275968.0,No_gene_product,b4505,
 ykgS,1.486230702420165,2.0,286208.0,No_gene_product,b4688,
 ykgP,1.4367075573978643,3.0,309426.0,No_gene_product,b4630,
 nusB,1.343706398548449,4.0,430592.0,transcription antitermination protein,b0416,
-cyoD,1.4831040155072457,5.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+cyoD,1.4831040155072457,5.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,['CYTBO3_4pp']
 ldrA,1.4503752153896912,6.0,1264640.0,"toxic polypeptide, small",b4419,
 ldrC,1.5319484814302977,6.0,1265693.0,"toxic polypeptide, small",b4423,
 tfaR,1.4959977050551476,7.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
@@ -20,7 +20,7 @@ yhdN,1.4072901537135885,16.0,3432499.0,DUF1992 family protein,b3293,
 rpsL,1.4566088891240643,17.0,3467536.0,30S ribosomal subunit protein S12,b3342,
 insK,1.4339910176160282,18.0,3715072.0,IS150 transposase B,b3558,
 rpmB,1.3027817132581625,19.0,3804797.0,50S ribosomal subunit protein L28,b3637,
-atpE,1.487732207973498,20.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpE,1.487732207973498,20.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,['ATPS4rpp']
 yifL,1.3077698452810786,21.0,3987968.0,putative lipoprotein,b4558,
 yihD,1.3472187575854548,22.0,4035584.0,DUF1040 protein YihD,b3858,
 tufB,1.8086657995005953,23.0,4165871.0,translation elongation factor EF-Tu 2,b3980,

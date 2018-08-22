@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 sgrT,1.3605545570445905,1.0,73874.0,inhibitor of glucose uptake,b4662,
 ykfM,1.4980486725359947,2.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 ykgL,1.3809539871806407,3.0,307822.0,uncharacterized protein,b0295,
@@ -33,8 +33,8 @@ cspB,1.41095226512244,20.0,1635595.0,Qin prophage; cold shock protein,b1557,
 ydfA,1.331876671854695,21.0,1642764.0,Qin prophage; uncharacterized protein,b1571,
 dicB,1.3682932581288691,21.0,1644032.0,Qin prophage; cell division inhibition protein,b1575,
 yobI,1.588720951325004,22.0,1940371.0,uncharacterized protein,b4677,
-wbbK,1.4663083636322485,23.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbH,1.7079700473734103,23.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
+wbbK,1.4663083636322485,23.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbH,1.7079700473734103,23.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
 ibsA,1.3750558805748823,24.0,2146829.0,toxic membrane protein,b4667,
 yehK,1.3488447469524205,25.0,2197504.0,uncharacterized protein,b4541,
 yohP,1.507167395847233,26.0,2222464.0,uncharacterized protein,b4679,
@@ -88,16 +88,16 @@ slp,1.3720751986437012,55.0,3647488.0,outer membrane lipoprotein,b3506,
 dctR,1.4692724822628949,55.0,3648042.0,Putative LuxR family repressor for dicarboxylate transport,b3507,
 hdeB,1.4256092693863827,55.0,3649536.0,acid-resistance protein,b3509,
 gadE,1.377281558395196,55.0,3651725.0,gad regulon transcriptional activator,b3512,
-yiaM,1.3775606757624572,56.0,3737687.0,"2,3-diketo-L-gulonate TRAP transporter small permease protein",b3577,frozenset({<Reaction XYLUt2pp at 0x7fcfa6520c88>})
+yiaM,1.3775606757624572,56.0,3737687.0,"2,3-diketo-L-gulonate TRAP transporter small permease protein",b3577,['XYLUt2pp']
 yibG,1.542122665767448,57.0,3761536.0,TPR-like repeat protein,b3596,
 yibW,1.4084634901047506,57.0,3762251.0,No_gene_product,b4651,
 yibV,1.5276528217936878,57.0,3762704.0,No_gene_product,b4615,
 yibU,1.4920359294768653,57.0,3763307.0,No_gene_product,b4652,
-waaL,1.5931648771133107,58.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.6203457527075562,58.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.5272616068853366,58.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
+waaL,1.5931648771133107,58.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.6203457527075562,58.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.5272616068853366,58.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
 waaJ,1.4487050169018543,58.0,3794944.0,,,
-waaS,1.7626332864253877,58.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaS,1.7626332864253877,58.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 rpmG,1.5438730515642782,59.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 tnaC,1.4754490940582643,60.0,3881856.0,tryptophanase leader peptide,b3707,
 yjbL,1.5248309056595266,61.0,4250248.0,uncharacterized protein,b4047,

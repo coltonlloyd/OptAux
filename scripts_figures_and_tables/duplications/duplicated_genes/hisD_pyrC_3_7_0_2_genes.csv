@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykfN,1.3480162481777476,1.0,258860.0,No_gene_product,b4626,
 ykgR,1.373987627080568,2.0,308851.0,uncharacterized protein,b4671,
 ybbC,1.3506342988497273,3.0,523036.0,putative immunity protein,b0498,
@@ -25,7 +25,7 @@ gadE,1.4135940909151434,16.0,3651725.0,gad regulon transcriptional activator,b35
 yhjR,1.3819343036252334,17.0,3689472.0,DUF2629 family protein,b3535,
 yibA,1.3946860339867166,18.0,3760128.0,putative immunity protein for polymorphic toxin RhsA; HEAT-domain protein; lethality reduction protein,b3594,
 yibG,1.5367500515845862,18.0,3761536.0,TPR-like repeat protein,b3596,
-waaU,1.4910714089304944,19.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
+waaU,1.4910714089304944,19.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
 yiiE,1.320799018078206,20.0,4072656.0,CopG family putative transcriptional regulator,b3889,
 yjdQ,1.3296932368293937,21.0,4352007.0,No_gene_product,b4654,
 ythA,1.3536021593864582,22.0,4496384.0,uncharacterized protein,b4655,

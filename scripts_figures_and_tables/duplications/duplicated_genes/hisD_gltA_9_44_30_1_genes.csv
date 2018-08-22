@@ -1,6 +1,6 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 thrL,1.3404901144568668,0.0,189.0,thr operon leader peptide,b0001,
-panD,1.3856108206816562,1.0,142800.0,aspartate 1-decarboxylase,b0131,frozenset({<Reaction ASP1DC at 0x7fcfa6b8b128>})
+panD,1.3856108206816562,1.0,142800.0,aspartate 1-decarboxylase,b0131,['ASP1DC']
 yagE,1.3828783563589413,2.0,278528.0,2-keto-3-deoxy gluconate (KDG) aldolase; CP4-6 prophage,b0268,
 ykgS,1.5624836920680532,3.0,286208.0,No_gene_product,b4688,
 yagM,1.3899951109600717,3.0,289655.0,CP4-6 prophage; uncharacterized protein,b0279,
@@ -31,12 +31,12 @@ ydfO,1.448219949166893,23.0,1631303.0,Qin prophage; uncharacterized protein,b154
 gnsB,1.4104777780096343,23.0,1631865.0,Qin prophage; multicopy suppressor of secG(Cs) and fabA6(Ts),b1550,
 hokD,1.339901821830749,24.0,1639424.0,Qin prophage; small toxic polypeptide,b1562,
 relB,1.424005197855576,24.0,1639936.0,antitoxin of the RelE-RelB toxin-antitoxin syste; transcriptional repressor,b1564,
-lpp,1.3855917217101128,25.0,1751677.0,murein lipoprotein,b1677,"frozenset({<Reaction ALPATG160pp at 0x7fcfa6bc4588>, <Reaction ALPATE160pp at 0x7fcfa6bc46a0>})"
+lpp,1.3855917217101128,25.0,1751677.0,murein lipoprotein,b1677,"['ALPATG160pp', 'ALPATE160pp']"
 ydiE,1.4054566173296623,26.0,1783869.0,hemin uptake protein HemP homolog,b1705,
 pheM,1.3291883594506695,27.0,1793482.0,phenylalanyl-tRNA synthetase operon leader peptide,b1715,
 yoaK,1.4277317320485656,28.0,1873029.0,inner membrane-associated protein,b4676,
 yobF,1.6068620704417487,29.0,1901704.0,DUF2527 family heat-induced protein,b1824,
-nudB,1.385383681434878,30.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"frozenset({<Reaction NTPP5 at 0x7fcfa6717208>, <Reaction DNTPPA at 0x7fcfa6a793c8>})"
+nudB,1.385383681434878,30.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"['DNTPPA', 'NTPP5']"
 yoeH,1.3721154680527305,31.0,2061824.0,No_gene_product,b4641,
 yoeF,1.3023675925677838,32.0,2072226.0,No_gene_product,b4538,
 ibsA,1.3560618934409696,33.0,2146829.0,toxic membrane protein,b4667,
@@ -52,7 +52,7 @@ ygeI,1.482702021873401,40.0,2987008.0,uncharacterized protein,b2853,
 ibsC,1.4425245680184569,41.0,3050248.0,toxic membrane protein,b4665,
 hybG,1.3142551772312296,42.0,3133074.0,hydrogenase 2 accessory protein,b2990,
 hybF,1.5267693048554785,42.0,3133440.0,protein involved with the maturation of hydrogenases 1 and 2,b2991,
-ygiN,1.3785065800076095,43.0,3166720.0,quinol monooxygenase,b3029,"frozenset({<Reaction QMO3 at 0x7fcfa668ddd8>, <Reaction QMO2 at 0x7fcfa668d9e8>})"
+ygiN,1.3785065800076095,43.0,3166720.0,quinol monooxygenase,b3029,"['QMO3', 'QMO2']"
 rpsU,1.3410153108831155,44.0,3204139.0,30S ribosomal subunit protein S21,b3065,
 yrbN,1.4211382548171585,45.0,3301248.0,uncharacterized protein,b4685,
 yhdV,1.4804759348216796,46.0,3411968.0,putative outer membrane protein,b3267,

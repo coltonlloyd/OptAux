@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykfM,1.6245253936010164,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 ykgS,2.1041266526864786,2.0,286208.0,No_gene_product,b4688,
 yagL,1.4130770972018276,2.0,288930.0,CP4-6 prophage; DNA-binding protein,b0278,
@@ -36,9 +36,9 @@ ydfK,1.931690839696517,21.0,1627328.0,"cold shock protein, function unknown, Qin
 tfaQ,1.6953980378012028,21.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
 gnsB,1.435036284398513,21.0,1631865.0,Qin prophage; multicopy suppressor of secG(Cs) and fabA6(Ts),b1550,
 cspB,1.4445679727316338,22.0,1635595.0,Qin prophage; cold shock protein,b1557,
-wbbK,1.4863397067544069,23.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.3997143497737192,23.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-glf,1.4218222868730226,23.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
+wbbK,1.4863397067544069,23.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.3997143497737192,23.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+glf,1.4218222868730226,23.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
 yegR,1.4243376315998681,24.0,2161664.0,uncharacterized protein,b2085,
 yohP,1.5446171164460387,25.0,2222464.0,uncharacterized protein,b4679,
 yeiS,1.3184626675095188,26.0,2227200.0,DUF2542 family protein,b2145,
@@ -84,22 +84,22 @@ yhiJ,1.528019036659017,48.0,3624327.0,DUF4049 family protein,b3488,
 yhiL,1.501946730475345,48.0,3626211.0,No_gene_product,b4660,
 hdeB,1.4011428916028723,49.0,3649536.0,acid-resistance protein,b3509,
 gadE,1.5995817656930014,49.0,3651725.0,gad regulon transcriptional activator,b3512,
-gadA,1.5177787454754372,49.0,3659539.0,"glutamate decarboxylase A, PLP-dependent",b3517,frozenset({<Reaction GLUDC at 0x7fcfa691dba8>})
+gadA,1.5177787454754372,49.0,3659539.0,"glutamate decarboxylase A, PLP-dependent",b3517,['GLUDC']
 insK,1.352396311764878,50.0,3715072.0,IS150 transposase B,b3558,
 yibA,1.530608408829302,51.0,3760128.0,putative immunity protein for polymorphic toxin RhsA; HEAT-domain protein; lethality reduction protein,b3594,
 yibG,1.5627563562107036,51.0,3761536.0,TPR-like repeat protein,b3596,
 yibW,1.4572140680621997,51.0,3762251.0,No_gene_product,b4651,
 yibV,1.684183402988035,51.0,3762704.0,No_gene_product,b4615,
 yibB,1.4075653303302926,52.0,3786752.0,"YibB family protein, function unknown",b3618,
-waaL,1.6223898313475729,52.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.67080813638667,52.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.6277276146550033,52.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
+waaL,1.6223898313475729,52.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.67080813638667,52.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.6277276146550033,52.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
 waaJ,1.625710751472243,52.0,3794944.0,,,
-waaS,1.769929967514023,52.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaS,1.769929967514023,52.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 tnaC,1.3176482851874967,53.0,3881856.0,tryptophanase leader peptide,b3707,
 yigF,1.5656941546460865,54.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
 yigG,1.5741621145040243,54.0,3996172.0,PRK11371 family inner membrane protein,b3818,
-ompL,1.3705654122078819,55.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,frozenset({<Reaction H2Otex at 0x7fcfa68f9208>})
+ompL,1.3705654122078819,55.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,['H2Otex']
 yjbI,1.4879671680174353,56.0,4240630.0,No_gene_product,b4038,
 yjbL,1.5217202891948929,57.0,4250248.0,uncharacterized protein,b4047,
 yjbM,1.4459776947296137,57.0,4250526.0,uncharacterized protein,b4048,

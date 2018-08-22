@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 oweE,1.369818444010512,1.0,1199625.0,No_gene_product,b4692,
 wzb,1.366840746055443,2.0,2129135.0,colanic acid production protein-tyrosine-phosphatase; Wzc-P dephosphorylase,b2061,
 yohO,1.4002204123216666,3.0,2209135.0,putative membrane protein,b4542,
@@ -14,14 +14,14 @@ yfjK,1.3889999813532923,11.0,2754709.0,radiation resistance protein; DEAD/H heli
 ypjK,1.3741525574321913,12.0,2763803.0,CP4-57 prophage; putative inner membrane protein,b2635,
 yfjS,1.3616221167752278,12.0,2764039.0,CP4-57 prophage; uncharacterized protein,b2636,
 ypjF,1.4280570394456407,13.0,2770944.0,CP4-57 prophage; toxin of the YpjF-YfjZ toxin-antitoxin system,b2646,
-hycB,1.382688957583241,14.0,2842624.0,"hydrogenase 3, Fe-S subunit",b2724,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
+hycB,1.382688957583241,14.0,2842624.0,"hydrogenase 3, Fe-S subunit",b2724,"['HYD1pp', 'FHL']"
 ygcO,1.3704766585203043,15.0,2887277.0,putative 4Fe-4S cluster-containing protein,b2767,
 xerD,1.4359736526732583,16.0,3033088.0,site-specific tyrosine recombinase,b2894,
 sdhE,1.3436525683290983,16.0,3034162.0,flavinator of succinate dehydrogenase; antitoxin of CptAB toxin-antitoxin pair,b2897,
 ygfB,1.36576405151951,17.0,3048224.0,UPF0149 family protein,b2909,
 zapA,1.567851142738332,17.0,3048970.0,FtsZ stabilizer,b2910,
 ibsC,1.5063290479609586,17.0,3050248.0,toxic membrane protein,b4665,
-tktA,1.3454937191343879,18.0,3073002.0,"transketolase 1, thiamine triphosphate-binding",b2935,"frozenset({<Reaction TKT2 at 0x7fcfa65bb2b0>, <Reaction TKT1 at 0x7fcfa65bb5f8>})"
+tktA,1.3454937191343879,18.0,3073002.0,"transketolase 1, thiamine triphosphate-binding",b2935,"['TKT1', 'TKT2']"
 yghT,1.534200251826856,19.0,3127489.0,putative ATP-binding protein,b2986,
 hybG,1.477893995271627,19.0,3133074.0,hydrogenase 2 accessory protein,b2990,
 hybE,1.4049032964453647,19.0,3133669.0,hydrogenase 2-specific chaperone,b2992,
@@ -32,7 +32,7 @@ ibsE,1.5305233678046557,22.0,3188499.0,toxic membrane protein,b4666,
 rpsU,1.3492339850869521,23.0,3204139.0,30S ribosomal subunit protein S21,b3065,
 exuR,1.347897391232768,24.0,3240010.0,hexuronate regulon transcriptional repressor; autorepressor,b3094,
 yqjC,1.4365282839028246,24.0,3242327.0,DUF1090 family putative periplasmic protein,b3097,
-tdcC,1.434641009997197,25.0,3258368.0,L-threonine/L-serine transporter,b3116,"frozenset({<Reaction THRt2rpp at 0x7fcfa65adc88>, <Reaction SERt2rpp at 0x7fcfa65de6d8>})"
+tdcC,1.434641009997197,25.0,3258368.0,L-threonine/L-serine transporter,b3116,"['SERt2rpp', 'THRt2rpp']"
 agaR,1.462205432604985,26.0,3271214.0,transcriptional repressor of the aga regulon,b3131,
 agaS,1.348682267850534,26.0,3275334.0,tagatose-6-phosphate ketose/aldose isomerase,b3136,
 yraN,1.390856157797858,27.0,3289088.0,UPF0102 family protein,b3148,
@@ -47,8 +47,8 @@ rlmE,1.4286169812468852,29.0,3320393.0,"23S rRNA U2552 2'-O-ribose methyltransfe
 yhbY,1.3939745387182003,29.0,3321344.0,RNA binding protein associated with pre-50S ribosomal subunits,b3180,
 mlaB,1.3598859954533364,30.0,3330560.0,"ABC transporter maintaining OM lipid asymmetry, cytoplasmic STAS component",b3191,
 mlaD,1.4096073993383185,30.0,3331268.0,OM lipid asymmetry maintenance protein; membrane-anchored ABC family periplasmic binding protein,b3193,
-kdsD,1.442721377820095,30.0,3334624.0,D-arabinose 5-phosphate isomerase,b3197,frozenset({<Reaction A5PISO at 0x7fcfa6c33160>})
-kdsC,1.4170712588143515,30.0,3336192.0,3-deoxy-D-manno-octulosonate 8-phosphate phosphatase,b3198,frozenset({<Reaction KDOPP at 0x7fcfa685ae48>})
+kdsD,1.442721377820095,30.0,3334624.0,D-arabinose 5-phosphate isomerase,b3197,['A5PISO']
+kdsC,1.4170712588143515,30.0,3336192.0,3-deoxy-D-manno-octulosonate 8-phosphate phosphatase,b3198,['KDOPP']
 yhbJ,1.3874675134117016,31.0,3340473.0,"adaptor protein for GlmZ/GlmY sRNA decay, glucosamine-6-phosphate-regulated; NTPase",b3205,
 tufB,1.5371638487257289,32.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
 pmrR,1.420485740053994,33.0,4321932.0,putative membrane-bound BasS regulator,b4703,

@@ -1,15 +1,15 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ybcN,1.387086633118916,1.0,567921.0,DLP12 prophage; uncharacterized protein,b0547,
 ninE,1.3907140624214573,1.0,568376.0,DLP12 prophage; conserved protein,b0548,
 ybeT,10.716898435597606,2.0,674307.0,Sel1 family TPR-like repeat protein,b0647,
 ybeU,12.849260611912467,2.0,674963.0,DUF1266 family protein,b0648,
 djlC,12.56625559488122,2.0,675667.0,J domain-containing HscC co-chaperone; Hsc56,b0649,
-hscC,11.106014686482883,2.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,frozenset({<Reaction NTP1 at 0x7fcfa6717160>})
-rihA,11.705150678908275,2.0,678932.0,ribonucleoside hydrolase 1,b0651,"frozenset({<Reaction URIH at 0x7fcfa6594748>, <Reaction CYTDH at 0x7fcfa6aa7748>})"
-gltL,11.56618424795464,2.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltK,11.684679356590907,2.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltJ,11.164927587117196,2.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltI,12.027773672192923,2.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
+hscC,11.106014686482883,2.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,['NTP1']
+rihA,11.705150678908275,2.0,678932.0,ribonucleoside hydrolase 1,b0651,"['CYTDH', 'URIH']"
+gltL,11.56618424795464,2.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"['ASPabcpp', 'GLUabcpp']"
+gltK,11.684679356590907,2.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"['ASPabcpp', 'GLUabcpp']"
+gltJ,11.164927587117196,2.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"['ASPabcpp', 'GLUabcpp']"
+gltI,12.027773672192923,2.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"['ASPabcpp', 'GLUabcpp']"
 ynaJ,8.610168441514,3.0,1391621.0,DUF2534 family putative inner membrane protein,b1332,
 uspE,9.398614916856115,3.0,1392640.0,stress-induced protein,b1333,
 fnr,9.284852800181598,3.0,1393030.0,oxygen-sensing anaerobic growth regulon transcriptional regulator FNR; autorepressor,b1334,
@@ -21,7 +21,7 @@ abgR,8.61987737093928,3.0,1398997.0,putative DNA-binding transcriptional regulat
 smrA,8.222581085500446,3.0,1400235.0,DNA endonuclease,b1340,
 ydaM,8.36818985230983,3.0,1400832.0,"diguanylate cyclase, csgD regulator",b1341,
 tfaR,1.7368096831978705,4.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
-ydcT,1.3392398330591253,5.0,1507328.0,putative ABC transporter ATPase,b1441,"frozenset({<Reaction SPMDabcpp at 0x7fcfa65f7390>, <Reaction PTRCabcpp at 0x7fcfa6676e48>})"
+ydcT,1.3392398330591253,5.0,1507328.0,putative ABC transporter ATPase,b1441,"['PTRCabcpp', 'SPMDabcpp']"
 yncL,1.3198332180117358,5.0,1511424.0,stress-induced small inner membrane enterobacterial protein,b4598,
 tfaQ,1.7591362551022456,6.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
 yfcG,1.3289009803069218,7.0,2414592.0,GSH-dependent disulfide bond oxidoreductase,b2302,

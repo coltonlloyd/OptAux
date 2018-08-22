@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yadK,1.4757273383558243,1.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfM,1.6603736703017642,2.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 yafU,1.3181672212276803,2.0,235520.0,No_gene_product,b0218,
@@ -55,7 +55,7 @@ racC,1.416490711408766,29.0,1411744.0,Rac prophage; uncharacterized protein,b135
 ydaE,1.519973010208981,29.0,1412096.0,"conserved protein, Rac prophage",b4526,
 sieB,1.4288863614321563,29.0,1413120.0,"phage superinfection exclusion protein, Rac prophage",b1353,
 ydaS,1.35416468861575,29.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
-trkG,1.4120877794951157,30.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,frozenset({<Reaction Kt2pp at 0x7fcfa6862400>})
+trkG,1.4120877794951157,30.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,['Kt2pp']
 tfaR,1.8281469674684128,31.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
 ynaE,2.0356279795132464,31.0,1428480.0,"cold shock protein, Rac prophage",b1375,
 ynbG,1.8000663167585476,32.0,1459456.0,uncharacterized protein,b4674,
@@ -74,7 +74,7 @@ cspI,1.4354014881969726,39.0,1632768.0,Qin prophage; cold shock protein,b1552,
 cspB,1.5671393398551055,40.0,1635595.0,Qin prophage; cold shock protein,b1557,
 dicB,1.4294984262679704,41.0,1644032.0,Qin prophage; cell division inhibition protein,b1575,
 ydfD,1.3687566637893303,41.0,1644050.0,Qin prophage; uncharacterized protein,b1576,
-lpp,1.3633650030560769,42.0,1751677.0,murein lipoprotein,b1677,"frozenset({<Reaction ALPATG160pp at 0x7fcfa6bc4588>, <Reaction ALPATE160pp at 0x7fcfa6bc46a0>})"
+lpp,1.3633650030560769,42.0,1751677.0,murein lipoprotein,b1677,"['ALPATG160pp', 'ALPATE160pp']"
 ydiL,1.3172754208772284,43.0,1764871.0,putative HTH domain DNA-binding protein,b1689,
 rplT,1.4013923313521142,44.0,1793649.0,50S ribosomal subunit protein L20,b1716,
 yniB,1.3363354234654783,45.0,1802953.0,putative inner membrane protein,b1726,
@@ -91,11 +91,11 @@ yoeH,1.782150914698113,53.0,2061824.0,No_gene_product,b4641,
 yoeF,1.4091002332364573,54.0,2072226.0,No_gene_product,b4538,
 yoeB,1.3759501303863175,55.0,2082816.0,toxin of the YoeB-YefM toxin-antitoxin system,b4539,
 hisL,1.522590875753856,55.0,2083476.0,his operon leader peptide,b2018,
-wbbK,1.577234027591138,56.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.528009121290146,56.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,1.6493919585874361,56.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.524782462607373,56.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
-wzxB,1.459282386560921,56.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,frozenset({<Reaction O16AUNDtpp at 0x7fcfa6724fd0>})
+wbbK,1.577234027591138,56.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.528009121290146,56.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,1.6493919585874361,56.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.524782462607373,56.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
+wzxB,1.459282386560921,56.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,['O16AUNDtpp']
 ibsA,1.3323727377777823,57.0,2146829.0,toxic membrane protein,b4667,
 ibsB,1.325021516960271,57.0,2147200.0,toxic membrane protein,b4668,
 yegR,1.6098201314566731,58.0,2161664.0,uncharacterized protein,b2085,
@@ -155,12 +155,12 @@ yibA,1.487201318074534,91.0,3760128.0,putative immunity protein for polymorphic 
 yibG,1.472579444370594,91.0,3761536.0,TPR-like repeat protein,b3596,
 yibW,1.4485607277226724,91.0,3762251.0,No_gene_product,b4651,
 yibV,1.8352109021095846,91.0,3762704.0,No_gene_product,b4615,
-waaL,1.4680275576453716,92.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.6063794481289086,92.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.4951777392884134,92.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
-waaY,1.5308895700298184,92.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,frozenset({<Reaction HEPK2 at 0x7fcfa6906ef0>})
+waaL,1.4680275576453716,92.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.6063794481289086,92.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.4951777392884134,92.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
+waaY,1.5308895700298184,92.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,['HEPK2']
 waaJ,1.4612406294164046,92.0,3794944.0,,,
-waaS,1.7072485020824424,92.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaS,1.7072485020824424,92.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 rpmG,1.3138376743650024,93.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 tisB,1.2916347224140732,94.0,3846912.0,"toxic membrane persister formation peptide, LexA-regulated",b4618,
 tnaC,1.3331943448103278,95.0,3881856.0,tryptophanase leader peptide,b3707,

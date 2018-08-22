@@ -1,5 +1,5 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
-cyoD,1.6114918699482172,1.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,frozenset({<Reaction CYTBO3_4pp at 0x7fcfa6aa70b8>})
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
+cyoD,1.6114918699482172,1.0,443392.0,cytochrome o ubiquinol oxidase subunit IV,b0429,['CYTBO3_4pp']
 ninE,1.4710694265839763,2.0,568376.0,DLP12 prophage; conserved protein,b0548,
 essD,1.3627838369605905,3.0,572928.0,DLP12 prophage; putative phage lysis protein,b0554,
 ycaR,1.3202920316041542,4.0,966144.0,"peroxide and acid resistance protein, UPF0434 family",b0917,
@@ -12,13 +12,13 @@ yfcL,1.3828573033569729,10.0,2437632.0,uncharacterized protein,b2325,
 gtrA,1.3953192721180223,11.0,2461333.0,CPS-53 (KpLE1) prophage; bactoprenol-linked glucose translocase/flippase,b2350,
 ypjJ,1.463260115842889,12.0,2770432.0,uncharacterized protein,b4548,
 ibsC,1.406719131330981,13.0,3050248.0,toxic membrane protein,b4665,
-hybB,1.3759342952051694,14.0,3136344.0,putative hydrogenase 2 cytochrome b type component,b2995,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
+hybB,1.3759342952051694,14.0,3136344.0,putative hydrogenase 2 cytochrome b type component,b2995,"['HYD3pp', 'HYD2pp', 'HYD1pp']"
 agaR,1.4498495274636838,15.0,3271214.0,transcriptional repressor of the aga regulon,b3131,
 fis,1.3856951341379977,16.0,3404800.0,global DNA-binding transcriptional dual regulator,b3261,
 rplW,1.3633980737065188,17.0,3444740.0,50S ribosomal subunit protein L23,b3318,
 tufA,1.7359365438797276,18.0,3463503.0,translation elongation factor EF-Tu 1,b3339,
 rpsL,1.3763869209126978,18.0,3467536.0,30S ribosomal subunit protein S12,b3342,
-atpA,1.475961534868604,19.0,3911675.0,"F1 sector of membrane-bound ATP synthase, alpha subunit",b3734,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpA,1.475961534868604,19.0,3911675.0,"F1 sector of membrane-bound ATP synthase, alpha subunit",b3734,['ATPS4rpp']
 tufB,1.7599923704551506,20.0,4165871.0,translation elongation factor EF-Tu 2,b3980,
 yjgZ,1.3995123237825589,21.0,4491264.0,uncharacterized protein,b4277,
 insA,1.4525012676790685,22.0,4508343.0,IS1 repressor TnpA,b4294,

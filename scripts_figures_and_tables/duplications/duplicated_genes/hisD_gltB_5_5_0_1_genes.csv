@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykfM,1.4971071177102764,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 dinJ,1.4412837721977934,2.0,242728.0,antitoxin of YafQ-DinJ toxin-antitoxin system,b0226,
 ykfN,1.4972924716850204,3.0,258860.0,No_gene_product,b4626,
@@ -18,12 +18,12 @@ appY,1.5561292766584727,12.0,579584.0,global transcriptional activator; DLP12 pr
 ybeT,2.057138481977586,13.0,674307.0,Sel1 family TPR-like repeat protein,b0647,
 ybeU,1.943654129783474,13.0,674963.0,DUF1266 family protein,b0648,
 djlC,1.6710479287389797,13.0,675667.0,J domain-containing HscC co-chaperone; Hsc56,b0649,
-hscC,1.6607685335041176,13.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,frozenset({<Reaction NTP1 at 0x7fcfa6717160>})
-rihA,1.440720034765345,13.0,678932.0,ribonucleoside hydrolase 1,b0651,"frozenset({<Reaction URIH at 0x7fcfa6594748>, <Reaction CYTDH at 0x7fcfa6aa7748>})"
-gltL,1.7683627533562907,13.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltK,1.475273032225832,13.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltJ,1.4252867906742441,13.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
-gltI,1.6478276241642174,13.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"frozenset({<Reaction GLUabcpp at 0x7fcfa692a588>, <Reaction ASPabcpp at 0x7fcfa6b8bcf8>})"
+hscC,1.6607685335041176,13.0,677178.0,Hsp70 family chaperone Hsc62; RpoD-binding transcription inhibitor,b0650,['NTP1']
+rihA,1.440720034765345,13.0,678932.0,ribonucleoside hydrolase 1,b0651,"['CYTDH', 'URIH']"
+gltL,1.7683627533562907,13.0,679985.0,glutamate/aspartate ABC transporter ATPase,b0652,"['ASPabcpp', 'GLUabcpp']"
+gltK,1.475273032225832,13.0,680710.0,glutamate/aspartate ABC transporter permease,b0653,"['ASPabcpp', 'GLUabcpp']"
+gltJ,1.4252867906742441,13.0,681984.0,glutamate/aspartate ABC transporter permease,b0654,"['ASPabcpp', 'GLUabcpp']"
+gltI,1.6478276241642174,13.0,682294.0,glutamate/aspartate periplasmic binding protein,b0655,"['ASPabcpp', 'GLUabcpp']"
 ybfB,1.4905107282584893,14.0,729231.0,putative membrane protein,b0702,
 elfA,1.3485476941124044,15.0,993323.0,laminin-binding fimbrin subunit,b0938,
 ymfD,2.484943901568363,16.0,1192322.0,e14 prophage; putative SAM-dependent methyltransferase,b1137,
@@ -66,57 +66,57 @@ yddL,1.356710055265928,23.0,1540096.0,No_gene_product,b1472,
 ydfK,2.1950058390956197,24.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,
 tfaQ,1.8154770789497883,24.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
 yoeH,1.5354627310341655,25.0,2061824.0,No_gene_product,b4641,
-wbbK,1.6602242541753534,26.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.5083721511900363,26.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,1.5735589634240466,26.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.4236543945610238,26.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
-wzxB,1.4361669021626033,26.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,frozenset({<Reaction O16AUNDtpp at 0x7fcfa6724fd0>})
+wbbK,1.6602242541753534,26.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.5083721511900363,26.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,1.5735589634240466,26.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.4236543945610238,26.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
+wzxB,1.4361669021626033,26.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,['O16AUNDtpp']
 yehC,1.4119990062821088,27.0,2184404.0,putative periplasmic pilin chaperone,b2110,
 yehD,1.4668152375162369,27.0,2185216.0,putative fimbrial-like adhesin protein,b2111,
 yehE,1.3723377534622356,27.0,2186240.0,DUF2574 family protein,b2112,
 yohP,1.356055806632067,28.0,2222464.0,uncharacterized protein,b4679,
 ccmH,1.5291486886115868,29.0,2285568.0,"heme lyase, CcmH subunit",b2194,
-ccmE,1.3913680365973673,29.0,2288379.0,periplasmic heme chaperone,b2197,frozenset({<Reaction PHEMEabcpp at 0x7fcfa670bf98>})
-ccmD,1.4768269419116207,29.0,2288855.0,cytochrome c biogenesis protein; heme export ABC transporter holo-CcmE release factor,b2198,frozenset({<Reaction PHEMEabcpp at 0x7fcfa670bf98>})
-ccmC,1.4349513654364738,29.0,2289664.0,heme export ABC transporter permease; CcmE-interacting protein,b2199,frozenset({<Reaction PHEMEabcpp at 0x7fcfa670bf98>})
-napC,1.500036085471784,29.0,2291712.0,"quinol dehydrogenase, electron source for NapAB",b2202,"frozenset({<Reaction NO3R2bpp at 0x7fcfa676df60>, <Reaction NO3R1bpp at 0x7fcfa676d7f0>})"
-napH,1.3547920295315388,29.0,2292193.0,ferredoxin-type protein,b2204,frozenset({<Reaction NO3R1bpp at 0x7fcfa676d7f0>})
+ccmE,1.3913680365973673,29.0,2288379.0,periplasmic heme chaperone,b2197,['PHEMEabcpp']
+ccmD,1.4768269419116207,29.0,2288855.0,cytochrome c biogenesis protein; heme export ABC transporter holo-CcmE release factor,b2198,['PHEMEabcpp']
+ccmC,1.4349513654364738,29.0,2289664.0,heme export ABC transporter permease; CcmE-interacting protein,b2199,['PHEMEabcpp']
+napC,1.500036085471784,29.0,2291712.0,"quinol dehydrogenase, electron source for NapAB",b2202,"['NO3R2bpp', 'NO3R1bpp']"
+napH,1.3547920295315388,29.0,2292193.0,ferredoxin-type protein,b2204,['NO3R1bpp']
 alkB,1.5227350348725037,30.0,2302169.0,oxidative demethylase of N1-methyladenine or N3-methylcytosine DNA lesions,b2212,
 ada,1.4520539333406755,30.0,2302819.0,fused DNA-binding transcriptional dual regulator/O6-methylguanine-DNA methyltransferase,b2213,
-ompC,1.4364939702890764,30.0,2306048.0,outer membrane porin protein C,b2215,"frozenset({<Reaction GLCRtex at 0x7fcfa6990048>, <Reaction 3GMPtex at 0x7fcfa6c7c080>, <Reaction 34dhpactex at 0x7fcfa6c7c0b8>, <Reaction BTNtex at 0x7fcfa6b200b8>, <Reaction URAtex at 0x7fcfa6594160>, <Reaction GALTtex at 0x7fcfa696c198>, <Reaction NO3tex at 0x7fcfa6778198>, <Reaction TYMtex at 0x7fcfa6564198>, <Reaction GALURtex at 0x7fcfa696c278>, <Reaction GTHRDtex at 0x7fcfa68ec278>, <Reaction 3CMPtex at 0x7fcfa6c7c2b0>, <Reaction XYLUtex at 0x7fcfa65302b0>, <Reaction SUCCtex at 0x7fcfa66042b0>, <Reaction ALLTNtex at 0x7fcfa6bc42e8>, <Reaction F6Ptex at 0x7fcfa6a442e8>, <Reaction ARBtex at 0x7fcfa6b70320>, <Reaction 3AMPtex at 0x7fcfa6c7c358>, <Reaction 12PPDRtex at 0x7fcfa6ccc390>, <Reaction PHEtex at 0x7fcfa669c390>, <Reaction UREAtex at 0x7fcfa6594390>, <Reaction ALAALAtex at 0x7fcfa6bac400>, <Reaction IDONtex at 0x7fcfa68c4400>, <Reaction NOtex at 0x7fcfa6778438>, <Reaction DAMPtex at 0x7fcfa6ab44a8>, <Reaction 12PPDStex at 0x7fcfa6ccc4e0>, <Reaction R5Ptex at 0x7fcfa661c4e0>, <Reaction XANtex at 0x7fcfa65204e0>, <Reaction XMPtex at 0x7fcfa6520588>, <Reaction GLCUR1Ptex at 0x7fcfa69905f8>, <Reaction GLCURtex at 0x7fcfa6990630>, <Reaction GSNtex at 0x7fcfa68e0630>, <Reaction GMPtex at 0x7fcfa6954668>, <Reaction XYLtex at 0x7fcfa6530668>, <Reaction ALLtex at 0x7fcfa6bc46d8>, <Reaction TYRPtex at 0x7fcfa65646d8>, <Reaction 23CCMPtex at 0x7fcfa6ccc710>, <Reaction GLCtex at 0x7fcfa6990748>, <Reaction HOMtex at 0x7fcfa689c748>, <Reaction HXAtex at 0x7fcfa68a8780>, <Reaction GAMAN6Ptex at 0x7fcfa696c7f0>, <Reaction TYRtex at 0x7fcfa6564828>, <Reaction 23CAMPtex at 0x7fcfa6ccc860>, <Reaction CITtex at 0x7fcfa6b548d0>, <Reaction DALAtex at 0x7fcfa6ab48d0>, <Reaction GTPtex at 0x7fcfa68ec8d0>, <Reaction GTHOXtex at 0x7fcfa68e0940>, <Reaction 23CGMPtex at 0x7fcfa6ccc978>, <Reaction 23CUMPtex at 0x7fcfa6ccc9b0>, <Reaction GALtex at 0x7fcfa696c9e8>, <Reaction SUCRtex at 0x7fcfa6604a20>, <Reaction 23DAPPAtex at 0x7fcfa6ccca58>, <Reaction SULFACtex at 0x7fcfa6604a58>, <Reaction PItex at 0x7fcfa669cb00>, <Reaction UACGAMtex at 0x7fcfa6564b38>, <Reaction AMPtex at 0x7fcfa6bd0be0>, <Reaction HPPPNtex at 0x7fcfa689cc50>, <Reaction ANHGMtex at 0x7fcfa6bd0cc0>, <Reaction ILEtex at 0x7fcfa68c4cc0>, <Reaction XTSNtex at 0x7fcfa6520cc0>, <Reaction Zn2tex at 0x7fcfa6530d30>, <Reaction HYXNtex at 0x7fcfa68a8dd8>, <Reaction BUTSO3tex at 0x7fcfa6b20e48>, <Reaction GAMtex at 0x7fcfa696ce48>, <Reaction Htex at 0x7fcfa68a8eb8>, <Reaction VALtex at 0x7fcfa6594eb8>, <Reaction ARGtex at 0x7fcfa6b70ef0>, <Reaction GBBTNtex at 0x7fcfa696cf98>, <Reaction PNTOtex at 0x7fcfa66b8f98>, <Reaction BUTtex at 0x7fcfa6b20fd0>, <Reaction AGMtex at 0x7fcfa6c14fd0>, <Reaction ACACtex at 0x7fcfa6c4d048>, <Reaction PTRCtex at 0x7fcfa6681048>, <Reaction TRPtex at 0x7fcfa6555048>, <Reaction OROTtex at 0x7fcfa6749080>, <Reaction LYStex at 0x7fcfa683d198>, <Reaction H2O2tex at 0x7fcfa68f91d0>, <Reaction DMStex at 0x7fcfa6a79208>, <Reaction H2Otex at 0x7fcfa68f9208>, <Reaction O2Stex at 0x7fcfa6731208>, <Reaction PEAMNtex at 0x7fcfa66f1208>, <Reaction ACNAMtex at 0x7fcfa6be5240>, <Reaction 26DAHtex at 0x7fcfa6c5d278>, <Reaction MELIBtex at 0x7fcfa67f5278>, <Reaction ACALDtex at 0x7fcfa6c4d2e8>, <Reaction THMtex at 0x7fcfa65ad358>, <Reaction IMPtex at 0x7fcfa68cd390>, <Reaction G3PStex at 0x7fcfa69cd400>, <Reaction MEOHtex at 0x7fcfa67f5400>, <Reaction O2tex at 0x7fcfa6731400>, <Reaction GLYCAtex at 0x7fcfa6935470>, <Reaction ABUTtex at 0x7fcfa6c414a8>, <Reaction GLYC3Ptex at 0x7fcfa69354a8>, <Reaction PYDXtex at 0x7fcfa668d4a8>, <Reaction SBTtex at 0x7fcfa66514a8>, <Reaction LYXtex at 0x7fcfa683d518>, <Reaction MOBDtex at 0x7fcfa67b1518>, <Reaction INDOLEtex at 0x7fcfa68cd550>, <Reaction GLNtex at 0x7fcfa691d588>, <Reaction CA2tex at 0x7fcfa6b2d5f8>, <Reaction ACGAM1Ptex at 0x7fcfa6c4d630>, <Reaction DOXRBCNtex at 0x7fcfa6a796a0>, <Reaction H2Stex at 0x7fcfa68f96a0>, <Reaction DOPAtex at 0x7fcfa6a796d8>, <Reaction ACGALtex at 0x7fcfa6c4d7b8>, <Reaction METSOX2tex at 0x7fcfa67f57b8>, <Reaction THRPtex at 0x7fcfa65ad7f0>, <Reaction NO2tex at 0x7fcfa676d898>, <Reaction ACGAL1Ptex at 0x7fcfa6c4d940>, <Reaction H2tex at 0x7fcfa68f9940>, <Reaction GAL1Ptex at 0x7fcfa69cd978>, <Reaction TSULtex at 0x7fcfa65559e8>, <Reaction HG2tex at 0x7fcfa69119e8>, <Reaction MALtex at 0x7fcfa68499e8>, <Reaction MALDtex at 0x7fcfa683da20>, <Reaction OCTAtex at 0x7fcfa6731a58>, <Reaction INSTtex at 0x7fcfa68cda90>, <Reaction PYRtex at 0x7fcfa668da90>, <Reaction TTRCYCtex at 0x7fcfa6555a90>, <Reaction METDtex at 0x7fcfa67f5ac8>, <Reaction MAN6Ptex at 0x7fcfa6849b00>, <Reaction GDPtex at 0x7fcfa6979b70>, <Reaction PYDAMtex at 0x7fcfa6681b70>, <Reaction SELtex at 0x7fcfa6651cc0>, <Reaction GLYCLTtex at 0x7fcfa6935cf8>, <Reaction ARBTtex at 0x7fcfa6b65d30>, <Reaction QUIN2tex at 0x7fcfa668dd30>, <Reaction THMDtex at 0x7fcfa65a1dd8>, <Reaction TUNGStex at 0x7fcfa6555dd8>, <Reaction G6Ptex at 0x7fcfa69cde10>, <Reaction METSOX1tex at 0x7fcfa67f5e80>, <Reaction THRtex at 0x7fcfa65adef0>, <Reaction UDPACGALtex at 0x7fcfa6571ef0>, <Reaction GALBDtex at 0x7fcfa69cdf28>, <Reaction HIStex at 0x7fcfa6911f60>, <Reaction PACALDtex at 0x7fcfa6749f60>, <Reaction PYDXNtex at 0x7fcfa6681fd0>, <Reaction MANGLYCtex at 0x7fcfa6849fd0>, <Reaction PROtex at 0x7fcfa666a048>, <Reaction GLYCtex at 0x7fcfa69460f0>, <Reaction FE2tex at 0x7fcfa69ee128>, <Reaction DINStex at 0x7fcfa6a6e160>, <Reaction DIMPtex at 0x7fcfa6a6e1d0>, <Reaction PPTtex at 0x7fcfa665e1d0>, <Reaction PPALtex at 0x7fcfa66c6208>, <Reaction 3HPPtex at 0x7fcfa6c8a2b0>, <Reaction ASPtex at 0x7fcfa6b162b0>, <Reaction CMPtex at 0x7fcfa6ae22e8>, <Reaction HCINNMtex at 0x7fcfa69062e8>, <Reaction CYNTtex at 0x7fcfa6a9a320>, <Reaction MMETtex at 0x7fcfa67a2320>, <Reaction CLtex at 0x7fcfa6ae2358>, <Reaction CYSDtex at 0x7fcfa6a9a390>, <Reaction DHAtex at 0x7fcfa6a5a390>, <Reaction CMtex at 0x7fcfa6ae2438>, <Reaction DSERtex at 0x7fcfa6a86438>, <Reaction ISETACtex at 0x7fcfa685a438>, <Reaction FRULYStex at 0x7fcfa69a6470>, <Reaction PSCLYStex at 0x7fcfa666a470>, <Reaction CGLYtex at 0x7fcfa6b464e0>, <Reaction DDGLCNtex at 0x7fcfa6ace4e0>, <Reaction CUtex at 0x7fcfa6b0e518>, <Reaction ALAtex at 0x7fcfa6bba550>, <Reaction UMPtex at 0x7fcfa658a5c0>, <Reaction GALCTNLtex at 0x7fcfa695a5f8>, <Reaction LEUtex at 0x7fcfa6882668>, <Reaction FRUURtex at 0x7fcfa69a66d8>, <Reaction GALCTNtex at 0x7fcfa695a710>, <Reaction Ktex at 0x7fcfa6862710>, <Reaction GLUtex at 0x7fcfa692a780>, <Reaction SLNTtex at 0x7fcfa65ea780>, <Reaction CD2tex at 0x7fcfa6b3a7f0>, <Reaction SKMtex at 0x7fcfa65ea7f0>, <Reaction GALCTtex at 0x7fcfa695a828>, <Reaction CU2tex at 0x7fcfa6b0e898>, <Reaction SO2tex at 0x7fcfa65ea898>, <Reaction SO3tex at 0x7fcfa65ea8d0>, <Reaction MNLtex at 0x7fcfa67a2908>, <Reaction CO2tex at 0x7fcfa6ae2940>, <Reaction DUMPtex at 0x7fcfa6a86940>, <Reaction ETHAtex at 0x7fcfa6a36940>, <Reaction FRUtex at 0x7fcfa69a6978>, <Reaction GLCNtex at 0x7fcfa6986940>, <Reaction ETHSO3tex at 0x7fcfa6a369b0>, <Reaction CHLtex at 0x7fcfa6b469e8>, <Reaction DTMPtex at 0x7fcfa6a869e8>, <Reaction NAtex at 0x7fcfa67d2a20>, <Reaction GLYALDtex at 0x7fcfa692aac8>, <Reaction GLYtex at 0x7fcfa6946ac8>, <Reaction SERtex at 0x7fcfa65deac8>, <Reaction FE3tex at 0x7fcfa69eeb00>, <Reaction PSERtex at 0x7fcfa666ab00>, <Reaction BALAtex at 0x7fcfa6b16b38>, <Reaction FUCtex at 0x7fcfa69a6b38>, <Reaction PPAtex at 0x7fcfa66c6b38>, <Reaction DGMPtex at 0x7fcfa6aceba8>, <Reaction L__LACtex at 0x7fcfa6862ba8>, <Reaction PROGLYtex at 0x7fcfa665eba8>, <Reaction CHTBStex at 0x7fcfa6b46be0>, <Reaction ETOHtex at 0x7fcfa6a36c50>, <Reaction DGSNtex at 0x7fcfa6acecc0>, <Reaction MNtex at 0x7fcfa67a2cf8>, <Reaction COBALT2tex at 0x7fcfa6ae2d30>, <Reaction PPPNtex at 0x7fcfa66d2d30>, <Reaction DMSOtex at 0x7fcfa6a6ed68>, <Reaction GLYBtex at 0x7fcfa692ad68>, <Reaction CYStex at 0x7fcfa6a9ada0>, <Reaction ORNtex at 0x7fcfa673eda0>, <Reaction LIPOtex at 0x7fcfa6882e10>, <Reaction GLYC2Ptex at 0x7fcfa692aef0>, <Reaction TREtex at 0x7fcfa65caf98>, <Reaction CYANtex at 0x7fcfa6b0efd0>, <Reaction LALADGLUtex at 0x7fcfa6877080>, <Reaction SO4tex at 0x7fcfa65f70b8>, <Reaction 5MTRtex at 0x7fcfa6c330f0>, <Reaction DAPtex at 0x7fcfa6abf0f0>, <Reaction 3UMPtex at 0x7fcfa6c23160>, <Reaction ACGAtex at 0x7fcfa6bdb198>, <Reaction THYMtex at 0x7fcfa65bb1d0>, <Reaction 3PEPTtex at 0x7fcfa6c23240>, <Reaction ASO3tex at 0x7fcfa6b8b240>, <Reaction UDPGALtex at 0x7fcfa657f240>, <Reaction MSO3tex at 0x7fcfa67bb2e8>, <Reaction FUSAtex at 0x7fcfa69b3320>, <Reaction ACtex at 0x7fcfa6bff358>, <Reaction NH4tex at 0x7fcfa675f358>, <Reaction TARTRDtex at 0x7fcfa6613358>, <Reaction FUMtex at 0x7fcfa69b3390>, <Reaction METtex at 0x7fcfa6803390>, <Reaction RIBtex at 0x7fcfa66273c8>, <Reaction G3PItex at 0x7fcfa69bf470>, <Reaction CRNDtex at 0x7fcfa6aff4a8>, <Reaction LALALGLUtex at 0x7fcfa6877550>, <Reaction MANtex at 0x7fcfa67db550>, <Reaction SPMDtex at 0x7fcfa65f7550>, <Reaction ASCBtex at 0x7fcfa6b7b5f8>, <Reaction 4HOXPACDtex at 0x7fcfa6c23668>, <Reaction CRNtex at 0x7fcfa6aff668>, <Reaction TMAtex at 0x7fcfa65bb668>, <Reaction MG2tex at 0x7fcfa68036a0>, <Reaction UDPGLCURtex at 0x7fcfa657f6a0>, <Reaction G3PCtex at 0x7fcfa69bf6d8>, <Reaction RMNtex at 0x7fcfa66276d8>, <Reaction TARTRtex at 0x7fcfa6613748>, <Reaction DCAtex at 0x7fcfa6abf780>, <Reaction NI2tex at 0x7fcfa675f898>, <Reaction UDPGtex at 0x7fcfa657f940>, <Reaction TMAOtex at 0x7fcfa65bb978>, <Reaction ADEtex at 0x7fcfa6bff9b0>, <Reaction D__LACtex at 0x7fcfa6aa79e8>, <Reaction FALDtex at 0x7fcfa6a539e8>, <Reaction FORtex at 0x7fcfa69979e8>, <Reaction CYTDtex at 0x7fcfa6aa7a20>, <Reaction 4PEPTtex at 0x7fcfa6c23a58>, <Reaction G3PGtex at 0x7fcfa69bfa58>, <Reaction DCMPtex at 0x7fcfa6abfb00>, <Reaction G1Ptex at 0x7fcfa69b3b00>, <Reaction 5DGLCNtex at 0x7fcfa6c23b38>, <Reaction ASNtex at 0x7fcfa6b7bb38>, <Reaction LCTStex at 0x7fcfa6877b38>, <Reaction MINCYCtex at 0x7fcfa6803b70>, <Reaction N2Otex at 0x7fcfa67bbb70>, <Reaction G3PEtex at 0x7fcfa69bfba8>, <Reaction TAURtex at 0x7fcfa6613c50>, <Reaction TCYNTtex at 0x7fcfa6613cf8>, <Reaction ACMUMtex at 0x7fcfa6bdbd68>, <Reaction ACSERtex at 0x7fcfa6bf3d68>, <Reaction NACtex at 0x7fcfa67bbd68>, <Reaction ACMANAtex at 0x7fcfa6bdbe48>, <Reaction NMNtex at 0x7fcfa675feb8>, <Reaction CSNtex at 0x7fcfa6afff28>, <Reaction AKGtex at 0x7fcfa6b9ffd0>})"
+ompC,1.4364939702890764,30.0,2306048.0,outer membrane porin protein C,b2215,"['ACNAMtex', 'SUCCtex', 'XYLUtex', 'ACALDtex', 'CMPtex', 'F6Ptex', 'CLtex', 'DHAtex', 'IMPtex', 'PHEtex', 'IDONtex', 'CMtex', 'CRNDtex', 'DAMPtex', 'GLYC3Ptex', 'CGLYtex', 'DDGLCNtex', 'MANtex', 'INDOLEtex', 'TRPtex', 'UMPtex', 'ACGAM1Ptex', 'GSNtex', 'CRNtex', 'GMPtex', 'LEUtex', 'XYLtex', 'FE2tex', 'SLNTtex', 'ACGALtex', 'SKMtex', 'SO2tex', 'CITtex', 'DALAtex', 'SO3tex', 'CO2tex', 'ACGAL1Ptex', 'GTHOXtex', 'CHLtex', 'FORtex', 'TSULtex', 'SUCRtex', 'SULFACtex', 'INSTtex', 'TTRCYCtex', 'PItex', 'DGMPtex', 'AMPtex', 'ANHGMtex', 'DGSNtex', 'ILEtex', 'GLYCLTtex', 'COBALT2tex', 'Zn2tex', 'ACSERtex', 'TUNGStex', 'CSNtex', 'AGMtex', 'LIPOtex', 'CHTBStex', 'SO4tex', 'DAPtex', '3UMPtex', 'TYMtex', 'URAtex', 'ACGAtex', 'LYStex', 'DINStex', 'GALURtex', 'GTHRDtex', 'OROTtex', 'ALLTNtex', 'MMETtex', 'FUSAtex', 'NH4tex', 'THMtex', '12PPDRtex', 'ALAALAtex', 'NOtex', '12PPDStex', 'R5Ptex', 'XANtex', 'CUtex', 'SPMDtex', 'XMPtex', 'ALLtex', 'TYRPtex', '23CCMPtex', 'DCAtex', 'GAMAN6Ptex', 'THRPtex', 'TYRtex', '23CAMPtex', 'CU2tex', 'NI2tex', 'NO2tex', 'GTPtex', 'MNLtex', 'GLCNtex', '23CGMPtex', 'GAL1Ptex', '23CUMPtex', 'GALtex', 'HG2tex', 'MALtex', 'NAtex', '23DAPPAtex', 'DCMPtex', 'G1Ptex', 'MAN6Ptex', 'UACGAMtex', 'PYDAMtex', 'XTSNtex', 'MNtex', 'ARBTtex', 'DMSOtex', 'THMDtex', 'G6Ptex', 'GAMtex', 'HIStex', 'NMNtex', 'PACALDtex', 'THRtex', 'GALBDtex', 'THYMtex', 'GBBTNtex', 'PNTOtex', 'TREtex', 'CYANtex', 'MANGLYCtex', 'NO3tex', 'FE3tex', 'GLCRtex', '26DAHtex', 'PYDXNtex', 'H2O2tex', 'DIMPtex', 'DMStex', 'H2Otex', 'O2Stex', 'UDPGALtex', 'ASPtex', '3CMPtex', '3HPPtex', 'HCINNMtex', 'ARBtex', '3AMPtex', 'ACtex', 'GLYCtex', 'O2tex', 'DSERtex', 'FRULYStex', 'PSCLYStex', 'ABUTtex', 'MOBDtex', 'LALALGLUtex', 'CA2tex', 'GLCUR1Ptex', 'GLCURtex', 'DOXRBCNtex', 'H2Stex', 'UDPGLCURtex', 'DOPAtex', 'FRUURtex', 'GLCtex', 'HXAtex', 'CD2tex', 'DUMPtex', 'ETHAtex', 'H2tex', 'FRUtex', 'UDPGtex', 'ADEtex', 'ETHSO3tex', 'D__LACtex', 'DTMPtex', 'FALDtex', 'CYTDtex', 'OCTAtex', 'GLYtex', 'SERtex', 'PSERtex', 'BALAtex', 'FUCtex', 'LCTStex', 'PROGLYtex', 'ETOHtex', 'ACMUMtex', 'HYXNtex', 'ACMANAtex', 'Htex', '34dhpactex', 'ARGtex', 'UDPACGALtex', 'ACACtex', 'PROtex', '3GMPtex', 'PEAMNtex', 'FUMtex', 'MELIBtex', '3PEPTtex', 'ASO3tex', 'BTNtex', 'GALTtex', 'MSO3tex', 'CYNTtex', 'TARTRDtex', 'CYSDtex', 'METtex', 'UREAtex', 'RIBtex', 'MEOHtex', 'PPALtex', 'ISETACtex', 'PYDXtex', 'SBTtex', 'LYXtex', 'ALAtex', 'GLNtex', 'ASCBtex', 'GALCTNLtex', '4HOXPACDtex', 'TMAtex', 'MG2tex', 'G3PCtex', 'RMNtex', 'GALCTNtex', 'Ktex', 'HOMtex', 'TARTRtex', 'GLUtex', 'GALCTtex', 'TMAOtex', 'MALDtex', '4PEPTtex', 'G3PGtex', 'PYRtex', 'GLYALDtex', 'METDtex', '5DGLCNtex', 'ASNtex', 'PPAtex', 'GDPtex', 'MINCYCtex', 'N2Otex', 'G3PEtex', 'L__LACtex', 'HPPPNtex', 'TAURtex', 'SELtex', 'TCYNTtex', 'PPPNtex', 'QUIN2tex', 'GLYBtex', 'NACtex', 'CYStex', 'GLYCAtex', 'G3PItex', 'BUTSO3tex', 'METSOX1tex', 'VALtex', 'GLYC2Ptex', 'AKGtex', 'BUTtex', 'METSOX2tex', 'PTRCtex', 'LALADGLUtex', 'ORNtex', '5MTRtex', 'G3PStex', 'PPTtex']"
 rcsD,1.4233963905721319,30.0,2306966.0,phosphotransfer intermediate protein in two-component regulatory system with RcsBC,b2216,
 rcsB,1.446359907342644,30.0,2310144.0,response regulator in two-component regulatory system with RcsC and YojN,b2217,
 rcsC,1.4863021016526592,30.0,2310505.0,hybrid sensory kinase in two-component regulatory system with RcsB and YojN,b2218,
 atoS,1.4815387043930042,30.0,2313521.0,sensory histidine kinase in two-component regulatory system with AtoC,b2219,
 atoC,1.535427206804426,30.0,2315344.0,"fused response regulator of ato operon, in two-component system with AtoS: response regulator/sigma54 interaction protein",b2220,
-atoD,1.5189529838916085,30.0,2316925.0,"acetyl-CoA:acetoacetyl-CoA transferase, alpha subunit",b2221,"frozenset({<Reaction ACACCT at 0x7fcfa6c41080>, <Reaction HXCT at 0x7fcfa68a86a0>, <Reaction BUTCT at 0x7fcfa6b20c88>})"
-atoE,1.4208458107122413,30.0,2318336.0,short chain fatty acid transporter,b2223,"frozenset({<Reaction ACACt2pp at 0x7fcfa6c41e10>, <Reaction BUTt2rpp at 0x7fcfa6b20da0>, <Reaction HEXt2rpp at 0x7fcfa6911748>})"
-atoB,1.3786975731764135,30.0,2320384.0,acetyl-CoA acetyltransferase,b2224,frozenset({<Reaction ACACT1r at 0x7fcfa6c41710>})
+atoD,1.5189529838916085,30.0,2316925.0,"acetyl-CoA:acetoacetyl-CoA transferase, alpha subunit",b2221,"['ACACCT', 'BUTCT', 'HXCT']"
+atoE,1.4208458107122413,30.0,2318336.0,short chain fatty acid transporter,b2223,"['HEXt2rpp', 'ACACt2pp', 'BUTt2rpp']"
+atoB,1.3786975731764135,30.0,2320384.0,acetyl-CoA acetyltransferase,b2224,['ACACT1r']
 yfaP,1.437508880099025,30.0,2320845.0,"DUF2135 family protein, putative host defense protein",b2225,
 yfaQ,1.4237030166026003,30.0,2321626.0,"tandem DUF2300 domain protein, putative host defense protein",b2226,
 yfaS,1.4233638040909329,30.0,2326528.0,No_gene_product,b4500,
 yfaA,1.4560396962130013,30.0,2328434.0,"DUF2138 family protein, putative host defense protein",b2230,
-ubiG,1.5113015989555538,30.0,2333045.0,bifunctional 3-demethylubiquinone-9 3-methyltransferase/ 2-octaprenyl-6-hydroxy phenol methylase,b2232,"frozenset({<Reaction OHPHM at 0x7fcfa673e390>, <Reaction DMQMT at 0x7fcfa6a6ea20>})"
+ubiG,1.5113015989555538,30.0,2333045.0,bifunctional 3-demethylubiquinone-9 3-methyltransferase/ 2-octaprenyl-6-hydroxy phenol methylase,b2232,"['OHPHM', 'DMQMT']"
 yfaL,1.4511591431790354,30.0,2334720.0,adhesin,b2233,
-nrdA,1.4449885641062867,30.0,2338343.0,"ribonucleoside-diphosphate reductase 1, alpha subunit",b2234,"frozenset({<Reaction RNDR3 at 0x7fcfa6627f98>, <Reaction RNDR2 at 0x7fcfa6627eb8>, <Reaction RNDR1 at 0x7fcfa6627c50>, <Reaction RNDR4 at 0x7fcfa6630198>})"
-nrdB,1.5217838847514134,30.0,2340864.0,"ribonucleoside-diphosphate reductase 1, beta subunit, ferritin-like protein",b2235,"frozenset({<Reaction RNDR3 at 0x7fcfa6627f98>, <Reaction RNDR2 at 0x7fcfa6627eb8>, <Reaction RNDR1 at 0x7fcfa6627c50>, <Reaction RNDR4 at 0x7fcfa6630198>})"
+nrdA,1.4449885641062867,30.0,2338343.0,"ribonucleoside-diphosphate reductase 1, alpha subunit",b2234,"['RNDR1', 'RNDR4', 'RNDR3', 'RNDR2']"
+nrdB,1.5217838847514134,30.0,2340864.0,"ribonucleoside-diphosphate reductase 1, beta subunit, ferritin-like protein",b2235,"['RNDR1', 'RNDR4', 'RNDR3', 'RNDR2']"
 yfaE,1.405015207323155,30.0,2341992.0,ferredoxin involved with ribonucleotide reductase diferric-tyrosyl radical (Y*) cofactor maintenance,b2236,
 inaA,1.5980428081356417,30.0,2342912.0,acid-inducible Kdo/WaaP family putative kinase,b2237,
 yfaH,1.9748668879097098,30.0,2343129.0,No_gene_product,b2238,
-glpQ,1.7147890333927267,30.0,2343413.0,periplasmic glycerophosphodiester phosphodiesterase,b2239,"frozenset({<Reaction GPDDA5pp at 0x7fcfa68e0208>, <Reaction GPDDA1pp at 0x7fcfa6954c18>, <Reaction GPDDA2pp at 0x7fcfa69543c8>, <Reaction GPDDA4pp at 0x7fcfa6954fd0>, <Reaction GPDDA3pp at 0x7fcfa69547f0>})"
+glpQ,1.7147890333927267,30.0,2343413.0,periplasmic glycerophosphodiester phosphodiesterase,b2239,"['GPDDA2pp', 'GPDDA3pp', 'GPDDA4pp', 'GPDDA1pp', 'GPDDA5pp']"
 yfaD,1.598973066676549,30.0,2351104.0,transposase_31 family protein,b2244,
 ypaA,1.5106502126748442,30.0,2351294.0,No_gene_product,b4543,
 rhmA,1.490119750708491,30.0,2351520.0,2-keto-3-deoxy-L-rhamnonate aldolase,b2245,
 rhmT,1.3932024103947003,30.0,2353152.0,putative L-rhamnonate transporter,b2246,
 yfaY,1.5404734040078407,30.0,2355909.0,inactive PncC family protein,b2249,
 yfaZ,1.4984082685906532,30.0,2357248.0,"outer membrane protein, putative porin",b2250,
-nudI,1.5721244733149224,30.0,2358032.0,nucleoside triphosphatase,b2251,"frozenset({<Reaction DUTPDP at 0x7fcfa6a93080>, <Reaction NTPP7 at 0x7fcfa67242b0>, <Reaction NTPP3 at 0x7fcfa6717d30>})"
+nudI,1.5721244733149224,30.0,2358032.0,nucleoside triphosphatase,b2251,"['NTPP7', 'DUTPDP', 'NTPP3']"
 ais,1.7187716091594536,30.0,2358496.0,putative LPS core heptose(II)-phosphate phosphatase,b2252,
-arnD,1.4735206194036214,30.0,2363496.0,undecaprenyl phosphate-alpha-L-ara4FN deformylase,b2256,frozenset({<Reaction UPLA4FNF at 0x7fcfa658a400>})
-arnT,1.4514408063729092,30.0,2364386.0,4-amino-4-deoxy-L-arabinose transferase,b2257,frozenset({<Reaction LA4NTpp at 0x7fcfa6862b70>})
+arnD,1.4735206194036214,30.0,2363496.0,undecaprenyl phosphate-alpha-L-ara4FN deformylase,b2256,['UPLA4FNF']
+arnT,1.4514408063729092,30.0,2364386.0,4-amino-4-deoxy-L-arabinose transferase,b2257,['LA4NTpp']
 pmrD,1.4249147480081727,30.0,2366976.0,inactive two-component system connector protein,b2259,
-menE,1.4220804839342482,30.0,2367488.0,O-succinylbenzoate-CoA ligase,b2260,frozenset({<Reaction SUCBZL at 0x7fcfa65f7c50>})
-menC,1.4459116111615296,30.0,2368478.0,O-succinylbenzoyl-CoA synthase,b2261,frozenset({<Reaction SUCBZS at 0x7fcfa6604128>})
+menE,1.4220804839342482,30.0,2367488.0,O-succinylbenzoate-CoA ligase,b2260,['SUCBZL']
+menC,1.4459116111615296,30.0,2368478.0,O-succinylbenzoyl-CoA synthase,b2261,['SUCBZS']
 elaB,1.543702151389546,30.0,2374200.0,putative membrane-anchored DUF883 family ribosome-binding protein,b2266,
 elaA,1.5896603036671966,30.0,2374560.0,GNAT family putative N-acetyltransferase,b2267,
 rbn,1.5291189295749676,30.0,2375680.0,"RNase BN, tRNA processing enzyme",b2268,
@@ -127,41 +127,41 @@ yfbM,1.7771003809970864,30.0,2380412.0,DUF1877 family protein,b2272,
 yfbN,1.9368729562779345,30.0,2381824.0,uncharacterized protein,b2273,
 yfbO,2.0540988103332527,30.0,2382113.0,uncharacterized protein,b2274,
 yfbP,1.6815294401438157,30.0,2382594.0,TPR-like repeats-containing protein,b2275,
-nuoN,1.4279166405503085,30.0,2383872.0,"NADH:ubiquinone oxidoreductase, membrane subunit N",b2276,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
-nuoM,1.4083153550971115,30.0,2384990.0,"NADH:ubiquinone oxidoreductase, membrane subunit M",b2277,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
-nuoH,1.3533029857487304,30.0,2390016.0,"NADH:ubiquinone oxidoreductase, membrane subunit H",b2282,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
-nuoC,1.3679950073807743,30.0,2395533.0,"NADH:ubiquinone oxidoreductase, fused CD subunit",b2286,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
-nuoB,1.535092732708488,30.0,2397429.0,"NADH:ubiquinone oxidoreductase, chain B",b2287,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
-nuoA,1.5152407976021678,30.0,2398208.0,"NADH:ubiquinone oxidoreductase, membrane subunit A",b2288,"frozenset({<Reaction NADH16pp at 0x7fcfa67c6208>, <Reaction NADH18pp at 0x7fcfa67c6390>, <Reaction NADH17pp at 0x7fcfa67c62b0>})"
+nuoN,1.4279166405503085,30.0,2383872.0,"NADH:ubiquinone oxidoreductase, membrane subunit N",b2276,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
+nuoM,1.4083153550971115,30.0,2384990.0,"NADH:ubiquinone oxidoreductase, membrane subunit M",b2277,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
+nuoH,1.3533029857487304,30.0,2390016.0,"NADH:ubiquinone oxidoreductase, membrane subunit H",b2282,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
+nuoC,1.3679950073807743,30.0,2395533.0,"NADH:ubiquinone oxidoreductase, fused CD subunit",b2286,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
+nuoB,1.535092732708488,30.0,2397429.0,"NADH:ubiquinone oxidoreductase, chain B",b2287,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
+nuoA,1.5152407976021678,30.0,2398208.0,"NADH:ubiquinone oxidoreductase, membrane subunit A",b2288,"['NADH18pp', 'NADH16pp', 'NADH17pp']"
 lrhA,1.5732942083553207,30.0,2399181.0,"transcriptional repressor of flagellar, motility and chemotaxis genes",b2289,
-yfbR,1.474878427400261,30.0,2402340.0,5'-nucleotidase,b2291,"frozenset({<Reaction NTD1 at 0x7fcfa6778c18>, <Reaction NTD5 at 0x7fcfa678a828>, <Reaction NTD8 at 0x7fcfa678ae10>, <Reaction NTD3 at 0x7fcfa678a4a8>, <Reaction NTD6 at 0x7fcfa678a9e8>, <Reaction NTD12 at 0x7fcfa678a0f0>})"
+yfbR,1.474878427400261,30.0,2402340.0,5'-nucleotidase,b2291,"['NTD6', 'NTD12', 'NTD1', 'NTD5', 'NTD8', 'NTD3']"
 yfbS,1.4678524509944948,30.0,2402998.0,putative transporter,b2292,
 yfbT,1.424846789122277,30.0,2404917.0,sugar phosphatas,b2293,
 yfbU,1.5709327285179941,30.0,2405578.0,UPF0304 family protein,b2294,
 yfbV,1.6464028510370214,30.0,2406400.0,UPF0208 family inner membrane protein,b2295,
-ackA,1.5564407162601528,30.0,2406948.0,acetate kinase A and propionate kinase 2,b2296,frozenset({<Reaction ACKr at 0x7fcfa6bdb7f0>})
-pta,1.4152287909900352,30.0,2408448.0,phosphate acetyltransferase,b2297,"frozenset({<Reaction PTA2 at 0x7fcfa6676908>, <Reaction PTAr at 0x7fcfa6676a58>})"
+ackA,1.5564407162601528,30.0,2406948.0,acetate kinase A and propionate kinase 2,b2296,['ACKr']
+pta,1.4152287909900352,30.0,2408448.0,phosphate acetyltransferase,b2297,"['PTAr', 'PTA2']"
 yfcC,1.4772961052806244,30.0,2410559.0,putative inner membrane transporter; C4-dicarboxylate anaerobic carrier family protein,b2298,
 yfcD,1.6746012663738064,30.0,2412544.0,putative NUDIX hydrolase,b2299,
 yfcE,1.5076037335867114,30.0,2412712.0,phosphodiesterase activity on bis-pNPP,b2300,
 yfcF,1.4951253655939896,30.0,2413319.0,glutathione S-transferase,b2301,
 yfcG,1.562954415098046,30.0,2414592.0,GSH-dependent disulfide bond oxidoreductase,b2302,
-folX,1.5077789414862666,30.0,2414803.0,"D-erythro-7,8-dihydroneopterin triphosphate 2'-epimerase and dihydroneopterin aldolase",b2303,frozenset({<Reaction DHPTPE at 0x7fcfa6a64e10>})
+folX,1.5077789414862666,30.0,2414803.0,"D-erythro-7,8-dihydroneopterin triphosphate 2'-epimerase and dihydroneopterin aldolase",b2303,['DHPTPE']
 yfcI,1.580204295565884,30.0,2416640.0,transposase_31 family protein,b2305,
-hisP,1.4783716177418926,30.0,2417214.0,histidine ABC transporter ATPase,b2306,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction HISabcpp at 0x7fcfa69113c8>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-hisM,1.6913450528942175,30.0,2418688.0,histidine ABC transporter permease,b2307,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction HISabcpp at 0x7fcfa69113c8>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-hisJ,1.4534906880912675,30.0,2419484.0,histidine ABC transporter periplasmic binding protein,b2309,frozenset({<Reaction HISabcpp at 0x7fcfa69113c8>})
-argT,1.5649700023817488,30.0,2420736.0,lysine/arginine/ornithine transporter subunit,b2310,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-ubiX,1.5507156957654225,30.0,2421535.0,3-octaprenyl-4-hydroxybenzoate carboxy-lyase,b2311,frozenset({<Reaction OPHBDC at 0x7fcfa673ea20>})
+hisP,1.4783716177418926,30.0,2417214.0,histidine ABC transporter ATPase,b2306,"['HISabcpp', 'ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+hisM,1.6913450528942175,30.0,2418688.0,histidine ABC transporter permease,b2307,"['HISabcpp', 'ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+hisJ,1.4534906880912675,30.0,2419484.0,histidine ABC transporter periplasmic binding protein,b2309,['HISabcpp']
+argT,1.5649700023817488,30.0,2420736.0,lysine/arginine/ornithine transporter subunit,b2310,"['ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+ubiX,1.5507156957654225,30.0,2421535.0,3-octaprenyl-4-hydroxybenzoate carboxy-lyase,b2311,['OPHBDC']
 cvpA,1.4931092966488646,30.0,2423753.0,colicin V production protein,b2313,
 dedD,1.4110984719565878,30.0,2424832.0,membrane-anchored periplasmic protein involved in septation,b2314,
-accD,1.5644576604153837,30.0,2426880.0,"acetyl-CoA carboxylase, beta (carboxyltransferase) subunit",b2316,frozenset({<Reaction ACCOAC at 0x7fcfa6c4d6a0>})
+accD,1.5644576604153837,30.0,2426880.0,"acetyl-CoA carboxylase, beta (carboxyltransferase) subunit",b2316,['ACCOAC']
 truA,1.4780682499794995,30.0,2428928.0,tRNA pseudouridine(38-40) synthase,b2318,
 usg,1.5028383162694714,30.0,2429114.0,putative semialdehyde dehydrogenase,b2319,
-pdxB,1.4179834915339706,30.0,2430976.0,erythronate-4-phosphate dehydrogenase,b2320,frozenset({<Reaction PERD at 0x7fcfa66f1080>})
+pdxB,1.4179834915339706,30.0,2430976.0,erythronate-4-phosphate dehydrogenase,b2320,['PERD']
 flk,1.5650194815306835,30.0,2431428.0,putative flagella assembly protein,b2321,
 yfcJ,1.392301506857658,30.0,2433024.0,putative arabinose efflux transporter,b2322,
-fabB,1.5524397110008514,30.0,2435072.0,3-oxoacyl-[acyl-carrier-protein] synthase I,b2323,"frozenset({<Reaction 3OAS121 at 0x7fcfa6c16400>, <Reaction 3OAS60 at 0x7fcfa6c16c18>, <Reaction 3OAS161 at 0x7fcfa6c16828>, <Reaction 3OAS141 at 0x7fcfa6c16630>, <Reaction 3OAS180 at 0x7fcfa6c16a58>, <Reaction 3OAS120 at 0x7fcfa6c16668>, <Reaction 3OAS160 at 0x7fcfa6c16898>, <Reaction MACPD at 0x7fcfa683d898>, <Reaction OPMEACPS at 0x7fcfa673eeb8>, <Reaction 3OAS100 at 0x7fcfa6c16518>, <Reaction KAS14 at 0x7fcfa685ab38>, <Reaction 3OAS140 at 0x7fcfa6c16588>, <Reaction 3OAS80 at 0x7fcfa6c16ba8>})"
+fabB,1.5524397110008514,30.0,2435072.0,3-oxoacyl-[acyl-carrier-protein] synthase I,b2323,"['3OAS121', '3OAS60', '3OAS161', '3OAS141', '3OAS180', '3OAS120', '3OAS160', 'MACPD', 'OPMEACPS', '3OAS100', 'KAS14', '3OAS140', '3OAS80']"
 mnmC,1.5511300974426647,30.0,2435242.0,fused 5-methylaminomethyl-2-thiouridine-forming enzyme methyltransferase and FAD-dependent demodification enzyme,b2324,
 yfcL,1.4352436103129356,30.0,2437632.0,uncharacterized protein,b2325,
 prmB,1.4432176377361277,30.0,2441216.0,N5-glutamine methyltransferase,b2330,
@@ -174,10 +174,10 @@ yfcS,1.5331145944388993,30.0,2445312.0,putative periplasmic pilin chaperone,b233
 yfcU,1.523961268680868,30.0,2445834.0,No_gene_product,b4661,
 yfcV,1.4932927108655027,30.0,2448561.0,putative fimbrial-like adhesin protein,b2339,
 sixA,1.5435657198641757,30.0,2449805.0,phosphohistidine phosphatase,b2340,
-fadJ,1.4183889889546257,30.0,2450493.0,enoyl-CoA hydratase/epimerase and isomerase/3-hydroxyacyl-CoA dehydrogenase,b2341,"frozenset({<Reaction HACD5 at 0x7fcfa6906048>, <Reaction ECOAH3 at 0x7fcfa6a284a8>, <Reaction HACD1 at 0x7fcfa68f9cc0>, <Reaction ECOAH7 at 0x7fcfa6a288d0>, <Reaction HACD6 at 0x7fcfa6906128>, <Reaction HACD7 at 0x7fcfa6906160>, <Reaction HACD3 at 0x7fcfa68f9da0>, <Reaction ECOAH8 at 0x7fcfa6a289b0>, <Reaction HACD4 at 0x7fcfa68f9dd8>, <Reaction ECOAH4 at 0x7fcfa6a28630>, <Reaction HACD8 at 0x7fcfa6906240>, <Reaction ECOAH5 at 0x7fcfa6a28710>, <Reaction ECOAH1 at 0x7fcfa6a28320>, <Reaction HACD2 at 0x7fcfa68f9b70>, <Reaction ECOAH2 at 0x7fcfa6a28390>, <Reaction ECOAH6 at 0x7fcfa6a287f0>})"
-fadI,1.4341928285779255,30.0,2453504.0,"beta-ketoacyl-CoA thiolase, anaerobic, subunit",b2342,"frozenset({<Reaction ACACT7r at 0x7fcfa6c41c50>, <Reaction ACACT2r at 0x7fcfa6c41860>, <Reaction ACACT5r at 0x7fcfa6c41ac8>, <Reaction ACACT3r at 0x7fcfa6c418d0>, <Reaction ACACT1r at 0x7fcfa6c41710>, <Reaction ACACT6r at 0x7fcfa6c41748>, <Reaction ACACT8r at 0x7fcfa6c41dd8>, <Reaction ACACT4r at 0x7fcfa6c419e8>})"
+fadJ,1.4183889889546257,30.0,2450493.0,enoyl-CoA hydratase/epimerase and isomerase/3-hydroxyacyl-CoA dehydrogenase,b2341,"['HACD4', 'ECOAH4', 'HACD8', 'ECOAH5', 'ECOAH1', 'HACD5', 'HACD6', 'HACD2', 'ECOAH2', 'ECOAH6', 'HACD7', 'ECOAH3', 'HACD1', 'ECOAH7', 'HACD3', 'ECOAH8']"
+fadI,1.4341928285779255,30.0,2453504.0,"beta-ketoacyl-CoA thiolase, anaerobic, subunit",b2342,"['ACACT8r', 'ACACT4r', 'ACACT7r', 'ACACT2r', 'ACACT5r', 'ACACT3r', 'ACACT1r', 'ACACT6r']"
 yfcZ,1.5983933497474492,30.0,2454128.0,UPF0381 family protein,b2343,
-fadL,1.609785031634664,30.0,2455552.0,long-chain fatty acid outer membrane transporter,b2344,"frozenset({<Reaction TTDCAtexi at 0x7fcfa6555c18>, <Reaction OCDCEAtexi at 0x7fcfa6731a20>, <Reaction HDCAtexi at 0x7fcfa6906940>, <Reaction TTDCEAtexi at 0x7fcfa6555b70>, <Reaction DDCAtexi at 0x7fcfa6abfc88>, <Reaction HDCEAtexi at 0x7fcfa6906ac8>, <Reaction OCDCAtexi at 0x7fcfa67318d0>})"
+fadL,1.609785031634664,30.0,2455552.0,long-chain fatty acid outer membrane transporter,b2344,"['HDCEAtexi', 'OCDCAtexi', 'TTDCAtexi', 'OCDCEAtexi', 'HDCAtexi', 'TTDCEAtexi', 'DDCAtexi']"
 yfdF,2.1199887874878423,30.0,2456490.0,uncharacterized protein,b2345,
 mlaA,1.6734961896043017,30.0,2457730.0,"ABC transporter maintaining OM lipid asymmetry, OM lipoprotein component",b2346,
 yfdC,1.3909364979075827,30.0,2459648.0,putative inner membrane protein,b2347,
@@ -199,20 +199,20 @@ ypdJ,1.8135674464219496,30.0,2469659.0,No_gene_product,b4545,
 torI,1.6863786757170627,30.0,2469888.0,response regulator inhibitor for tor operon,b4501,
 dsdC,1.4737797367069907,30.0,2470172.0,dsd operon activator; autorepressor,b2364,
 dsdX,1.6301741601822992,30.0,2471936.0,D-serine transporter,b2365,
-dsdA,1.447915829840308,30.0,2473984.0,D-serine dehydratase,b2366,frozenset({<Reaction SERD_D at 0x7fcfa65de3c8>})
+dsdA,1.447915829840308,30.0,2473984.0,D-serine dehydratase,b2366,['SERD_D']
 emrY,1.7745177339080753,30.0,2474116.0,putative multidrug efflux system,b2367,
 emrK,1.9342180773256792,30.0,2476032.0,multidrug resistance efflux pump membrane fusion protein,b2368,
 evgA,1.9619936048408697,30.0,2477233.0,response regulator in two-component regulatory system with EvgS,b2369,
 evgS,1.863556160746515,30.0,2477852.0,hybrid sensory histidine kinase in two-component regulatory system with EvgA,b2370,
 yfdE,1.685042550167379,30.0,2482176.0,acetyl-CoA:oxalate CoA-transferase,b2371,
 yfdV,1.797388216050897,30.0,2482720.0,putative transporter,b2372,
-oxc,1.5414093475776596,30.0,2483734.0,"oxalyl CoA decarboxylase, ThDP-dependent",b2373,frozenset({<Reaction OXCDC at 0x7fcfa67497b8>})
-frc,1.5811347561976115,30.0,2486272.0,"formyl-CoA transferase, NAD(P)-binding",b2374,frozenset({<Reaction FORCT at 0x7fcfa6997748>})
+oxc,1.5414093475776596,30.0,2483734.0,"oxalyl CoA decarboxylase, ThDP-dependent",b2373,['OXCDC']
+frc,1.5811347561976115,30.0,2486272.0,"formyl-CoA transferase, NAD(P)-binding",b2374,['FORCT']
 yfdX,1.7931050449569814,30.0,2487245.0,uncharacterized protein,b2375,
 ypdI,2.026079455300329,30.0,2488320.0,putative lipoprotein involved in colanic acid biosynthesis,b2376,
 yfdY,1.7179607188624766,30.0,2488528.0,DUF2545 family putative inner membrane protein,b2377,
 ypdK,1.6388967809854003,30.0,2490399.0,inner membrane protein,b4680,
-alaC,1.4945922596982733,30.0,2490535.0,glutamate-pyruvate aminotransferase; glutamic-pyruvic transaminase (GPT); alanine transaminase,b2379,frozenset({<Reaction ALATA_L at 0x7fcfa6baccc0>})
+alaC,1.4945922596982733,30.0,2490535.0,glutamate-pyruvate aminotransferase; glutamic-pyruvic transaminase (GPT); alanine transaminase,b2379,['ALATA_L']
 ypdA,1.4979645374942145,30.0,2492149.0,sensor kinase regulating yhjX; pyruvate-responsive YpdAB two-component system,b2380,
 ypdB,1.4931398423759952,30.0,2494464.0,response regulator activating yhjX; pyruvate-responsive YpdAB two-component system,b2381,
 ypdC,1.5192525738768619,30.0,2494608.0,putative DNA-binding protein,b2382,
@@ -220,36 +220,36 @@ fryA,1.4021854383217611,30.0,2495468.0,"putative PTS enzyme: Hpr, enzyme I and I
 ypdE,1.4346796103555128,30.0,2498560.0,aminopeptidase,b2384,
 ypdF,1.524257112196994,30.0,2499025.0,Xaa-Pro aminopeptidase,b2385,
 fryB,1.6820365167525946,30.0,2501632.0,putative enzyme IIB component of PTS,b2387,
-nupC,1.5101175410844336,30.0,2506752.0,nucleoside (except guanosine) transporter,b2393,"frozenset({<Reaction THMDt2pp at 0x7fcfa65a1e10>, <Reaction ADNt2pp at 0x7fcfa6c09240>, <Reaction CYTDt2pp at 0x7fcfa6aa7940>, <Reaction DCYTt2pp at 0x7fcfa6abfe80>, <Reaction URIt2pp at 0x7fcfa6594898>, <Reaction DADNt2pp at 0x7fcfa6aa7eb8>, <Reaction DURIt2pp at 0x7fcfa6a86eb8>})"
+nupC,1.5101175410844336,30.0,2506752.0,nucleoside (except guanosine) transporter,b2393,"['DCYTt2pp', 'THMDt2pp', 'DADNt2pp', 'ADNt2pp', 'CYTDt2pp', 'URIt2pp', 'DURIt2pp']"
 yfeA,1.5173131351316258,30.0,2509121.0,putative diguanylate cyclase,b2395,
 yfeD,1.4384151341671598,30.0,2512291.0,DUF1323 family putative DNA-binding protein,b2399,
-gltX,1.507062565633222,30.0,2512735.0,glutamyl-tRNA synthetase,b2400,frozenset({<Reaction GLUTRS at 0x7fcfa692a4a8>})
-xapB,1.5270432854067448,30.0,2516992.0,xanthosine transporter,b2406,"frozenset({<Reaction CYTDt2rpp at 0x7fcfa6aa7908>, <Reaction XTSNt2rpp at 0x7fcfa6520a20>, <Reaction ADNt2rpp at 0x7fcfa6c09128>, <Reaction URIt2rpp at 0x7fcfa6594860>, <Reaction THMDt2rpp at 0x7fcfa65a1d68>, <Reaction INSt2rpp at 0x7fcfa68cd9e8>})"
+gltX,1.507062565633222,30.0,2512735.0,glutamyl-tRNA synthetase,b2400,['GLUTRS']
+xapB,1.5270432854067448,30.0,2516992.0,xanthosine transporter,b2406,"['THMDt2rpp', 'INSt2rpp', 'CYTDt2rpp', 'XTSNt2rpp', 'ADNt2rpp', 'URIt2rpp']"
 yfeN,1.6334217651830414,30.0,2519040.0,putative outer membrane protein,b2408,
 yfeR,1.4921192769024647,30.0,2519288.0,transcriptional regulator of yefH,b2409,
 yfeH,1.492682014095674,30.0,2521088.0,putative inorganic ion transporter,b2410,
 ypeB,1.5248573965377172,30.0,2521299.0,DUF3820 family protein,b4546,
-ligA,1.4509233409783728,30.0,2523136.0,"DNA ligase, NAD(+)-dependent",b2411,frozenset({<Reaction NADDP at 0x7fcfa67bbeb8>})
+ligA,1.4509233409783728,30.0,2523136.0,"DNA ligase, NAD(+)-dependent",b2411,['NADDP']
 zipA,1.511987811958034,30.0,2523605.0,FtsZ stabilizer,b2412,
 cysZ,1.6417370981567898,30.0,2525184.0,"sulfate transporter, sulfite inhibited",b2413,
-cysK,1.5340024306132214,30.0,2525767.0,"cysteine synthase A, O-acetylserine sulfhydrolase A subunit",b2414,frozenset({<Reaction CYSS at 0x7fcfa6a9a710>})
-ptsH,1.7666845064755252,30.0,2527232.0,phosphohistidinoprotein-hexose phosphotransferase component of PTS system (Hpr),b2415,"frozenset({<Reaction MANptspp at 0x7fcfa67db400>, <Reaction GALTptspp at 0x7fcfa696c048>, <Reaction FRUptspp at 0x7fcfa69a64a8>, <Reaction ARBTptspp at 0x7fcfa6b658d0>, <Reaction ACGAptspp at 0x7fcfa6c4df98>, <Reaction FRUpts2pp at 0x7fcfa69a6518>, <Reaction ACMANAptspp at 0x7fcfa6bdbd30>, <Reaction MANGLYCptspp at 0x7fcfa67db160>, <Reaction MNLptspp at 0x7fcfa67a2588>, <Reaction MALTptspp at 0x7fcfa6849588>, <Reaction SUCptspp at 0x7fcfa66049b0>, <Reaction SBTptspp at 0x7fcfa66511d0>, <Reaction ACMUMptspp at 0x7fcfa6bdbdd8>, <Reaction DHAPT at 0x7fcfa6a5a240>, <Reaction TREptspp at 0x7fcfa65cae48>, <Reaction GAMptspp at 0x7fcfa696ca90>, <Reaction GLCptspp at 0x7fcfa6990710>, <Reaction ASCBptspp at 0x7fcfa6b7b390>})"
-ptsI,1.5666329851431855,30.0,2527424.0,PEP-protein phosphotransferase of PTS system (enzyme I),b2416,"frozenset({<Reaction MANptspp at 0x7fcfa67db400>, <Reaction GALTptspp at 0x7fcfa696c048>, <Reaction FRUptspp at 0x7fcfa69a64a8>, <Reaction CHTBSptspp at 0x7fcfa6b540b8>, <Reaction ARBTptspp at 0x7fcfa6b658d0>, <Reaction ACGAptspp at 0x7fcfa6c4df98>, <Reaction FRUpts2pp at 0x7fcfa69a6518>, <Reaction ACMANAptspp at 0x7fcfa6bdbd30>, <Reaction MANGLYCptspp at 0x7fcfa67db160>, <Reaction MNLptspp at 0x7fcfa67a2588>, <Reaction MALTptspp at 0x7fcfa6849588>, <Reaction SUCptspp at 0x7fcfa66049b0>, <Reaction SBTptspp at 0x7fcfa66511d0>, <Reaction ACMUMptspp at 0x7fcfa6bdbdd8>, <Reaction DHAPT at 0x7fcfa6a5a240>, <Reaction TREptspp at 0x7fcfa65cae48>, <Reaction GAMptspp at 0x7fcfa696ca90>, <Reaction GLCptspp at 0x7fcfa6990710>, <Reaction ASCBptspp at 0x7fcfa6b7b390>})"
-crr,1.8440862441847763,30.0,2529280.0,glucose-specific enzyme IIA component of PTS,b2417,"frozenset({<Reaction GLCptspp at 0x7fcfa6990710>, <Reaction TREptspp at 0x7fcfa65cae48>, <Reaction MALTptspp at 0x7fcfa6849588>, <Reaction ACGAptspp at 0x7fcfa6c4df98>, <Reaction SUCptspp at 0x7fcfa66049b0>, <Reaction ACMUMptspp at 0x7fcfa6bdbdd8>})"
-pdxK,1.448197293404293,30.0,2529744.0,pyridoxal-pyridoxamine kinase/hydroxymethylpyrimidine kinase,b2418,"frozenset({<Reaction PYDXNK at 0x7fcfa6681e80>, <Reaction PYDAMK at 0x7fcfa6681e10>, <Reaction HMPK1 at 0x7fcfa689c630>, <Reaction PYDXK at 0x7fcfa6681f60>})"
+cysK,1.5340024306132214,30.0,2525767.0,"cysteine synthase A, O-acetylserine sulfhydrolase A subunit",b2414,['CYSS']
+ptsH,1.7666845064755252,30.0,2527232.0,phosphohistidinoprotein-hexose phosphotransferase component of PTS system (Hpr),b2415,"['ACMUMptspp', 'SBTptspp', 'DHAPT', 'TREptspp', 'GAMptspp', 'GLCptspp', 'MALTptspp', 'ACGAptspp', 'ASCBptspp', 'GALTptspp', 'MANptspp', 'FRUptspp', 'ARBTptspp', 'FRUpts2pp', 'MANGLYCptspp', 'ACMANAptspp', 'MNLptspp', 'SUCptspp']"
+ptsI,1.5666329851431855,30.0,2527424.0,PEP-protein phosphotransferase of PTS system (enzyme I),b2416,"['ACMUMptspp', 'SBTptspp', 'DHAPT', 'TREptspp', 'GAMptspp', 'GLCptspp', 'MALTptspp', 'ACGAptspp', 'ASCBptspp', 'GALTptspp', 'MANptspp', 'CHTBSptspp', 'FRUptspp', 'ARBTptspp', 'FRUpts2pp', 'MANGLYCptspp', 'ACMANAptspp', 'MNLptspp', 'SUCptspp']"
+crr,1.8440862441847763,30.0,2529280.0,glucose-specific enzyme IIA component of PTS,b2417,"['ACMUMptspp', 'GLCptspp', 'TREptspp', 'MALTptspp', 'ACGAptspp', 'SUCptspp']"
+pdxK,1.448197293404293,30.0,2529744.0,pyridoxal-pyridoxamine kinase/hydroxymethylpyrimidine kinase,b2418,"['PYDXK', 'PYDXNK', 'PYDAMK', 'HMPK1']"
 yfeK,1.6427227321202837,30.0,2530700.0,uncharacterized protein,b2419,
 yfeS,1.7959526527990415,30.0,2531328.0,WGR domain protein,b2420,
-cysA,1.433191788610527,30.0,2533376.0,sulfate/thiosulfate transporter subunit,b2422,"frozenset({<Reaction SLNTtpp at 0x7fcfa65ea710>, <Reaction TSULabcpp at 0x7fcfa6555748>, <Reaction SULabcpp at 0x7fcfa6604d68>, <Reaction SELtpp at 0x7fcfa6651978>, <Reaction MOBDabcpp at 0x7fcfa67b1160>})"
-cysU,1.3750132896783138,30.0,2535424.0,sulfate/thiosulfate ABC transporter permease,b2424,"frozenset({<Reaction SLNTtpp at 0x7fcfa65ea710>, <Reaction TSULabcpp at 0x7fcfa6555748>, <Reaction SULabcpp at 0x7fcfa6604d68>, <Reaction SELtpp at 0x7fcfa6651978>, <Reaction MOBDabcpp at 0x7fcfa67b1160>})"
-cysP,1.5425268125704268,30.0,2535870.0,thiosulfate-binding protein,b2425,"frozenset({<Reaction SLNTtpp at 0x7fcfa65ea710>, <Reaction TSULabcpp at 0x7fcfa6555748>, <Reaction SULabcpp at 0x7fcfa6604d68>, <Reaction SELtpp at 0x7fcfa6651978>, <Reaction MOBDabcpp at 0x7fcfa67b1160>})"
+cysA,1.433191788610527,30.0,2533376.0,sulfate/thiosulfate transporter subunit,b2422,"['SELtpp', 'SLNTtpp', 'MOBDabcpp', 'SULabcpp', 'TSULabcpp']"
+cysU,1.3750132896783138,30.0,2535424.0,sulfate/thiosulfate ABC transporter permease,b2424,"['SELtpp', 'SLNTtpp', 'MOBDabcpp', 'SULabcpp', 'TSULabcpp']"
+cysP,1.5425268125704268,30.0,2535870.0,thiosulfate-binding protein,b2425,"['SELtpp', 'SLNTtpp', 'MOBDabcpp', 'SULabcpp', 'TSULabcpp']"
 ucpA,1.6051877027535744,30.0,2537472.0,"furfural resistance protein, putative short-chain oxidoreductase",b2426,
 murR,1.4928516034095816,30.0,2538110.0,"repressor for murPQ, MurNAc 6-P inducible",b2427,
-murQ,1.4142081506451278,30.0,2539520.0,N-acetylmuramic acid 6-phosphate (MurNAc-6-P) etherase,b2428,frozenset({<Reaction ACM6PH at 0x7fcfa6bdb4e0>})
-murP,1.4378713574543254,30.0,2540031.0,"N-acetylmuramic acid permease, EIIBC component, PTS system",b2429,"frozenset({<Reaction SUCptspp at 0x7fcfa66049b0>, <Reaction ACMUMptspp at 0x7fcfa6bdbdd8>})"
+murQ,1.4142081506451278,30.0,2539520.0,N-acetylmuramic acid 6-phosphate (MurNAc-6-P) etherase,b2428,['ACM6PH']
+murP,1.4378713574543254,30.0,2540031.0,"N-acetylmuramic acid permease, EIIBC component, PTS system",b2429,"['ACMUMptspp', 'SUCptspp']"
 yfeW,1.5355156411887074,30.0,2541568.0,penicillin binding protein PBP4B; weak DD-carboxypeptidase activity,b2430,
 yfeX,1.565500283429205,30.0,2543616.0,"porphyrinogen oxidase, cytoplasmic",b2431,
 yfeY,1.618147858771276,30.0,2543999.0,RpoE-regulated lipoprotein,b2432,
-amiA,1.487967830347423,30.0,2545710.0,N-acetylmuramoyl-l-alanine amidase I,b2435,"frozenset({<Reaction AGM3PApp at 0x7fcfa6c14390>, <Reaction AGM4PApp at 0x7fcfa6c147f0>})"
+amiA,1.487967830347423,30.0,2545710.0,N-acetylmuramoyl-l-alanine amidase I,b2435,"['AGM4PApp', 'AGM3PApp']"
 eutR,1.4085090044803295,30.0,2547712.0,"eut operon transcriptional activator, AraC family",b2437,
 eutK,1.491464466469332,30.0,2548586.0,putative ethanol utilization carboxysome structural protein,b2438,
 intZ,1.4784717622046968,30.0,2552216.0,CPZ-55 prophage; putative phage integrase,b2442,
@@ -264,74 +264,74 @@ eutA,1.488654402999764,30.0,2558839.0,reactivating factor for ethanolamine ammon
 eutN,1.4929573332674515,30.0,2565121.0,Ethanolamine catabolic microcompartment shell protein,b2456,
 eutQ,1.4744011183303118,30.0,2568192.0,RmlC-like cupin domain protein,b2460,
 eutS,1.390752232482928,30.0,2568828.0,putative ethanol utilization carboxysome structural protein,b2462,
-maeB,1.4461228423423511,30.0,2569456.0,malic enzyme: putative oxidoreductase/phosphotransacetylase,b2463,frozenset({<Reaction ME2 at 0x7fcfa67e7f98>})
-talA,1.435482620850101,30.0,2572288.0,transaldolase A,b2464,frozenset({<Reaction TALA at 0x7fcfa6613320>})
-tktB,1.4788203662591928,30.0,2572994.0,"transketolase 2, thiamine triphosphate-binding",b2465,"frozenset({<Reaction TKT2 at 0x7fcfa65bb2b0>, <Reaction TKT1 at 0x7fcfa65bb5f8>})"
+maeB,1.4461228423423511,30.0,2569456.0,malic enzyme: putative oxidoreductase/phosphotransacetylase,b2463,['ME2']
+talA,1.435482620850101,30.0,2572288.0,transaldolase A,b2464,['TALA']
+tktB,1.4788203662591928,30.0,2572994.0,"transketolase 2, thiamine triphosphate-binding",b2465,"['TKT1', 'TKT2']"
 ypfG,1.4967177634361701,30.0,2575092.0,DUF1176 family protein,b2466,
-nudK,1.5765695921639031,30.0,2576384.0,GDP-mannose pyrophosphatase,b2467,frozenset({<Reaction GDPMNP at 0x7fcfa69799e8>})
+nudK,1.5765695921639031,30.0,2576384.0,GDP-mannose pyrophosphatase,b2467,['GDPMNP']
 aegA,1.5146196564735717,30.0,2576904.0,"putative oxidoreductase, FeS binding subunit/NAD/FAD-binding subunit",b2468,
 narQ,1.5458759781597313,30.0,2580480.0,sensory histidine kinase in two-component regulatory system with NarP,b2469,
 ypfM,1.9177794522747769,30.0,2584192.0,stress-induced small enterobacterial protein,b4606,
 yffB,1.9936266231320514,30.0,2584605.0,putative ArsC family reductase,b2471,
-dapE,1.3730906419476567,30.0,2584965.0,N-succinyl-diaminopimelate deacylase,b2472,frozenset({<Reaction SDPDS at 0x7fcfa66514e0>})
+dapE,1.3730906419476567,30.0,2584965.0,N-succinyl-diaminopimelate deacylase,b2472,['SDPDS']
 ypfN,1.6931389400876486,30.0,2586120.0,"putative membrane protein, UPF0370 family",b4547,
 ypfH,1.3853655736624018,30.0,2586624.0,"palmitoyl-CoA esterase activity, uncertain physiological substrate",b2473,
 tmcA,1.5374116501854203,30.0,2588672.0,elongator methionine tRNA (ac4C34) acetyltransferase,b2474,
 ypfJ,1.5653194228841518,30.0,2589232.0,putative neutral zinc metallopeptidase,b2475,
 bamC,1.4106264677583837,30.0,2591189.0,BamABCDE complex OM biogenesis lipoprotein,b2477,
-dapA,1.603779645057884,30.0,2592768.0,dihydrodipicolinate synthase,b2478,frozenset({<Reaction DHDPS at 0x7fcfa6a5ac88>})
+dapA,1.603779645057884,30.0,2592768.0,dihydrodipicolinate synthase,b2478,['DHDPS']
 gcvR,1.6664216577610835,30.0,2593264.0,"transcriptional repressor, regulatory protein accessory to GcvA",b2479,
-bcp,1.509060209846803,30.0,2593836.0,"peroxiredoxin; thiol peroxidase, thioredoxin-dependent",b2480,frozenset({<Reaction THIORDXi at 0x7fcfa65a1a58>})
-hyfA,1.7145321487233172,30.0,2594816.0,"hydrogenase 4, 4Fe-4S subunit",b2481,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
-hyfB,1.4181529958739962,30.0,2596864.0,"hydrogenase 4, membrane subunit",b2482,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
-hyfE,1.5100690975740736,30.0,2599620.0,"hydrogenase 4, membrane subunit",b2485,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
-hyfF,1.4372490271312814,30.0,2600275.0,"hydrogenase 4, membrane subunit",b2486,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
-hyfH,1.4851696382955262,30.0,2603522.0,"hydrogenase 4, Fe-S subunit",b2488,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
-hyfJ,1.4461259831627715,30.0,2605056.0,putative processing element hydrogenase 4,b2490,frozenset({<Reaction FHL at 0x7fcfa6a0e630>})
+bcp,1.509060209846803,30.0,2593836.0,"peroxiredoxin; thiol peroxidase, thioredoxin-dependent",b2480,['THIORDXi']
+hyfA,1.7145321487233172,30.0,2594816.0,"hydrogenase 4, 4Fe-4S subunit",b2481,['FHL']
+hyfB,1.4181529958739962,30.0,2596864.0,"hydrogenase 4, membrane subunit",b2482,['FHL']
+hyfE,1.5100690975740736,30.0,2599620.0,"hydrogenase 4, membrane subunit",b2485,['FHL']
+hyfF,1.4372490271312814,30.0,2600275.0,"hydrogenase 4, membrane subunit",b2486,['FHL']
+hyfH,1.4851696382955262,30.0,2603522.0,"hydrogenase 4, Fe-S subunit",b2488,['FHL']
+hyfJ,1.4461259831627715,30.0,2605056.0,putative processing element hydrogenase 4,b2490,['FHL']
 hyfR,1.4824259829912778,30.0,2605258.0,hydrogenase-4 transcriptional activator,b2491,
 yfgO,1.4375596283658862,30.0,2609152.0,putative UPF0118 family inner membrane permease,b2493,
 bepA,1.5315547056617012,30.0,2609452.0,"OM protein maintenance and assembly metalloprotease and chaperone, periplasmic",b2494,
 yfgD,1.6965005071529844,30.0,2611200.0,putative oxidoreductase,b2495,
 hda,1.5025777505240898,30.0,2611433.0,ATPase regulatory factor involved in DnaA inactivation,b2496,
-uraA,1.4046335815297937,30.0,2613248.0,uracil permease,b2497,frozenset({<Reaction URAt2pp at 0x7fcfa658af60>})
-upp,1.5560006257987606,30.0,2613604.0,uracil phosphoribosyltransferase,b2498,frozenset({<Reaction UPPRT at 0x7fcfa658ad30>})
-purM,1.4922191227446207,30.0,2615296.0,phosphoribosylaminoimidazole synthetase,b2499,frozenset({<Reaction PRAIS at 0x7fcfa665e550>})
-purN,1.4156961611083398,30.0,2615592.0,phosphoribosylglycinamide formyltransferase 1,b2500,frozenset({<Reaction GARFT at 0x7fcfa6979320>})
-ppk,1.5632521539746067,30.0,2616402.0,"polyphosphate kinase, component of RNA degradosome",b2501,"frozenset({<Reaction PPK2r at 0x7fcfa66d2390>, <Reaction PPKr at 0x7fcfa66d24a8>})"
-ppx,1.589908304226037,30.0,2618473.0,exopolyphosphatase,b2502,"frozenset({<Reaction PPA at 0x7fcfa66c6550>, <Reaction PPA2 at 0x7fcfa66c6668>})"
+uraA,1.4046335815297937,30.0,2613248.0,uracil permease,b2497,['URAt2pp']
+upp,1.5560006257987606,30.0,2613604.0,uracil phosphoribosyltransferase,b2498,['UPPRT']
+purM,1.4922191227446207,30.0,2615296.0,phosphoribosylaminoimidazole synthetase,b2499,['PRAIS']
+purN,1.4156961611083398,30.0,2615592.0,phosphoribosylglycinamide formyltransferase 1,b2500,['GARFT']
+ppk,1.5632521539746067,30.0,2616402.0,"polyphosphate kinase, component of RNA degradosome",b2501,"['PPK2r', 'PPKr']"
+ppx,1.589908304226037,30.0,2618473.0,exopolyphosphatase,b2502,"['PPA', 'PPA2']"
 yfgF,1.651697812905369,30.0,2621440.0,"cyclic-di-GMP phosphodiesterase, anaerobic",b2503,
 yfgG,1.8107053629884007,30.0,2622648.0,uncharacterized protein,b2504,
 yfgH,1.9023443441943892,30.0,2623488.0,outer membrane integrity lipoprotein,b2505,
 yfgI,1.5774184929435506,30.0,2623684.0,"nalidixic acid resistance protein, putative periplasmic protein",b2506,
-guaB,1.456322317044425,30.0,2625962.0,IMP dehydrogenase,b2508,frozenset({<Reaction IMPD at 0x7fcfa68cd208>})
+guaB,1.456322317044425,30.0,2625962.0,IMP dehydrogenase,b2508,['IMPD']
 xseA,1.6097444156370533,30.0,2627590.0,"exonuclease VII, large subunit",b2509,
 yfgJ,1.7679296994918405,30.0,2629120.0,DUF1407 family protein,b2510,
 der,1.604224284457161,30.0,2629632.0,GTPase; multicopy suppressor of ftsJ,b2511,
 bamB,1.48445018102683,30.0,2631680.0,BamABCDE complex OM biogenesis lipoprotein,b2512,
 yfgM,1.6097241211491617,30.0,2632021.0,ancillary SecYEG translocon subunit; putative anti-RcsB factor,b2513,
-ispG,1.5184673347293707,30.0,2634044.0,1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase,b2515,frozenset({<Reaction MECDPDH5 at 0x7fcfa67f5048>})
+ispG,1.5184673347293707,30.0,2634044.0,1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase,b2515,['MECDPDH5']
 rodZ,1.502594670377686,30.0,2635776.0,MreB assembly cytoskeletal protein,b2516,
-ndk,1.4100688739831204,30.0,2637824.0,multifunctional nucleoside diphosphate kinase and apyrimidinic endonuclease and 3'-phosphodiesterase,b2518,"frozenset({<Reaction NDPK4 at 0x7fcfa67d2e10>, <Reaction NDPK3 at 0x7fcfa67d2c88>, <Reaction NDPK7 at 0x7fcfa675f1d0>, <Reaction NDPK8 at 0x7fcfa675f2b0>, <Reaction NDPK5 at 0x7fcfa67d2ef0>, <Reaction NDPK1 at 0x7fcfa67d2b00>, <Reaction NDPK6 at 0x7fcfa675f198>, <Reaction NDPK2 at 0x7fcfa67d2dd8>})"
+ndk,1.4100688739831204,30.0,2637824.0,multifunctional nucleoside diphosphate kinase and apyrimidinic endonuclease and 3'-phosphodiesterase,b2518,"['NDPK2', 'NDPK4', 'NDPK3', 'NDPK7', 'NDPK8', 'NDPK5', 'NDPK1', 'NDPK6']"
 yfhM,1.505948189452319,30.0,2640684.0,bacterial alpha2-macroglobulin colonization factor ECAM; anti-host protease defense factor; periplasmic inner membrane-anchored lipoprotein,b2520,
-sseA,1.388965181588745,30.0,2646016.0,3-mercaptopyruvate sulfurtransferase,b2521,frozenset({<Reaction MCPST at 0x7fcfa67db208>})
+sseA,1.388965181588745,30.0,2646016.0,3-mercaptopyruvate sulfurtransferase,b2521,['MCPST']
 sseB,1.7780666891879573,30.0,2648064.0,"rhodanase-like enzyme, sulfur transfer from thiosulfate",b2522,
-pepB,1.4010716113765178,30.0,2648433.0,aminopeptidase B,b2523,"frozenset({<Reaction AMPTASECG at 0x7fcfa6bd0a90>, <Reaction AMPTASEPG at 0x7fcfa6bd0c50>})"
+pepB,1.4010716113765178,30.0,2648433.0,aminopeptidase B,b2523,"['AMPTASEPG', 'AMPTASECG']"
 fdx,1.5744364896033147,30.0,2650112.0,[2Fe-2S] ferredoxin,b2525,
 hscA,1.5074593942875378,30.0,2650443.0,DnaK-like molecular chaperone specific for IscU,b2526,
 hscB,1.537043649693568,30.0,2652310.0,"HscA co-chaperone, J domain-containing protein Hsc56; IscU-specific chaperone HscAB",b2527,
-iscU,1.466701050352661,30.0,2653261.0,iron-sulfur cluster assembly scaffold protein,b2529,"frozenset({<Reaction I2FE2SS at 0x7fcfa68b2828>, <Reaction I2FE2SR at 0x7fcfa68a8e48>, <Reaction I4FE4ST at 0x7fcfa68b2a58>, <Reaction I4FE4SR at 0x7fcfa68b2668>, <Reaction I2FE2ST at 0x7fcfa68b2940>, <Reaction I2FE2SS2 at 0x7fcfa68b27f0>})"
+iscU,1.466701050352661,30.0,2653261.0,iron-sulfur cluster assembly scaffold protein,b2529,"['I2FE2SS2', 'I2FE2ST', 'I2FE2SS', 'I2FE2SR', 'I4FE4ST', 'I4FE4SR']"
 iscR,1.544295300029806,30.0,2655001.0,isc operon transcriptional repressor; suf operon transcriptional activator; oxidative stress- and iron starvation-inducible; autorepressor,b2531,
 trmJ,1.6026609998940922,30.0,2656256.0,"tRNA mC32,mU32 2'-O-methyltransferase, SAM-dependent",b2532,
-suhB,1.6179886148544027,30.0,2656800.0,inositol monophosphatase,b2533,"frozenset({<Reaction MI1PP at 0x7fcfa68038d0>, <Reaction G2PP at 0x7fcfa69b3d68>})"
+suhB,1.6179886148544027,30.0,2656800.0,inositol monophosphatase,b2533,"['MI1PP', 'G2PP']"
 yfhR,1.5457673331930455,30.0,2658304.0,putative S9 family prolyl oligopeptidase,b2534,
 csiE,1.4988072463438153,30.0,2658793.0,stationary phase inducible protein,b2535,
 iroK,1.6194394877087304,30.0,2661376.0,3-hydroxypropionic acid resistance peptide,b4706,
 hcaR,1.5868590278021264,30.0,2661364.0,hca operon transcriptional regulator,b2537,
-hcaE,1.5044488478140712,30.0,2662400.0,"3-phenylpropionate dioxygenase, large (alpha) subunit",b2538,"frozenset({<Reaction PPPNDO at 0x7fcfa66d2be0>, <Reaction CINNDO at 0x7fcfa6b54160>})"
-hcaF,1.49513477538895,30.0,2663748.0,"3-phenylpropionate dioxygenase, small (beta) subunit",b2539,"frozenset({<Reaction PPPNDO at 0x7fcfa66d2be0>, <Reaction CINNDO at 0x7fcfa6b54160>})"
-hcaC,1.4237521691079318,30.0,2664448.0,"3-phenylpropionate dioxygenase, ferredoxin subunit",b2540,"frozenset({<Reaction PPPNDO at 0x7fcfa66d2be0>, <Reaction CINNDO at 0x7fcfa6b54160>})"
-hcaB,1.4703192317459226,30.0,2664583.0,"2,3-dihydroxy-2,3-dihydrophenylpropionate dehydrogenase",b2541,"frozenset({<Reaction DHCIND at 0x7fcfa6a5a828>, <Reaction DHPPD at 0x7fcfa6a64978>})"
-hcaD,1.519551604191708,30.0,2666496.0,"phenylpropionate dioxygenase, ferredoxin reductase subunit",b2542,"frozenset({<Reaction PPPNDO at 0x7fcfa66d2be0>, <Reaction CINNDO at 0x7fcfa6b54160>})"
+hcaE,1.5044488478140712,30.0,2662400.0,"3-phenylpropionate dioxygenase, large (alpha) subunit",b2538,"['PPPNDO', 'CINNDO']"
+hcaF,1.49513477538895,30.0,2663748.0,"3-phenylpropionate dioxygenase, small (beta) subunit",b2539,"['PPPNDO', 'CINNDO']"
+hcaC,1.4237521691079318,30.0,2664448.0,"3-phenylpropionate dioxygenase, ferredoxin subunit",b2540,"['PPPNDO', 'CINNDO']"
+hcaB,1.4703192317459226,30.0,2664583.0,"2,3-dihydroxy-2,3-dihydrophenylpropionate dehydrogenase",b2541,"['DHPPD', 'DHCIND']"
+hcaD,1.519551604191708,30.0,2666496.0,"phenylpropionate dioxygenase, ferredoxin reductase subunit",b2542,"['PPPNDO', 'CINNDO']"
 yphA,1.6446734890008121,30.0,2666704.0,DoxX family inner membrane protein,b2543,
 yphB,1.559794520512086,30.0,2667174.0,"mutarotase superfamily protein, YphB family",b2544,
 yphC,1.5227907811844883,30.0,2668544.0,putative Zn-dependent NAD(P)-binding oxidoreductase,b2545,
@@ -339,20 +339,20 @@ yphE,1.4333632219936618,30.0,2670592.0,putative sugar ABC transporter ATPase,b25
 yphF,1.6023079586780204,30.0,2672640.0,putative sugar ABC transporter periplasmic binding protein,b2548,
 yphG,1.5508336617075293,30.0,2672822.0,DUF4380 domain-containing TPR repeat protein,b2549,
 yphH,1.468361886928166,30.0,2676736.0,putative DNA-binding transcriptional regulator,b2550,
-glyA,1.4847304136995947,30.0,2678784.0,serine hydroxymethyltransferase,b2551,"frozenset({<Reaction THRA2i at 0x7fcfa65ad320>, <Reaction THRAi at 0x7fcfa65ad278>, <Reaction GHMT2r at 0x7fcfa6986390>, <Reaction THFAT at 0x7fcfa65a1cc0>, <Reaction ALATA_D2 at 0x7fcfa6bac2e8>, <Reaction ALATA_L2 at 0x7fcfa6baccf8>})"
-hmp,1.5437817195770414,30.0,2679193.0,fused nitric oxide dioxygenase/dihydropteridine reductase 2,b2552,"frozenset({<Reaction NODOx at 0x7fcfa6778080>, <Reaction NODOy at 0x7fcfa6778828>})"
+glyA,1.4847304136995947,30.0,2678784.0,serine hydroxymethyltransferase,b2551,"['THFAT', 'ALATA_D2', 'ALATA_L2', 'THRAi', 'GHMT2r', 'THRA2i']"
+hmp,1.5437817195770414,30.0,2679193.0,fused nitric oxide dioxygenase/dihydropteridine reductase 2,b2552,"['NODOy', 'NODOx']"
 glnB,1.6664955852055459,30.0,2680428.0,regulatory protein P-II for glutamine synthetase,b2553,
 glrR,1.497863628366041,30.0,2680832.0,response regulator regulating glmY sRNA in two-component system with sensor protein GlrK,b2554,
 yfhG,1.416122388821871,30.0,2682151.0,putative outer membrane protein modulating the QseEF response,b2555,
 glrK,1.526988755553115,30.0,2683029.0,sensor protein kinase regulating glmY sRNA in two-component system with response regulator GlrR,b2556,
-purL,1.4315267028132312,30.0,2686976.0,phosphoribosylformyl-glycineamide synthetase,b2557,frozenset({<Reaction PRFGS at 0x7fcfa665e978>})
-mltF,1.5429356112585637,30.0,2689159.0,"membrane-bound lytic transglycosylase F, murein hydrolase",b2558,"frozenset({<Reaction MLTGY3pp at 0x7fcfa68127f0>, <Reaction MLTGY1pp at 0x7fcfa6812240>, <Reaction MLTGY4pp at 0x7fcfa6812860>, <Reaction MLTGY2pp at 0x7fcfa68125f8>})"
+purL,1.4315267028132312,30.0,2686976.0,phosphoribosylformyl-glycineamide synthetase,b2557,['PRFGS']
+mltF,1.5429356112585637,30.0,2689159.0,"membrane-bound lytic transglycosylase F, murein hydrolase",b2558,"['MLTGY2pp', 'MLTGY1pp', 'MLTGY3pp', 'MLTGY4pp']"
 tadA,1.6399690767070605,30.0,2691072.0,tRNA-specific adenosine deaminase,b2559,
 yfhH,1.5125326031855184,30.0,2692117.0,putative DNA-binding transcriptional regulator,b2561,
 yfhL,1.879845327213894,30.0,2693120.0,putative 4Fe-4S cluster-containing protein,b2562,
 shoB,1.9104973728850134,30.0,2693504.0,toxic membrane protein,b4687,
-acpS,1.8231391384774542,30.0,2693976.0,holo-[acyl-carrier-protein] synthase 1,b2563,frozenset({<Reaction ACPS1 at 0x7fcfa6bf3588>})
-pdxJ,1.437326279655354,30.0,2694356.0,pyridoxine 5'-phosphate synthase,b2564,frozenset({<Reaction PDX5PS at 0x7fcfa66e5a90>})
+acpS,1.8231391384774542,30.0,2693976.0,holo-[acyl-carrier-protein] synthase 1,b2563,['ACPS1']
+pdxJ,1.437326279655354,30.0,2694356.0,pyridoxine 5'-phosphate synthase,b2564,['PDX5PS']
 recO,1.4719416609447908,30.0,2695168.0,gap repair protein,b2565,
 rnc,1.5571661176542806,30.0,2697216.0,RNase III,b2567,
 lepB,1.5402257783639575,30.0,2697693.0,leader peptidase (signal peptidase I),b2568,
@@ -361,28 +361,28 @@ rseC,1.47008526552444,30.0,2700680.0,SoxR iron-sulfur cluster reduction factor c
 rseB,1.5368935579981835,30.0,2701312.0,"anti-sigma E factor, binds RseA",b2571,
 rseA,1.4751310345767183,30.0,2702112.0,anti-sigma factor,b2572,
 rpoE,1.5115348566452138,30.0,2703360.0,RNA polymerase sigma E factor,b2573,
-nadB,1.5051749636886815,30.0,2703778.0,"quinolinate synthase, L-aspartate oxidase (B protein) subunit",b2574,"frozenset({<Reaction ASPO4 at 0x7fcfa6b8b898>, <Reaction ASPO3 at 0x7fcfa6b8b6a0>, <Reaction ASPO6 at 0x7fcfa6b8ba58>, <Reaction ASPO5 at 0x7fcfa6b8b978>})"
+nadB,1.5051749636886815,30.0,2703778.0,"quinolinate synthase, L-aspartate oxidase (B protein) subunit",b2574,"['ASPO6', 'ASPO5', 'ASPO4', 'ASPO3']"
 trmN,1.5304641453267893,30.0,2705408.0,tRNA1(Val) (adenine(37)-N6)-methyltransferase,b2575,
 srmB,1.5461762133121033,30.0,2707456.0,ATP-dependent RNA helicase,b2576,
 yfiE,1.6109470647465356,30.0,2707797.0,putative DNA-binding transcriptional regulator,b2577,
-eamB,1.4933971933491936,30.0,2708781.0,cysteine and O-acetylserine exporter,b2578,"frozenset({<Reaction CYStpp at 0x7fcfa6a9ae80>, <Reaction ACSERtpp at 0x7fcfa6bf3f60>})"
-grcA,1.6286697605400664,30.0,2709504.0,autonomous glycyl radical cofactor,b2579,"frozenset({<Reaction PFL at 0x7fcfa66f1ac8>, <Reaction OBTFL at 0x7fcfa6731860>})"
+eamB,1.4933971933491936,30.0,2708781.0,cysteine and O-acetylserine exporter,b2578,"['ACSERtpp', 'CYStpp']"
+grcA,1.6286697605400664,30.0,2709504.0,autonomous glycyl radical cofactor,b2579,"['PFL', 'OBTFL']"
 ung,1.6184467029267473,30.0,2710112.0,uracil-DNA-glycosylase,b2580,
 yfiF,1.427092963168738,30.0,2711552.0,putative methyltransferase,b2581,
-trxC,1.7656850271144984,30.0,2712093.0,thioredoxin 2,b2582,"frozenset({<Reaction DSBDR at 0x7fcfa6a86208>, <Reaction RNDR1 at 0x7fcfa6627c50>, <Reaction THIORDXi at 0x7fcfa65a1a58>, <Reaction TRDR at 0x7fcfa65ca860>, <Reaction RNDR2 at 0x7fcfa6627eb8>, <Reaction METSOXR1 at 0x7fcfa67f5f60>, <Reaction METSOXR2 at 0x7fcfa6803160>, <Reaction RNDR3 at 0x7fcfa6627f98>, <Reaction PAPSR at 0x7fcfa66e53c8>, <Reaction RNDR4 at 0x7fcfa6630198>})"
+trxC,1.7656850271144984,30.0,2712093.0,thioredoxin 2,b2582,"['PAPSR', 'DSBDR', 'METSOXR2', 'RNDR1', 'THIORDXi', 'TRDR', 'RNDR2', 'RNDR3', 'RNDR4', 'METSOXR1']"
 yfiP,1.5102415437474477,30.0,2712581.0,DTW domain protein,b2583,
 pka,1.4909934726137457,30.0,2713311.0,protein lysine acetyltransferase,b2584,
-pssA,1.5681442420411684,30.0,2716085.0,phosphatidylserine synthase; CDP-diacylglycerol-serine O-phosphatidyltransferase,b2585,"frozenset({<Reaction PSSA141 at 0x7fcfa6676438>, <Reaction PSSA140 at 0x7fcfa6676358>, <Reaction PSSA180 at 0x7fcfa6676668>, <Reaction PSSA161 at 0x7fcfa6676588>, <Reaction PSSA120 at 0x7fcfa6676198>, <Reaction PSSA160 at 0x7fcfa66764a8>, <Reaction PSSA181 at 0x7fcfa66767b8>})"
+pssA,1.5681442420411684,30.0,2716085.0,phosphatidylserine synthase; CDP-diacylglycerol-serine O-phosphatidyltransferase,b2585,"['PSSA120', 'PSSA141', 'PSSA140', 'PSSA180', 'PSSA161', 'PSSA160', 'PSSA181']"
 yfiM,1.568506524056864,30.0,2717696.0,putative lipoprotein,b2586,
-kgtP,1.5955879207113086,30.0,2717806.0,alpha-ketoglutarate transporter,b2587,frozenset({<Reaction AKGt2rpp at 0x7fcfa6b9fcc0>})
+kgtP,1.5955879207113086,30.0,2717806.0,alpha-ketoglutarate transporter,b2587,['AKGt2rpp']
 clpB,1.4242606703664353,30.0,2724958.0,protein disaggregation chaperone,b2592,
 yfiH,1.5061993064990353,30.0,2727936.0,UPF0124 family protein,b2593,
 rluD,1.4858988728978078,30.0,2728389.0,"23S rRNA pseudouridine(1911,1915,1917) synthase",b2594,
 bamD,1.6356014331578594,30.0,2729984.0,BamABCDE complex OM biogenesis lipoprotein,b2595,
 raiA,1.5789610938062897,30.0,2730512.0,cold shock protein associated with 30S ribosomal subunit,b2597,
 pheL,1.9085791549829325,30.0,2730957.0,pheA gene leader peptide,b2598,
-pheA,1.6002309609941257,30.0,2732032.0,"chorismate mutase and prephenate dehydratase, P-protein",b2599,"frozenset({<Reaction PPNDH at 0x7fcfa66d29b0>, <Reaction CHORM at 0x7fcfa6b46dd8>})"
-aroF,1.5111764485584152,30.0,2734080.0,"3-deoxy-D-arabino-heptulosonate-7-phosphate synthase, tyrosine-repressible",b2601,frozenset({<Reaction DDPA at 0x7fcfa6ace7f0>})
+pheA,1.6002309609941257,30.0,2732032.0,"chorismate mutase and prephenate dehydratase, P-protein",b2599,"['CHORM', 'PPNDH']"
+aroF,1.5111764485584152,30.0,2734080.0,"3-deoxy-D-arabino-heptulosonate-7-phosphate synthase, tyrosine-repressible",b2601,['DDPA']
 yfiL,1.6740891749979192,30.0,2734718.0,lipoprotein,b2602,
 yfiR,1.72734568241945,30.0,2735233.0,putative periplasmic inhibitor of YfiN activity,b2603,
 yfiN,1.5987221337471809,30.0,2736128.0,putative membrane-anchored diguanylate cyclase,b2604,
@@ -392,7 +392,7 @@ rpsP,1.5550820132282617,30.0,2739295.0,30S ribosomal subunit protein S16,b2609,
 ffh,1.4604724414247872,30.0,2740224.0,Signal Recognition Particle (SRP) component with 4.5S RNA (ffs),b2610,
 ypjD,1.4302085372644833,30.0,2741320.0,cytochrome c assembly protein family inner membrane protein,b2611,
 grpE,1.4672904729480767,30.0,2743473.0,heat shock protein,b2614,
-nadK,1.4894560864520512,30.0,2744320.0,NAD kinase,b2615,frozenset({<Reaction NADK at 0x7fcfa67c6898>})
+nadK,1.4894560864520512,30.0,2744320.0,NAD kinase,b2615,['NADK']
 recN,1.5327062130493243,30.0,2745153.0,recombination and repair protein,b2616,
 bamE,1.6490327973859353,30.0,2746963.0,lipoprotein component of BamABCDE OM biogenesis complex,b2617,
 ratB,1.7136921712199642,30.0,2747392.0,UPF0125 family protein,b2618,
@@ -428,9 +428,9 @@ ypjC,2.302751784505362,30.0,2777088.0,No_gene_product,b2650,
 ygaQ,2.129611857601186,30.0,2779755.0,No_gene_product,b4462,
 csiD,1.4990457362760188,30.0,2783232.0,carbon starvation protein,b2659,
 lhgO,1.397458372099029,30.0,2783340.0,L-2-hydroxyglutarate oxidase,b2660,
-gabD,1.4430303120358916,30.0,2785280.0,"succinate-semialdehyde dehydrogenase I, NADP-dependent",b2661,frozenset({<Reaction SSALy at 0x7fcfa65f7e48>})
-gabT,1.4120070422219433,30.0,2787328.0,"4-aminobutyrate aminotransferase, PLP-dependent",b2662,frozenset({<Reaction ABTA at 0x7fcfa6c41198>})
-gabP,1.5172906392852108,30.0,2787611.0,gamma-aminobutyrate transporter,b2663,frozenset({<Reaction ABUTt2pp at 0x7fcfa6c413c8>})
+gabD,1.4430303120358916,30.0,2785280.0,"succinate-semialdehyde dehydrogenase I, NADP-dependent",b2661,['SSALy']
+gabT,1.4120070422219433,30.0,2787328.0,"4-aminobutyrate aminotransferase, PLP-dependent",b2662,['ABTA']
+gabP,1.5172906392852108,30.0,2787611.0,gamma-aminobutyrate transporter,b2663,['ABUTt2pp']
 csiR,1.384152311233457,30.0,2789376.0,transcriptional repressor of csiD,b2664,
 yqaE,1.6845320683396772,30.0,2790228.0,cyaR sRNA-regulated protein,b2666,
 ygaV,1.668303418856209,30.0,2790569.0,tributyltin-inducible repressor of ygaVP,b2667,
@@ -441,47 +441,47 @@ ygaC,1.621892968133057,30.0,2793008.0,uncharacterized protein,b2671,
 ygaM,1.5160779786550296,30.0,2793504.0,putative membrane-anchored DUF883 family ribosome-binding protein,b2672,
 nrdH,1.5348788652735268,30.0,2794081.0,hydrogen donor for NrdEF electron transport system; glutaredoxin-like protein,b2673,
 nrdI,1.463030890261848,30.0,2794323.0,NrdEF cluster assembly flavodoxin,b2674,
-nrdE,1.4300363700632994,30.0,2794706.0,"ribonucleoside-diphosphate reductase 2, alpha subunit",b2675,"frozenset({<Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction RNDR4b at 0x7fcfa6630160>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
-nrdF,1.6905707118122038,30.0,2797568.0,"ribonucleoside-diphosphate reductase 2, beta subunit, ferritin-like protein",b2676,"frozenset({<Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction RNDR4b at 0x7fcfa6630160>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
-proV,1.646994886629978,30.0,2798173.0,glycine betaine/proline ABC transporter periplasmic binding protein,b2677,"frozenset({<Reaction CTBTabcpp at 0x7fcfa6afff98>, <Reaction CRNabcpp at 0x7fcfa6aff358>, <Reaction CRNDabcpp at 0x7fcfa6aff1d0>, <Reaction PROabcpp at 0x7fcfa665ef60>})"
-proX,1.440885551571835,30.0,2800490.0,glycine betaine/proline ABC transporter periplasmic binding protein; cold shock protein,b2679,"frozenset({<Reaction CTBTabcpp at 0x7fcfa6afff98>, <Reaction CRNabcpp at 0x7fcfa6aff358>, <Reaction CRNDabcpp at 0x7fcfa6aff1d0>, <Reaction PROabcpp at 0x7fcfa665ef60>})"
+nrdE,1.4300363700632994,30.0,2794706.0,"ribonucleoside-diphosphate reductase 2, alpha subunit",b2675,"['RNDR2b', 'RNDR3b', 'RNDR4b', 'RNDR1b']"
+nrdF,1.6905707118122038,30.0,2797568.0,"ribonucleoside-diphosphate reductase 2, beta subunit, ferritin-like protein",b2676,"['RNDR2b', 'RNDR3b', 'RNDR4b', 'RNDR1b']"
+proV,1.646994886629978,30.0,2798173.0,glycine betaine/proline ABC transporter periplasmic binding protein,b2677,"['CTBTabcpp', 'CRNabcpp', 'PROabcpp', 'CRNDabcpp']"
+proX,1.440885551571835,30.0,2800490.0,glycine betaine/proline ABC transporter periplasmic binding protein; cold shock protein,b2679,"['CTBTabcpp', 'CRNabcpp', 'PROabcpp', 'CRNDabcpp']"
 ygaY,1.5207476337115438,30.0,2801674.0,No_gene_product,b2681,
-ygaZ,1.5801977439684716,30.0,2803712.0,"putative L-valine exporter, norvaline resistance protein",b2682,frozenset({<Reaction VALt2rpp at 0x7fcfa6594cf8>})
-ygaH,1.6281585052584893,30.0,2803712.0,"putative L-valine exporter, norvaline resistance protein",b2683,frozenset({<Reaction VALt2rpp at 0x7fcfa6594cf8>})
+ygaZ,1.5801977439684716,30.0,2803712.0,"putative L-valine exporter, norvaline resistance protein",b2682,['VALt2rpp']
+ygaH,1.6281585052584893,30.0,2803712.0,"putative L-valine exporter, norvaline resistance protein",b2683,['VALt2rpp']
 mprA,1.6592304157886781,30.0,2804128.0,transcriptional repressor of microcin B17 synthesis and multidrug efflux,b2684,
 emrA,1.4200639864822577,30.0,2805760.0,multidrug efflux system,b2685,
-luxS,1.7332288799597277,30.0,2807808.0,S-ribosylhomocysteine lyase,b2687,frozenset({<Reaction RHCCE at 0x7fcfa6627048>})
-gshA,1.6298994141093202,30.0,2808241.0,glutamate-cysteine ligase,b2688,frozenset({<Reaction GLUCYS at 0x7fcfa691d9b0>})
+luxS,1.7332288799597277,30.0,2807808.0,S-ribosylhomocysteine lyase,b2687,['RHCCE']
+gshA,1.6298994141093202,30.0,2808241.0,glutamate-cysteine ligase,b2688,['GLUCYS']
 yqaA,1.5497567626580757,30.0,2809870.0,COG1238 family inner membrane protein,b2689,
-yqaB,1.562569750283609,30.0,2810295.0,fructose-1-P and 6-phosphogluconate phosphatase,b2690,frozenset({<Reaction PGMT at 0x7fcfa66ff8d0>})
+yqaB,1.562569750283609,30.0,2810295.0,fructose-1-P and 6-phosphogluconate phosphatase,b2690,['PGMT']
 csrA,1.7042445576744452,30.0,2812416.0,pleiotropic regulatory protein for carbon source metabolism,b2696,
-alaS,1.4602393532840117,30.0,2812739.0,alanyl-tRNA synthetase,b2697,frozenset({<Reaction ALATRS at 0x7fcfa6bace80>})
+alaS,1.4602393532840117,30.0,2812739.0,alanyl-tRNA synthetase,b2697,['ALATRS']
 recX,1.5386814354441833,30.0,2815497.0,regulatory protein for RecA,b2698,
 recA,1.5750606539894823,30.0,2816066.0,DNA recombination and repair protein; ssDNA-dependent ATPase; synaptase; ssDNA and dsDNA binding protein; ATP-dependent homologous DNA strand exchanger; recombinase A; LexA autocleavage cofactor,b2699,
 pncC,1.7205617896089938,30.0,2817207.0,nicotinamide-nucleotide amidohydrolase; NMN amidohydrolase,b2700,
-mltB,1.5912110200860246,30.0,2818048.0,membrane-bound lytic murein transglycosylase B,b2701,"frozenset({<Reaction MLTGY3pp at 0x7fcfa68127f0>, <Reaction MLTGY1pp at 0x7fcfa6812240>, <Reaction MLTGY4pp at 0x7fcfa6812860>, <Reaction MLTGY2pp at 0x7fcfa68125f8>})"
-srlA,1.608498338016464,30.0,2819190.0,glucitol/sorbitol-specific enzyme IIC component of PTS,b2702,frozenset({<Reaction SBTptspp at 0x7fcfa66511d0>})
-srlE,1.6021867369543645,30.0,2820096.0,glucitol/sorbitol-specific enzyme IIB component of PTS,b2703,frozenset({<Reaction SBTptspp at 0x7fcfa66511d0>})
-srlB,1.4365165291051,30.0,2820720.0,glucitol/sorbitol-specific enzyme IIA component of PTS,b2704,frozenset({<Reaction SBTptspp at 0x7fcfa66511d0>})
-srlD,1.4269517576992286,30.0,2821095.0,sorbitol-6-phosphate dehydrogenase,b2705,frozenset({<Reaction SBTPD at 0x7fcfa6651358>})
+mltB,1.5912110200860246,30.0,2818048.0,membrane-bound lytic murein transglycosylase B,b2701,"['MLTGY2pp', 'MLTGY1pp', 'MLTGY3pp', 'MLTGY4pp']"
+srlA,1.608498338016464,30.0,2819190.0,glucitol/sorbitol-specific enzyme IIC component of PTS,b2702,['SBTptspp']
+srlE,1.6021867369543645,30.0,2820096.0,glucitol/sorbitol-specific enzyme IIB component of PTS,b2703,['SBTptspp']
+srlB,1.4365165291051,30.0,2820720.0,glucitol/sorbitol-specific enzyme IIA component of PTS,b2704,['SBTptspp']
+srlD,1.4269517576992286,30.0,2821095.0,sorbitol-6-phosphate dehydrogenase,b2705,['SBTPD']
 srlM,1.6635595825835843,30.0,2822144.0,sorbitol=responsive srl operon transcriptional activator,b2706,
 srlR,1.468955365079128,30.0,2822405.0,sorbitol-inducible srl operon transcriptional repressor,b2707,
-srlQ,1.4768908800416078,30.0,2823171.0,D-arabinose 5-phosphate isomerase,b2708,frozenset({<Reaction A5PISO at 0x7fcfa6c33160>})
+srlQ,1.4768908800416078,30.0,2823171.0,D-arabinose 5-phosphate isomerase,b2708,['A5PISO']
 norR,1.5272786527846762,30.0,2824133.0,anaerobic nitric oxide reductase DNA-binding transcriptional activator,b2709,
-norV,1.5173091691063538,30.0,2826240.0,anaerobic nitric oxide reductase flavorubredoxin,b2710,frozenset({<Reaction NHFRBO at 0x7fcfa675f438>})
-norW,1.4288289429420702,30.0,2828288.0,NADH:flavorubredoxin oxidoreductase,b2711,frozenset({<Reaction NHFRBO at 0x7fcfa675f438>})
+norV,1.5173091691063538,30.0,2826240.0,anaerobic nitric oxide reductase flavorubredoxin,b2710,['NHFRBO']
+norW,1.4288289429420702,30.0,2828288.0,NADH:flavorubredoxin oxidoreductase,b2711,['NHFRBO']
 hypF,1.4136964032913093,30.0,2828531.0,carbamoyl phosphate phosphatase and [NiFe] hydrogenase maturation protein,b2712,
 hydN,1.4030892036494054,30.0,2830936.0,"formate dehydrogenase-H, [4Fe-4S] ferredoxin subunit",b2713,
 ascG,1.5086723520796397,30.0,2832384.0,asc operon transcriptional repressor; prpBC operon repressor,b2714,
-ascF,1.5461604107462175,30.0,2832882.0,"cellobiose/arbutin/salicin-specific PTS enzymes, IIB and IC components",b2715,frozenset({<Reaction ARBTptspp at 0x7fcfa6b658d0>})
+ascF,1.5461604107462175,30.0,2832882.0,"cellobiose/arbutin/salicin-specific PTS enzymes, IIB and IC components",b2715,['ARBTptspp']
 ascB,1.6514780831242561,30.0,2834432.0,cryptic 6-phospho-beta-glucosidase,b2716,
 hycI,1.626654851994931,30.0,2835931.0,protease involved in processing C-terminal end of HycE,b2717,
 hycH,1.484971469582708,30.0,2836480.0,hydrogenase 3 maturation protein,b2718,
-hycG,1.5197982355502575,30.0,2836801.0,"hydrogenase 3 and formate hydrogenase complex, HycG subunit",b2719,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
-hycF,1.4977826640149223,30.0,2837568.0,formate hydrogenlyase complex iron-sulfur protein,b2720,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
-hycE,1.5128715579171887,30.0,2838120.0,"hydrogenase 3, large subunit",b2721,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
-hycD,1.428314612353499,30.0,2840576.0,"hydrogenase 3, membrane subunit",b2722,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
-hycB,1.5269743381316474,30.0,2842624.0,"hydrogenase 3, Fe-S subunit",b2724,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction FHL at 0x7fcfa6a0e630>})"
+hycG,1.5197982355502575,30.0,2836801.0,"hydrogenase 3 and formate hydrogenase complex, HycG subunit",b2719,"['HYD1pp', 'FHL']"
+hycF,1.4977826640149223,30.0,2837568.0,formate hydrogenlyase complex iron-sulfur protein,b2720,"['HYD1pp', 'FHL']"
+hycE,1.5128715579171887,30.0,2838120.0,"hydrogenase 3, large subunit",b2721,"['HYD1pp', 'FHL']"
+hycD,1.428314612353499,30.0,2840576.0,"hydrogenase 3, membrane subunit",b2722,"['HYD1pp', 'FHL']"
+hycB,1.5269743381316474,30.0,2842624.0,"hydrogenase 3, Fe-S subunit",b2724,"['HYD1pp', 'FHL']"
 hycA,1.7207421889768437,30.0,2843332.0,regulator of the transcriptional regulator FhlA,b2725,
 hypA,1.3615846105068248,30.0,2844005.0,protein involved in nickel insertion into hydrogenases 3,b2726,
 hypC,1.3938807436268927,30.0,2845222.0,hydrogenase maturation protein,b2728,
@@ -501,8 +501,8 @@ pcm,1.5020677424203317,30.0,2862251.0,L-isoaspartate protein carboxylmethyltrans
 truD,1.4089451080668207,30.0,2863613.0,tRNA(Glu) pseudouridine(13) synthase,b2745,
 ftsB,1.3827170846521581,30.0,2866176.0,cell division protein,b2748,
 ygbE,1.7570399407185362,30.0,2866688.0,DUF3561 family inner membrane protein,b2749,
-cysC,1.6515562405745845,30.0,2867200.0,adenosine 5'-phosphosulfate kinase,b2750,frozenset({<Reaction ADSK at 0x7fcfa6c09e10>})
-cysD,1.6616719174418892,30.0,2869248.0,"sulfate adenylyltransferase, subunit 2",b2752,frozenset({<Reaction SADT2 at 0x7fcfa66510b8>})
+cysC,1.6515562405745845,30.0,2867200.0,adenosine 5'-phosphosulfate kinase,b2750,['ADSK']
+cysD,1.6616719174418892,30.0,2869248.0,"sulfate adenylyltransferase, subunit 2",b2752,['SADT2']
 iap,1.616788894395704,30.0,2869939.0,aminopeptidase in alkaline phosphatase isozyme conversion,b2753,
 ygbF,1.7010086641133115,30.0,2871927.0,CRISPR adaptation ssRNA endonuclease,b2754,
 ygbT,1.3812346317736155,30.0,2872213.0,"multifunctional endonuclease Cas1, CRISPR adaptation protein; DNA repair enzyme",b2755,
@@ -512,10 +512,10 @@ casC,1.762246139384726,30.0,2875392.0,CRISP RNA (crRNA) containing Cascade antiv
 casB,1.6328199945478679,30.0,2875513.0,CRISP RNA (crRNA) containing Cascade antiviral complex protein,b2759,
 casA,1.8406376027022757,30.0,2875988.0,CRISP RNA (crRNA) containing Cascade antiviral complex protein,b2760,
 ygcB,1.7377009312448473,30.0,2877911.0,Cascade complex anti-viral R-loop helicase-annealase Cas3,b2761,
-cysH,1.5772988626725626,30.0,2881536.0,"phosphoadenosine phosphosulfate reductase; PAPS reductase, thioredoxin dependent",b2762,"frozenset({<Reaction PAPSR at 0x7fcfa66e53c8>, <Reaction PAPSR2 at 0x7fcfa66e52e8>})"
-cysI,1.501478422299033,30.0,2881745.0,"sulfite reductase, beta subunit, NAD(P)-binding, heme-binding",b2763,"frozenset({<Reaction FLVR at 0x7fcfa6a0ec18>, <Reaction FADRx2 at 0x7fcfa6a53748>, <Reaction FMNRx2 at 0x7fcfa6997550>, <Reaction SULRi at 0x7fcfa6604cf8>})"
-cysJ,1.4814837690456877,30.0,2883584.0,"sulfite reductase, alpha subunit, flavoprotein",b2764,"frozenset({<Reaction FLVR at 0x7fcfa6a0ec18>, <Reaction FADRx2 at 0x7fcfa6a53748>, <Reaction FMNRx2 at 0x7fcfa6997550>, <Reaction SULRi at 0x7fcfa6604cf8>})"
-queD,1.560728180738213,30.0,2885632.0,6-pyruvoyl tetrahydrobiopterin synthase (PTPS),b2765,frozenset({<Reaction CPH4S at 0x7fcfa6af3898>})
+cysH,1.5772988626725626,30.0,2881536.0,"phosphoadenosine phosphosulfate reductase; PAPS reductase, thioredoxin dependent",b2762,"['PAPSR', 'PAPSR2']"
+cysI,1.501478422299033,30.0,2881745.0,"sulfite reductase, beta subunit, NAD(P)-binding, heme-binding",b2763,"['FMNRx2', 'SULRi', 'FADRx2', 'FLVR']"
+cysJ,1.4814837690456877,30.0,2883584.0,"sulfite reductase, alpha subunit, flavoprotein",b2764,"['FMNRx2', 'SULRi', 'FADRx2', 'FLVR']"
+queD,1.560728180738213,30.0,2885632.0,6-pyruvoyl tetrahydrobiopterin synthase (PTPS),b2765,['CPH4S']
 ygcN,1.5246831242322687,30.0,2886015.0,putative oxidoreductase,b2766,
 ygcO,1.5457031900587697,30.0,2887277.0,putative 4Fe-4S cluster-containing protein,b2767,
 ygcP,1.7372799134477208,30.0,2887680.0,putative antiterminator regulatory protein,b2768,
@@ -528,30 +528,30 @@ ygcE,1.621895782448312,30.0,2895254.0,putative kinase,b2776,
 queE,1.7162552580480266,30.0,2898105.0,7-carboxy-7-deazaguanine synthase; queosine biosynthesis,b2777,
 yqcG,2.640749518173272,30.0,2898944.0,membrane stress resistance protein,b4682,
 ygcG,2.0639901797557103,30.0,2899069.0,"TPM domain protein, putative phosphatase",b2778,
-eno,1.6007111664133193,30.0,2900001.0,enolase,b2779,frozenset({<Reaction ENO at 0x7fcfa6a362e8>})
-pyrG,1.533840080589429,30.0,2901387.0,CTP synthetase,b2780,frozenset({<Reaction CTPS2 at 0x7fcfa6b0e4a8>})
-mazG,1.4190956543309143,30.0,2903252.0,nucleoside triphosphate pyrophosphohydrolase,b2781,"frozenset({<Reaction NTPP5 at 0x7fcfa6717208>, <Reaction NTPP4 at 0x7fcfa6717e10>, <Reaction NTPP1 at 0x7fcfa6717a90>, <Reaction NTPP7 at 0x7fcfa67242b0>, <Reaction NTPP8 at 0x7fcfa6724320>, <Reaction NTPP3 at 0x7fcfa6717d30>, <Reaction NTPP6 at 0x7fcfa6724160>, <Reaction NTPP2 at 0x7fcfa6717da0>})"
+eno,1.6007111664133193,30.0,2900001.0,enolase,b2779,['ENO']
+pyrG,1.533840080589429,30.0,2901387.0,CTP synthetase,b2780,['CTPS2']
+mazG,1.4190956543309143,30.0,2903252.0,nucleoside triphosphate pyrophosphohydrolase,b2781,"['NTPP4', 'NTPP5', 'NTPP1', 'NTPP7', 'NTPP8', 'NTPP3', 'NTPP6', 'NTPP2']"
 mazF,1.6279287276038479,30.0,2904114.0,"mRNA interferase toxin, antitoxin is MazE",b2782,
-relA,1.4311615785235785,30.0,2904775.0,(p)ppGpp synthetase I/GTP pyrophosphokinase,b2784,"frozenset({<Reaction GTPDPK at 0x7fcfa68ec860>, <Reaction GDPDPK at 0x7fcfa6979470>})"
+relA,1.4311615785235785,30.0,2904775.0,(p)ppGpp synthetase I/GTP pyrophosphokinase,b2784,"['GTPDPK', 'GDPDPK']"
 rlmD,1.6597596037358577,30.0,2908160.0,"23S rRNA m(5)U1939 methyltransferase, SAM-dependent",b2785,
 barA,1.6007622580127399,30.0,2908415.0,"hybrid sensory histidine kinase, in two-component regulatory system with UvrY",b2786,
-gudD,1.5259473387551183,30.0,2912256.0,D-glucarate dehydratase 1,b2787,frozenset({<Reaction GLCRD at 0x7fcfa6986eb8>})
-gudX,1.3954525477368669,30.0,2912764.0,"glucarate dehydratase-related protein, substrate unknown",b2788,frozenset({<Reaction GLCRD at 0x7fcfa6986eb8>})
-gudP,1.3953215980559157,30.0,2914304.0,putative D-glucarate transporter,b2789,"frozenset({<Reaction GLCRt2rpp at 0x7fcfa6986da0>, <Reaction GLYCAt2rpp at 0x7fcfa6935438>, <Reaction GALCTt2rpp at 0x7fcfa695a6d8>})"
+gudD,1.5259473387551183,30.0,2912256.0,D-glucarate dehydratase 1,b2787,['GLCRD']
+gudX,1.3954525477368669,30.0,2912764.0,"glucarate dehydratase-related protein, substrate unknown",b2788,['GLCRD']
+gudP,1.3953215980559157,30.0,2914304.0,putative D-glucarate transporter,b2789,"['GALCTt2rpp', 'GLYCAt2rpp', 'GLCRt2rpp']"
 yqcA,1.6792322568513693,30.0,2915893.0,"short-chain flavodoxin, FMN-binding",b2790,
 truC,1.540023720305425,30.0,2916360.0,"tRNA(Ile1,Asp) pseudouridine(65) synthase",b2791,
 yqcC,1.39479548364951,30.0,2917376.0,DUF446 family protein,b2792,
 syd,1.6032965630262828,30.0,2918400.0,SecY-interacting protein,b2793,
-queF,1.7666098537566994,30.0,2918706.0,7-cyano-7-deazaguanine reductase (NADPH-dependent),b2794,frozenset({<Reaction CDGR at 0x7fcfa6b3afd0>})
+queF,1.7666098537566994,30.0,2918706.0,7-cyano-7-deazaguanine reductase (NADPH-dependent),b2794,['CDGR']
 ygdH,1.5393886806928943,30.0,2919666.0,UPF0717 family protein,b2795,
-sdaC,1.5699247251994337,30.0,2922496.0,putative serine transporter,b2796,frozenset({<Reaction SERt2rpp at 0x7fcfa65de6d8>})
-sdaB,1.6110848161625513,30.0,2922934.0,L-serine dehydratase 2,b2797,frozenset({<Reaction SERD_L at 0x7fcfa65de4a8>})
+sdaC,1.5699247251994337,30.0,2922496.0,putative serine transporter,b2796,['SERt2rpp']
+sdaB,1.6110848161625513,30.0,2922934.0,L-serine dehydratase 2,b2797,['SERD_L']
 ygdG,1.4810957001178486,30.0,2924544.0,"Ssb-binding protein, misidentified as ExoIX",b2798,
-fucO,1.4947455193703871,30.0,2925223.0,"L-1,2-propanediol oxidoreductase",b2799,frozenset({<Reaction LCARS at 0x7fcfa6877c88>})
-fucA,1.6285550844698333,30.0,2926592.0,L-fuculose-1-phosphate aldolase,b2800,frozenset({<Reaction FCLPA at 0x7fcfa69e3470>})
-fucP,1.644865486738131,30.0,2928640.0,L-fucose transporter,b2801,frozenset({<Reaction FUCtpp at 0x7fcfa69a6e48>})
-fucI,1.4727691927347901,30.0,2928942.0,L-fucose isomerase,b2802,frozenset({<Reaction FCI at 0x7fcfa69e3198>})
-fucK,1.5664309029111687,30.0,2930796.0,L-fuculokinase,b2803,frozenset({<Reaction FCLK at 0x7fcfa69e31d0>})
+fucO,1.4947455193703871,30.0,2925223.0,"L-1,2-propanediol oxidoreductase",b2799,['LCARS']
+fucA,1.6285550844698333,30.0,2926592.0,L-fuculose-1-phosphate aldolase,b2800,['FCLPA']
+fucP,1.644865486738131,30.0,2928640.0,L-fucose transporter,b2801,['FUCtpp']
+fucI,1.4727691927347901,30.0,2928942.0,L-fucose isomerase,b2802,['FCI']
+fucK,1.5664309029111687,30.0,2930796.0,L-fuculokinase,b2803,['FCLK']
 fucU,1.522094117653243,30.0,2932246.0,L-fucose mutarotase,b2804,
 fucR,1.7271203509504502,30.0,2932736.0,l-fucose operon activator,b2805,
 rlmM,1.5076279165045845,30.0,2933501.0,"23S rRNA C2498 2'-O-ribose methyltransferase, SAM-dependent",b2806,
@@ -559,8 +559,8 @@ ygdD,1.5675403747803782,30.0,2934784.0,UPF0382 family inner membrane protein,b28
 gcvA,1.5286311401486437,30.0,2935008.0,glycine cleavage system transcriptional activator; autorepressor,b2808,
 ygdI,1.7157860278901271,30.0,2936320.0,DUF903 family verified lipoprotein,b2809,
 csdE,1.5242828588226534,30.0,2937900.0,CsdA-binding activator; Fe-S protein,b2811,
-amiC,1.4230646876815187,30.0,2941115.0,N-acetylmuramoyl-L-alanine amidase,b2817,"frozenset({<Reaction AGM3PApp at 0x7fcfa6c14390>, <Reaction AGM4PApp at 0x7fcfa6c147f0>})"
-argA,1.532849632209755,30.0,2942976.0,amino acid N-acetyltransferase and inactive acetylglutamate kinase,b2818,frozenset({<Reaction ACGS at 0x7fcfa6bdb588>})
+amiC,1.4230646876815187,30.0,2941115.0,N-acetylmuramoyl-L-alanine amidase,b2817,"['AGM4PApp', 'AGM3PApp']"
+argA,1.532849632209755,30.0,2942976.0,amino acid N-acetyltransferase and inactive acetylglutamate kinase,b2818,['ACGS']
 recD,1.4304741861642694,30.0,2943993.0,"exonuclease V (RecBCD complex), alpha chain",b2819,
 recB,1.499556446336544,30.0,2949120.0,"exonuclease V (RecBCD complex), beta subunit",b2820,
 ptrA,1.576099669420462,30.0,2949354.0,protease III,b2821,
@@ -569,7 +569,7 @@ ppdC,1.8276684855852192,30.0,2955799.0,putative prepilin peptidase-dependent pro
 ygdB,1.593267444217814,30.0,2956107.0,DUF2509 family protein,b2824,
 ppdB,1.4461482027965968,30.0,2956511.0,putative prepilin peptidase-dependent protein,b2825,
 ppdA,1.4595898125784659,30.0,2957312.0,putative prepilin peptidase-dependent protein,b2826,
-thyA,1.449847403497658,30.0,2957719.0,thymidylate synthetase,b2827,frozenset({<Reaction TMDS at 0x7fcfa65ca240>})
+thyA,1.449847403497658,30.0,2957719.0,thymidylate synthetase,b2827,['TMDS']
 lgt,1.4105653615912317,30.0,2959360.0,phosphatidylglycerol-prolipoprotein diacylglyceryl transferase,b2828,
 ptsP,1.479908968920419,30.0,2959546.0,PEP-protein phosphotransferase enzyme I; GAF domain containing protein,b2829,
 rppH,1.569462906832341,30.0,2961805.0,RNA pyrophosphohydrolase,b2830,
@@ -577,11 +577,11 @@ mutH,1.6357675423402773,30.0,2963456.0,methyl-directed mismatch repair protein,b
 ygdQ,1.5717224100120202,30.0,2963778.0,UPF0053 family inner membrane protein,b2832,
 ygdR,2.040687456789714,30.0,2964629.0,DUF903 family verified lipoprotein,b2833,
 tas,1.665216542139648,30.0,2965504.0,putative NADP(H)-dependent aldo-keto reductase,b2834,
-lplT,1.4473470461519113,30.0,2966027.0,lysophospholipid transporter,b2835,"frozenset({<Reaction 2AGPG161tipp at 0x7fcfa6c6c438>, <Reaction 2AGPE140tipp at 0x7fcfa6c5d898>, <Reaction 2AGPG180tipp at 0x7fcfa6c6c4e0>, <Reaction 2AGPG141tipp at 0x7fcfa6c6c128>, <Reaction 2AGPE141tipp at 0x7fcfa6c5d940>, <Reaction 2AGPA160tipp at 0x7fcfa6c5d550>, <Reaction 2AGPG181tipp at 0x7fcfa6c6c588>, <Reaction 2AGPE160tipp at 0x7fcfa6c5d9e8>, <Reaction 2AGPA161tipp at 0x7fcfa6c5d5f8>, <Reaction 2AGPA120tipp at 0x7fcfa6c5d208>, <Reaction 2AGPE161tipp at 0x7fcfa6c5da90>, <Reaction 2AGPA180tipp at 0x7fcfa6c5d6a0>, <Reaction 2AGPG140tipp at 0x7fcfa6c6c320>, <Reaction 2AGPE180tipp at 0x7fcfa6c5db38>, <Reaction 2AGPG120tipp at 0x7fcfa6c5df28>, <Reaction 2AGPA140tipp at 0x7fcfa6c5d358>, <Reaction 2AGPA181tipp at 0x7fcfa6c5d748>, <Reaction 2AGPG160tipp at 0x7fcfa6c6c390>, <Reaction 2AGPA141tipp at 0x7fcfa6c5d3c8>, <Reaction 2AGPE181tipp at 0x7fcfa6c5dbe0>, <Reaction 2AGPE120tipp at 0x7fcfa6c5d7f0>})"
-aas,1.4853726281962418,30.0,2967213.0,fused 2-acylglycerophospho-ethanolamine acyl transferase/acyl-acyl carrier protein synthetase,b2836,"frozenset({<Reaction 2AGPGAT141 at 0x7fcfa6c6c860>, <Reaction AACPS6 at 0x7fcfa6c33860>, <Reaction 2AGPEAT120 at 0x7fcfa6c5dc88>, <Reaction AACPS3 at 0x7fcfa6c334e0>, <Reaction AACPS7 at 0x7fcfa6c33908>, <Reaction 2AGPGAT160 at 0x7fcfa6c6c940>, <Reaction AACPS4 at 0x7fcfa6c33550>, <Reaction 2AGPGAT161 at 0x7fcfa6c6c9b0>, <Reaction AACPS5 at 0x7fcfa6c335c0>, <Reaction 2AGPEAT180 at 0x7fcfa6c5ddd8>, <Reaction AACPS2 at 0x7fcfa6c33208>, <Reaction 2AGPGAT120 at 0x7fcfa6c6c630>, <Reaction 2AGPEAT181 at 0x7fcfa6c5de48>, <Reaction 2AGPGAT180 at 0x7fcfa6c6ca90>, <Reaction 2AGPEAT141 at 0x7fcfa6c5deb8>, <Reaction 2AGPGAT140 at 0x7fcfa6c6c6d8>, <Reaction 2AGPEAT140 at 0x7fcfa6c5def0>, <Reaction 2AGPGAT181 at 0x7fcfa6c6cb38>, <Reaction AACPS8 at 0x7fcfa6c33748>, <Reaction AACPS1 at 0x7fcfa6c33358>, <Reaction 2AGPEAT161 at 0x7fcfa6c5df98>, <Reaction AACPS9 at 0x7fcfa6c333c8>, <Reaction 2AGPEAT160 at 0x7fcfa6c5dfd0>})"
+lplT,1.4473470461519113,30.0,2966027.0,lysophospholipid transporter,b2835,"['2AGPE160tipp', '2AGPA161tipp', '2AGPA120tipp', '2AGPG141tipp', '2AGPE161tipp', '2AGPA180tipp', '2AGPE180tipp', '2AGPA181tipp', '2AGPA140tipp', '2AGPG160tipp', '2AGPA141tipp', '2AGPE181tipp', '2AGPE120tipp', '2AGPG161tipp', '2AGPE140tipp', '2AGPG120tipp', '2AGPG180tipp', '2AGPE141tipp', '2AGPA160tipp', '2AGPG181tipp', '2AGPG140tipp']"
+aas,1.4853726281962418,30.0,2967213.0,fused 2-acylglycerophospho-ethanolamine acyl transferase/acyl-acyl carrier protein synthetase,b2836,"['AACPS5', '2AGPGAT120', 'AACPS2', '2AGPGAT180', '2AGPEAT141', '2AGPGAT140', '2AGPEAT140', '2AGPEAT181', '2AGPGAT181', 'AACPS8', 'AACPS1', 'AACPS9', '2AGPEAT160', '2AGPEAT161', '2AGPGAT141', 'AACPS6', '2AGPEAT120', 'AACPS3', 'AACPS7', '2AGPEAT180', '2AGPGAT160', 'AACPS4', '2AGPGAT161']"
 galR,1.6346574723183718,30.0,2969957.0,galactose-inducible d-galactose regulon transcriptional repressor; autorepressor,b2837,
 lysR,1.4696885161074258,30.0,2972379.0,transcriptional activator of lysA; autorepressor,b2839,
-araE,1.5316463523275459,30.0,2974122.0,arabinose transporter,b2841,frozenset({<Reaction ARBt2rpp at 0x7fcfa6b65a58>})
+araE,1.5316463523275459,30.0,2974122.0,arabinose transporter,b2841,['ARBt2rpp']
 kduD,1.445684289834356,30.0,2975855.0,2-dehydro-3-deoxy-D-gluconate 5-dehydrogenase; KDG oxidoreductase; 20-ketosteroid reductase,b2842,
 kduI,1.6517320454730573,30.0,2976646.0,hexuronate isomerase,b2843,
 yqeF,1.549422684169919,30.0,2977792.0,short chain acyltransferase,b2844,
@@ -600,84 +600,84 @@ ygeK,2.1723593287381133,30.0,2988032.0,No_gene_product,b2856,
 ygeN,2.5514874775593595,30.0,2988672.0,No_gene_product,b2858,
 ygeO,1.934466631168486,30.0,2989320.0,No_gene_product,b2859,
 ygeQ,1.9104812774464472,30.0,2992128.0,No_gene_product,b2863,
-xdhA,1.4952740901194688,30.0,2993703.0,"xanthine dehydrogenase, molybdenum binding subunit",b2866,"frozenset({<Reaction XAND at 0x7fcfa6520358>, <Reaction HXAND at 0x7fcfa68a85f8>})"
-xdhB,1.4635628895582287,30.0,2996224.0,"xanthine dehydrogenase, FAD-binding subunit",b2867,"frozenset({<Reaction XAND at 0x7fcfa6520358>, <Reaction HXAND at 0x7fcfa68a85f8>})"
-xdhC,1.4275901860750477,30.0,2996847.0,"xanthine dehydrogenase, Fe-S binding subunit",b2868,"frozenset({<Reaction XAND at 0x7fcfa6520358>, <Reaction HXAND at 0x7fcfa68a85f8>})"
+xdhA,1.4952740901194688,30.0,2993703.0,"xanthine dehydrogenase, molybdenum binding subunit",b2866,"['XAND', 'HXAND']"
+xdhB,1.4635628895582287,30.0,2996224.0,"xanthine dehydrogenase, FAD-binding subunit",b2867,"['XAND', 'HXAND']"
+xdhC,1.4275901860750477,30.0,2996847.0,"xanthine dehydrogenase, Fe-S binding subunit",b2868,"['XAND', 'HXAND']"
 ygeV,1.665342884507195,30.0,2998272.0,putative sigma-54-interacting transcriptional activator,b2869,
 ygeW,1.6473962776527058,30.0,3000320.0,putative carbamoyltransferase,b2870,
-ygeX,1.3712743435057941,30.0,3000868.0,"2,3-diaminopropionate ammonia lyase, PLP-dependent",b2871,frozenset({<Reaction DAPAL at 0x7fcfa6ab4d68>})
+ygeX,1.3712743435057941,30.0,3000868.0,"2,3-diaminopropionate ammonia lyase, PLP-dependent",b2871,['DAPAL']
 ygeY,1.582797666200724,30.0,3002368.0,putative peptidase,b2872,
 hyuA,1.4991752558612343,30.0,3003386.0,D-stereospecific phenylhydantoinase,b2873,
-yqeA,1.7221331329974339,30.0,3004819.0,putative amino acid kinase,b2874,frozenset({<Reaction CBMKr at 0x7fcfa6b3a240>})
+yqeA,1.7221331329974339,30.0,3004819.0,putative amino acid kinase,b2874,['CBMKr']
 yqeB,1.5463659695087681,30.0,3006464.0,XdhC-CoxI family protein with NAD(P)-binding Rossman fold,b2875,
 yqeC,1.4844044188712213,30.0,3007645.0,putative selenium-dependent hydroxylase accessory protein,b2876,
-mocA,1.8852758910173406,30.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,frozenset({<Reaction MOCDS at 0x7fcfa67b1278>})
+mocA,1.8852758910173406,30.0,3008518.0,CTP:molybdopterin cytidylyltransferase,b2877,['MOCDS']
 ygfK,1.523383231300374,30.0,3009418.0,putative Fe-S subunit oxidoreductase subunit,b2878,
 ssnA,1.3912637600743671,30.0,3012608.0,putative chlorohydrolase/aminohydrolase,b2879,
 ygfM,1.6903405806534784,30.0,3014656.0,putative oxidoreductase,b2880,
 xdhD,1.5206887830295963,30.0,3014674.0,"putative hypoxanthine oxidase, molybdopterin-binding/Fe-S binding",b2881,
-xanQ,1.5238263620735053,30.0,3017709.0,xanthine permease,b2882,frozenset({<Reaction XANt2pp at 0x7fcfa6520668>})
+xanQ,1.5238263620735053,30.0,3017709.0,xanthine permease,b2882,['XANt2pp']
 ygfQ,1.4954800500441994,30.0,3020479.0,,,
 ygfS,1.493582948746776,30.0,3021882.0,putative 4Fe-4S ferredoxin-type oxidoreductase subunit,b2886,
 ygfT,1.5694870789223376,30.0,3022848.0,"putative oxidoreductase, Fe-S subunit/nucleotide-binding subunit",b2887,
 uacT,1.512392526716995,30.0,3024725.0,uric acid permease,b2888,
 yqfG,2.155130578413224,30.0,3026175.0,uncharacterized protein,b4684,
-idi,1.7886033266238701,30.0,3026944.0,isopentenyl diphosphate isomerase,b2889,frozenset({<Reaction IPDDI at 0x7fcfa68cde10>})
-lysS,1.4255412959653049,30.0,3027015.0,"lysine tRNA synthetase, constitutive",b2890,frozenset({<Reaction LYSTRS at 0x7fcfa682ed30>})
+idi,1.7886033266238701,30.0,3026944.0,isopentenyl diphosphate isomerase,b2889,['IPDDI']
+lysS,1.4255412959653049,30.0,3027015.0,"lysine tRNA synthetase, constitutive",b2890,['LYSTRS']
 prfB,1.5494729768664453,30.0,3028992.0,peptide chain release factor RF-2,b2891,
 recJ,1.5049689005329547,30.0,3031040.0,"ssDNA exonuclease, 5' --> 3'-specific",b2892,
-dsbC,1.4832320182729006,30.0,3031470.0,protein disulfide isomerase II,b2893,"frozenset({<Reaction DSBCGT at 0x7fcfa6a79eb8>, <Reaction TDSR1 at 0x7fcfa65a16d8>})"
+dsbC,1.4832320182729006,30.0,3031470.0,protein disulfide isomerase II,b2893,"['DSBCGT', 'TDSR1']"
 xerD,1.4064101579455364,30.0,3033088.0,site-specific tyrosine recombinase,b2894,
-fldB,1.4847376319252084,30.0,3033213.0,flavodoxin 2,b2895,"frozenset({<Reaction RNTR1c2 at 0x7fcfa66301d0>, <Reaction MECDPDH5 at 0x7fcfa67f5048>, <Reaction POR5 at 0x7fcfa66c6358>, <Reaction RNTR2c2 at 0x7fcfa6630668>, <Reaction FLDR2 at 0x7fcfa6a0eac8>, <Reaction RNTR4c2 at 0x7fcfa66306d8>, <Reaction RNTR3c2 at 0x7fcfa66303c8>})"
+fldB,1.4847376319252084,30.0,3033213.0,flavodoxin 2,b2895,"['RNTR3c2', 'FLDR2', 'RNTR4c2', 'RNTR1c2', 'MECDPDH5', 'POR5', 'RNTR2c2']"
 cptA,1.6305454896002352,30.0,3033774.0,toxin of CptAB toxin-antitoxin pair,b2896,
 sdhE,1.6544486834294334,30.0,3034162.0,flavinator of succinate dehydrogenase; antitoxin of CptAB toxin-antitoxin pair,b2897,
 ygfZ,1.6598114663454875,30.0,3035136.0,"iron-sulfur cluster repair protein, plumbagin resistance",b2898,
 yqfA,1.7432954924462343,30.0,3035847.0,hemolysin III family HylIII inner membrane protein,b2899,
 yqfB,1.8676257068441422,30.0,3036672.0,UPF0267 family protein,b2900,
-bglA,1.6970688238854643,30.0,3037020.0,6-phospho-beta-glucosidase A,b2901,frozenset({<Reaction AB6PGH at 0x7fcfa6c33f28>})
+bglA,1.6970688238854643,30.0,3037020.0,6-phospho-beta-glucosidase A,b2901,['AB6PGH']
 ygfF,1.4160944841351593,30.0,3039232.0,putative NAD(P)-dependent oxidoreductase,b2902,
-gcvP,1.4228661301886372,30.0,3039526.0,"glycine decarboxylase, PLP-dependent, subunit P of glycine cleavage complex",b2903,frozenset({<Reaction GLYCL at 0x7fcfa6935c18>})
-gcvH,1.7061181749334133,30.0,3042518.0,glycine cleavage complex lipoylprotein,b2904,frozenset({<Reaction GLYCL at 0x7fcfa6935c18>})
-gcvT,1.5870728756473893,30.0,3043328.0,"aminomethyltransferase, tetrahydrofolate-dependent, subunit (T protein) of glycine cleavage complex",b2905,frozenset({<Reaction GLYCL at 0x7fcfa6935c18>})
+gcvP,1.4228661301886372,30.0,3039526.0,"glycine decarboxylase, PLP-dependent, subunit P of glycine cleavage complex",b2903,['GLYCL']
+gcvH,1.7061181749334133,30.0,3042518.0,glycine cleavage complex lipoylprotein,b2904,['GLYCL']
+gcvT,1.5870728756473893,30.0,3043328.0,"aminomethyltransferase, tetrahydrofolate-dependent, subunit (T protein) of glycine cleavage complex",b2905,['GLYCL']
 ubiI,1.6307323587974383,30.0,3045376.0,"2-octaprenylphenol hydroxylase, FAD-dependent",b2906,
-ubiH,1.6756757056919915,30.0,3045698.0,"2-octaprenyl-6-methoxyphenol hydroxylase, FAD/NAD(P)-binding",b2907,frozenset({<Reaction OMPHHX at 0x7fcfa673e710>})
+ubiH,1.6756757056919915,30.0,3045698.0,"2-octaprenyl-6-methoxyphenol hydroxylase, FAD/NAD(P)-binding",b2907,['OMPHHX']
 pepP,1.5042339056055074,30.0,3047424.0,proline aminopeptidase P II,b2908,
 ygfB,1.4918355897119946,30.0,3048224.0,UPF0149 family protein,b2909,
 zapA,1.7201806959444108,30.0,3048970.0,FtsZ stabilizer,b2910,
-fau,1.4931700345499448,30.0,3049599.0,5-formyltetrahydrofolate cyclo-ligase family protein,b2912,frozenset({<Reaction FOMETRi at 0x7fcfa69973c8>})
+fau,1.4931700345499448,30.0,3049599.0,5-formyltetrahydrofolate cyclo-ligase family protein,b2912,['FOMETRi']
 ibsC,2.1385865872790384,30.0,3050248.0,toxic membrane protein,b4665,
-serA,1.441253112043255,30.0,3051520.0,D-3-phosphoglycerate dehydrogenase,b2913,frozenset({<Reaction PGCD at 0x7fcfa66ff128>})
-rpiA,1.5544700647476333,30.0,3052024.0,"ribose 5-phosphate isomerase, constitutive",b2914,frozenset({<Reaction RPI at 0x7fcfa6630710>})
+serA,1.441253112043255,30.0,3051520.0,D-3-phosphoglycerate dehydrogenase,b2913,['PGCD']
+rpiA,1.5544700647476333,30.0,3052024.0,"ribose 5-phosphate isomerase, constitutive",b2914,['RPI']
 yqfE,1.412447967481458,30.0,3053056.0,No_gene_product,b2915,
 argP,1.6547149420337832,30.0,3053568.0,transcriptional regulator for arginine transport and DNA replication genes; replication initiation inhibitor,b2916,
 argK,1.5276415781342112,30.0,3056345.0,membrane ATPase/protein kinase,b2918,
-scpB,1.5924917511744399,30.0,3057664.0,"methylmalonyl-CoA decarboxylase, biotin-independent",b2919,frozenset({<Reaction MMCD at 0x7fcfa67a2128>})
-scpC,1.4656477230208127,30.0,3058160.0,propionyl-CoA:succinate CoA transferase,b2920,frozenset({<Reaction PPCSCT at 0x7fcfa66d2160>})
+scpB,1.5924917511744399,30.0,3057664.0,"methylmalonyl-CoA decarboxylase, biotin-independent",b2919,['MMCD']
+scpC,1.4656477230208127,30.0,3058160.0,propionyl-CoA:succinate CoA transferase,b2920,['PPCSCT']
 ygfI,1.7445641724947107,30.0,3059712.0,putative DNA-binding transcriptional regulator,b2921,
 yggE,1.5878242474311537,30.0,3060698.0,oxidative stress defense protein,b2922,
-argO,1.693296568464643,30.0,3061760.0,arginine transporter,b2923,"frozenset({<Reaction LYSt3pp at 0x7fcfa682eda0>, <Reaction ARGt3pp at 0x7fcfa6b70eb8>})"
+argO,1.693296568464643,30.0,3061760.0,arginine transporter,b2923,"['LYSt3pp', 'ARGt3pp']"
 mscS,1.538384936023373,30.0,3062305.0,"mechanosensitive channel protein, small conductance",b2924,
-fbaA,1.5030297644129127,30.0,3063808.0,"fructose-bisphosphate aldolase, class II",b2925,"frozenset({<Reaction FBA3 at 0x7fcfa6a53e80>, <Reaction FBA at 0x7fcfa6a53d68>})"
-pgk,1.608960937539465,30.0,3065856.0,phosphoglycerate kinase,b2926,frozenset({<Reaction PGK at 0x7fcfa66ff470>})
-epd,1.584207176131975,30.0,3066030.0,D-erythrose 4-phosphate dehydrogenase,b2927,frozenset({<Reaction E4PD at 0x7fcfa6a93710>})
+fbaA,1.5030297644129127,30.0,3063808.0,"fructose-bisphosphate aldolase, class II",b2925,"['FBA', 'FBA3']"
+pgk,1.608960937539465,30.0,3065856.0,phosphoglycerate kinase,b2926,['PGK']
+epd,1.584207176131975,30.0,3066030.0,D-erythrose 4-phosphate dehydrogenase,b2927,['E4PD']
 yggC,1.55734103209799,30.0,3067904.0,putative PanK family P-loop kinase,b2928,
 yggD,1.582769038340572,30.0,3068044.0,MtlR family putative transcriptional repressor,b2929,
-yggF,1.49180444886112,30.0,3068575.0,"fructose 1,6 bisphosphatase isozyme",b2930,frozenset({<Reaction FBP at 0x7fcfa69e3048>})
+yggF,1.49180444886112,30.0,3068575.0,"fructose 1,6 bisphosphatase isozyme",b2930,['FBP']
 yggP,1.601290916944079,30.0,3069952.0,putative Zn-binding dehydrogenase,b4465,
 cmtA,1.6458233944720984,30.0,3072000.0,putative mannitol-specific PTS IIB and IIC components,b2933,
 cmtB,1.966300543870245,30.0,3072245.0,putative mannitol-specific enzyme IIA component of PTS,b2934,
-tktA,1.4949998628288308,30.0,3073002.0,"transketolase 1, thiamine triphosphate-binding",b2935,"frozenset({<Reaction TKT2 at 0x7fcfa65bb2b0>, <Reaction TKT1 at 0x7fcfa65bb5f8>})"
+tktA,1.4949998628288308,30.0,3073002.0,"transketolase 1, thiamine triphosphate-binding",b2935,"['TKT1', 'TKT2']"
 loiP,1.5816200838213073,30.0,3075271.0,"Phe-Phe periplasmic metalloprotease, OM lipoprotein; low salt-inducible; Era-binding heat shock protein",b2936,
-speB,1.4772448827661868,30.0,3076235.0,agmatinase,b2937,frozenset({<Reaction AGMT at 0x7fcfa6c14da0>})
-speA,1.5083656858262693,30.0,3077293.0,"biosynthetic arginine decarboxylase, PLP-binding",b2938,frozenset({<Reaction ARGDCpp at 0x7fcfa6b706a0>})
+speB,1.4772448827661868,30.0,3076235.0,agmatinase,b2937,['AGMT']
+speA,1.5083656858262693,30.0,3077293.0,"biosynthetic arginine decarboxylase, PLP-binding",b2938,['ARGDCpp']
 yqgB,1.6445896964531233,30.0,3079278.0,uncharacterized protein,b2939,
 yqgC,1.7212490924089012,30.0,3079680.0,uncharacterized protein,b2940,
-metK,1.4240933879489586,30.0,3080192.0,S-adenosylmethionine synthetase,b2942,frozenset({<Reaction METAT at 0x7fcfa67f5908>})
-galP,1.5069808858956923,30.0,3081642.0,D-galactose transporter,b2943,"frozenset({<Reaction GALt2pp at 0x7fcfa696c9b0>, <Reaction GLCt2pp at 0x7fcfa69908d0>})"
+metK,1.4240933879489586,30.0,3080192.0,S-adenosylmethionine synthetase,b2942,['METAT']
+galP,1.5069808858956923,30.0,3081642.0,D-galactose transporter,b2943,"['GLCt2pp', 'GALt2pp']"
 yggI,1.7071361304047858,30.0,3083113.0,Zn-dependent metalloprotease-related protein,b2944,
 endA,1.6335898258883703,30.0,3084288.0,DNA-specific endonuclease I,b2945,
 rsmE,1.3749924988519615,30.0,3084492.0,"16S rRNA m(3)U1498 methyltransferase, SAM-dependent",b2946,
-gshB,1.4981073971041317,30.0,3085236.0,glutathione synthetase,b2947,frozenset({<Reaction GTHS at 0x7fcfa68ec080>})
+gshB,1.4981073971041317,30.0,3085236.0,glutathione synthetase,b2947,['GTHS']
 yqgE,1.5384112644645485,30.0,3086336.0,uncharacterized protein,b2948,
 yqgF,1.416096873097547,30.0,3086858.0,putative Holliday junction resolvase,b2949,
 yggS,1.5844935153249329,30.0,3088456.0,"UPF0001 family protein, PLP-binding",b2951,
@@ -685,58 +685,58 @@ yggT,1.6138493145727795,30.0,3089178.0,putative inner membrane protein; compensa
 yggU,1.5582734082306382,30.0,3089920.0,UPF0235 family protein,b2953,
 yggW,1.5313944665830563,30.0,3090625.0,HemN family putative oxidoreductase,b2955,
 yggM,1.6496350567123113,30.0,3092480.0,DUF1202 family putative secreted protein,b2956,
-ansB,1.603584147208367,30.0,3093040.0,periplasmic L-asparaginase 2,b2957,"frozenset({<Reaction ASNNpp at 0x7fcfa6b7b908>, <Reaction GLUNpp at 0x7fcfa691ddd8>})"
+ansB,1.603584147208367,30.0,3093040.0,periplasmic L-asparaginase 2,b2957,"['GLUNpp', 'ASNNpp']"
 yggN,1.7295272153801178,30.0,3094528.0,DUF2884 family putative periplasmic protein,b2958,
 yggL,1.7116909041229837,30.0,3095165.0,DUF469 family protein,b2959,
 trmI,1.4399430327885727,30.0,3095491.0,"tRNA m(7)G46 methyltransferase, SAM-dependent",b2960,
 mutY,1.5252774261087727,30.0,3096576.0,adenine DNA glycosylase,b2961,
 yggX,1.5909325271400099,30.0,3097600.0,oxidative damage protective factor for iron-sulfur proteins,b2962,
-mltC,1.6002512431767677,30.0,3098624.0,membrane-bound lytic murein transglycosylase C,b2963,"frozenset({<Reaction MLTGY3pp at 0x7fcfa68127f0>, <Reaction MLTGY1pp at 0x7fcfa6812240>, <Reaction MLTGY4pp at 0x7fcfa6812860>, <Reaction MLTGY2pp at 0x7fcfa68125f8>})"
-nupG,1.4810394956870239,30.0,3099072.0,nucleoside transporter,b2964,"frozenset({<Reaction THMDt2pp at 0x7fcfa65a1e10>, <Reaction INSt2pp at 0x7fcfa68cda20>, <Reaction ADNt2pp at 0x7fcfa6c09240>, <Reaction DCYTt2pp at 0x7fcfa6abfe80>, <Reaction URIt2pp at 0x7fcfa6594898>, <Reaction DADNt2pp at 0x7fcfa6aa7eb8>, <Reaction DGSNt2pp at 0x7fcfa6aceac8>, <Reaction DURIt2pp at 0x7fcfa6a86eb8>, <Reaction DINSt2pp at 0x7fcfa6a6e128>, <Reaction CYTDt2pp at 0x7fcfa6aa7940>, <Reaction GSNt2pp at 0x7fcfa68e07b8>})"
-speC,1.5623734209117779,30.0,3100378.0,"ornithine decarboxylase, constitutive",b2965,frozenset({<Reaction ORNDC at 0x7fcfa6749048>})
+mltC,1.6002512431767677,30.0,3098624.0,membrane-bound lytic murein transglycosylase C,b2963,"['MLTGY2pp', 'MLTGY1pp', 'MLTGY3pp', 'MLTGY4pp']"
+nupG,1.4810394956870239,30.0,3099072.0,nucleoside transporter,b2964,"['DCYTt2pp', 'THMDt2pp', 'INSt2pp', 'ADNt2pp', 'URIt2pp', 'DURIt2pp', 'DGSNt2pp', 'DINSt2pp', 'DADNt2pp', 'CYTDt2pp', 'GSNt2pp']"
+speC,1.5623734209117779,30.0,3100378.0,"ornithine decarboxylase, constitutive",b2965,['ORNDC']
 yqgA,1.5677036148686678,30.0,3102911.0,DUF554 family putative inner membrane protein,b2966,
 yghE,1.5459177183165869,30.0,3104768.0,No_gene_product,b2969,
 yghF,1.6412444644805968,30.0,3105451.0,No_gene_product,b2970,
 yghG,1.6843151577273683,30.0,3106816.0,secretin (GspDbeta) OM localization lipoprotein pilotin,b2971,
 pppA,1.6102736338552182,30.0,3106901.0,bifunctional prepilin leader peptidase/ methylase,b2972,
 yghJ,1.5607515911585985,30.0,3107908.0,,,
-glcA,1.5502345539890927,30.0,3112960.0,glycolate transporter,b2975,"frozenset({<Reaction D__LACt2pp at 0x7fcfa6aa7ba8>, <Reaction GLYCLTt2rpp at 0x7fcfa69352b0>, <Reaction L__LACt2rpp at 0x7fcfa6862550>})"
-glcB,1.534899499127327,30.0,3114992.0,malate synthase G,b2976,frozenset({<Reaction MALS at 0x7fcfa683db70>})
+glcA,1.5502345539890927,30.0,3112960.0,glycolate transporter,b2975,"['GLYCLTt2rpp', 'D__LACt2pp', 'L__LACt2rpp']"
+glcB,1.534899499127327,30.0,3114992.0,malate synthase G,b2976,['MALS']
 glcG,1.6852104246435937,30.0,3117185.0,DUF336 family protein,b2977,
-glcE,1.4960523269871493,30.0,3119104.0,glycolate oxidase FAD binding subunit,b4468,"frozenset({<Reaction GLYCTO2 at 0x7fcfa6935da0>, <Reaction GLYCTO4 at 0x7fcfa6946358>, <Reaction GLYCTO3 at 0x7fcfa69462e8>})"
-glcD,1.4926768207066652,30.0,3121152.0,"glycolate oxidase subunit, FAD-linked",b2979,"frozenset({<Reaction GLYCTO2 at 0x7fcfa6935da0>, <Reaction GLYCTO4 at 0x7fcfa6946358>, <Reaction GLYCTO3 at 0x7fcfa69462e8>})"
+glcE,1.4960523269871493,30.0,3119104.0,glycolate oxidase FAD binding subunit,b4468,"['GLYCTO4', 'GLYCTO3', 'GLYCTO2']"
+glcD,1.4926768207066652,30.0,3121152.0,"glycolate oxidase subunit, FAD-linked",b2979,"['GLYCTO4', 'GLYCTO3', 'GLYCTO2']"
 glcC,1.5296134471313096,30.0,3121630.0,glycolate-inducible glc operon transcriptional repressor; autorepressor,b2980,
 yghO,1.5777788466374782,30.0,3123200.0,No_gene_product,b2981,
 yghQ,1.3639457000318906,30.0,3125248.0,putative inner membrane polysaccharide flippase,b2983,
 yghR,1.5152174295509748,30.0,3125812.0,putative ATP-binding protein,b2984,
 yghS,1.747088716034386,30.0,3127296.0,putative ATP-binding protein,b2985,
 yghT,1.6577413338496931,30.0,3127489.0,putative ATP-binding protein,b2986,
-pitB,1.4538682939483405,30.0,3129344.0,phosphate transporter,b2987,frozenset({<Reaction PIt2rpp at 0x7fcfa669c978>})
-gss,1.5153904515682737,30.0,3130021.0,glutathionylspermidine amidase and glutathionylspermidine synthetase,b2988,"frozenset({<Reaction GSPMDS at 0x7fcfa68e0a90>, <Reaction GSPMDA at 0x7fcfa68e0828>})"
+pitB,1.4538682939483405,30.0,3129344.0,phosphate transporter,b2987,['PIt2rpp']
+gss,1.5153904515682737,30.0,3130021.0,glutathionylspermidine amidase and glutathionylspermidine synthetase,b2988,"['GSPMDS', 'GSPMDA']"
 yghU,1.53060604419518,30.0,3132085.0,putative S-transferase,b2989,
 hybG,1.6880363473336728,30.0,3133074.0,hydrogenase 2 accessory protein,b2990,
 hybF,1.4024273560508684,30.0,3133440.0,protein involved with the maturation of hydrogenases 1 and 2,b2991,
 hybE,1.4756157458326762,30.0,3133669.0,hydrogenase 2-specific chaperone,b2992,
 hybD,1.464685769158735,30.0,3134150.0,maturation protease for hydrogenase 2,b2993,
-hybC,1.4355744094019893,30.0,3134644.0,"hydrogenase 2, large subunit",b2994,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
-hybB,1.407009147717803,30.0,3136344.0,putative hydrogenase 2 cytochrome b type component,b2995,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
-hybA,1.4657897922708,30.0,3137536.0,hydrogenase 2 4Fe-4S ferredoxin-type component,b2996,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
-hybO,1.6099545707779315,30.0,3139584.0,"hydrogenase 2, small subunit",b2997,"frozenset({<Reaction HYD1pp at 0x7fcfa68a84a8>, <Reaction HYD3pp at 0x7fcfa68a8d68>, <Reaction HYD2pp at 0x7fcfa68a8cf8>})"
+hybC,1.4355744094019893,30.0,3134644.0,"hydrogenase 2, large subunit",b2994,"['HYD3pp', 'HYD2pp', 'HYD1pp']"
+hybB,1.407009147717803,30.0,3136344.0,putative hydrogenase 2 cytochrome b type component,b2995,"['HYD3pp', 'HYD2pp', 'HYD1pp']"
+hybA,1.4657897922708,30.0,3137536.0,hydrogenase 2 4Fe-4S ferredoxin-type component,b2996,"['HYD3pp', 'HYD2pp', 'HYD1pp']"
+hybO,1.6099545707779315,30.0,3139584.0,"hydrogenase 2, small subunit",b2997,"['HYD3pp', 'HYD2pp', 'HYD1pp']"
 yghW,1.8636499642453714,30.0,3139808.0,DUF2623 family protein,b2998,
 yghX,1.547393528656861,30.0,3140214.0,No_gene_product,b4658,
-gpr,1.5101236444011528,30.0,3141632.0,L-glyceraldehyde 3-phosphate reductase,b3001,frozenset({<Reaction ALR2 at 0x7fcfa6bc45c0>})
+gpr,1.5101236444011528,30.0,3141632.0,L-glyceraldehyde 3-phosphate reductase,b3001,['ALR2']
 yqhA,1.7302719734995253,30.0,3142335.0,UPF0114 family putative inner membrane protein,b3002,
 yghA,1.4927403296925936,30.0,3143680.0,putative oxidoreductase,b3003,
-exbD,1.4568239879988325,30.0,3144176.0,membrane spanning protein in TonB-ExbB-ExbD complex,b3005,"frozenset({<Reaction FECRMtonex at 0x7fcfa69fe630>, <Reaction FE3DCITtonex at 0x7fcfa69ee6d8>, <Reaction CPGNtonex at 0x7fcfa6af3710>, <Reaction ADOCBLtonex at 0x7fcfa6c09710>, <Reaction CBL1tonex at 0x7fcfa6b2d710>, <Reaction FE3HOXtonex at 0x7fcfa69eed30>, <Reaction FEENTERtonex at 0x7fcfa69fe940>, <Reaction CBItonex at 0x7fcfa6b2dba8>, <Reaction FEOXAMtonex at 0x7fcfa69fefd0>, <Reaction FE3DHBZStonex at 0x7fcfa69ee9e8>})"
-exbB,1.3861658704962845,30.0,3144608.0,membrane spanning protein in TonB-ExbB-ExbD complex,b3006,"frozenset({<Reaction FECRMtonex at 0x7fcfa69fe630>, <Reaction FE3DCITtonex at 0x7fcfa69ee6d8>, <Reaction CPGNtonex at 0x7fcfa6af3710>, <Reaction ADOCBLtonex at 0x7fcfa6c09710>, <Reaction CBL1tonex at 0x7fcfa6b2d710>, <Reaction FE3HOXtonex at 0x7fcfa69eed30>, <Reaction FEENTERtonex at 0x7fcfa69fe940>, <Reaction CBItonex at 0x7fcfa6b2dba8>, <Reaction FEOXAMtonex at 0x7fcfa69fefd0>, <Reaction FE3DHBZStonex at 0x7fcfa69ee9e8>})"
-metC,1.4838233233474918,30.0,3145728.0,"cystathionine beta-lyase, PLP-dependent",b3008,"frozenset({<Reaction CYSTL at 0x7fcfa6a9ab00>, <Reaction CYSDS at 0x7fcfa6a9a5f8>})"
+exbD,1.4568239879988325,30.0,3144176.0,membrane spanning protein in TonB-ExbB-ExbD complex,b3005,"['FE3HOXtonex', 'FE3DHBZStonex', 'FEOXAMtonex', 'FECRMtonex', 'FE3DCITtonex', 'CPGNtonex', 'CBL1tonex', 'ADOCBLtonex', 'FEENTERtonex', 'CBItonex']"
+exbB,1.3861658704962845,30.0,3144608.0,membrane spanning protein in TonB-ExbB-ExbD complex,b3006,"['FE3HOXtonex', 'FE3DHBZStonex', 'FEOXAMtonex', 'FECRMtonex', 'FE3DCITtonex', 'CPGNtonex', 'CBL1tonex', 'ADOCBLtonex', 'FEENTERtonex', 'CBItonex']"
+metC,1.4838233233474918,30.0,3145728.0,"cystathionine beta-lyase, PLP-dependent",b3008,"['CYSDS', 'CYSTL']"
 yqhC,1.5883637526378718,30.0,3147776.0,transcriptional activator of yqhD,b3010,
-dkgA,1.5958184659065309,30.0,3149981.0,"2,5-diketo-D-gluconate reductase A",b3012,"frozenset({<Reaction DKGLCNR1 at 0x7fcfa6a6e320>, <Reaction ALR2 at 0x7fcfa6bc45c0>})"
+dkgA,1.5958184659065309,30.0,3149981.0,"2,5-diketo-D-gluconate reductase A",b3012,"['ALR2', 'DKGLCNR1']"
 yqhG,1.5507686475582387,30.0,3151872.0,DUF3828 family putative periplasmic protein,b3013,
 yqhH,1.439848770513506,30.0,3151985.0,"outer membrane lipoprotein, Lpp paralog",b3014,
 ygiQ,1.4865496418063957,30.0,3153920.0,Radical SAM superfamily protein,b4469,
 ftsP,1.4758504600569915,30.0,3154615.0,septal ring component that protects the divisome from stress; multicopy suppressor of ftsI(Ts),b3017,
-plsC,1.5331213464321714,30.0,3156102.0,1-acyl-sn-glycerol-3-phosphate acyltransferase,b3018,"frozenset({<Reaction AGPAT161 at 0x7fcfa6b9f320>, <Reaction AGPAT141 at 0x7fcfa6c14e48>, <Reaction AGPAT160 at 0x7fcfa6b9f278>, <Reaction AGPAT120 at 0x7fcfa6c14f98>, <Reaction AGPAT180 at 0x7fcfa6b9f3c8>, <Reaction AGPAT181 at 0x7fcfa6b9f470>, <Reaction AGPAT140 at 0x7fcfa6b9f0f0>})"
+plsC,1.5331213464321714,30.0,3156102.0,1-acyl-sn-glycerol-3-phosphate acyltransferase,b3018,"['AGPAT180', 'AGPAT160', 'AGPAT120', 'AGPAT161', 'AGPAT141', 'AGPAT181', 'AGPAT140']"
 ygiS,1.4888137905459915,30.0,3159469.0,putative ABC transporter permease,b3020,
 mqsA,1.73415563364052,30.0,3161209.0,antitoxin for MqsR toxin; transcriptional repressor,b3021,
 mqsR,2.1507262746006215,30.0,3161606.0,GCU-specific mRNA interferase toxin of the MqsR-MqsA toxin-antitoxin system; biofilm/motility regulator; anti-repressor,b3022,
@@ -744,18 +744,18 @@ ygiV,1.5670915969210362,30.0,3162112.0,transcriptional repressor for mcbR biofil
 qseB,1.5404561344798273,30.0,3163186.0,quorum sensing DNA-binding response regulator in two-component regulatory system with QseC,b3025,
 qseC,1.583040181980308,30.0,3164160.0,quorum sensing sensory histidine kinase in two-component regulatory system with QseB,b3026,
 ygiZ,2.245166985818969,30.0,3165237.0,inner membrane protein,b3027,
-mdaB,1.6548463507504652,30.0,3166208.0,NADPH quinone reductase,b3028,"frozenset({<Reaction NADPHQR3 at 0x7fcfa67d2320>, <Reaction NADPHQR2 at 0x7fcfa67c60b8>, <Reaction NADPHQR4 at 0x7fcfa67c68d0>})"
-ygiN,1.6357227856492862,30.0,3166720.0,quinol monooxygenase,b3029,"frozenset({<Reaction QMO3 at 0x7fcfa668ddd8>, <Reaction QMO2 at 0x7fcfa668d9e8>})"
+mdaB,1.6548463507504652,30.0,3166208.0,NADPH quinone reductase,b3028,"['NADPHQR4', 'NADPHQR2', 'NADPHQR3']"
+ygiN,1.6357227856492862,30.0,3166720.0,quinol monooxygenase,b3029,"['QMO3', 'QMO2']"
 parE,1.4098591730448435,30.0,3166862.0,"DNA topoisomerase IV, subunit B",b3030,
 yqiA,1.8424207198755138,30.0,3168783.0,acyl CoA esterase,b3031,
 cpdA,1.613273575393034,30.0,3169364.0,"3',5' cAMP phosphodiesterase",b3032,
 yqiB,1.6677803210624593,30.0,3170304.0,DUF1249 protein YqiB,b3033,
-nudF,1.5911152836282234,30.0,3170639.0,ADP-ribose pyrophosphatase,b3034,frozenset({<Reaction ADPRDP at 0x7fcfa6c09978>})
+nudF,1.5911152836282234,30.0,3170639.0,ADP-ribose pyrophosphatase,b3034,['ADPRDP']
 ygiB,1.3950950301556517,30.0,3173102.0,DUF1190 family protein,b3037,
 ygiC,1.5616349649103078,30.0,3174400.0,ATP-Grasp family ATPase,b3038,
 ygiD,1.4813435143961626,30.0,3174977.0,"4,5- DOPA-extradiol-dioxygenase",b3039,
-zupT,1.462591414656624,30.0,3176448.0,zinc transporter,b3040,"frozenset({<Reaction COBALT2tpp at 0x7fcfa6ae2c50>, <Reaction MN2tpp at 0x7fcfa67a2668>, <Reaction CD2tpp at 0x7fcfa6b3a278>, <Reaction CU2tpp at 0x7fcfa6b0e978>, <Reaction FE2tpp at 0x7fcfa69ee2b0>, <Reaction ZN2tpp at 0x7fcfa65309b0>})"
-ribB,1.5641036625208322,30.0,3177171.0,"3,4-dihydroxy-2-butanone-4-phosphate synthase",b3041,frozenset({<Reaction DB4PS at 0x7fcfa6abf9b0>})
+zupT,1.462591414656624,30.0,3176448.0,zinc transporter,b3040,"['ZN2tpp', 'FE2tpp', 'COBALT2tpp', 'MN2tpp', 'CU2tpp', 'CD2tpp']"
+ribB,1.5641036625208322,30.0,3177171.0,"3,4-dihydroxy-2-butanone-4-phosphate synthase",b3041,['DB4PS']
 yqiC,1.789040291207961,30.0,3178198.0,BMFP family putative fusogenic protein,b3042,
 ygiL,2.0800112679445237,30.0,3178772.0,putative fimbrial-like adhesin protein,b3043,
 yqiH,1.856694625276395,30.0,3183239.0,putative periplasmic pilin chaperone,b3047,
@@ -769,12 +769,12 @@ glnE,1.4738628829579774,30.0,3190159.0,fused deadenylyltransferase/adenylyltrans
 ygiF,1.533432296523425,30.0,3193022.0,inorganic triphosphatase,b3054,
 ygiM,1.3678390711709563,30.0,3194880.0,SH3 domain protein,b3055,
 cca,1.370390816652479,30.0,3195249.0,fused tRNA nucleotidyl transferase/2'3'-cyclic phosphodiesterase/2'nucleotidase and phosphatase,b3056,
-bacA,1.4605325195001406,30.0,3196928.0,undecaprenyl pyrophosphate phosphatase,b3057,"frozenset({<Reaction UDCPDP at 0x7fcfa6571c18>, <Reaction UDCPDPpp at 0x7fcfa6571d30>})"
-folB,1.6363337326750906,30.0,3197579.0,dihydroneopterin aldolase and dihydroneopterin triphosphate 2'-epimerase,b3058,"frozenset({<Reaction DHNPA2r at 0x7fcfa6a64400>, <Reaction DHNPTE at 0x7fcfa6a644a8>})"
-plsY,1.418278703168569,30.0,3198052.0,putative glycerol-3-phosphate acyltransferase,b3059,"frozenset({<Reaction APG3PAT140 at 0x7fcfa6b5ab00>, <Reaction APG3PAT161 at 0x7fcfa6b5ac18>, <Reaction APG3PAT160 at 0x7fcfa6b5ab38>, <Reaction APG3PAT181 at 0x7fcfa6b5ad30>, <Reaction APG3PAT120 at 0x7fcfa6b5a588>, <Reaction APG3PAT141 at 0x7fcfa6b5aac8>, <Reaction APG3PAT180 at 0x7fcfa6b5acf8>})"
+bacA,1.4605325195001406,30.0,3196928.0,undecaprenyl pyrophosphate phosphatase,b3057,"['UDCPDP', 'UDCPDPpp']"
+folB,1.6363337326750906,30.0,3197579.0,dihydroneopterin aldolase and dihydroneopterin triphosphate 2'-epimerase,b3058,"['DHNPA2r', 'DHNPTE']"
+plsY,1.418278703168569,30.0,3198052.0,putative glycerol-3-phosphate acyltransferase,b3059,"['APG3PAT141', 'APG3PAT180', 'APG3PAT140', 'APG3PAT161', 'APG3PAT181', 'APG3PAT160', 'APG3PAT120']"
 ttdR,1.6018318967157963,30.0,3198976.0,transcriptional activator of ttdABT,b3060,
-ttdA,1.5648462959122262,30.0,3199821.0,"L-tartrate dehydratase, alpha subunit",b3061,frozenset({<Reaction TARTD at 0x7fcfa66133c8>})
-ttdB,1.4016200330395843,30.0,3201024.0,"L-tartrate dehydratase, beta subunit",b3062,frozenset({<Reaction TARTD at 0x7fcfa66133c8>})
+ttdA,1.5648462959122262,30.0,3199821.0,"L-tartrate dehydratase, alpha subunit",b3061,['TARTD']
+ttdB,1.4016200330395843,30.0,3201024.0,"L-tartrate dehydratase, beta subunit",b3062,['TARTD']
 dnaG,1.496933671113649,30.0,3204465.0,DNA primase,b3066,
 rpoD,1.4909758565153415,30.0,3206405.0,"RNA polymerase, sigma 70 (sigma D) factor",b3067,
 mug,1.527872931650432,30.0,3208325.0,G/U mismatch-specific DNA glycosylase; xanthine DNA glycosylase,b3068,
@@ -791,7 +791,7 @@ ygjQ,1.6324518659206688,30.0,3229898.0,DUF218 superfamily protein,b3086,
 ygjR,1.591915235792127,30.0,3230669.0,putative NAD(P)-dependent dehydrogenase,b3087,
 alx,1.4444902326705993,30.0,3231938.0,putative membrane-bound redox modulator,b3088,
 ygjV,1.5824847017154524,30.0,3234551.0,Imp-YgjV family inner membrane protein,b3090,
-uxaA,1.4414456304062797,30.0,3235840.0,altronate hydrolase,b3091,frozenset({<Reaction ALTRH at 0x7fcfa6bc4da0>})
+uxaA,1.4414456304062797,30.0,3235840.0,altronate hydrolase,b3091,['ALTRH']
 exuR,1.5890379280247475,30.0,3240010.0,hexuronate regulon transcriptional repressor; autorepressor,b3094,
 mzrA,1.5374307983233069,30.0,3241984.0,modulator of EnvZ/OmpR regulon,b3096,
 yqjC,1.9126826476348466,30.0,3242327.0,DUF1090 family putative periplasmic protein,b3097,
@@ -805,25 +805,25 @@ yhaK,1.429023762970621,30.0,3248128.0,redox-sensitive bicupin,b3106,
 yhaL,1.425724391519359,30.0,3248401.0,uncharacterized protein,b3107,
 yhaM,1.470481082510392,30.0,3248699.0,putative L-serine dehydratase alpha chain,b4470,
 yhaO,1.4953018933723785,30.0,3250176.0,putative transporter,b3110,
-tdcG,1.4192199163725852,30.0,3252224.0,"L-serine dehydratase 3, anaerobic",b4471,frozenset({<Reaction SERD_L at 0x7fcfa65de4a8>})
-tdcD,1.6011828366707324,30.0,3256320.0,"propionate kinase/acetate kinase C, anaerobic",b3115,"frozenset({<Reaction PPAKr at 0x7fcfa66c64a8>, <Reaction ACKr at 0x7fcfa6bdb7f0>})"
-tdcC,1.5390863359746538,30.0,3258368.0,L-threonine/L-serine transporter,b3116,"frozenset({<Reaction THRt2rpp at 0x7fcfa65adc88>, <Reaction SERt2rpp at 0x7fcfa65de6d8>})"
-tdcB,1.6232919537923678,30.0,3258397.0,"L-threonine dehydratase, catabolic",b3117,frozenset({<Reaction THRD_L at 0x7fcfa65ad710>})
+tdcG,1.4192199163725852,30.0,3252224.0,"L-serine dehydratase 3, anaerobic",b4471,['SERD_L']
+tdcD,1.6011828366707324,30.0,3256320.0,"propionate kinase/acetate kinase C, anaerobic",b3115,"['ACKr', 'PPAKr']"
+tdcC,1.5390863359746538,30.0,3258368.0,L-threonine/L-serine transporter,b3116,"['SERt2rpp', 'THRt2rpp']"
+tdcB,1.6232919537923678,30.0,3258397.0,"L-threonine dehydratase, catabolic",b3117,['THRD_L']
 tdcA,1.8158454450758956,30.0,3260416.0,tdc operon transcriptional activator,b3118,
 tdcR,2.196508183027674,30.0,3260928.0,L-threonine dehydratase operon activator protein,b3119,
 yhaB,2.180734957778428,30.0,3261212.0,uncharacterized protein,b3120,
 yhaC,2.2401102464534333,30.0,3262464.0,pentapetide repeats-related protein,b3121,
-garK,1.4005821446089772,30.0,3264512.0,glycerate kinase I,b3124,frozenset({<Reaction GLYCK2 at 0x7fcfa6935a90>})
-garR,1.5077103049471197,30.0,3265225.0,tartronate semialdehyde reductase,b3125,frozenset({<Reaction TRSARr at 0x7fcfa65556a0>})
-garL,1.5261813939756528,30.0,3266560.0,alpha-dehydro-beta-deoxy-D-glucarate aldolase,b3126,frozenset({<Reaction GLCRAL at 0x7fcfa69867f0>})
-garP,1.4825151006611272,30.0,3266931.0,putative (D)-galactarate transporter,b3127,"frozenset({<Reaction GLCRt2rpp at 0x7fcfa6986da0>, <Reaction GLYCAt2rpp at 0x7fcfa6935438>, <Reaction GALCTt2rpp at 0x7fcfa695a6d8>})"
-garD,1.5104046487691205,30.0,3268640.0,D-galactarate dehydrogenase,b3128,frozenset({<Reaction GALCTD at 0x7fcfa69cdeb8>})
+garK,1.4005821446089772,30.0,3264512.0,glycerate kinase I,b3124,['GLYCK2']
+garR,1.5077103049471197,30.0,3265225.0,tartronate semialdehyde reductase,b3125,['TRSARr']
+garL,1.5261813939756528,30.0,3266560.0,alpha-dehydro-beta-deoxy-D-glucarate aldolase,b3126,['GLCRAL']
+garP,1.4825151006611272,30.0,3266931.0,putative (D)-galactarate transporter,b3127,"['GALCTt2rpp', 'GLYCAt2rpp', 'GLCRt2rpp']"
+garD,1.5104046487691205,30.0,3268640.0,D-galactarate dehydrogenase,b3128,['GALCTD']
 prlF,1.627652994418278,30.0,3270656.0,antitoxin of the SohA(PrlF)-YhaV toxin-antitoxin system,b3129,
 yhaV,1.681215796395333,30.0,3270695.0,toxin of the SohB(PrlF)-YhaV toxin-antitoxin system,b3130,
 agaR,1.697696712602481,30.0,3271214.0,transcriptional repressor of the aga regulon,b3131,
-kbaZ,1.607437081025986,30.0,3272704.0,"tagatose 6-phosphate aldolase 1, kbaZ subunit",b3132,frozenset({<Reaction TGBPA at 0x7fcfa65a1630>})
+kbaZ,1.607437081025986,30.0,3272704.0,"tagatose 6-phosphate aldolase 1, kbaZ subunit",b3132,['TGBPA']
 agaS,1.4937185239706454,30.0,3275334.0,tagatose-6-phosphate ketose/aldose isomerase,b3136,
-kbaY,1.5776242342364872,30.0,3276800.0,"tagatose 6-phosphate aldolase 1, kbaY subunit",b3137,frozenset({<Reaction TGBPA at 0x7fcfa65a1630>})
+kbaY,1.5776242342364872,30.0,3276800.0,"tagatose 6-phosphate aldolase 1, kbaY subunit",b3137,['TGBPA']
 agaB,1.7461668171409137,30.0,3277528.0,N-acetylgalactosamine-specific enzyme IIB component of PTS,b3138,
 agaC,1.5657502083544208,30.0,3278043.0,N-acetylgalactosamine-specific enzyme IIC component of PTS,b3139,
 agaD,1.5533470786827672,30.0,3278848.0,N-acetylgalactosamine-specific enzyme IID component of PTS,b3140,
@@ -843,7 +843,7 @@ yhbS,1.5472001782731466,30.0,3293613.0,GNAT family putative N-acetyltransferase,
 yhbT,1.5142237147598283,30.0,3294110.0,SCP-2 sterol transfer family protein,b3157,
 yhbU,1.4051518167341583,30.0,3295232.0,U32 peptidase family protein,b3158,
 yhbV,1.42795535217439,30.0,3295847.0,U32 peptidase family protein,b3159,
-mtr,1.4994569956477797,30.0,3297931.0,tryptophan transporter of high affinity,b3161,"frozenset({<Reaction INDOLEt2rpp at 0x7fcfa68cd2b0>, <Reaction TRPt2rpp at 0x7fcfa6555668>})"
+mtr,1.4994569956477797,30.0,3297931.0,tryptophan transporter of high affinity,b3161,"['TRPt2rpp', 'INDOLEt2rpp']"
 yrbN,1.7065228978314348,30.0,3301248.0,uncharacterized protein,b4685,
 nlpI,1.5934997785211353,30.0,3301398.0,lipoprotein involved in osmotic sensitivity and filamentation,b3163,
 pnp,1.5464407932452229,30.0,3302391.0,polynucleotide phosphorylase/polyadenylase,b3164,
@@ -853,32 +853,32 @@ rbfA,1.5847442466001862,30.0,3306135.0,30s ribosome binding factor,b3167,
 infB,1.4241646886514898,30.0,3306700.0,translation initiation factor IF-2,b3168,
 nusA,1.4707815659398278,30.0,3309568.0,transcription termination/antitermination L factor,b3169,
 rimP,1.4531297136983716,30.0,3310912.0,ribosome maturation factor for 30S subunits,b3170,
-argG,1.4331347208815464,30.0,3311995.0,argininosuccinate synthetase,b3172,frozenset({<Reaction ARGSS at 0x7fcfa6b709b0>})
+argG,1.4331347208815464,30.0,3311995.0,argininosuccinate synthetase,b3172,['ARGSS']
 yhbX,1.7413829283871136,30.0,3313346.0,"putative EptAB family phosphoethanolamine transferase, inner membrane protein",b3173,
 secG,1.741686469244435,30.0,3315712.0,preprotein translocase membrane subunit,b3175,
-glmM,1.447720398466275,30.0,3316091.0,phosphoglucosamine mutase,b3176,frozenset({<Reaction PGAMT at 0x7fcfa66ff240>})
-folP,1.4261972625655186,30.0,3317760.0,"7,8-dihydropteroate synthase",b3177,frozenset({<Reaction DHPS2 at 0x7fcfa6a64b70>})
+glmM,1.447720398466275,30.0,3316091.0,phosphoglucosamine mutase,b3176,['PGAMT']
+folP,1.4261972625655186,30.0,3317760.0,"7,8-dihydropteroate synthase",b3177,['DHPS2']
 ftsH,1.421758393575805,30.0,3318359.0,"protease, ATP-dependent zinc-metallo",b3178,
 rlmE,1.5052826066624196,30.0,3320393.0,"23S rRNA U2552 2'-O-ribose methyltransferase, SAM-dependent",b3179,
 yhbY,1.5720993226018187,30.0,3321344.0,RNA binding protein associated with pre-50S ribosomal subunits,b3180,
 greA,1.5626545319758878,30.0,3321856.0,transcript cleavage factor,b3181,
-dacB,1.463185648245609,30.0,3322321.0,D-alanyl-D-alanine carboxypeptidase,b3182,"frozenset({<Reaction MDDEP3pp at 0x7fcfa67e7240>, <Reaction MDDCP2pp at 0x7fcfa67e7128>, <Reaction MDDCP3pp at 0x7fcfa67dbf60>, <Reaction MDDCP4pp at 0x7fcfa67e7160>, <Reaction MDDEP2pp at 0x7fcfa67e7588>, <Reaction MDDCP5pp at 0x7fcfa67e7198>, <Reaction MDDCP1pp at 0x7fcfa67dbda0>, <Reaction MDDEP4pp at 0x7fcfa67e77b8>, <Reaction MDDEP1pp at 0x7fcfa67e71d0>})"
+dacB,1.463185648245609,30.0,3322321.0,D-alanyl-D-alanine carboxypeptidase,b3182,"['MDDEP3pp', 'MDDCP2pp', 'MDDCP3pp', 'MDDCP5pp', 'MDDCP4pp', 'MDDEP2pp', 'MDDEP1pp', 'MDDCP1pp', 'MDDEP4pp']"
 obgE,1.3709632637185656,30.0,3323940.0,GTPase involved in cell partioning and DNA repair,b3183,
 yhbE,1.4223676396950313,30.0,3325952.0,EamA family inner membrane putative transporter,b3184,
 rpmA,1.3915505762411475,30.0,3326464.0,50S ribosomal subunit protein L27,b3185,
 rplU,1.417162522603334,30.0,3326498.0,50S ribosomal subunit protein L21,b3186,
-ispB,1.5380215538366289,30.0,3328000.0,octaprenyl diphosphate synthase,b3187,frozenset({<Reaction OCTDPS at 0x7fcfa6731cf8>})
+ispB,1.5380215538366289,30.0,3328000.0,octaprenyl diphosphate synthase,b3187,['OCTDPS']
 sfsB,1.6058147284629556,30.0,3328512.0,malPQ operon transcriptional activator,b3188,
-murA,1.4492903877793875,30.0,3328593.0,UDP-N-acetylglucosamine 1-carboxyvinyltransferase,b3189,frozenset({<Reaction UAGCVT at 0x7fcfa65714a8>})
+murA,1.4492903877793875,30.0,3328593.0,UDP-N-acetylglucosamine 1-carboxyvinyltransferase,b3189,['UAGCVT']
 ibaG,1.504382959562835,30.0,3330048.0,acid stress protein; putative BolA family transcriptional regulator,b3190,
 mlaB,1.5445785246516182,30.0,3330560.0,"ABC transporter maintaining OM lipid asymmetry, cytoplasmic STAS component",b3191,
 mlaD,1.5009715782480333,30.0,3331268.0,OM lipid asymmetry maintenance protein; membrane-anchored ABC family periplasmic binding protein,b3193,
 mlaE,1.5120207791604603,30.0,3332096.0,"ABC transporter maintaining OM lipid asymmetry, inner membrane permease protein",b3194,
 mlaF,1.5733104088899015,30.0,3332614.0,"ABC transporter maintaining OM lipid asymmetry, ATP-binding protein",b3195,
-kdsC,1.6079397737067413,30.0,3336192.0,3-deoxy-D-manno-octulosonate 8-phosphate phosphatase,b3198,frozenset({<Reaction KDOPP at 0x7fcfa685ae48>})
-lptC,1.606754716728637,30.0,3336194.0,periplasmic membrane-anchored LPS-binding protein; LPS export protein,b3199,"frozenset({<Reaction ECA4COLIPAabctex at 0x7fcfa6a1cc18>, <Reaction ACOLIPAabctex at 0x7fcfa6be5e80>, <Reaction O16A4COLIPAabctex at 0x7fcfa6724898>, <Reaction CLIPAabctex at 0x7fcfa6b546a0>, <Reaction LIPAabctex at 0x7fcfa6882eb8>, <Reaction ENLIPAabctex at 0x7fcfa6a360f0>, <Reaction COLIPAabctex at 0x7fcfa6af3128>, <Reaction K2L4Aabctex at 0x7fcfa685a550>, <Reaction COLIPAPabctex at 0x7fcfa6ae2f60>})"
-lptA,1.6108787314839572,30.0,3336738.0,lipopolysaccharide export ABC transporter periplasmic binding protein; Lipid A binding protein; LPS export and assembly protein,b3200,"frozenset({<Reaction ECA4COLIPAabctex at 0x7fcfa6a1cc18>, <Reaction ACOLIPAabctex at 0x7fcfa6be5e80>, <Reaction O16A4COLIPAabctex at 0x7fcfa6724898>, <Reaction CLIPAabctex at 0x7fcfa6b546a0>, <Reaction LIPAabctex at 0x7fcfa6882eb8>, <Reaction ENLIPAabctex at 0x7fcfa6a360f0>, <Reaction COLIPAabctex at 0x7fcfa6af3128>, <Reaction K2L4Aabctex at 0x7fcfa685a550>, <Reaction COLIPAPabctex at 0x7fcfa6ae2f60>})"
-lptB,1.4302971567456124,30.0,3337302.0,lipopolysaccharide export ABC transporter ATPase,b3201,"frozenset({<Reaction ECA4COLIPAabctex at 0x7fcfa6a1cc18>, <Reaction ACOLIPAabctex at 0x7fcfa6be5e80>, <Reaction O16A4COLIPAabctex at 0x7fcfa6724898>, <Reaction CLIPAabctex at 0x7fcfa6b546a0>, <Reaction LIPAabctex at 0x7fcfa6882eb8>, <Reaction ENLIPAabctex at 0x7fcfa6a360f0>, <Reaction COLIPAabctex at 0x7fcfa6af3128>, <Reaction K2L4Aabctex at 0x7fcfa685a550>, <Reaction COLIPAPabctex at 0x7fcfa6ae2f60>})"
+kdsC,1.6079397737067413,30.0,3336192.0,3-deoxy-D-manno-octulosonate 8-phosphate phosphatase,b3198,['KDOPP']
+lptC,1.606754716728637,30.0,3336194.0,periplasmic membrane-anchored LPS-binding protein; LPS export protein,b3199,"['ECA4COLIPAabctex', 'ACOLIPAabctex', 'O16A4COLIPAabctex', 'CLIPAabctex', 'ENLIPAabctex', 'LIPAabctex', 'COLIPAabctex', 'K2L4Aabctex', 'COLIPAPabctex']"
+lptA,1.6108787314839572,30.0,3336738.0,lipopolysaccharide export ABC transporter periplasmic binding protein; Lipid A binding protein; LPS export and assembly protein,b3200,"['ECA4COLIPAabctex', 'ACOLIPAabctex', 'O16A4COLIPAabctex', 'CLIPAabctex', 'ENLIPAabctex', 'LIPAabctex', 'COLIPAabctex', 'K2L4Aabctex', 'COLIPAPabctex']"
+lptB,1.4302971567456124,30.0,3337302.0,lipopolysaccharide export ABC transporter ATPase,b3201,"['ECA4COLIPAabctex', 'ACOLIPAabctex', 'O16A4COLIPAabctex', 'CLIPAabctex', 'ENLIPAabctex', 'LIPAabctex', 'COLIPAabctex', 'K2L4Aabctex', 'COLIPAPabctex']"
 rpoN,1.522085640856298,30.0,3338075.0,"RNA polymerase, sigma 54 (sigma N) factor",b3202,
 hpf,1.61090986265007,30.0,3339776.0,ribosome hibernation promoting factor HPF; stabilizes 100S dimers,b3203,
 yhbJ,1.4336526074656126,30.0,3340473.0,"adaptor protein for GlmZ/GlmY sRNA decay, glucosamine-6-phosphate-regulated; NTPase",b3205,
@@ -903,12 +903,12 @@ yibG,1.557274187689367,36.0,3761536.0,TPR-like repeat protein,b3596,
 yibS,1.4124891986120107,36.0,3762176.0,No_gene_product,b4650,
 yibW,1.4935945413278024,36.0,3762251.0,No_gene_product,b4651,
 yibV,1.678995267283947,36.0,3762704.0,No_gene_product,b4615,
-waaL,1.5212261121924755,37.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.7040228713071917,37.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,1.5972252548557562,37.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
+waaL,1.5212261121924755,37.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.7040228713071917,37.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,1.5972252548557562,37.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
 waaJ,1.461723161870598,37.0,3794944.0,,,
-waaR,1.4774216605471633,37.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaS,1.7906513708861984,37.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaR,1.4774216605471633,37.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaS,1.7906513708861984,37.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 tnaC,1.3744600776582296,38.0,3881856.0,tryptophanase leader peptide,b3707,
 yigF,1.400394571322662,39.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
 yigG,1.4444481946087573,39.0,3996172.0,PRK11371 family inner membrane protein,b3818,

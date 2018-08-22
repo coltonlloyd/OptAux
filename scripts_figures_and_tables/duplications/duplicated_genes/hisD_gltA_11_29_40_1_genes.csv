@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yaaA,1.3243064193436143,0.0,6144.0,"peroxide resistance protein, lowers intracellular iron",b0006,
 hokC,1.3045067400348003,1.0,16896.0,"toxic membrane protein, small",b4412,
 mokC,1.351974964176329,1.0,16896.0,"regulatory protein for HokC, overlaps CDS of hokC",b0018,
@@ -12,7 +12,7 @@ ykgR,1.542914354007321,4.0,308851.0,uncharacterized protein,b4671,
 ykgP,1.556795768517271,4.0,309426.0,No_gene_product,b4630,
 rclB,1.5793192219292438,4.0,314041.0,reactive chlorine species (RCS) stress resistance periplasmic protein,b0303,
 ykgH,1.4224911703143814,5.0,320406.0,putative inner membrane protein,b0310,
-cynS,1.3430393100418665,6.0,355199.0,cyanate aminohydrolase,b0340,frozenset({<Reaction CYNTAH at 0x7fcfa6b0eb70>})
+cynS,1.3430393100418665,6.0,355199.0,cyanate aminohydrolase,b0340,['CYNTAH']
 emrE,1.3993703342538564,7.0,563770.0,DLP12 prophage; multidrug resistance protein,b0543,
 uof,1.4369485745521513,8.0,706094.0,ryhB-regulated fur leader peptide,b4637,
 ybfK,1.6454378936078964,9.0,716288.0,uncharacterized protein,b4590,
@@ -66,13 +66,13 @@ yobD,1.4212491114785715,37.0,1899057.0,UPF0266 family inner membrane protein,b18
 cspC,1.5418710453786364,37.0,1901568.0,"stress protein, member of the CspA-family",b1823,
 yobF,1.4708767912761758,37.0,1901704.0,DUF2527 family heat-induced protein,b1824,
 yobI,1.5568124895579192,38.0,1940371.0,uncharacterized protein,b4677,
-nudB,1.5014652913352764,38.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"frozenset({<Reaction NTPP5 at 0x7fcfa6717208>, <Reaction DNTPPA at 0x7fcfa6a793c8>})"
+nudB,1.5014652913352764,38.0,1942436.0,dihydroneopterin triphosphate pyrophosphatase,b1865,"['DNTPPA', 'NTPP5']"
 yodD,1.4282760899850644,39.0,2018466.0,uncharacterized protein,b1953,
 zinT,1.3917422992226323,40.0,2034855.0,"zinc and cadmium binding protein, periplasmic",b1973,
 yoeH,2.1767766207261228,41.0,2061824.0,No_gene_product,b4641,
 yoeF,1.49189170076996,42.0,2072226.0,No_gene_product,b4538,
 hisL,1.5992298353200949,43.0,2083476.0,his operon leader peptide,b2018,
-wbbH,1.5951537497950599,44.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
+wbbH,1.5951537497950599,44.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
 ibsA,1.7196670649518224,45.0,2146829.0,toxic membrane protein,b4667,
 ibsB,1.350734464115603,45.0,2147200.0,toxic membrane protein,b4668,
 yegR,1.5206098590977324,46.0,2161664.0,uncharacterized protein,b2085,
@@ -85,7 +85,7 @@ gtrS,1.7771506133004704,49.0,2463744.0,"serotype-specific glucosyl transferase, 
 ypfM,1.7566372858251647,50.0,2584192.0,stress-induced small enterobacterial protein,b4606,
 yfgI,1.3495356828417577,51.0,2623684.0,"nalidixic acid resistance protein, putative periplasmic protein",b2506,
 shoB,1.362114550142776,52.0,2693504.0,toxic membrane protein,b4687,
-grcA,1.526702859409313,53.0,2709504.0,autonomous glycyl radical cofactor,b2579,"frozenset({<Reaction PFL at 0x7fcfa66f1ac8>, <Reaction OBTFL at 0x7fcfa6731860>})"
+grcA,1.526702859409313,53.0,2709504.0,autonomous glycyl radical cofactor,b2579,"['PFL', 'OBTFL']"
 raiA,1.6758090954135458,54.0,2730512.0,cold shock protein associated with 30S ribosomal subunit,b2597,
 pheL,2.0123249887682264,54.0,2730957.0,pheA gene leader peptide,b2598,
 rplS,1.481187258819018,55.0,2737541.0,50S ribosomal subunit protein L19,b2606,
@@ -123,9 +123,9 @@ insK,1.4094653840734126,74.0,3715072.0,IS150 transposase B,b3558,
 yibS,1.4632403517301094,75.0,3762176.0,No_gene_product,b4650,
 yibW,1.3089771190101163,75.0,3762251.0,No_gene_product,b4651,
 secB,1.4003196270137377,76.0,3777020.0,protein export chaperone,b3609,
-waaU,1.4870395103053213,77.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaR,1.4207892828607438,77.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaS,1.4712570341716869,77.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaU,1.4870395103053213,77.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaR,1.4207892828607438,77.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaS,1.4712570341716869,77.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 rpmG,1.3704206607314722,78.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 tisB,1.6781905236237689,79.0,3846912.0,"toxic membrane persister formation peptide, LexA-regulated",b4618,
 dgoR,1.4403991505610734,80.0,3867830.0,D-galactonate catabolism operon transcriptional repressor,b4479,

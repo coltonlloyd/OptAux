@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykgR,1.3364175068098407,1.0,308851.0,uncharacterized protein,b4671,
 ykgP,1.3307681062511627,1.0,309426.0,No_gene_product,b4630,
 iraM,1.3345146583011067,2.0,1207296.0,"RpoS stabilzer during Mg starvation, anti-RssB factor",b1160,
@@ -19,7 +19,7 @@ ygeI,1.467481264644514,10.0,2987008.0,uncharacterized protein,b2853,
 ysaC,1.3472061825823016,11.0,3744256.0,No_gene_product,b4648,
 yibW,1.409786101158083,12.0,3762251.0,No_gene_product,b4651,
 yibV,1.4061749951062317,12.0,3762704.0,No_gene_product,b4615,
-waaL,1.3438609462367437,13.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.3522403492115405,13.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaS,1.3982619790157305,14.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaL,1.3438609462367437,13.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.3522403492115405,13.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaS,1.3982619790157305,14.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yjbS,1.354739244740606,15.0,4258816.0,uncharacterized protein,b4621,

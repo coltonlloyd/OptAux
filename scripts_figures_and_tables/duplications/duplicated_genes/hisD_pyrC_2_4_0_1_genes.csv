@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 yadK,1.3749256716216929,1.0,147489.0,putative fimbrial-like adhesin protein,b0136,
 ykfN,1.3910738628732575,2.0,258860.0,No_gene_product,b4626,
 ykgP,1.4115569454318186,3.0,309426.0,No_gene_product,b4630,
@@ -15,8 +15,8 @@ ydcC,1.5814427282251,11.0,1526072.0,H repeat-associated putative transposase,b14
 ydfK,1.8845516017162627,12.0,1627328.0,"cold shock protein, function unknown, Qin prophage",b1544,
 tfaQ,1.815689377398019,12.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
 dicB,1.3990578601071053,13.0,1644032.0,Qin prophage; cell division inhibition protein,b1575,
-wbbK,1.4555003362531393,14.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbH,1.459037453545049,14.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
+wbbK,1.4555003362531393,14.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbH,1.459037453545049,14.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
 yehC,1.3842934876361934,15.0,2184404.0,putative periplasmic pilin chaperone,b2110,
 yfaH,1.300894461166808,16.0,2343129.0,No_gene_product,b2238,
 gtrS,1.5681285815864312,17.0,2463744.0,"serotype-specific glucosyl transferase, CPS-53 (KpLE1) prophage",b2352,
@@ -52,9 +52,9 @@ yibA,1.4499361249683653,33.0,3760128.0,putative immunity protein for polymorphic
 yibG,1.4924474766539668,33.0,3761536.0,TPR-like repeat protein,b3596,
 yibV,1.4641423946232137,33.0,3762704.0,No_gene_product,b4615,
 yibU,1.3826174111158682,33.0,3763307.0,No_gene_product,b4652,
-waaL,1.3562712059655408,34.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,1.4839518518850794,34.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaS,1.537021385252274,35.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaL,1.3562712059655408,34.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,1.4839518518850794,34.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaS,1.537021385252274,35.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yigG,1.4787249506157165,36.0,3996172.0,PRK11371 family inner membrane protein,b3818,
 yiiF,1.3730702696776595,37.0,4073110.0,"putative thymol sensitivity protein, CopG family putative transcriptional regulator",b3890,
 yjbI,1.4553702991456954,38.0,4240630.0,No_gene_product,b4038,

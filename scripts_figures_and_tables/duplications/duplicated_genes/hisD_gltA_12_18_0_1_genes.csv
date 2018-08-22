@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykfM,1.4845737060070936,1.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 ykgR,1.3930819038287163,2.0,308851.0,uncharacterized protein,b4671,
 ykgP,1.4193242330256264,2.0,309426.0,No_gene_product,b4630,
@@ -25,9 +25,9 @@ ydfK,2.019153610719681,16.0,1627328.0,"cold shock protein, function unknown, Qin
 tfaQ,1.706129860221142,16.0,1628566.0,Qin prophage; putative tail fibre assembly protein,b1546,
 cspB,1.3178089882600146,17.0,1635595.0,Qin prophage; cold shock protein,b1557,
 yoeH,1.354916331454834,18.0,2061824.0,No_gene_product,b4641,
-wbbK,1.4043333771907733,19.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbI,1.3843413605068398,19.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,1.461320708507199,19.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
+wbbK,1.4043333771907733,19.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbI,1.3843413605068398,19.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,1.461320708507199,19.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
 yfbO,1.3883235735163115,20.0,2382113.0,uncharacterized protein,b2274,
 yfdF,1.3751215568230095,21.0,2456490.0,uncharacterized protein,b2345,
 gtrS,1.5913070277537404,22.0,2463744.0,"serotype-specific glucosyl transferase, CPS-53 (KpLE1) prophage",b2352,
@@ -52,8 +52,8 @@ yhaB,1.3879597622254651,30.0,3261212.0,uncharacterized protein,b3120,
 arfA,1.3222877029695879,31.0,3431936.0,alternate ribosome-rescue factor A,b4550,
 yhhZ,1.3753795098796264,32.0,3575808.0,putative Hcp1 family polymorphic toxin protein; putative colicin-like DNase/tRNase activity,b3442,
 gadE,1.3726994409084787,33.0,3651725.0,gad regulon transcriptional activator,b3512,
-waaU,1.4574458398351502,34.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaS,1.554881294912127,35.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
+waaU,1.4574458398351502,34.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaS,1.554881294912127,35.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
 yigG,1.431831527088859,36.0,3996172.0,PRK11371 family inner membrane protein,b3818,
 yjbI,1.3520877980353212,37.0,4240630.0,No_gene_product,b4038,
 yjbS,1.5057021148818293,38.0,4258816.0,uncharacterized protein,b4621,

@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 thrL,1.545779089644571,0.0,189.0,thr operon leader peptide,b0001,
 hokC,1.708000030630626,1.0,16896.0,"toxic membrane protein, small",b4412,
 mokC,1.6472596886785738,1.0,16896.0,"regulatory protein for HokC, overlaps CDS of hokC",b0018,
@@ -13,7 +13,7 @@ htrE,1.5726346466190095,5.0,149315.0,putative outer membrane usher protein,b0139
 yadV,1.6000873233155286,5.0,151947.0,putative periplasmic pilin chaperone,b0140,
 yadN,1.650702066374091,5.0,152785.0,putative fimbrial-like adhesin protein,b0141,
 yaeP,1.36685881950458,6.0,210432.0,UPF0253 family protein,b4406,
-gloB,1.6039407175573115,7.0,230513.0,hydroxyacylglutathione hydrolase,b0212,frozenset({<Reaction GLYOX at 0x7fcfa6946978>})
+gloB,1.6039407175573115,7.0,230513.0,hydroxyacylglutathione hydrolase,b0212,['GLYOX']
 yafT,1.6569169491637674,7.0,233821.0,lipoprotein,b0217,
 ykfM,2.1354574885533566,7.0,234743.0,"lethality reduction protein, putative inner membrane protein",b4586,
 yafU,1.7898573263985504,7.0,235520.0,No_gene_product,b0218,
@@ -65,7 +65,7 @@ tfaX,1.8102983281514156,22.0,578560.0,No_gene_product,b0563,
 appY,2.09570642721094,22.0,579584.0,global transcriptional activator; DLP12 prophage,b0564,
 ompT,1.537567019245671,22.0,580135.0,DLP12 prophage; outer membrane protease VII; outer membrane protein 3b,b0565,
 ybdO,1.9418491972699374,23.0,632832.0,putative DNA-binding transcriptional regulator,b0603,
-dsbG,1.3984837684198699,23.0,633282.0,"thiol:disulfide interchange protein, periplasmic",b0604,"frozenset({<Reaction TDSR2 at 0x7fcfa65a15c0>, <Reaction DSBGGT at 0x7fcfa6a862e8>})"
+dsbG,1.3984837684198699,23.0,633282.0,"thiol:disulfide interchange protein, periplasmic",b0604,"['TDSR2', 'DSBGGT']"
 cspE,1.4687126904508927,24.0,652800.0,constitutive cold shock family transcription antitermination protein; negative regulator of cspA transcription; RNA melting protein; ssDNA-binding protein,b0623,
 ybeF,1.4587603852099367,24.0,655880.0,LysR family putative transcriptional regulator,b0629,
 ybeR,1.3922956828456365,25.0,672166.0,uncharacterized protein,b0645,
@@ -81,7 +81,7 @@ ybfD,1.502827398963869,28.0,733547.0,H repeat-associated putative transposase,b0
 cydX,1.4954355903666043,29.0,769651.0,cytochrome d (bd-I) ubiquinol oxidase subunit X,b4515,
 ybhM,1.4638060280453575,30.0,816248.0,BAX Inhibitor-1 family inner membrane protein,b0787,
 mntS,1.3468223313774392,31.0,848384.0,"Mn(2)-response protein, MntR-repressed",b4705,
-grxA,1.4622512660088618,32.0,885951.0,"glutaredoxin 1, redox coenzyme for ribonucleotide reductase (RNR1a)",b0849,"frozenset({<Reaction RNDR4b at 0x7fcfa6630160>, <Reaction GRXR at 0x7fcfa68e04e0>, <Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction PAPSR2 at 0x7fcfa66e52e8>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
+grxA,1.4622512660088618,32.0,885951.0,"glutaredoxin 1, redox coenzyme for ribonucleotide reductase (RNR1a)",b0849,"['RNDR2b', 'GRXR', 'RNDR3b', 'RNDR1b', 'RNDR4b', 'PAPSR2']"
 lrp,1.337081423310034,33.0,928050.0,leucine-responsive global transcriptional regulator,b0889,
 ycaK,1.626696120878402,34.0,945123.0,putative NAD(P)H-dependent oxidoreductase,b0901,
 elfA,1.6837628560406475,35.0,993323.0,laminin-binding fimbrin subunit,b0938,
@@ -125,7 +125,7 @@ pliG,1.547542871716384,45.0,1222656.0,periplasmic inhibitor of g-type lysozyme,b
 hlyE,1.638833843774102,45.0,1224938.0,hemolysin E,b1182,
 ldrA,1.4575616070466946,46.0,1264640.0,"toxic polypeptide, small",b4419,
 ldrC,1.6049554774222028,46.0,1265693.0,"toxic polypeptide, small",b4423,
-chaA,1.4175669960017385,46.0,1266204.0,calcium/sodium:proton antiporter,b1216,"frozenset({<Reaction CA2t3pp at 0x7fcfa6b2d400>, <Reaction Kt3pp at 0x7fcfa6862518>, <Reaction NAt3pp at 0x7fcfa67d2a90>})"
+chaA,1.4175669960017385,46.0,1266204.0,calcium/sodium:proton antiporter,b1216,"['CA2t3pp', 'Kt3pp', 'NAt3pp']"
 yciI,1.3654875244572477,47.0,1305088.0,putative DGPF domain-containing enzyme,b1251,
 yciE,1.5286846982411755,48.0,1308974.0,putative rubrerythrin/ferritin-like metal-binding protein,b1257,
 yciF,1.5208971722334224,48.0,1309526.0,putative rubrerythrin/ferritin-like metal-binding protein,b1258,
@@ -146,7 +146,7 @@ kilR,1.718811229530351,52.0,1412264.0,"killing protein, Rac prophage; FtsZ inhib
 sieB,1.8499788271848314,52.0,1413120.0,"phage superinfection exclusion protein, Rac prophage",b1353,
 racR,1.4551305444982565,52.0,1414021.0,Rac prophage; putative DNA-binding transcriptional regulator,b1356,
 ydaS,1.8546837801321736,52.0,1414656.0,Rac prophage; putative DNA-binding transcriptional regulator,b1357,
-trkG,2.0342093401876653,53.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,frozenset({<Reaction Kt2pp at 0x7fcfa6862400>})
+trkG,2.0342093401876653,53.0,1418038.0,Rac prophage; potassium transporter subunit,b1363,['Kt2pp']
 tmpR,1.4580761472175583,53.0,1421312.0,No_gene_product,b1368,
 tfaR,2.022096655667414,53.0,1426667.0,Rac prophage; putative tail fiber assembly protein,b1373,
 pinR,1.8540924742569462,53.0,1427456.0,Rac prophage; putative site-specific recombinase,b1374,
@@ -203,7 +203,7 @@ ydfD,1.73653953004157,61.0,1644050.0,Qin prophage; uncharacterized protein,b1576
 ynfC,1.49201170539942,62.0,1651003.0,UPF0257 family lipoprotein,b1585,
 ydgC,1.3605392888534453,63.0,1675951.0,GlpM family inner membrane protein,b1607,
 blr,1.5767677033974357,64.0,1698816.0,beta-lactam resistance membrane protein; divisome-associated protein,b4409,
-lpp,1.5096800876039569,65.0,1751677.0,murein lipoprotein,b1677,"frozenset({<Reaction ALPATG160pp at 0x7fcfa6bc4588>, <Reaction ALPATE160pp at 0x7fcfa6bc46a0>})"
+lpp,1.5096800876039569,65.0,1751677.0,murein lipoprotein,b1677,"['ALPATG160pp', 'ALPATE160pp']"
 ydiH,1.3210482174447464,66.0,1759232.0,uncharacterized protein,b1685,
 ydiL,1.4020101368612956,66.0,1764871.0,putative HTH domain DNA-binding protein,b1689,
 ydiV,1.5811152530146675,67.0,1785856.0,"anti-FlhD4C2 factor, inactive EAL family phosphodiesterase",b1707,
@@ -251,22 +251,22 @@ yoeI,1.4265832433934753,85.0,2080532.0,uncharacterized protein,b4678,
 yoeB,1.6475103940569589,85.0,2082816.0,toxin of the YoeB-YefM toxin-antitoxin system,b4539,
 yefM,1.7842015324456986,85.0,2082942.0,antitoxin of the YoeB-YefM toxin-antitoxin system,b2017,
 hisL,2.21686230836927,85.0,2083476.0,his operon leader peptide,b2018,
-ugd,1.6410858270532807,86.0,2093056.0,UDP-glucose 6-dehydrogenase,b2028,frozenset({<Reaction UDPGD at 0x7fcfa657f320>})
-wbbK,2.130281575616824,86.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,frozenset({<Reaction O16GLCT1 at 0x7fcfa67311d0>})
-wbbJ,1.566209736545966,86.0,2097974.0,putative lipopolysaccharide biosynthesis O-acetyl transferase,b2033,frozenset({<Reaction O16AT at 0x7fcfa6724ba8>})
-wbbI,2.158142841963092,86.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,frozenset({<Reaction O16GALFT at 0x7fcfa6731048>})
-wbbH,2.3163028673326718,86.0,2099540.0,O-antigen polymerase,b2035,"frozenset({<Reaction O16AP3pp at 0x7fcfa6724a90>, <Reaction O16AP1pp at 0x7fcfa6724a58>, <Reaction O16AP2pp at 0x7fcfa6724860>})"
-glf,1.8667734802018052,86.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,frozenset({<Reaction UDPGALM at 0x7fcfa657f160>})
-wzxB,2.0812980958220035,86.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,frozenset({<Reaction O16AUNDtpp at 0x7fcfa6724fd0>})
-rfbC,1.712644594876244,86.0,2103296.0,"dTDP-4-deoxyrhamnose-3,5-epimerase",b2038,frozenset({<Reaction TDPDRE at 0x7fcfa65a1160>})
-rfbA,1.6742208918507777,86.0,2103618.0,glucose-1-phosphate thymidylyltransferase,b2039,frozenset({<Reaction G1PTT at 0x7fcfa69b3a20>})
+ugd,1.6410858270532807,86.0,2093056.0,UDP-glucose 6-dehydrogenase,b2028,['UDPGD']
+wbbK,2.130281575616824,86.0,2097152.0,lipopolysaccharide biosynthesis protein,b2032,['O16GLCT1']
+wbbJ,1.566209736545966,86.0,2097974.0,putative lipopolysaccharide biosynthesis O-acetyl transferase,b2033,['O16AT']
+wbbI,2.158142841963092,86.0,2099200.0,"d-Galf:alpha-d-Glc beta-1,6-galactofuranosyltransferase",b2034,['O16GALFT']
+wbbH,2.3163028673326718,86.0,2099540.0,O-antigen polymerase,b2035,"['O16AP1pp', 'O16AP2pp', 'O16AP3pp']"
+glf,1.8667734802018052,86.0,2101248.0,"UDP-galactopyranose mutase, FAD/NAD(P)-binding",b2036,['UDPGALM']
+wzxB,2.0812980958220035,86.0,2101817.0,putative polisoprenol-linked O-antigen transporter,b2037,['O16AUNDtpp']
+rfbC,1.712644594876244,86.0,2103296.0,"dTDP-4-deoxyrhamnose-3,5-epimerase",b2038,['TDPDRE']
+rfbA,1.6742208918507777,86.0,2103618.0,glucose-1-phosphate thymidylyltransferase,b2039,['G1PTT']
 yegJ,1.4578178595378288,87.0,2144665.0,uncharacterized protein,b2071,
 ibsA,1.4629285592210104,87.0,2146829.0,toxic membrane protein,b4667,
 ibsB,1.6365673242074525,87.0,2147200.0,toxic membrane protein,b4668,
 ogrK,1.306086301445956,88.0,2160782.0,"orphan Ogr protein, positive regulator of P2 growth",b2082,
 yegZ,1.4597320656466017,88.0,2161152.0,No_gene_product,b2083,
 yegR,2.30810960552109,88.0,2161664.0,uncharacterized protein,b2085,
-gatB,1.5721140502626518,89.0,2167808.0,galactitol-specific enzyme IIB component of PTS,b2093,frozenset({<Reaction GALTptspp at 0x7fcfa696c048>})
+gatB,1.5721140502626518,89.0,2167808.0,galactitol-specific enzyme IIB component of PTS,b2093,['GALTptspp']
 rcnB,1.4667410928549902,90.0,2180608.0,periplasmic modulator of Ni and Co efflux,b2107,
 yehA,1.5788722271172326,90.0,2181120.0,putative fimbrial-like adhesin protein,b2108,
 yehD,1.8809667345344456,90.0,2185216.0,putative fimbrial-like adhesin protein,b2111,
@@ -279,32 +279,32 @@ elaD,1.7528230977621377,93.0,2376191.0,"protease, capable of cleaving an AMC-ubi
 yfbN,1.8783820748434383,93.0,2381824.0,uncharacterized protein,b2273,
 yfbO,2.1665626896929386,93.0,2382113.0,uncharacterized protein,b2274,
 yfbP,1.566608152335505,93.0,2382594.0,TPR-like repeats-containing protein,b2275,
-alaA,2.013073621628109,94.0,2401039.0,glutamate-pyruvate aminotransferase; glutamic-pyruvic transaminase (GPT); alanine transaminase,b2290,frozenset({<Reaction ALATA_L at 0x7fcfa6baccc0>})
-yfbR,2.2489818457633604,94.0,2402340.0,5'-nucleotidase,b2291,"frozenset({<Reaction NTD1 at 0x7fcfa6778c18>, <Reaction NTD5 at 0x7fcfa678a828>, <Reaction NTD8 at 0x7fcfa678ae10>, <Reaction NTD3 at 0x7fcfa678a4a8>, <Reaction NTD6 at 0x7fcfa678a9e8>, <Reaction NTD12 at 0x7fcfa678a0f0>})"
+alaA,2.013073621628109,94.0,2401039.0,glutamate-pyruvate aminotransferase; glutamic-pyruvic transaminase (GPT); alanine transaminase,b2290,['ALATA_L']
+yfbR,2.2489818457633604,94.0,2402340.0,5'-nucleotidase,b2291,"['NTD6', 'NTD12', 'NTD1', 'NTD5', 'NTD8', 'NTD3']"
 yfbS,1.953058155250003,94.0,2402998.0,putative transporter,b2292,
 yfbT,1.875963648292713,94.0,2404917.0,sugar phosphatas,b2293,
 yfbU,2.594476521957033,94.0,2405578.0,UPF0304 family protein,b2294,
 yfbV,2.2900726771976587,94.0,2406400.0,UPF0208 family inner membrane protein,b2295,
-ackA,2.2582620398265187,94.0,2406948.0,acetate kinase A and propionate kinase 2,b2296,frozenset({<Reaction ACKr at 0x7fcfa6bdb7f0>})
-pta,1.8762895709400471,94.0,2408448.0,phosphate acetyltransferase,b2297,"frozenset({<Reaction PTA2 at 0x7fcfa6676908>, <Reaction PTAr at 0x7fcfa6676a58>})"
+ackA,2.2582620398265187,94.0,2406948.0,acetate kinase A and propionate kinase 2,b2296,['ACKr']
+pta,1.8762895709400471,94.0,2408448.0,phosphate acetyltransferase,b2297,"['PTAr', 'PTA2']"
 yfcC,2.164144538525538,94.0,2410559.0,putative inner membrane transporter; C4-dicarboxylate anaerobic carrier family protein,b2298,
 yfcD,1.9061815549341699,94.0,2412544.0,putative NUDIX hydrolase,b2299,
 yfcE,2.1227213094822,94.0,2412712.0,phosphodiesterase activity on bis-pNPP,b2300,
 yfcF,2.156650261600869,94.0,2413319.0,glutathione S-transferase,b2301,
 yfcG,2.211088927182619,94.0,2414592.0,GSH-dependent disulfide bond oxidoreductase,b2302,
-folX,2.449881907203313,94.0,2414803.0,"D-erythro-7,8-dihydroneopterin triphosphate 2'-epimerase and dihydroneopterin aldolase",b2303,frozenset({<Reaction DHPTPE at 0x7fcfa6a64e10>})
+folX,2.449881907203313,94.0,2414803.0,"D-erythro-7,8-dihydroneopterin triphosphate 2'-epimerase and dihydroneopterin aldolase",b2303,['DHPTPE']
 yfcH,1.7886062032015284,94.0,2415186.0,putative NAD-dependent nucleotide-sugar epimerase,b2304,
 yfcI,2.94495954581112,94.0,2416640.0,transposase_31 family protein,b2305,
-hisP,2.11833088385012,94.0,2417214.0,histidine ABC transporter ATPase,b2306,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction HISabcpp at 0x7fcfa69113c8>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-hisM,2.151993602932752,94.0,2418688.0,histidine ABC transporter permease,b2307,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction HISabcpp at 0x7fcfa69113c8>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-hisQ,1.9249994636994112,94.0,2418708.0,histidine ABC transporter permease,b2308,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction HISabcpp at 0x7fcfa69113c8>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-hisJ,2.3177504111007803,94.0,2419484.0,histidine ABC transporter periplasmic binding protein,b2309,frozenset({<Reaction HISabcpp at 0x7fcfa69113c8>})
-argT,2.534837094764214,94.0,2420736.0,lysine/arginine/ornithine transporter subunit,b2310,"frozenset({<Reaction LYSabcpp at 0x7fcfa682e898>, <Reaction ARGabcpp at 0x7fcfa6b70a58>, <Reaction ORNabcpp at 0x7fcfa67490f0>})"
-ubiX,1.9417857282012765,94.0,2421535.0,3-octaprenyl-4-hydroxybenzoate carboxy-lyase,b2311,frozenset({<Reaction OPHBDC at 0x7fcfa673ea20>})
-purF,1.79600262814719,94.0,2422199.0,amidophosphoribosyltransferase,b2312,frozenset({<Reaction GLUPRT at 0x7fcfa691da58>})
+hisP,2.11833088385012,94.0,2417214.0,histidine ABC transporter ATPase,b2306,"['HISabcpp', 'ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+hisM,2.151993602932752,94.0,2418688.0,histidine ABC transporter permease,b2307,"['HISabcpp', 'ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+hisQ,1.9249994636994112,94.0,2418708.0,histidine ABC transporter permease,b2308,"['HISabcpp', 'ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+hisJ,2.3177504111007803,94.0,2419484.0,histidine ABC transporter periplasmic binding protein,b2309,['HISabcpp']
+argT,2.534837094764214,94.0,2420736.0,lysine/arginine/ornithine transporter subunit,b2310,"['ARGabcpp', 'ORNabcpp', 'LYSabcpp']"
+ubiX,1.9417857282012765,94.0,2421535.0,3-octaprenyl-4-hydroxybenzoate carboxy-lyase,b2311,['OPHBDC']
+purF,1.79600262814719,94.0,2422199.0,amidophosphoribosyltransferase,b2312,['GLUPRT']
 cvpA,2.243537565705407,94.0,2423753.0,colicin V production protein,b2313,
-folC,1.5609165785575505,94.0,2425152.0,bifunctional folylpolyglutamate synthase/ dihydrofolate synthase,b2315,frozenset({<Reaction DHFS at 0x7fcfa6a5aeb8>})
-accD,1.93390772448055,94.0,2426880.0,"acetyl-CoA carboxylase, beta (carboxyltransferase) subunit",b2316,frozenset({<Reaction ACCOAC at 0x7fcfa6c4d6a0>})
+folC,1.5609165785575505,94.0,2425152.0,bifunctional folylpolyglutamate synthase/ dihydrofolate synthase,b2315,['DHFS']
+accD,1.93390772448055,94.0,2426880.0,"acetyl-CoA carboxylase, beta (carboxyltransferase) subunit",b2316,['ACCOAC']
 yfcO,1.526604370392644,95.0,2443264.0,DUF2544 family putative outer membrane protein,b2332,
 yfdF,2.0653755365673656,96.0,2456490.0,uncharacterized protein,b2345,
 gtrA,1.6475297322128672,96.0,2461333.0,CPS-53 (KpLE1) prophage; bactoprenol-linked glucose translocase/flippase,b2350,
@@ -366,7 +366,7 @@ ygeN,2.2427448905026792,114.0,2988672.0,No_gene_product,b2858,
 ygeO,1.7993828741086166,114.0,2989320.0,No_gene_product,b2859,
 ygeQ,1.7853602061436715,114.0,2992128.0,No_gene_product,b2863,
 yqfG,1.7061495861711178,115.0,3026175.0,uncharacterized protein,b4684,
-idi,1.4283493691692566,115.0,3026944.0,isopentenyl diphosphate isomerase,b2889,frozenset({<Reaction IPDDI at 0x7fcfa68cde10>})
+idi,1.4283493691692566,115.0,3026944.0,isopentenyl diphosphate isomerase,b2889,['IPDDI']
 ibsC,1.86639708150192,116.0,3050248.0,toxic membrane protein,b4665,
 cmtB,1.5506833467803,117.0,3072245.0,putative mannitol-specific enzyme IIA component of PTS,b2934,
 yghW,1.367684889568724,118.0,3139808.0,DUF2623 family protein,b2998,
@@ -435,17 +435,17 @@ yibS,2.370901860997206,141.0,3762176.0,No_gene_product,b4650,
 yibW,2.272604760377034,141.0,3762251.0,No_gene_product,b4651,
 yibV,2.429238032463247,141.0,3762704.0,No_gene_product,b4615,
 yibU,2.0859128420738844,141.0,3763307.0,No_gene_product,b4652,
-grxC,1.4161396731172988,142.0,3777550.0,glutaredoxin 3,b3610,"frozenset({<Reaction RNDR4b at 0x7fcfa6630160>, <Reaction GRXR at 0x7fcfa68e04e0>, <Reaction RNDR1b at 0x7fcfa6627da0>, <Reaction RNDR2b at 0x7fcfa6627cc0>, <Reaction PAPSR2 at 0x7fcfa66e52e8>, <Reaction RNDR3b at 0x7fcfa6627cf8>})"
+grxC,1.4161396731172988,142.0,3777550.0,glutaredoxin 3,b3610,"['RNDR2b', 'GRXR', 'RNDR3b', 'RNDR1b', 'RNDR4b', 'PAPSR2']"
 yibB,1.8234791258175527,143.0,3786752.0,"YibB family protein, function unknown",b3618,
-waaL,2.2902030827416993,143.0,3790848.0,O-antigen ligase,b3622,"frozenset({<Reaction O16A4Lpp at 0x7fcfa67240b8>, <Reaction ECA4OALpp at 0x7fcfa6a1ccf8>})"
-waaU,2.4278965952336984,143.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,frozenset({<Reaction HEPT4 at 0x7fcfa6911358>})
-waaZ,2.0075380301747514,143.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,frozenset({<Reaction MOAT3C at 0x7fcfa67b10f0>})
-waaY,2.2606693969471565,143.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,frozenset({<Reaction HEPK2 at 0x7fcfa6906ef0>})
+waaL,2.2902030827416993,143.0,3790848.0,O-antigen ligase,b3622,"['O16A4Lpp', 'ECA4OALpp']"
+waaU,2.4278965952336984,143.0,3791598.0,lipopolysaccharide core biosynthesis,b3623,['HEPT4']
+waaZ,2.0075380301747514,143.0,3792896.0,lipopolysaccharide KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3624,['MOAT3C']
+waaY,2.2606693969471565,143.0,3793626.0,lipopolysaccharide core biosynthesis protein,b3625,['HEPK2']
 waaJ,2.210756140992086,143.0,3794944.0,,,
-waaR,1.9745660062176102,143.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,frozenset({<Reaction GLCTR3 at 0x7fcfa6990588>})
-waaB,1.787007625349864,143.0,3796992.0,"lipopolysaccharide 1,6-galactosyltransferase; UDP-D-galactose:(glucosyl)lipopolysaccharide-1, 6-D-galactosyltransferase",b3628,frozenset({<Reaction GALT1 at 0x7fcfa695af98>})
-waaS,2.5202667072641387,143.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,frozenset({<Reaction RHAT1 at 0x7fcfa661cda0>})
-waaP,1.5092416653705245,143.0,3799040.0,kinase that phosphorylates core heptose of lipopolysaccharide,b3630,frozenset({<Reaction HEPK1 at 0x7fcfa6906e48>})
+waaR,1.9745660062176102,143.0,3795398.0,"lipopolysaccharide 1,2-glucosyltransferase; UDP-glucose:(glucosyl)LPS alpha-1,2-glucosyltransferase",b3626,['GLCTR3']
+waaB,1.787007625349864,143.0,3796992.0,"lipopolysaccharide 1,6-galactosyltransferase; UDP-D-galactose:(glucosyl)lipopolysaccharide-1, 6-D-galactosyltransferase",b3628,['GALT1']
+waaS,2.5202667072641387,143.0,3797540.0,lipopolysaccharide rhamnose:KdoIII transferase; lipopolysaccharide core biosynthesis protein,b3629,['RHAT1']
+waaP,1.5092416653705245,143.0,3799040.0,kinase that phosphorylates core heptose of lipopolysaccharide,b3630,['HEPK1']
 rpmG,1.4202832758989397,144.0,3804672.0,50S ribosomal subunit protein L33,b3636,
 dinD,1.473047560091916,145.0,3811328.0,DNA damage-inducible protein,b3645,
 yicT,1.4227625187506636,146.0,3829784.0,No_gene_product,b4653,
@@ -457,17 +457,17 @@ tnaC,1.7381821725728632,149.0,3881856.0,tryptophanase leader peptide,b3707,
 cbrB,1.6368141669411187,150.0,3891200.0,"PRK09823 family inner membrane protein, creBC regulon",b3716,
 cbrC,1.4819661791148522,150.0,3891381.0,UPF0167 family protein,b3717,
 bglG,1.5296577494547519,151.0,3899392.0,transcriptional antiterminator of the bgl operon,b3723,
-atpE,1.399398249429639,152.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,frozenset({<Reaction ATPS4rpp at 0x7fcfa6b16748>})
+atpE,1.399398249429639,152.0,3914309.0,"F0 sector of membrane-bound ATP synthase, subunit c",b3737,['ATPS4rpp']
 rsmG,1.3509624926285306,152.0,3916416.0,"16S rRNA m(7)G527 methyltransferase, SAM-dependent; glucose-inhibited cell-division protein",b3740,
 yifE,1.4174893187045645,153.0,3941445.0,UPF0438 family protein,b3764,
 ilvL,1.5895290774559212,153.0,3943681.0,ilvG operon leader peptide,b3766,
 ppiC,1.3831824677535538,154.0,3953152.0,peptidyl-prolyl cis-trans isomerase C (rotamase C),b3775,
 yigF,2.010239292350308,155.0,3995778.0,DUF2628 family putative inner membrane protein,b3817,
 yigG,2.067289571368624,155.0,3996172.0,PRK11371 family inner membrane protein,b3818,
-ompL,1.513606589382666,156.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,frozenset({<Reaction H2Otex at 0x7fcfa68f9208>})
+ompL,1.513606589382666,156.0,4057088.0,outer membrane porin L; putative sulpholipid porin,b3875,['H2Otex']
 yiiF,1.7647855620171045,157.0,4073110.0,"putative thymol sensitivity protein, CopG family putative transcriptional regulator",b3890,
 yiiS,1.45291287935453,158.0,4103168.0,UPF0381 family protein,b3922,
-murB,1.3955226174609592,159.0,4161984.0,"UDP-N-acetylenolpyruvoylglucosamine reductase, FAD-binding",b3972,frozenset({<Reaction UAPGR at 0x7fcfa6571ba8>})
+murB,1.3955226174609592,159.0,4161984.0,"UDP-N-acetylenolpyruvoylglucosamine reductase, FAD-binding",b3972,['UAPGR']
 arpA,1.5714704898640406,160.0,4210688.0,ankyrin repeat protein,b4017,
 yjbI,2.2754747996545994,161.0,4240630.0,No_gene_product,b4038,
 yjbJ,1.4769322453565148,162.0,4249164.0,"stress-induced protein, UPF0337 family",b4045,
@@ -476,7 +476,7 @@ yjbM,1.8959240136723048,162.0,4250526.0,uncharacterized protein,b4048,
 yjbS,2.365091863339395,163.0,4258816.0,uncharacterized protein,b4621,
 yjcF,2.1340282237108807,164.0,4272128.0,pentapeptide repeats protein,b4066,
 adiY,1.7595396716347693,165.0,4327424.0,adi system transcriptional activator,b4116,
-melB,1.5318367484092226,165.0,4333568.0,melibiose:sodium symporter,b4120,frozenset({<Reaction MELIBt2pp at 0x7fcfa67f50f0>})
+melB,1.5318367484092226,165.0,4333568.0,melibiose:sodium symporter,b4120,['MELIBt2pp']
 yjdK,2.442716621637579,166.0,4342400.0,,,
 yjdO,1.9344297320990078,166.0,4342784.0,,,
 cadC,1.643767569642551,166.0,4350212.0,cadBA operon transcriptional activator,b4133,
@@ -506,7 +506,7 @@ yjhI,1.5687666626883219,176.0,4514831.0,putative DNA-binding transcriptional reg
 sgcB,1.5067438170217153,177.0,4520071.0,putative enzyme IIB component of PTS,b4565,
 yjhY,1.5076590574263682,177.0,4521984.0,No_gene_product,b4656,
 nanM,1.4258132359079205,178.0,4528128.0,N-acetylneuraminic acid mutarotase,b4310,
-nanC,1.4822457233185171,178.0,4528601.0,N-acetylnuraminic acid outer membrane channel protein,b4311,frozenset({<Reaction ACNAMtex at 0x7fcfa6be5240>})
+nanC,1.4822457233185171,178.0,4528601.0,N-acetylnuraminic acid outer membrane channel protein,b4311,['ACNAMtex']
 fimB,1.7226608903409093,178.0,4530773.0,tyrosine recombinase/inversion of on/off regulator of fimA,b4312,
 fimE,1.5964084910671552,178.0,4532224.0,tyrosine recombinase/inversion of on/off regulator of fimA,b4313,
 yjiC,1.9488609740964207,179.0,4545306.0,uncharacterized protein,b4325,

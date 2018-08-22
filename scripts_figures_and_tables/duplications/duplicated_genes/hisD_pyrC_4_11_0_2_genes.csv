@@ -1,4 +1,4 @@
-,Multiplicity,Group Num,Start Position,Product,Gene Name,Reactions
+,Multiplicity,Group Number,Start Position,Product,Gene,iJO1366 Reactions
 ykgL,1.3579776709969082,1.0,307822.0,uncharacterized protein,b0295,
 ykgR,1.5106854169145385,1.0,308851.0,uncharacterized protein,b4671,
 ykgP,1.64215467002325,1.0,309426.0,No_gene_product,b4630,
@@ -34,7 +34,7 @@ yfdR,1.5731438509468896,27.0,2468462.0,CPS-53 (KpLE1) prophage; conserved protei
 yfdT,1.4303835926673105,27.0,2469376.0,CPS-53 (KpLE1) prophage; uncharacterized protein,b2363,
 ypdJ,1.4080448714272327,27.0,2469659.0,No_gene_product,b4545,
 torI,1.3721414749958112,27.0,2469888.0,response regulator inhibitor for tor operon,b4501,
-xapA,1.419758109281553,28.0,2517403.0,purine nucleoside phosphorylase 2; nicotinamide 1-beta-D-riboside synthase,b2407,"frozenset({<Reaction PUNP7 at 0x7fcfa6681908>, <Reaction PUNP3 at 0x7fcfa6681630>, <Reaction PUNP5 at 0x7fcfa6681940>, <Reaction PUNP4 at 0x7fcfa66819b0>, <Reaction PUNP6 at 0x7fcfa66819e8>})"
+xapA,1.419758109281553,28.0,2517403.0,purine nucleoside phosphorylase 2; nicotinamide 1-beta-D-riboside synthase,b2407,"['PUNP6', 'PUNP7', 'PUNP3', 'PUNP5', 'PUNP4']"
 yfeK,1.455777310395295,29.0,2530700.0,uncharacterized protein,b2419,
 ypfM,1.8414278207064512,30.0,2584192.0,stress-induced small enterobacterial protein,b4606,
 pheL,1.2906784057540333,31.0,2730957.0,pheA gene leader peptide,b2598,
