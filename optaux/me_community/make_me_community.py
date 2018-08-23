@@ -16,6 +16,22 @@ with open('%s/iJL1678b.pickle' % resource_dir, 'rb') as f:
 me.unmodeled_protein_fraction = .8
 me_cons.unmodeled_protein_fraction = .8
 
+print("USING 65 for ALL keffs")
+for r in me.reactions:
+    if hasattr(r, 'keff'):
+        r.keff = 65.
+for r in me.process_data:
+    if hasattr(r, 'keff'):
+        r.keff = 65.
+
+for r in me_cons.reactions:
+    if hasattr(r, 'keff'):
+        r.keff = 65.
+for r in me_cons.process_data:
+    if hasattr(r, 'keff'):
+        r.keff = 65.
+
+
 me.global_info['k_deg'] = 0.
 me.update()
 me_cons.global_info['k_deg'] = 0.
