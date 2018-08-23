@@ -104,8 +104,9 @@ resource_dir = resources.__path__[0]
 with open('%s/iJL1678b_community.pickle' % resource_dir, 'rb') as f:
     model = pickle.load(f)
 
-model.reactions.EX_glc__D_e_Shared.lower_bound = GLUCOSE_UPTAKE
-
+model.reactions.EX_glc__D_e_S1.lower_bound = GLUCOSE_UPTAKE / 2.
+model.reactions.EX_glc__D_e_S2.lower_bound = GLUCOSE_UPTAKE / 2.
+print(model.reactions.EX_glc__D_e_S2.lower_bound)
 m_model = cobra.io.load_json_model('%s/iJO1366.json' % resource_dir)
 print('loaded model')
 
