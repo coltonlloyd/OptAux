@@ -13,7 +13,7 @@ here = dirname(abspath(__file__))
 resource_dir = dirname(abspath(resources.__file__))
 
 
-def make_binary_community_me(model, model_cons, ME_model=True):
+def make_binary_community_me(model, model_cons, savefile_name, ME_model=True):
     # Add 1 metabolite to model for each strain
     met_list = []
     for met in model.metabolites:
@@ -90,7 +90,7 @@ def make_binary_community_me(model, model_cons, ME_model=True):
         model.reactions.dummy_reaction_FWD_SPONT_S1.objective_coefficient = 1.
         model.reactions.dummy_reaction_FWD_SPONT_S2.objective_coefficient = 1.
 
-        with open('%s/iJL1678b_community.pickle' % resource_dir, 'wb') as f:
+        with open('%s/%s' % (resource_dir, savefile_name), 'wb') as f:
             pickle.dump(model, f)
     else:
         return model

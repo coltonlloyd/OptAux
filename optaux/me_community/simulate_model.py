@@ -72,6 +72,7 @@ parser.add_argument('--Scale_secretion', default='True')
 parser.add_argument('--Restrict_crossfeeding', default='experimental_inferred')
 parser.add_argument('--glucose_uptake', default=-1000)
 parser.add_argument('--docker', default='False')
+parser.add_argument('--model_to_use', default='default')
 
 args = parser.parse_args()
 
@@ -87,6 +88,7 @@ MODE = args.mode
 SCALE_SECRETION = str2bool(args.Scale_secretion)
 GLUCOSE_UPTAKE = float(args.glucose_uptake)
 DOCKER = str2bool(args.docker)
+MODEL_TO_USE = args.model_to_use
 
 if MODE == 'default' or MODE == 'glucose_limited':
     RESTRICT = False
@@ -101,7 +103,9 @@ print(PAIR, FRACTION, UNMODELED_PROTEIN, SCALE_SECRETION, RESTRICT)
 # Load and prepare model for simulations
 here = dirname(abspath(__file__))
 resource_dir = resources.__path__[0]
-with open('%s/iJL1678b_community.pickle' % resource_dir, 'rb') as f:
+
+with open('%s/community_me_%s_keffs.pickle' % (resource_dir,
+                                               MODEL_TO_USE), 'rb') as f:
     model = pickle.load(f)
 
 model.reactions.EX_glc__D_e_S1.lower_bound = GLUCOSE_UPTAKE / 2.

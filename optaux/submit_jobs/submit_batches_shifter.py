@@ -14,11 +14,11 @@ modes = ['secretion_keff_sweep', 'metabolite_limitation',
 submit_template = \
     "sbatch shifter_submit_job %s %s %s %s %s --Restrict_crossfeeding %s " \
     "--keff_transporter_1 %s --keff_transporter_2 %s --glucose_uptake %s " \
-    "--docker %s"
+    "--docker %s --model_to_use %s"
 
 if __name__ == '__main__':
     os.system('shifterimg -v pull coltonlloyd/optaux:latest')
-    
+    model = 'null'
     values = []
     for mode in modes:
         if mode == 'secretion_keff_sweep':
@@ -35,7 +35,8 @@ if __name__ == '__main__':
                     for f in np.linspace(.05, .95, 10):
                         os.system(submit_template %
                                   (pair, f, q1, q2, mode,
-                                   'experimental_inferred', k1, k2, -1000, True))
+                                   'experimental_inferred', k1, k2, -1000,
+                                   True, model))
 
         elif mode == 'metabolite_limitation':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -49,7 +50,8 @@ if __name__ == '__main__':
 
                     for f in np.linspace(.05, .95, 10):
                         os.system(submit_template %
-                                  (pair, f, q1, q2, mode, met, k1, k2, -1000, True))
+                                  (pair, f, q1, q2, mode, met, k1, k2, -1000,
+                                   True, model))
         elif mode == 'unmodeled_sweep':
             for ko1, ko2 in zip(ko1s, ko2s):
                 pair = ':'.join(ko1) + '-' + ':'.join(ko2)
@@ -61,7 +63,8 @@ if __name__ == '__main__':
                     for f in np.linspace(.05, .95, 10):
                         os.system(submit_template %
                                   (pair, f, q1, q2, mode,
-                                   'experimental_inferred', k1, k2, -1000, True))
+                                   'experimental_inferred', k1, k2, -1000,
+                                   True, model))
 
         elif mode == 'default':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -72,7 +75,8 @@ if __name__ == '__main__':
                 k2 = 1.
                 for f in np.linspace(.05, .95, 10):
                     os.system(submit_template %
-                              (pair, f, q1, q2, mode, False, k1, k2, -1000, True))
+                              (pair, f, q1, q2, mode, False, k1, k2, -1000,
+                               True, model))
 
         elif mode == 'glucose_limited':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -83,4 +87,5 @@ if __name__ == '__main__':
                 k2 = 1.
                 for f in np.linspace(.05, .95, 10):
                     os.system(submit_template %
-                              (pair, f, q1, q2, mode, False, k1, k2, -5, True))
+                              (pair, f, q1, q2, mode, False, k1, k2, -5,
+                               True, model))
