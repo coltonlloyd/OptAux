@@ -104,12 +104,12 @@ print(PAIR, FRACTION, UNMODELED_PROTEIN, SCALE_SECRETION, RESTRICT)
 here = dirname(abspath(__file__))
 resource_dir = resources.__path__[0]
 
-with open('%s/community_me_%s_keffs.pickle' % (resource_dir,
-                                               MODEL_TO_USE), 'rb') as f:
+model_loc = '%s/community_me_%s_keffs.pickle' % (resource_dir, MODEL_TO_USE)
+print(model_loc)
+with open(model_loc, 'rb') as f:
     model = pickle.load(f)
 
-model.reactions.EX_glc__D_e_S1.lower_bound = GLUCOSE_UPTAKE / 2.
-model.reactions.EX_glc__D_e_S2.lower_bound = GLUCOSE_UPTAKE / 2.
+model.reactions.EX_glc__D_e_Shared.lower_bound = GLUCOSE_UPTAKE
 print(model.reactions.EX_glc__D_e_S2.lower_bound)
 m_model = cobra.io.load_json_model('%s/iJO1366.json' % resource_dir)
 print('loaded model')

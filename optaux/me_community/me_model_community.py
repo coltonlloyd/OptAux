@@ -117,13 +117,13 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
 
     for rxn in model.reactions.query('EX_'):
         # filter out a few complexes with 'COMPLEX_mod' in ID
-        if not rxn.id.startswith('EX_'):
+        if not rxn.id.startswith('EX_') or 'Shared' in rxn.id:
             continue
 
         check_rxn_id = rxn.id.replace('_S1', '_Shared').replace('_S2',
                                                                 '_Shared')
         check_rxn = model.reactions.get_by_id(check_rxn_id)
-        if check_rxn.lower_bound < 0:
+        if check_rxn.lower_bound < 0 and check_rxn.id != 'EX_glc__D_e_Shared':
             continue
 
         # split exchanges into forward and reverse reactions
@@ -150,6 +150,9 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
             rxn.add_metabolites(
                 {model.metabolites.get_by_id(met_shared_id): frac_term},
                 combine=False)
+            if rxn.id in ['EX_glc__D_e_S1', 'EX_glc__D_e_S2']:
+                rxn.upper_bound = 0
+                print(rxn.reaction, rxn.upper_bound)
 
             # met <- x * met_shared
             rxn_rev_id = rxn.id + '_reverse'

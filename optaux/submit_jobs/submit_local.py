@@ -15,14 +15,18 @@ def run_pool(function, values, processes=4):
 
 
 def submit_job(value_tuple):
-    pair, f, q1, q2, mode, restrict, k1, k2 = value_tuple
+    pair, f, q1, q2, mode, restrict, k1, k2, uptake, model = value_tuple
     os.system("python3.6 %s/simulate_model.py %s %s %s %s %s "
               "--Restrict_crossfeeding %s --keff_transporter_1 %s "
-              "--keff_transporter_2 %s" %
-              (sim_script_dir, pair, f, q1, q2, mode, restrict, k1, k2))
+              "--keff_transporter_2 %s --glucose_uptake %s "
+              "--model_to_use %s" %
+              (sim_script_dir, pair, f, q1, q2, mode, restrict, k1, k2,
+               uptake, model))
 
 
-def does_sim_exist(simulation_directory, pair, mode, f, q1, q2, k1, k2, met=None):
+def does_sim_exist(simulation_directory, pair, mode, f, q1, q2, k1, k2,
+                   met=None):
+
     if mode == 'secretion_keff_sweep':
         file_loc = \
             '%s/%s/%s/%.2f_%.2f_0_secretion_multiplier/' \
@@ -41,6 +45,10 @@ def does_sim_exist(simulation_directory, pair, mode, f, q1, q2, k1, k2, met=None
             (simulation_directory, mode, pair, met, f)
 
     elif mode == 'default':
+        file_loc = '%s/%s/%s/%.2f_%.2f_unmodeled_protein' \
+                   '/%.2f_frac_strain1_sol.json' % \
+                   (simulation_directory, mode, pair, q1*100, q2*100, f)
+    elif mode == 'glucose_limited':
         file_loc = '%s/%s/%s/%.2f_%.2f_unmodeled_protein' \
                    '/%.2f_frac_strain1_sol.json' % \
                    (simulation_directory, mode, pair, q1*100, q2*100, f)
