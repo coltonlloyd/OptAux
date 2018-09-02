@@ -28,7 +28,7 @@ def get_knockouts(optknock_problem):
     return knockouts
 
 
-def run_optaux(cons_model, target_metabolite, percent_max_growth,
+def run_optaux(cons_model, target_metabolite, growth_rate,
                n_knockouts, aerobicity='aerobic',
                lb_essential_list=[], trace_metabolite_threshold=0,
                media_list=[], exclude_reactions={},
@@ -38,6 +38,14 @@ def run_optaux(cons_model, target_metabolite, percent_max_growth,
 
     # Find growth objective
     growth_objective = list(model.objective.keys())[0].id
+
+    # Run into numerical issues with small coefficients (FE-S cluster, etc.)
+    biomass = model.reactions.get_by_id(growth_objective)
+    for k, v in biomass.metabolites.items():
+        if v > -1e-3 and v < 0:
+            biomass._metabolites[k] = -1e-3
+
+    model.reactions.BIOMASS_Ec_iJO1366_WT_53p95M.remove_from_model()
 
     # Target exchange reaction
     target_exchange = 'EX_' + target_metabolite
@@ -84,8 +92,7 @@ def run_optaux(cons_model, target_metabolite, percent_max_growth,
                     manual_exclude_reaction_list=lb_essential_list)
 
     # Set the min_biomass to a percent of the max growth rate
-    max_WT_growth = model_red.optimize().f
-    min_biomass = max_WT_growth * percent_max_growth
+    min_biomass = growth_rate
 
     # Set objective to uptake of target metabolite
     try:

@@ -60,11 +60,11 @@ if __name__ == '__main__':
                 met = r.id.replace('EX_', '')
 
                 # Fraction of maximum growth rate for optaux sim
-                frac = .01
+                growth_rate = .1
                 if 'C' not in model.metabolites.get_by_id(met).elements:
                     continue
                 try:
-                    ans = run_optaux(model, met, frac, num,
+                    ans = run_optaux(model, met, growth_rate, num,
                                      lb_essential_list=lb_essential_list,
                                      media_list=[], solver='gurobi',
                                      exclude_reactions=false_positives,

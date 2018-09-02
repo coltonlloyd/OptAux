@@ -125,6 +125,7 @@ def set_up_optaux(model, chemical_objective, knockable_reactions,
     # convert to canonical form and copy
     con_model = canonical_form(model, copy=True)
 
+    # Inner problem is a minimization
     for r in con_model.reactions:
         if r.id == chemical_objective:
             r.objective_coefficient = 1
@@ -134,22 +135,18 @@ def set_up_optaux(model, chemical_objective, knockable_reactions,
             r.objective_coefficient = 0.
 
     model = con_model.copy()
-    cons_model = con_model.copy()
 
-    model = dual_problem(model, integer_vars_to_maintain=decision_variable_ids)
-    for r in cons_model.reactions:
-        if 'decision_var' not in r.id:
-            r.objective_coefficient = 0
-            model.add_reaction(r)
-        else:
-            r.objective_coefficient = 0
-    for r in cons_model.reactions:
-        if 'decision_var' in r.id:
-            update_decision_variable(model, r.id.replace('_decision_var', ''))
+    # Dual embed minimization problem
+    model = dual_embed(model, decision_variable_ids)
 
-    # max c_dual^{-T} * x_dual
+    # Reset out objective as maximization
     for r in model.reactions:
-        r.objective_coefficient = -r.objective_coefficient
+        if r.id == chemical_objective:
+            r.objective_coefficient = -1
+        elif r.id == chemical_objective + '_reverse':
+            r.objective_coefficient = 1
+        else:
+            r.objective_coefficient = 0.
 
     # add the n_knockouts constraint
     n_knockouts_constr = Metabolite("n_knockouts_constraint")
