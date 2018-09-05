@@ -126,6 +126,10 @@ def get_characteristic_abundance_df(save_loc):
                 return True
             if 'I40' in name or 'I30' in name:
                 return True
+            # Low coverage and no detected gltA characteristic mutation
+            # for ALE '10-23-1-1'. Remove this point
+            if 'A10' in name and 'F23' in name:
+                return True
             return False
 
         df_raw = \
