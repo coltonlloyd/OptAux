@@ -17,7 +17,7 @@ here = dirname(abspath(__file__))
 if __name__ == '__main__':
     table_save_loc = '%s/relative_abundance/tables' % here
     fig_save_loc = '%s/relative_abundance/figures' % here
-    alignment_loc = ''  # alignment files not yet available
+    alignment_loc = '/media/hard_drive/all_aux_ale_resequencing/aux/'  # alignment files not yet available
 
     fig, axes = plt.subplots(2, 3, figsize=(15, 10), sharey=True, sharex='col')
     print(axes)

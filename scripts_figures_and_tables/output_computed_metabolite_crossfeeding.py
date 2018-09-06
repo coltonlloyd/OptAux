@@ -16,9 +16,6 @@ colors.extend(reversed(colors[:-1]))
 plt.rcParams['axes.prop_cycle'] = cycler(color=colors)
 
 
-skip_list = ['h2o', 'etoh', 'o2', 'mg2', 'nh4', 'so4', 'h', 'ac', 'for',
-             'pi', 'lac__D', 'co2', 'glc__D', 'fe2', 'fe3', 'fum']
-
 here = os.path.dirname(os.path.abspath(__file__))
 
 rxn_to_gene = {'CS': r'$\Delta \mathit{gltA} \Delta \mathit{prpC}$',
@@ -36,45 +33,47 @@ def get_metabolite_exchange(x_dict, exchange_fluxes, frac_S1):
     sim_fluxes = {}
     for r, v in x_dict.items():
 
-        if 'reverse' in r or not r.startswith('EX_') or '_Shared' in r:
-            continue
-
-        met_id = remove_strain_from_id(r).replace('EX_', '').replace('_e', '')
-        if met_id in skip_list:
+        if not r.startswith('EX_') or '_Shared' in r:
             continue
 
         sim_fluxes[r] = v * frac_S1 if '_S1' in r else -v * (1-frac_S1)
 
-    skip_reaction = []
     for r in list(sim_fluxes.keys()):
-        if r in skip_reaction:
-            continue
-        skip_reaction.append(r)
         v = sim_fluxes[r]
-        s2_r = r.replace('_S1', '_S2')
-        s1_r = r.replace('_S2', '_S1')
-        if '_S1' in r and s2_r not in skip_reaction:
-            v += sim_fluxes.get(s2_r, 0)
-            skip_reaction.append(s2_r)
-        elif '_S2' in r and s1_r not in skip_reaction:
-            v += sim_fluxes.get(s1_r, 0)
-            skip_reaction.append(s1_r)
-
-        exchange_fluxes[remove_strain_from_id(r)].append(v)
+        exchange_fluxes[r].append(v)
 
     return exchange_fluxes
 
 
-def filter_exchange_fluxes(exchange_fluxes, sim_kind, threshold=.2):
+def filter_exchange_fluxes(exchange_fluxes, sim_kind, threshold=.002):
     output_fluxes = {}
+
+    back = True if sim_kind == 'm_model' else False
+
     for r, flux in exchange_fluxes.items():
+        # Uses back instead of reverse if m-model
+
+        if 'reverse' in r:
+            continue
+        if 'back' in r:
+            continue
 
         flux = np.array(flux)
 
         if len(flux) == 0 or abs(flux).sum() <= threshold:
             continue
-        if sim_kind == 'default' and 'his__L' in r:
+
+        suffix = '_reverse' if not back else '_back'
+        if '_S1' in r:
+            reverse_flux = \
+                np.array(exchange_fluxes[r.replace('_S1', '_S2') + suffix])
+        elif '_S2' in r:
+            reverse_flux = \
+                np.array(exchange_fluxes[r.replace('_S2', '_S1') + suffix])
+
+        if len(reverse_flux) == 0 or abs(reverse_flux).sum() <= threshold:
             continue
+
         output_fluxes[r] = flux
 
     return output_fluxes
@@ -92,8 +91,7 @@ def get_me_exchange_array(sim_loc, ale, unmodeled):
     for sim in sorted(sims):
         # fraction of strain 1
         frac = (float(sim.split('/')[-1].split('_')[0]))
-        if int(100. * frac) % 5 != 0 or int(100. * frac) % 10 == 0:
-            continue
+
         x.append(frac)
         with open(sim, 'r') as f:
             x_dict = json.load(f)
@@ -116,7 +114,7 @@ def add_met_exchange_to_axis(ex, x, sim_kind, ale, ax):
             line_type = ':'
 
         met = r.replace('EX_', '').replace('_e', '')
-        if sim_kind != 'default':
+        if sim_kind == 'secretion_keff_sweep':
             color = colors[0] if met == 'his__L' else colors[1]
             ax.plot(x, flux, line_type, linewidth=5,
                     label=met, color=color)
@@ -133,7 +131,7 @@ def add_met_exchange_to_axis(ex, x, sim_kind, ale, ax):
     ax.set_xlim([.05, .95])
 
 
-def plot_metabolit_exchange(sim_loc, ales, unmodeled, sim_kind):
+def plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind):
     fig, axes = plt.subplots(1, 3, sharex='row', sharey='col', figsize=(15, 4))
     for i, ale in enumerate(ales):
         ax = axes[i]
@@ -154,16 +152,26 @@ def plot_metabolit_exchange(sim_loc, ales, unmodeled, sim_kind):
 if __name__ == '__main__':
     plt.rcParams['axes.facecolor'] = 'w'
     ales = ['HISTD-CS', 'HISTD-DHORTS', 'HISTD-GLUDy:GLUSy']
-    sim_location = '%s/community_me_sims/' % here
+    sim_location = '/home/sbrg-cjlloyd/Desktop/community_sims_output_ML_keffs/'
     save_location = '%s/community_plots/' % here
 
     sim_kind = 'secretion_keff_sweep'
     sim_loc = '/'.join([sim_location, sim_kind])
     # plot with default values
     unmodeled = '100.00_100.00_0_secretion_multiplier'
-    plot_metabolit_exchange(sim_loc, ales, unmodeled, sim_kind)
+    plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)
 
     sim_kind = 'default'
     sim_loc = '/'.join([sim_location, sim_kind])
     unmodeled = '75.00_75.00_unmodeled_protein'
-    plot_metabolit_exchange(sim_loc, ales, unmodeled, sim_kind)
+    plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)
+
+    sim_kind = 'glucose_limited'
+    sim_loc = '/'.join([sim_location, sim_kind])
+    unmodeled = '36.00_36.00_unmodeled_protein'
+    plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)
+
+    sim_kind = 'm_model'
+    sim_loc = '/'.join(['/home/sbrg-cjlloyd/Desktop/community_m_sims/'])
+    unmodeled = 'no_unmodeled'
+    plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)

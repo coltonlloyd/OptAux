@@ -3,6 +3,7 @@ import pandas as pd
 from glob import glob
 
 from optaux import resources
+from optaux.ale_resequencing.relative_abundance import _fill_missing_df_entries
 
 
 resource_dir = resources.__path__[0]
@@ -12,7 +13,9 @@ for resequencing in glob('%s/resequencing_data/*Table.csv' % resource_dir):
 
     # load df
     df = pd.read_csv(resequencing)
-
+    df.set_index('Position', inplace=True)
+    df = _fill_missing_df_entries(df, pair.replace('_', ''))
+    df.reset_index(inplace=True, col_fill='Position')
     #df = df[df.columns.drop(list(df.filter(regex='I30 R1')))]
     #df = df[df.columns.drop(list(df.filter(regex='I40 R1')))]
 

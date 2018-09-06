@@ -12,7 +12,7 @@ ko1s = [['HISTD'], ['HISTD'], ['HISTD']]
 
 ko2s = [['CS'], ['GLUDy', 'GLUSy'], ['DHORTS']]
 
-modes = ['secretion_keff_sweep', 'metabolite_limitation', 'default']
+modes = ['glucose_limited']
 
 here = os.path.dirname(os.path.abspath(__file__))
 simulation_directory = '%s/community_me_sims' % here
@@ -23,6 +23,7 @@ skip_mets = ['EX_fe3dcit_e', 'EX_fe3dcit_e', 'EX_progly_e', 'EX_23ccmp_e',
 
 if __name__ == '__main__':
     values = []
+    model = 'default'
     for mode in modes:
         if mode == 'secretion_keff_sweep':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -38,7 +39,8 @@ if __name__ == '__main__':
                         if not does_sim_exist(simulation_directory, pair, mode,
                                               f, q1, q2, k1, k2):
                             values.append((pair, f, q1, q2, mode,
-                                           'experimental_inferred', k1, k2))
+                                           'experimental_inferred', k1, k2,
+                                           -1000, model))
 
         elif mode == 'metabolite_limitation':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -56,7 +58,8 @@ if __name__ == '__main__':
                         if not does_sim_exist(simulation_directory, pair, mode,
                                               f, q1, q2, k1, k2, met):
                             values.append(
-                                (pair, f, q1, q2, mode, met,  k1, k2))
+                                (pair, f, q1, q2, mode, met,  k1, k2, -1000,
+                                 model))
         elif mode == 'unmodeled_sweep':
             for ko1, ko2 in zip(ko1s, ko2s):
                 pair = ':'.join(ko1) + '-' + ':'.join(ko2)
@@ -69,7 +72,8 @@ if __name__ == '__main__':
                         if not does_sim_exist(simulation_directory, pair, mode,
                                               f, q1, q2, k1, k2):
                             values.append((pair, f, q1, q2, mode,
-                                           'experimental_inferred', k1, k2))
+                                           'experimental_inferred', k1, k2,
+                                           -1000, model))
 
         elif mode == 'default':
             for ko1, ko2 in zip(ko1s, ko2s):
@@ -79,6 +83,20 @@ if __name__ == '__main__':
                 for f in np.linspace(.05, .95, 10):
                     if not does_sim_exist(simulation_directory, pair, mode, f,
                                           q1, q2, k1, k2):
-                        values.append((pair, f, q1, q2, mode, False, k1, k2))
+                        values.append((pair, f, q1, q2, mode, False, k1, k2,
+                                       -1000, model))
 
-    run_pool(submit_job, values, processes=2)
+        elif mode == 'glucose_limited':
+            for ko1, ko2 in zip(ko1s, ko2s):
+                pair = ':'.join(ko1) + '-' + ':'.join(ko2)
+                q1 = .36
+                q2 = .36
+                k1 = 1.
+                k2 = 1.
+                for f in np.linspace(.05, .95, 10):
+                    if not does_sim_exist(simulation_directory, pair, mode, f,
+                                          q1, q2, k1, k2, model):
+                        values.append((pair, f, q1, q2, mode, False, k1, k2,
+                                       -5, model))
+
+    run_pool(submit_job, values, processes=4)

@@ -87,6 +87,13 @@ def return_summary_file_loc(pair, ale, flask, isolate, replicate):
            (resource_dir, pair, ale, flask, isolate, replicate)
     if os.path.exists(path):
         return path
+    # Needed to handle change in ale naming convention throughout course of
+    # study
+    elif os.path.exists(path.replace('-1-', '-0-')):
+        return path.replace('-1-', '-0-')
+
+    elif os.path.exists(path.replace('-1-', '-0-').replace('-1/', '-0/')):
+        return path.replace('-1-', '-0-').replace('-1/', '-0/')
     else:
         raise UserWarning(path, 'not valid')
 
@@ -137,20 +144,22 @@ def find_duplicated_genes(save_loc, duplicated_genes, coverage_list, mean,
             for i in pos:
                 multiplicity.append(coverage_list[i])
             df.loc[gene, 'Multiplicity'] = np.array(multiplicity).mean() / mean
-            df.loc[gene, 'Group Num'] = group
+            df.loc[gene, 'Group Number'] = group
             df.loc[gene, 'Start Position'] = list(pos)[0]
             try:
                 df.loc[gene, 'Product'] = g_to_info[gene]['gene_product']
             except:
                 df.loc[gene, 'Product'] = ''
             try:
-                df.loc[gene, 'Gene Name'] = g_to_info[gene]['gene_name']
+                df.loc[gene, 'Gene'] = g_to_info[gene]['gene_name']
             except:
-                df.loc[gene, 'Gene Name'] = ''
+                df.loc[gene, 'Gene'] = ''
             try:
-                df.loc[gene, 'Reactions'] = str(iJO1366.genes.get_by_id(df.loc[gene, 'Gene Name']).reactions)
+                df.loc[gene, 'iJO1366 Reactions'] = \
+                    str([i.id for i in iJO1366.genes.get_by_id(
+                        df.loc[gene, 'Gene']).reactions])
             except:
-                df.loc[gene, 'Reactions'] = ''
+                df.loc[gene, 'iJO1366 Reactions'] = ''
             last = index
     df.to_csv('%s/%s_%s_%s_%s_%s_genes.csv' %
               (save_loc, pair, ale_num, flask_num, isolate, replicate))
@@ -191,7 +200,7 @@ def return_gene_duplicates(save_loc, pair, coverage_dict, cutoff=1.25):
                 for replicate, read_coverage in coverage_dict[ale][flask][isolate].items():
                     print(pair, ale, flask, isolate, replicate)
                     summary_file = return_summary_file_loc(pair, ale, flask,
-                                                       isolate, replicate)
+                                                           isolate, replicate)
                     mean = get_fit_mean_from_breseq(summary_file)
 
                     read_cov = []
@@ -206,11 +215,12 @@ def return_gene_duplicates(save_loc, pair, coverage_dict, cutoff=1.25):
     return all_dup_genes
 
 
-def return_coverage_dict(save_loc, alignment_loc, pair, genome_size=4631468):
+def return_coverage_dict(save_loc, alignment_loc, pair, genome_size=4631468,
+                         skip_ale=list()):
     """Return dictionary of {ale:{flask:{isolate:{replicate: coverage_list}}}
 
     where coverage_list is a list of integers corresponding to the number of
-    alignments at each base pair postition
+    alignments at each base pair position
 
     """
     all_coverage = {}
@@ -219,8 +229,11 @@ def return_coverage_dict(save_loc, alignment_loc, pair, genome_size=4631468):
                           'aux_%s/breseq/ale/*/data/reference.bam' % pair):
 
         # Get the ale information
-        ale_name = [str(int(i)) for i in
-                    file.split('ale/')[1].split('/data')[0].split('-')]
+        string_ale_name = file.split('ale/')[1].split('/data')[0]
+        if string_ale_name in skip_ale:
+            print('Skipping ' + file)
+            continue
+        ale_name = [str(int(i)) for i in string_ale_name.split('-')]
         ale_num, flask, isolate, replicate = ale_name
 
         def _add_ale_info_to_coverage_dict(ale_num, flask, isolate,
@@ -429,13 +442,10 @@ def plot_coverage(save_loc, pair, cov_dict, sections=10000, cutoff=1.25,
                     # a rows num_cols columns
                     if isolate not in [30, 40]:
                         ax = axes[num_cols][a]
-                        kind = ''
                     elif isolate == 30:
                         ax = axes[-2][a]
-                        kind = 'endclone'
                     elif isolate == 40:
                         ax = axes[-1][a]
-                        kind = 'endclone'
                     add_gene_positions(ax, ymax, kind='all')
 
                     plot_and_format(ax, xy[:, 0], xy[:, 1], genome_size, ale,
