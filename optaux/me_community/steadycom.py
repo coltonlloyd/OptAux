@@ -29,7 +29,7 @@ except ImportError:
     Red = Green = Normal = ""
 
 
-def make_auxotrophs(model_cons, ko, rename_dict= {}, ko_uptakes=[]):
+def make_auxotrophs(model_cons, ko, rename_dict= {}, ko_uptakes=[], ko_secretion=[]):
     model = model_cons.copy()
     if len(ko) > 0 and ko[0] in model_cons.reactions:
         for rxn in ko:
@@ -46,6 +46,10 @@ def make_auxotrophs(model_cons, ko, rename_dict= {}, ko_uptakes=[]):
         for r in model.reactions.query('EX_'):
             if r.lower_bound == 0:
                 r.lower_bound = -10.
+
+    if len(ko_secretion) > 0:
+        for r in ko_secretion:
+            model.reactions.get_by_id(r).upper_bound = 0
 
     model.id = str(ko)
     model.repair()
@@ -272,13 +276,13 @@ def run_fva_for_abundances(model, percent_max, max_gr, solver=None,
 
     if compiled_expressions is None:
         compiled_expressions = compile_expressions(model)
-
-    out_abundances = {}
-    for strain in model.reactions.query('abundance_strain_0'):
+    from collections import defaultdict
+    out_abundances = defaultdict(dict)
+    for strain in model.reactions.query('abundance_strain_'):
         for frac in np.linspace(percent_max, 1, 10):
             substitute_mu(lp, frac*max_gr, compiled_expressions, solver)
             out_dict = calculate_lp_variability(lp, solver, model, [strain])
-            out_abundances[frac] = out_dict
+            out_abundances[frac].update(out_dict)
 
     return out_abundances
 
@@ -311,7 +315,49 @@ def run(ko1_list, ko2_list):
     # solve(com_model)
 
 
-if __name__ == '__main__':
+def reproduce_figure():
     rename_dict = {'lysA': 'b2838', 'metA': 'b4013', 'yddG': 'b1473',
                    'argH': 'b3960', 'pheA': 'b2599', 'yjeH': 'b4141',
                    'lysO': 'b0874', 'argO': 'b2923'}
+
+    ijo = cobra.io.load_json_model(
+        '/home/sbrg-cjlloyd/Desktop/ecoli_M_models/iJO1366.json')
+    # add methionine export
+    r = cobra.Reaction('METtpp')
+    ijo.add_reaction(r)
+    r.add_metabolites({'met__L_c': -1, 'met__L_p': 1})
+    ijo.reactions.LYSt3pp.gene_reaction_rule = 'b0874'
+    ijo.reactions.METtpp.gene_reaction_rule = 'b4141'
+
+    kos = [['lysA', 'metA', 'yddG'],
+           ['argH', 'pheA', 'yjeH'],
+           ['argH', 'lysO', 'pheA'],
+           ['argO', 'lysA', 'metA']]
+
+    possible_uptake = [['EX_lys__L_e', 'EX_met__L_e'],
+                       ['EX_arg__L_e', 'EX_phe__L_e'],
+                       ['EX_arg__L_e', 'EX_phe__L_e'],
+                       ['EX_lys__L_e', 'EX_met__L_e']]
+
+    # metabolites each strain cannot secrete
+    ko_secretion = [['EX_lys__L_e', 'EX_met__L_e', 'EX_phe__L_e'],
+                    ['EX_arg__L_e', 'EX_met__L_e', 'EX_phe__L_e'],
+                    ['EX_arg__L_e', 'EX_lys__L_e', 'EX_phe__L_e'],
+                    ['EX_arg__L_e', 'EX_lys__L_e', 'EX_met__L_e']]
+    ijo.reactions.EX_o2_e.lower_bound = -18.5
+    ijo.reactions.ATPM.lower_bound = 10.39
+    ijo.reactions.EX_glc__D_e.lower_bound = -8
+
+    com_model = cobra.Model('community_model')
+    exchange_list = [i.id for i in ijo.reactions.query('EX_')]
+    initialize_com_model(com_model, ijo, len(kos), exchange_list)
+
+    model_list = [make_auxotrophs(ijo, ko, ko_uptakes=possible_uptake[i],
+                                  ko_secretion=ko_secretion[i],
+                                  rename_dict=rename_dict) for
+                  i, ko in enumerate(kos)]
+    for i, model in enumerate(model_list):
+        com_model = add_model_to_community(com_model, model, i)
+
+    com_model.reactions.community_biomass_variable.lower_bound = 1.
+    return com_model
