@@ -1,8 +1,11 @@
 FROM sbrg/cobrame:master
 WORKDIR /source/
 
+USER root
+RUN apk add --no-cache zsh
+USER $NB_UID
+
 RUN echo \
-    && apk add --no-cache zsh \
     && echo "# Created by newuser for 5.3.1" > ~/.zshrc \
 	&& cd /source \
 	&& git clone https://github.com/coltonlloyd/OptAux.git \
