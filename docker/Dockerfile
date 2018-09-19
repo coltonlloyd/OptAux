@@ -2,6 +2,10 @@ FROM sbrg/cobrame:master
 WORKDIR /source/
 
 RUN echo \
+    && su \
+    && apk add --no-cache zsh \
+    && exit \
+    && echo "# Created by newuser for 5.3.1" > ~/.zshrc \
 	&& cd /source \
 	&& git clone https://github.com/coltonlloyd/OptAux.git \
 
