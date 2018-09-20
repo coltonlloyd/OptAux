@@ -11,7 +11,11 @@ from optaux.ale_resequencing import relative_abundance_plotting, \
 from optaux.resources.update_mpl_rcparams import update_rcparams
 
 update_rcparams()
+plt.rcParams['xtick.labelsize'] = 20
+plt.rcParams['ytick.labelsize'] = 20
+plt.rcParams['axes.labelsize'] = 20
 plt.rcParams['axes.facecolor'] = 'white'
+plt.rcParams['legend.fontsize'] = 15
 
 here = dirname(abspath(__file__))
 if __name__ == '__main__':
@@ -47,8 +51,12 @@ if __name__ == '__main__':
     for i in [0, 1]:
         axes[i][0].set_ylabel('Fractional Stain Abundance')
 
+    fig.savefig('%s/coverage.eps' % fig_save_loc)
     fig.savefig('%s/coverage.png' % fig_save_loc)
 
     # Normalize = True ensure abundance predictions add to 1
+    # NOTE: Filter for unique case where coverage is too low to identify
+    # characteristic mutation, so filter out ale_10_flask_23
     relative_abundance_plotting.plot_pairwise_comparison_of_preditions(
-        table_save_loc, fig_save_loc, normalize=True)
+        table_save_loc, fig_save_loc, normalize=True,
+        filter_ale_10_flask_23=True)

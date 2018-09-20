@@ -12,6 +12,12 @@ strain_to_ko = {'hisD': r'$\Delta \mathit{hisD}$',
                 'gltA': r'$\Delta \mathit{gltA} \Delta \mathit{prpC}$',
                 'gltB': r'$\Delta \mathit{gdhA} \Delta \mathit{gltB}$'}
 
+plt.rcParams['xtick.labelsize'] = 20
+plt.rcParams['ytick.labelsize'] = 20
+plt.rcParams['axes.labelsize'] = 20
+plt.rcParams['axes.facecolor'] = 'white'
+plt.rcParams['legend.fontsize'] = 15
+
 
 def _get_x_label_array(df):
     out = [''] * len(df.columns)
@@ -66,11 +72,13 @@ def plot_abundance_df(abundance_df, strain_1, strain_2, type, ax):
     ax.plot([-.5, len(left) - .5], [1, 1], 'r--')
     ax.set_xlim([-.5, len(left)-.5])
     ax.set_title(('Abundance by %s' % type).replace('characteristic', '\n characteristic mutations'))
-    ax.legend(loc='lower left', facecolor='w', framealpha=.8, frameon=True)
+    ax.legend(loc='lower left', facecolor='w', framealpha=.8, frameon=True,
+              prop={'weight': 'bold'})
 
 
 def plot_pairwise_comparison_of_preditions(table_loc, save_loc,
-                                           normalize=True):
+                                           normalize=True,
+                                           filter_ale_10_flask_23=False):
     fig, axes = plt.subplots(1, 3, figsize=(15, 5), sharey=True)
     for i, pair in enumerate(['hisD_gltA', 'hisD_gltB', 'hisD_pyrC']):
         s1, s2 = pair.split('_')
@@ -81,11 +89,15 @@ def plot_pairwise_comparison_of_preditions(table_loc, save_loc,
         df_cov = pd.read_csv(
             '%s/abundance_by_coverage_%s.csv' % (
                 table_loc, pair.replace('_', '')),
-            index_col=0)
+            index_col=0, header=None)
         df_char = pd.read_csv(
             '%s/abundance_by_characteristic_%s.csv' % (
                 table_loc, pair.replace('_', '')),
-            index_col=0)
+            index_col=0, header=None)
+
+        if filter_ale_10_flask_23:
+            df_cov = df_cov.T[
+                (df_cov.T['Ale'] != 10) | (df_cov.T['Flask'] != 23)].T
 
         if normalize:
             def _normalize_values(df):
@@ -113,7 +125,7 @@ def plot_pairwise_comparison_of_preditions(table_loc, save_loc,
         cor2 = df[['%s_characteristic' % s2, '%s_coverage' % s2]].corr().iloc[
             0, 1]
         ax.plot([0, 1], [0, 1], c='r')
-        ax.legend()
+        ax.legend(prop={'weight': 'bold'})
         ax.set_xlabel('Characteristic Mutations')
 
     axes[1].set_title('Comparison of Methods')
