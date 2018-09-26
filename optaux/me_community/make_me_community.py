@@ -14,8 +14,7 @@ print('remove rna degradation')
 
 
 # Make default community model
-with open('%s/iJL1678b.pickle' % resource_dir, 'rb') as f:
-    me = pickle.load(f)
+me = load_json_me_model('%s/iJL1678b.json' % resource_dir)
 
 me.unmodeled_protein_fraction = .8
 me.global_info['k_deg'] = 0.
@@ -27,8 +26,7 @@ make_binary_community_me(me, me_cons, 'community_me_default_keffs.pickle')
 
 
 # Make community model with all keffs = 65
-with open('%s/iJL1678b.pickle' % resource_dir, 'rb') as f:
-    me = pickle.load(f)
+me = load_json_me_model('%s/iJL1678b.json' % resource_dir)
 
 print("USING 65 for ALL keffs")
 for r in me.reactions:
@@ -63,14 +61,3 @@ me.update()
 me_cons = deepcopy(me)
 
 make_binary_community_me(me, me_cons, 'community_me_null_keffs.pickle')
-
-
-# Make community model with machine learning keffs
-me = load_json_me_model('%s/iJL1678b_ML_keffs.json' % resource_dir)
-me.unmodeled_protein_fraction = .8
-me.global_info['k_deg'] = 0.
-me.update()
-
-me_cons = deepcopy(me)
-
-make_binary_community_me(me, me_cons, 'community_me_ML_keffs.pickle')

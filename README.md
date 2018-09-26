@@ -94,11 +94,11 @@ To recreate Figure 8 and the supplementary community ME-figures:
 ## Software
 The following software and versions were used for publication:
 
-- Python 2.7/3.6
+- Python 3.6
 - An MILP solver. The scripts here use Gurobi by default.
-- COBRApy <= v0.5.11
-- [COBRAme](https:/github.com/sbrg/cobrame) v0.0.7
-- [ECOLIme](https:/github.com/sbrg/ecolime) v0.0.7
+- COBRApy v0.5.11
+- [COBRAme](https:/github.com/sbrg/cobrame) v0.0.9
+- [ECOLIme](https:/github.com/sbrg/ecolime) v0.0.9
 - [solvemepy](https:/github.com/sbrg/solvemepy) v1.0.1
     - Including the qMINOS solver
 - pysam v0.14.1

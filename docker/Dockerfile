@@ -6,7 +6,7 @@ RUN apk add --no-cache zsh
 USER $NB_UID
 
 RUN echo \
-    && echo "# Created by newuser for 5.3.1" > ~/.zshrc \
+    && echo "# " > ~/.zshrc \
 	&& cd /source \
 	&& git clone https://github.com/coltonlloyd/OptAux.git \
 
@@ -15,7 +15,7 @@ RUN echo \
 
 	# build iJL1678b ME-model
 	&& cp /source/ecolime/ecolime/me_models/iJL1678b.pickle /source/OptAux/optaux/resources \
-
+    && cp /source/ecolime/ecolime/me_models/iJL1678b_full.json /source/OptAux/optaux/resources/iJL1678b.json \
 	# build community ME-model
 	&& cd /source/OptAux/optaux/me_community \
 	&& $PYTHON make_me_community.py \
