@@ -54,9 +54,10 @@ def add_experimental_abundance_boxplot(abundance_df, ale, axis):
         sns.swarmplot(data=abundance, size=5, color="0", linewidth=0, ax=axis,
                       orient='horizontal')
         axis.set_yticks([0])
-        axis.set_yticklabels(['Experimentally \n Inferred'], rotation=90,
+        axis.set_yticklabels(['Experimentally \n Inferred \n '
+                              r'($\bf{By\ mutation}$)'],
                              va='center', ha='center')
-        axis.tick_params(axis='y', pad=15)
+        axis.tick_params(axis='y', pad=65)
         axis.set_xlabel(r'Fraction $\Delta \mathrm{hisD}$')
 
 
@@ -137,77 +138,74 @@ def get_growth_rates(sim_loc, ale, unmodeled, me_model=True):
     return x, me_gr
 
 
-def make_default_comparison_plot(abundance_df, me_sim_dir, m_sim_dir):
-    keff_sets = ['65', 'default', 'null', 'ML']
-    me_plot_kinds = ['default']
+def make_me_keffs_comparison_plot(abundance_df, me_sim_dir):
+    map_keff_to_legend = {'65': r'all $k_{eff}$s = 65',
+                          'default': 'default model',
+                          'null': r'$\it{in\ vivo}$ estimated $k_{eff}$s'}
+    keff_sets = ['65', 'default', 'null']
     gridkw = dict(height_ratios=[5, 1, 1])
     fig1, (axes1, axes2, axes3) = plt.subplots(3, 3, sharex='col',
                                         gridspec_kw=gridkw,
-                                        figsize=(15, 6))
+                                        figsize=(15, 6), sharey='row')
 
     ale_plot_locs = {}
     max_gr_positions = defaultdict(list)
     for keff_set in keff_sets:
-        for plot_kind in me_plot_kinds:
-            # Glucose limited plots are identical
-            if keff_set == 'default' and plot_kind == 'glucose_limited':
+        sim_loc = '%s/community_sims_output_%s_keffs/default' % (me_sim_dir,
+                                                                 keff_set)
+        for i, directory in enumerate(glob('/'.join([sim_loc, '*']))):
+            ale = directory.split('/')[-1]
+            if ale not in ale_plot_locs:
+                ale_plot_locs[ale] = i
+            else:
+                i = ale_plot_locs[ale]
+            annotation = [x.split('/')[-1] for
+                          x in glob('/'.join([sim_loc, ale, '*']))][0]
+
+            x, gr = get_growth_rates(sim_loc, ale, annotation)
+            if not x:
                 continue
-            sim_loc = '/'.join(['/home/sbrg-cjlloyd/Desktop/community_sims_output_%s_keffs' % keff_set, plot_kind])
-            for i, directory in enumerate(glob('/'.join([sim_loc, '*']))):
-                ale = directory.split('/')[-1]
-                if ale not in ale_plot_locs:
-                    ale_plot_locs[ale] = i
-                else:
-                    i = ale_plot_locs[ale]
-                annotation = [x.split('/')[-1] for
-                              x in glob('/'.join([sim_loc, ale, '*']))][0]
+            x = [0] + x + [1]
+            gr = [0] + gr + [0]
+            gr_array = np.array(gr)
+            norm_gr = gr_array/gr_array.max()
+            axes1[i].plot(x, norm_gr, label=map_keff_to_legend[keff_set],
+                          linewidth=3, marker='o')
 
-                x, gr = get_growth_rates(sim_loc, ale, annotation)
-                if not x:
-                    continue
-                x = [0] + x + [1]
-                gr = [0] + gr + [0]
-                gr_array = np.array(gr)
-                norm_gr = gr_array/gr_array.max()
-                axes1[i].plot(x, norm_gr, label=plot_kind+'_'+keff_set,
-                              linewidth=3)
+            x_max = x[np.argmax(gr_array)]
+            x_array = np.array(x)
+            x_close_to_max =x_array[norm_gr >= .95]
+            gr_close_to_max = norm_gr[norm_gr > .95]
+            max_gr_positions[ale].extend(x_close_to_max)
+            gr_max = gr_array.max()
 
-                x_max = x[np.argmax(gr_array)]
-                x_array = np.array(x)
-                x_close_to_max =x_array[norm_gr > .95]
-                gr_close_to_max = norm_gr[norm_gr > .95]
-                max_gr_positions[ale].extend(x_close_to_max)
-                gr_max = gr_array.max()
-                axes1[i].arrow(x_max, .1, 0, -.1, width=.01,
-                               color=axes1[i].get_lines()[-1].get_color())
-                axes1[i].fill_between(x_close_to_max, gr_close_to_max,
-                                      np.zeros(len(x_close_to_max)),
-                                      facecolor='#B6C3C5',
-                                      alpha=.2
-                                      )
+            #axes1[i].fill_between(x_close_to_max, gr_close_to_max,
+            #                      np.zeros(len(x_close_to_max)),
+            #                      facecolor='#B6C3C5',
+            #                      alpha=.15
+            #                      )
+            axes1[i].set_ylim((.9, 1.01))
+            axes1[i].arrow(x_max, .92, 0, -.01, width=.01, head_length=.01,
+                           color=axes1[i].get_lines()[-1].get_color())
     for ale, position in ale_plot_locs.items():
         add_experimental_abundance_boxplot(abundance_df, ale, axes3[position])
 
-        x, gr = get_growth_rates(m_sim_dir, ale, 'no_unmodeled', me_model=False)
-        x = [0] + x + [1]
-        gr = [0] + gr + [0]
-        norm_gr = np.array(gr) / np.array(gr).max()
-        #axes1[position].plot(x, norm_gr, label='m_model',
-        #                      linewidth=3)
         print(max_gr_positions[ale])
         axes2[position].set_xlim([0, 1])
-        #sns.boxplot(np.array(max_gr_positions[ale]), ax=axes2[position])
-        #sns.swarmplot(max_gr_positions[ale], size=5, color="0", linewidth=0,
-        #             ax=axes2[position], orient='horizontal')
-        bins = (np.array(max_gr_positions[ale]).max() - \
-               np.array(max_gr_positions[ale]).min()) * 10
-        print(np.array(max_gr_positions[ale]).max())
-        print(np.array(max_gr_positions[ale]).min())
-        print(int(bins))
-        sns.distplot(np.array(max_gr_positions[ale]), ax=axes2[position], rug=True,
-                     bins=int(bins)+1)
-        axes1[position].legend()
-        axes1[position].set_title(ale)
+        max_grs = np.array(max_gr_positions[ale])
+        sns.kdeplot(max_grs, ax=axes2[position], bw='silverman')
+
+        axes1[position].set_title('%s & %s' % tuple([rxn_to_gene[ko]
+                                                     for ko in ale.split('-')]))
+
+    axes2[0].set_yticks([1])
+    axes2[0].set_yticklabels(['>95% Max \n ME-model Growth'], va='center',
+                             ha='center')
+    axes2[0].tick_params(axis='y', pad=65)
+    axes1[0].set_ylabel('Computed Community \n '
+                        r'Growth Rate ($hr^{-1}$)')
+    axes1[1].legend(frameon=True, loc='center right', framealpha=.9)
+
     return fig1
 
 
@@ -437,14 +435,14 @@ if __name__ == '__main__':
     normalize_to_max = False
     main_text_figure = True
 
-    sim_dir = '%s/community_sims_output_ML_keffs/' % '/home/sbrg-cjlloyd/Desktop'
+    sim_dir = '%s/community_sims_output_default_keffs/' % here
     save_location = '%s/community_plots/' % here
-    m_sim_dir = '%s/community_m_sims/' % '/home/sbrg-cjlloyd/Desktop'
 
-    # ######################### Make M + ME comparison
+    # ################ Make M + ME comparison for Figure 7 ####################
     plt.rcParams['axes.facecolor'] = 'w'
-    fig = make_default_comparison_plot(abundance_df, sim_dir, m_sim_dir)
-    fig.savefig('/home/sbrg-cjlloyd/Desktop/test.png')
+    fig = make_me_keffs_comparison_plot(abundance_df, here)
+    fig.savefig('%s/Figure_7_me_sims.png' % save_location)
+
     # ######################### Make Figure 8 ################################
     max_gr_dict = {}
     fig, axes = plt.subplots(3, 3, figsize=(15, 12), sharey='row',
@@ -474,16 +472,3 @@ if __name__ == '__main__':
     fig.savefig('%s/community_plots/Figure_8.png' % here,  dpi=250)
 
     # ################### Make supplementary fig ##############################
-    plt.rcParams['axes.facecolor'] = 'w'
-    max_gr_dict = {}
-    plot_kind = 'default'
-
-    save_loc = save_location + plot_kind
-    if not os.path.exists(save_loc):
-        os.mkdir(save_loc)
-
-    fig, ax = plt.subplots(1, 1)
-    make_computational_abundance_plots(abundance_df, sim_dir, plot_kind,
-                                       normalize_to_max, max_gr_dict,
-                                       subplot_axes=ax)
-    fig.savefig('%s/community_plots/Supplementary_fig.png' % here, dpi=250)

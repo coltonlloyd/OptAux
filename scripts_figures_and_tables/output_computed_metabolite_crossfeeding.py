@@ -58,6 +58,9 @@ def filter_exchange_fluxes(exchange_fluxes, sim_kind, threshold=.002):
         if 'back' in r:
             continue
 
+        if sim_kind != 'secretion_keff_sweep' and r == 'EX_his__L_e_S2':
+            continue
+
         flux = np.array(flux)
 
         if len(flux) == 0 or abs(flux).sum() <= threshold:
@@ -103,6 +106,7 @@ def get_me_exchange_array(sim_loc, ale, unmodeled):
 
 def add_met_exchange_to_axis(ex, x, sim_kind, ale, ax):
     i = 0
+    map_met_id_to_legend = {'LalaDgluMdapDala': 'LalaDgluM\ndapDala'}
     for r, flux in ex.items():
         if i < 5:
             line_type = '-'
@@ -113,13 +117,14 @@ def add_met_exchange_to_axis(ex, x, sim_kind, ale, ax):
         else:
             line_type = ':'
 
-        met = r.replace('EX_', '').replace('_e', '')
+        met = r.replace('EX_', '').replace('_e', '').replace('_S1', '')
         if sim_kind == 'secretion_keff_sweep':
             color = colors[0] if met == 'his__L' else colors[1]
             ax.plot(x, flux, line_type, linewidth=5,
                     label=met, color=color)
         else:
-            ax.plot(x, flux, line_type, linewidth=5, label=met)
+            ax.plot(x, flux, line_type, linewidth=5,
+                    label=map_met_id_to_legend.get(met, met))
         i += 1
 
     if i > 2:
@@ -136,7 +141,7 @@ def plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind):
     for i, ale in enumerate(ales):
         ax = axes[i]
         x, me_ex = get_me_exchange_array(sim_loc, ale, unmodeled)
-        me_ex = filter_exchange_fluxes(me_ex, sim_kind, threshold=.02)
+        me_ex = filter_exchange_fluxes(me_ex, sim_kind, threshold=0.01)
         add_met_exchange_to_axis(me_ex, x, sim_kind, ale, ax)
         ax.set_title(
             ' & '.join([rxn_to_gene[i] for i in ale.split('-')]))
@@ -152,7 +157,7 @@ def plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind):
 if __name__ == '__main__':
     plt.rcParams['axes.facecolor'] = 'w'
     ales = ['HISTD-CS', 'HISTD-DHORTS', 'HISTD-GLUDy:GLUSy']
-    sim_location = '/home/sbrg-cjlloyd/Desktop/community_sims_output_ML_keffs/'
+    sim_location = '/home/sbrg-cjlloyd/Desktop/community_sims_output_default_keffs/'
     save_location = '%s/community_plots/' % here
 
     sim_kind = 'secretion_keff_sweep'

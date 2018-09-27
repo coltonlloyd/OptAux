@@ -110,5 +110,5 @@ for i, pair in enumerate([['CS'], ['DHORTS'], ['GLUDy', 'GLUSy']]):
     axes[i].legend()
     axes[i].set_xlabel('Fraction Strain 1')
     axes[i].set_ylim((.9, 1.01))
-axes[0].set_ylabel(r'Community Growth Rate ($hr^{-1}$)')
+axes[0].set_ylabel(r'Community Growth Rate (Normalized)')
 fig.savefig('steadycom_m_model_comparison.png')
