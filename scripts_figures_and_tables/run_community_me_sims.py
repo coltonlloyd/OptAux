@@ -25,7 +25,7 @@ skip_mets = ['EX_fe3dcit_e', 'EX_fe3dcit_e', 'EX_progly_e', 'EX_23ccmp_e',
 
 if __name__ == '__main__':
     values = []
-    for model in ['default', 'null']:
+    for model in ['default', 'null', '65']:
         for mode in modes:
             if mode == 'secretion_keff_sweep':
                 for ko1, ko2 in zip(ko1s, ko2s):

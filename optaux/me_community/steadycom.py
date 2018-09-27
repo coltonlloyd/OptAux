@@ -8,8 +8,11 @@ from cobra.solvers import solver_dict
 from optaux.resources.possible_uptake import ko_uptakes
 from cobra.flux_analysis.variability import calculate_lp_variability
 from cobrame.solve.symbolic import substitute_mu, compile_expressions
-
+from optaux import resources
 from time import time
+
+
+resource_dir = resources.__path__[0]
 
 # Implementation of SteadyCom from Chan et al 2017
 # (https://doi.org/10.1371/journal.pcbi.1005539)
@@ -287,26 +290,27 @@ def run_fva_for_abundances(model, percent_max, max_gr, solver=None,
     return out_abundances
 
 
-def run(ko1_list, ko2_list):
+def run(ijo, ko1_list, ko2_list, restrict_uptake_to_one_metabolite=False):
 
     kos = [ko1_list, ko2_list]
-
-    ijo = cobra.io.load_json_model(
-        '/home/sbrg-cjlloyd/Desktop/ecoli_M_models/iJO1366.json')
 
     ijo.reactions.EX_o2_e.lower_bound = -1000
     ijo.reactions.ATPM.lower_bound = 3.15
     ijo.reactions.EX_glc__D_e.lower_bound = -10
-    # add methionine export
-    r = cobra.Reaction('OROTtpp')
-    ijo.add_reaction(r)
-    r.add_metabolites({'orot_c': -1, 'orot_p': 1})
 
     com_model = cobra.Model('community_model')
     exchange_list = [i.id for i in ijo.reactions.query('EX_')]
     initialize_com_model(com_model, ijo, len(kos), exchange_list)
-
-    model_list = [make_auxotrophs(ijo, ko, ko_uptakes=ko_uptakes[str(ko)]) for i, ko in enumerate(kos)]
+    if restrict_uptake_to_one_metabolite:
+        mets_to_ko_dict = ko_uptakes
+    else:
+        mets_to_ko_dict = {"['CS']": [u'EX_akg_e'],
+                           "['DHORTS']": [u'EX_orot_e'],
+                           "['HISTD']": [u'EX_his__L_e'],
+                           "['GLUDy', 'GLUSy']": [u'EX_glu__L_e']}
+    model_list = \
+        [make_auxotrophs(ijo, ko, ko_uptakes=mets_to_ko_dict[str(ko)])
+         for i, ko in enumerate(kos)]
     for i, model in enumerate(model_list):
         com_model = add_model_to_community(com_model, model, i)
 
@@ -320,8 +324,7 @@ def reproduce_figure():
                    'argH': 'b3960', 'pheA': 'b2599', 'yjeH': 'b4141',
                    'lysO': 'b0874', 'argO': 'b2923'}
 
-    ijo = cobra.io.load_json_model(
-        '/home/sbrg-cjlloyd/Desktop/ecoli_M_models/iJO1366.json')
+    ijo = cobra.io.load_json_model('%s/iJO1366.json' % resource_dir)
     # add methionine export
     r = cobra.Reaction('METtpp')
     ijo.add_reaction(r)
@@ -344,6 +347,8 @@ def reproduce_figure():
                     ['EX_arg__L_e', 'EX_met__L_e', 'EX_phe__L_e'],
                     ['EX_arg__L_e', 'EX_lys__L_e', 'EX_phe__L_e'],
                     ['EX_arg__L_e', 'EX_lys__L_e', 'EX_met__L_e']]
+
+    # Use iAF1260 parameters
     ijo.reactions.EX_o2_e.lower_bound = -18.5
     ijo.reactions.ATPM.lower_bound = 10.39
     ijo.reactions.EX_glc__D_e.lower_bound = -8

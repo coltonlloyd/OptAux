@@ -3,7 +3,7 @@ import tarfile
 
 here = os.path.dirname(os.path.abspath(__file__))
 
-for model in ['null', 'default']:
+for model in ['null', 'default', '65']:
     for plot_kind in ['metabolite_limitation', 'secretion_keff_sweep',
                       'default', 'glucose_limited']:
         tar_filename = '%s/community_sims_output_%s_keffs/%s.tar.gz' % (here, model, plot_kind)
