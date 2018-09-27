@@ -84,7 +84,7 @@ The key results from the study can be reproduced with the following
    - This will make community models based on the two ME-models described
    as well as community model with all k<sub>eff</sub>s set to 65 s<sup>-1</sup>.
 
-2. All of the simulations needed to reproduce Figure 8 can then be ran with:
+2. All of the simulations needed to reproduce Figures 8 and 9 can then be ran with:
 `python run_community_me_sims.py`
 
    - This code uses python's multiprocessesing functionality with 2 processes 
@@ -97,7 +97,7 @@ already included in this package. **Note:** If using these files instead of
 running new simulations you must run `python unpack_community_me_sims.py` to unpack
 the tar.gz files in order to plot.
 
-To recreate Figure 8, part of Figure 7, and the supplementary community ME-figures:
+To recreate Figure 9, part of Figure 8, and the supplementary community ME-figures:
 
 3. To plot community growth rates for varying strain abundances run:
 ```python [optaux]/scripts_figures_and_tables/output_computed_community_growth_rates.py```

@@ -20,7 +20,7 @@ from optaux import resources
 plt.rcParams['xtick.labelsize'] = 25
 plt.rcParams['ytick.labelsize'] = 25
 plt.rcParams['axes.labelsize'] = 35
-plt.rcParams['axes.titlesize'] = 30
+plt.rcParams['axes.titlesize'] = 20
 plt.rcParams['axes.facecolor'] = 'white'
 plt.rcParams['axes.edgecolor'] = 'black'
 plt.rcParams['axes.linewidth'] = 2
@@ -387,7 +387,7 @@ def plot_coverage(save_loc, pair, cov_dict, sections=10000, cutoff=1.25,
                         flask)][int(isolate)][int(replicate)] = cov
 
     plots = 2
-    fig_gltJ, axes_gltJ = plt.subplots(plots, max_cols, figsize=(4*max_cols,
+    fig_gltJ, axes_gltJ = plt.subplots(plots, 4, figsize=(4*4,
                                                                  3 * plots))
 
     # To clean up output plots, remove duplications seen in starting strains.
@@ -409,6 +409,7 @@ def plot_coverage(save_loc, pair, cov_dict, sections=10000, cutoff=1.25,
         a += 1
         print(pair, ale)
         num_cols = -1
+        num_cols_filtered = -1
         for flask in sorted(coverage_dict[ale]):
             for isolate in sorted(coverage_dict[ale][flask]):
                 for replicate in sorted(coverage_dict[ale][flask][isolate]):
@@ -455,23 +456,39 @@ def plot_coverage(save_loc, pair, cov_dict, sections=10000, cutoff=1.25,
                             label='cutoff', linewidth=3)
 
                     if ale == 5:
-                        ax_gltJ = axes_gltJ[0][num_cols]
+                        print(replicate)
+                        if replicate == 2:
+                            continue
+                        if isolate == 30 or isolate == 40:
+                            continue
+                        num_cols_filtered += 1
+                        ax_gltJ = axes_gltJ[0][num_cols_filtered]
                         plot_and_format(ax_gltJ, xy[:, 0], xy[:, 1],
                                         genome_size, ale, flask, isolate,
                                         replicate, mean, xrange=[5e5, 15e5])
                         add_gene_positions(ax_gltJ, ymax, kind='gltJ')
-                        ax_gltJ.set_title(ax_gltJ.get_title().replace('Ale', '$\Delta$hisD & $\Delta$gdhAgltB\nAle'))
+                        title = ax_gltJ.get_title().replace('A', '$\Delta hisD$ & $\Delta gdhA \Delta gltB$\n A')
+                        title = title.split(' I')[0].replace(' A', 'Ale ').replace('F', 'Flask ')
+                        ax_gltJ.set_title(title)
                         ax_gltJ.set_ylim([0, 25])
                         ax_gltJ.ticklabel_format(style='sci', axis='x',
                                                  scilimits=(0, 0))
 
                     elif ale == 11:
-                        ax_gltJ = axes_gltJ[1][num_cols]
+                        if replicate == 2:
+                            continue
+                        if isolate == 30 or isolate == 40:
+                            continue
+
+                        num_cols_filtered += 1
+                        ax_gltJ = axes_gltJ[1][num_cols_filtered]
                         plot_and_format(ax_gltJ, xy[:, 0], xy[:, 1],
                                         genome_size, ale, flask, isolate,
-                                        replicate, mean, xrange=[2e6, 3.3e6])
+                                        replicate, mean, xrange=[1.7e6, 3.3e6])
                         add_gene_positions(ax_gltJ, ymax, kind='hisJ')
-                        ax_gltJ.set_title(ax_gltJ.get_title().replace('A', '$\Delta$hisD & $\Delta$gltAprpC\nA'))
+                        title = ax_gltJ.get_title().replace('A', '$\Delta hisD$ & $\Delta gltA \Delta prpC$\n A')
+                        title = title.split(' I')[0].replace(' A', 'Ale ').replace('F', 'Flask ')
+                        ax_gltJ.set_title(title)
                         ax_gltJ.set_ylim([0, 5])
                         ax_gltJ.ticklabel_format(style='sci', axis='x',
                                                  scilimits=(0, 0))
