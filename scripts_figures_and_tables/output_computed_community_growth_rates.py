@@ -472,3 +472,30 @@ if __name__ == '__main__':
     fig.savefig('%s/community_plots/Figure_8.png' % here,  dpi=250)
 
     # ################### Make supplementary fig ##############################
+    sim_dir = '%s/community_sims_output_null_keffs/' % here
+    max_gr_dict = {}
+    fig, axes = plt.subplots(3, 3, figsize=(15, 12), sharey='row',
+                             sharex='col')
+    for i, plot_kind in enumerate(plot_kinds):
+        # Get location of simulation fluxes based on simulation type
+        make_computational_abundance_plots(abundance_df, sim_dir, plot_kind,
+                                           normalize_to_max, max_gr_dict,
+                                           subplot_axes=axes[i])
+
+    make_sweeps_box_plots(max_gr_dict, abundance_df, plot_kind,
+                          subplot_axes=axes[2])
+
+    # Add titles to top row
+    for i, ale in enumerate(['HISTD-CS', 'HISTD-DHORTS', 'HISTD-GLUDy:GLUSy']):
+        axes[0][i].set_title(' & '.join([rxn_to_gene[i] for
+                                         i in ale.split('-')]),
+                             fontsize=25)
+
+    # Add labels to each panel
+    for i, t in enumerate(['A', 'B', 'C']):
+        fig.text(0.085, 1 - i / 3.2, t, fontsize=35, fontweight='bold',
+                 va='top', color='black')
+
+    fig.tight_layout()
+    fig.savefig('%s/community_plots/Supplementary_fig_null_model.png' % here,
+                dpi=250)
