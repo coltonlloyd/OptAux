@@ -105,16 +105,7 @@ def knock_out_reactions(model, ko1, ko2):
             model.reactions.get_by_id(rxn + '_S2').knock_out()
 
 
-def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
-    if secretion and uptake:
-        print('Scaling Secretion and Uptake Flux')
-    elif secretion:
-        print('Scaling Secretion')
-    elif uptake:
-        print('Scaling Uptake')
-    else:
-        print('Not scaling exchange fluxes')
-
+def split_exchange_into_irreversible(model):
     for rxn in model.reactions.query('EX_'):
         # filter out a few complexes with 'COMPLEX_mod' in ID
         if not rxn.id.startswith('EX_') or 'Shared' in rxn.id:
@@ -134,6 +125,16 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
             rev_rxn.lower_bound = -1000
             rev_rxn.upper_bound = 0
             rxn.lower_bound = 0
+
+
+def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=False,
+                          already_split=False, split_suffix='_reverse'):
+    if not already_split:
+        split_exchange_into_irreversible(model)
+    for rxn in model.reactions.query('EX_'):
+        if not rxn.id.startswith('EX_') or 'Shared' in rxn.id \
+                or 'reverse' in rxn.id or 'back' in rxn.id:
+            continue
 
         if '_S1' not in rxn.id and '_S2' not in rxn.id:
             continue
@@ -155,7 +156,7 @@ def scale_exchange_fluxes(model, fraction_S1, secretion=True, uptake=True):
                 print(rxn.reaction, rxn.upper_bound)
 
             # met <- x * met_shared
-            rxn_rev_id = rxn.id + '_reverse'
+            rxn_rev_id = rxn.id + split_suffix
             if rxn_rev_id in model.reactions:
                 rxn_rev = model.reactions.get_by_id(rxn_rev_id)
                 rxn_rev.add_metabolites(

@@ -12,7 +12,7 @@ if __name__ == '__main__':
     alignment_loc = '/media/hard_drive/all_aux_ale_resequencing/aux/'  # alignment files not yet available
     save_loc = '%s/duplications/' % here
     #'hisD_gltB',
-    for pair in ['hisD_pyrC', 'hisD_gltA']:
+    for pair in ['hisD_gltB', 'hisD_pyrC', 'hisD_gltA']:
         # coverage_dict = {'pair': {'ale': {'flask': {'isolate': {'replicate':
         # [coverage_per_position]}}}}}
         if os.path.isfile('%s/%s_coverage_dict.json' % (save_loc, pair)):

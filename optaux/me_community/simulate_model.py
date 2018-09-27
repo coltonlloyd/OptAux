@@ -207,34 +207,45 @@ else:
 
 # ************************************************************
 if MODE == 'unmodeled_sweep':
-    out_directories = [os.getcwd(), MODE, PAIR,
+    out_directories = [os.getcwd(),
+                       'community_sims_output_%s_keffs' % MODEL_TO_USE,
+                       MODE, PAIR,
                        '%.2f_%.2f_%i_unmodeled_protein' % (
                            UNMODELED_PROTEIN[0] * 100,
                            UNMODELED_PROTEIN[1] * 100,
                            float(ITER))]
 elif MODE == 'secretion_keff_sweep':
-    out_directories = [os.getcwd(), MODE, PAIR,
+    out_directories = [os.getcwd(),
+                       'community_sims_output_%s_keffs' % MODEL_TO_USE,
+                       MODE, PAIR,
                        '%.2f_%.2f_%i_secretion_multiplier' % (
                            SECRETION_KEFF_MULTIPLIER[0] * 100,
                            SECRETION_KEFF_MULTIPLIER[1] * 100,
                            float(ITER))]
 elif MODE == 'metabolite_limitation':
-    out_directories = [os.getcwd(), MODE, PAIR, '%s' % RESTRICT]
+    out_directories = [os.getcwd(),
+                       'community_sims_output_%s_keffs' % MODEL_TO_USE,
+                       MODE, PAIR, '%s' % RESTRICT]
 
 elif MODE == 'default':
-    out_directories = [os.getcwd(), MODE, PAIR,
+    out_directories = [os.getcwd(),
+                       'community_sims_output_%s_keffs' % MODEL_TO_USE,
+                       MODE, PAIR,
                        '%.2f_%.2f_unmodeled_protein' % (
                            UNMODELED_PROTEIN[0] * 100,
                            UNMODELED_PROTEIN[1] * 100)]
 elif MODE == 'glucose_limited':
-    out_directories = [os.getcwd(), MODE, PAIR,
+    out_directories = [os.getcwd(),
+                       'community_sims_output_%s_keffs' % MODEL_TO_USE,
+                       MODE, PAIR,
                        '%.2f_%.2f_unmodeled_protein' % (
                            UNMODELED_PROTEIN[0] * 100,
                            UNMODELED_PROTEIN[1] * 100)]
 
 else:
     raise UserWarning('MODE not "unmodeled_sweep" or "secretion_keff_sweep" or'
-                      ' "metabolite limitation" or "default" or "glucose_limited"')
+                      ' "metabolite limitation" or "default" or'
+                      ' "glucose_limited"')
 
 output_dir = os.getcwd() if not DOCKER else '/output/'
 for dir in out_directories[1:]:
@@ -250,12 +261,7 @@ with open('test_model.pickle', 'wb') as f:
 me_nlp = ME_NLP1(model, growth_key='mu')
 me_nlp.compiled_expressions = me_nlp.compile_expressions()
 
-# do not find community basis. This can cause issues
-if os.path.isfile('community_basis_nope.pickle'):
-    with open('community_basis.pickle', 'rb') as f:
-        hs = pickle.load(f)
-else:
-    x, status, hs = me_nlp.solvelp(.0001)
+x, status, hs = me_nlp.solvelp(.001)
 
 muopt, hs, xopt, cache = solve_model(me_nlp, hs)
 

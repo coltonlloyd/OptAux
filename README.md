@@ -45,13 +45,14 @@ as a comparison of the predictions based on each method.
 
 ### Duplications
 Read coverages are plotted using the alignment files produced from breseq 
-(not provided for now). They coverage of each base pair, however, is included 
-as a compressed dictionary and must first be unpacked by running `python unpack_read_coverage_dict`
+(Not provided due to filesize limits on github. They can be obtained by
+contacting cjlloyd@ucsd.edu for access to the alignment files or accessing
+the raw reads hosted on the Sequence Read Archive under accession no. SRP161177).
 
 Running `python output_duplications.py` will:
 
 1. Check if `[optaux]/scripts_figures_and_tables/duplications/[pair_name]_coverage_dict.json`
-exists. If not it will get this dictionary using the bam files output from breseq.
+exists. If not it will produce this dictionary using the bam files output from breseq.
 
 2. Find the genes with >80% of their base pairs above the 1.25x fit mean cutoff.
 These are compiled and output in 
@@ -61,15 +62,23 @@ These are compiled and output in
 `[optaux]/scripts_figures_and_tables/duplications/`
 
 ### Community ME-model Sims and Plotting
-To run the community ME-model simulations the, community ME-model must first be
-constructed (if the docker image is used, the community model is already built)
+The iJL1678b ME-model (constructed using COBRAme/ECOLIme v0.0.9) is provided
+as json files with two different k<sub>eff</sub> parameter sets:
 
-1. Build iJL1768b-ME by running `python [ecolime]/ecolime/build_me_model.py`
-2. Copy the model to optaux with:
- ```cp [ecolime]/ecolime/me_models/iJL1678b.pickle [optaux]/optaux/resources/```
-3. Build iJL1678b-community with: `python [optuax]/optaux/me_community/make_me_communityl.py`
+  - `iJL1678b.json`: The model with default parameters
 
-4. All of the simulations needed to reproduce Figure 8 can then be ran with:
+  - `iJL1678b_null_keffs.json`: The model with k<sub>eff</sub>s values set to
+those obtained from [Dividi et. al.](http://www.pnas.org/content/113/12/3401).
+Metabolic k<sub>eff</sub>s not included in this dataset were imputed
+with the median value, 6.2 s<sup>-1</sup>. Non-metabolic reactions outside the scope
+of this dataset were set to 65 s<sup>-1</sup> as in the default model.
+
+The key results from the study can be reproduced with the following
+1. Build iJL1678b-community models with: `python [optuax]/optaux/me_community/make_me_communityl.py`.
+   - This will make community models based on the two ME-models described
+   as well as community model with all k<sub>eff</sub>s set to 65 s<sup>-1</sup>.
+
+2. All of the simulations needed to reproduce Figure 8 can then be ran with:
 `python run_community_me_sims.py`
 
    - This code uses python's multiprocessesing functionality with 2 processes 
@@ -84,10 +93,10 @@ the tar.gz files in order to plot.
 
 To recreate Figure 8 and the supplementary community ME-figures:
 
-5. To plot community growth rates for varying strain abundances run: 
+3. To plot community growth rates for varying strain abundances run:
 ```python [optaux]/scripts_figures_and_tables/output_computed_community_growth_rates.py```
 
-6. To plot metabolite cross-feeding for varying strain abundances run: 
+4. To plot metabolite cross-feeding for varying strain abundances run:
 ```python [optaux]/scripts_figures_and_tables/output_computed_metabolite_crossfeeding.py```
 
 
