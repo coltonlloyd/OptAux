@@ -50,7 +50,8 @@ def filter_exchange_fluxes(exchange_fluxes, sim_kind, threshold=.002):
 
     back = True if sim_kind == 'm_model' else False
 
-    for r, flux in exchange_fluxes.items():
+    exchange_flux_copy = exchange_fluxes.copy()
+    for r, flux in exchange_flux_copy.items():
         # Uses back instead of reverse if m-model
 
         if 'reverse' in r:
@@ -157,7 +158,8 @@ def plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind):
 if __name__ == '__main__':
     plt.rcParams['axes.facecolor'] = 'w'
     ales = ['HISTD-CS', 'HISTD-DHORTS', 'HISTD-GLUDy:GLUSy']
-    sim_location = '/home/sbrg-cjlloyd/Desktop/community_sims_output_default_keffs/'
+
+    sim_location = '%s/community_sims_output_default_keffs/' % here
     save_location = '%s/community_plots/' % here
 
     sim_kind = 'secretion_keff_sweep'
@@ -174,9 +176,4 @@ if __name__ == '__main__':
     sim_kind = 'glucose_limited'
     sim_loc = '/'.join([sim_location, sim_kind])
     unmodeled = '36.00_36.00_unmodeled_protein'
-    plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)
-
-    sim_kind = 'm_model'
-    sim_loc = '/'.join(['/home/sbrg-cjlloyd/Desktop/community_m_sims/'])
-    unmodeled = 'no_unmodeled'
     plot_metabolite_exchange(sim_loc, ales, unmodeled, sim_kind)

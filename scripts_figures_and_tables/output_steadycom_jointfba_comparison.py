@@ -3,11 +3,13 @@ import numpy as np
 from optaux.me_community import steadycom
 import cobra
 from matplotlib import pyplot as plt
-import os
+from os.path import dirname, abspath
 from optaux import resources
 from optaux.resources.possible_uptake import ko_uptakes, get_possible_uptake
 from optaux.me_community.me_model_community import make_binary_community_me, scale_exchange_fluxes
 
+here = dirname(abspath(__file__))
+save_location = '%s/community_plots/' % here
 
 rxn_to_gene = {'CS': r'$\Delta \mathit{gltA} \Delta \mathit{prpC}$',
                'HISTD': r'$\Delta \mathit{hisD}$',
@@ -111,4 +113,4 @@ for i, pair in enumerate([['CS'], ['DHORTS'], ['GLUDy', 'GLUSy']]):
     axes[i].set_xlabel('Fraction Strain 1')
     axes[i].set_ylim((.9, 1.01))
 axes[0].set_ylabel(r'Community Growth Rate (Normalized)')
-fig.savefig('steadycom_m_model_comparison.png')
+fig.savefig('%s/steadycom_m_model_comparison.png' % save_location)

@@ -18,8 +18,13 @@ Run `python [optaux]/scripts_figures_and_tables/make_optaux_supplement.py`
 
 This runs OptAux algorithm in aerobic glucose minimal media conditions for
 all carbon containing exchange reactions in iJO1366. It will by default
-run OptAux for 4 `trace_metabolite_thresholds` (0, 0.01, 0.1, and 2) and
-output the results in `supplement_1_optaux_solutions.xls`
+run OptAux for 4 `competing_metabolite_uptake_thresholds` (0, 0.01, 0.1, and 2) and
+output the results in `supplement_1_optaux_solutions.xls` as well as
+intermediate results as `optaux_intermediate_trace_[threhold_value].xls`
+
+To process the results into an MSE summary spreadsheet and the set of
+EBC designs with the smallest number of knockouts, run
+`output_optaux_summaries.xls`
 
 ### Relative abundance approximations
 Running `python output_relative_abundance_results.py` will:
@@ -61,7 +66,7 @@ These are compiled and output in
 3. Output the plots used to create Figure 7 and the supplementary figures in
 `[optaux]/scripts_figures_and_tables/duplications/`
 
-### Community ME-model Sims and Plotting
+### Community Modeling Sims and Plotting
 The iJL1678b ME-model (constructed using COBRAme/ECOLIme v0.0.9) is provided
 as json files with two different k<sub>eff</sub> parameter sets:
 
@@ -85,13 +90,13 @@ The key results from the study can be reproduced with the following
     by default. To speed up these simulations, more processes can be used. A 
     single simulation typically requires 4-8 gb of RAM to solve with 
     qMINOS.
-   - This will output the results into `[optaux]/scripts_figures_and_tables/community_me_sims`.
+   - This will output the results into `[optaux]/scripts_figures_and_tables/community_sims_output_[null/65/default]_keffs`.
 Alternatively, tar.gz files are containing the output of these simulations are 
 already included in this package. **Note:** If using these files instead of
 running new simulations you must run `python unpack_community_me_sims.py` to unpack
 the tar.gz files in order to plot.
 
-To recreate Figure 8 and the supplementary community ME-figures:
+To recreate Figure 8, part of Figure 7, and the supplementary community ME-figures:
 
 3. To plot community growth rates for varying strain abundances run:
 ```python [optaux]/scripts_figures_and_tables/output_computed_community_growth_rates.py```
@@ -99,6 +104,11 @@ To recreate Figure 8 and the supplementary community ME-figures:
 4. To plot metabolite cross-feeding for varying strain abundances run:
 ```python [optaux]/scripts_figures_and_tables/output_computed_metabolite_crossfeeding.py```
 
+5. To plot community growth rates for substrate limited ME-model and M-model run:
+``python [optaux]/scripts_figures_and_tables/output_glucose_limited_me_m_comparison.py``
+
+6. To output the supplement community growth comparison between steadycom and jointfba M-model:
+``python [optaux]/scripts_figures_and_tables/output_steadycom_jointfba_comparison.py``
 
 ## Software
 The following software and versions were used for publication:
