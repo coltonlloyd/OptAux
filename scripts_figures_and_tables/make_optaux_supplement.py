@@ -4,6 +4,7 @@ from datetime import date
 
 import pandas as pd
 import cobra
+from os.path import dirname, abspath
 
 from optaux.core.run_optaux import run_optaux
 from optaux import resources
@@ -15,6 +16,7 @@ from optaux.helper_functions.characterize_auxotrophs import (
 if __name__ == '__main__':
     resource_dir = resources.__path__[0]
     model_loc = resource_dir + '/iJO1366.json'
+    here = dirname(abspath(__file__))
     false_positive_loc = resource_dir + '/OrthKOEssential.csv'
 
     media_list = []
@@ -24,7 +26,7 @@ if __name__ == '__main__':
                     index_col=0).T.values[0]
     # Load model for OptAux
     cons_model = cobra.io.load_json_model(model_loc)
-    writer = pd.ExcelWriter('supplement_1_optaux_solutions.xls')
+    writer = pd.ExcelWriter('%s/optaux_solutions/supplement_1_optaux_solutions.xls' % here)
 
     # Load known model false positives. Exclude these from possible knockouts
 

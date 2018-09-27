@@ -5,14 +5,15 @@ from optaux import resources
 import glob
 import pandas as pd
 from collections import Counter
-
+from os.path import dirname, abspath
 
 resource_dir = resources.__path__[0]
+here = dirname(abspath(__file__))
 
 ijo = cobra.io.load_json_model(resource_dir + '/iJO1366.json')
 
 df = pd.DataFrame()
-for fi in glob.glob('./optaux*.xls'):
+for fi in glob.glob('%s/optaux_solutions/optaux*.xls' % here):
     temp_df = pd.read_excel(fi)
     df = df.append(temp_df, ignore_index=True)
 
@@ -51,7 +52,7 @@ def output_mse_summary_df():
                 ijo, ko_list.split(' & '), a[0].split(', '))
 
     df_out.sort_values(['Subsystem 1', 'Subsystem 2',
-                        'Subsystem 3']).to_excel('MSE_summary.xls')
+                        'Subsystem 3']).to_excel('%s/optaux_solutions/MSE_summary.xls' % here)
 
 
 def print_unique_and_total_designs():
@@ -164,7 +165,7 @@ def output_table_of_simplest_ebc_design():
         out_df.loc[met_name, 'Reactions'] = out_df.loc[
             met_name, 'Reactions'].rstrip(' | ')
 
-    out_df.to_csv('ebc_simplest_designs.csv')
+    out_df.to_csv('%s/optaux_solutions/ebc_simplest_designs.csv' % here)
 
 
 if __name__ == '__main__':
