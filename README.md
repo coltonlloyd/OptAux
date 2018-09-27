@@ -52,7 +52,8 @@ as a comparison of the predictions based on each method.
 Read coverages are plotted using the alignment files produced from breseq 
 (Not provided due to filesize limits on github. They can be obtained by
 contacting cjlloyd@ucsd.edu for access to the alignment files or accessing
-the raw reads hosted on the Sequence Read Archive under accession no. SRP161177).
+the raw reads hosted on the Sequence Read Archive under accession no.
+[SRP161177](https://www.ncbi.nlm.nih.gov/sra/SRP161177)).
 
 Running `python output_duplications.py` will:
 
