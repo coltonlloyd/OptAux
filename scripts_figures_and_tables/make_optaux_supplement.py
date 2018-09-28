@@ -33,7 +33,7 @@ if __name__ == '__main__':
     false_positives = pd.read_csv(false_positive_loc,
                                   index_col=0).index.values
 
-    for trace in [0, .01, .1, 2]:
+    for competing_uptake in [0, .01, .1, 2]:
         df = pd.DataFrame(columns=['Target Metabolite',
                                    'Reaction Knockouts',
                                    'Gene Knockouts',
@@ -70,7 +70,7 @@ if __name__ == '__main__':
                                      lb_essential_list=lb_essential_list,
                                      media_list=[], solver='gurobi',
                                      exclude_reactions=false_positives,
-                                     trace_metabolite_threshold=trace)
+                                     competing_metabolite_uptake_threshold=competing_uptake)
                 except:
                     print('Error in %i_%s' % (num, r.id))
                     continue
@@ -105,6 +105,6 @@ if __name__ == '__main__':
                 ans['Date'] = str(date.today())
 
                 df = df.append(ans, ignore_index=True)
-                df.to_excel('optaux_intermediate_trace_%.2f.xls' % trace)
-        df.to_excel(excel_writer=writer, sheet_name='%.2f Trace' % trace)
+                df.to_excel('optaux_intermediate_trace_%.2f.xls' % competing_uptake)
+        df.to_excel(excel_writer=writer, sheet_name='%.2f Competing' % competing_uptake)
     writer.save()

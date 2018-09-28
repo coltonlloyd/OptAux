@@ -30,7 +30,7 @@ def get_knockouts(optknock_problem):
 
 def run_optaux(cons_model, target_metabolite, growth_rate,
                n_knockouts, aerobicity='aerobic',
-               lb_essential_list=[], trace_metabolite_threshold=0,
+               lb_essential_list=[], competing_metabolite_uptake_threshold=0,
                media_list=[], exclude_reactions={},
                solver='gurobi'):
 
@@ -61,11 +61,11 @@ def run_optaux(cons_model, target_metabolite, growth_rate,
     else:
         raise ValueError('Must set aerobicity')
 
-    if trace_metabolite_threshold:
+    if competing_metabolite_uptake_threshold:
         for r in model.reactions.query('EX_'):
             if r.id == 'EX_glc__D_e' or r.lower_bound < 0:
                 continue
-            r.lower_bound = -trace_metabolite_threshold
+            r.lower_bound = -competing_metabolite_uptake_threshold
 
     # Scale target metabolite uptake by number of carbons
     scale = model.metabolites.glc__D_c.elements['C'] / \
@@ -148,5 +148,5 @@ def run_optaux(cons_model, target_metabolite, growth_rate,
                 min_max_uptake if min_max_uptake < -1e-12 else 0,
             'Oxygen Uptake': oxygen_bound,
             'Time (s)': toc,
-            'Trace Metabolite Threshold': trace_metabolite_threshold,
+            'Competing Metabolite Uptake Threshold': competing_metabolite_uptake_threshold,
             'Solver': solver, 'Solve Status': p.solution.status}
