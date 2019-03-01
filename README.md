@@ -1,7 +1,6 @@
 # OptAux
 
-Files and scripts needed to reproduce the figures in "Model-driven
-design and evolution of non-trivial synthetic syntrophic pairs"
+Files and scripts needed to reproduce the figures in ["The genetic basis for adaptation of model-designed syntrophic co-cultures"](https://doi.org/10.1371/journal.pcbi.1006213)
 
 ## Docker
 Project can be installed using docker by running from the docker folder
